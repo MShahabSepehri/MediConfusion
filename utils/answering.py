@@ -1,0 +1,503 @@
+import os
+import time
+import pandas as pd
+from tqdm import tqdm
+from PIL import Image
+from utils import io_tools
+from transformers import set_seed, logging
+from VLMs import gpt, blip2, instructblip, med_flamingo, claude, gemini
+try:
+    from VLMs import llava
+except:
+    from VLMs import radfm
+
+
+os.environ["TOKENIZERS_PARALLELISM"] = "true"
+logging.set_verbosity_error()
+
+ROOT = io_tools.get_root(__file__, 2)
+PROMPTS_LOC = f'{ROOT}/configs/prompts/answering.json'
+DATA_PATH = f'{ROOT}/data/dataset.json'
+STATS_PATH = f'{ROOT}/data/stats/statistics.json'
+DATA = io_tools.load_json(DATA_PATH)
+STATS = io_tools.load_json(STATS_PATH)
+PROMPTS = io_tools.load_json(PROMPTS_LOC)
+
+
+class BaseAnsweringModel():
+    def __init__(self, key, model_args_path, mode, data_path, load_image=False):
+        self.key = key
+        self.load_image = load_image
+        self.model_args_path = model_args_path
+        self.conversion = io_tools.load_json(PROMPTS_LOC).get('conversion')
+        self.mode = mode
+        self.data_path = data_path
+        self.set_model_params()
+
+    def set_model_params(self):
+        args = io_tools.load_json(self.model_args_path)
+        self.set_init_prompt(args.get('init_prompt_id'))
+        self.tr = args.get('tr')
+        if self.mode == 'no_option':
+            self.clean_up = self.clean_up_no_option
+        else:
+            self.clean_up = self.clean_up_with_option
+        self.use_forward = (self.mode == 'option_fwd')
+        return args
+
+    def ask_question(self, question, options, image_list):
+        tmp = self.convert_question(question, options)
+        # raise ValueError(tmp)
+        return tmp
+
+    def set_init_prompt(self, init_prompt_id):
+        self.init_prompt = None
+        if init_prompt_id is None:
+            return
+        tmp = PROMPTS.get('init_prompts').get(self.key)
+        if tmp is not None:
+            self.init_prompt = tmp.get(init_prompt_id)
+        else:
+            self.init_prompt = PROMPTS.get('init_prompts').get('default')
+
+    def evaluate(self, resume_path, save_path):
+        results = io_tools.load_resume_dict(resume_path)
+        score = self.create_score_table([], [], 0, 0, 0)
+        for id in tqdm(DATA.keys()):
+            if id in results.keys():
+                continue
+            sample = DATA.get(id)
+            ans_dict, sample_score = self.sample_eval(sample)
+            
+            self.update_score_table(score, sample_score)
+            results[id] = {'answer': ans_dict, 'score': sample_score}
+            if save_path is not None:
+                io_tools.save_json(results, save_path)
+        self.print_score(score)
+        if save_path is not None:
+            io_tools.save_json(score, save_path.replace('.json', '_scores.json'))
+        return results, score
+    
+    def sample_eval(self, sample):
+        image_list = [f"{self.data_path}/{sample.get('im_1')}",  f"{self.data_path}/{sample.get('im_2')}"]
+        if self.load_image:
+            image_list = [Image.open(x) for x in image_list]
+        question = sample.get('question')
+        options = [sample.get('option_A'), sample.get('option_B')]
+        im1_ans = sample.get('im_1_correct')
+        im2_ans = sample.get('im_2_correct')
+        responses = self.ask_question(question, options, image_list)
+        ans_dict = {'im1': self.clean_up(question, options, responses[0]), 
+                    'im2': self.clean_up(question, options, responses[1])}
+        im1_correct, im2_correct, confused = self.get_score(ans_dict, im1_ans, im2_ans)
+        scores = self.create_score_table(sample.get('category_1'), 
+                                         sample.get('category_2'), 
+                                         im1_correct, 
+                                         im2_correct, 
+                                         confused
+                                         )
+        
+
+        return ans_dict, scores
+        
+    def get_clean_up_prompt(self, question, options, response):
+        role = self.conversion.get('role')
+        return (f'[Question]\n{question}\n\n'
+                f'[{role}]\n{response}\n\n[End of {role} 1]\n\n'
+                f'[Answer A]\nA: {options[0]}\n\n[End of {role} 2]\n\n'
+                f'[Answer B]\nB: {options[1]}\n\n[End of {role} 2]\n\n'
+                f'[System]\n{self.conversion.get("instruct_prompt")}\n\n')
+
+    def get_score(self, ans_dict, im1_ans, im2_ans):
+        im1_correct, c1 = self.check_answer(im1_ans, 
+                                            ans_dict.get('im1').get('A'), 
+                                            ans_dict.get('im1').get('B'), 
+                                            self.tr)
+        im2_correct, c2 = self.check_answer(im2_ans, 
+                                            ans_dict.get('im2').get('A'), 
+                                            ans_dict.get('im2').get('B'), 
+                                            self.tr)
+        # set_score = 1 * ((im1_ans == 1) and (im2_ans == 1))
+        # single_score = 1 * (im1_ans == 1) + 1 * (im2_ans == 1)
+        confused = 1 * ((c1 == c2) and (c1 != '-'))
+        return im1_correct, im2_correct, confused
+    
+    def clean_up_no_option(self, question, options, answer):
+        client = gpt.get_client()
+        prompt = self.get_clean_up_prompt(question, options, answer)
+        response = gpt.get_response(client=client,
+                                    deployment_name=self.conversion.get('gpt_deployment_name'),
+                                    init_prompt=self.conversion.get('init_prompt'),
+                                    prompt=prompt,
+                                    temperature=float(self.conversion.get('temperature')),
+                                    )
+        ans = self.process_response(response)
+        ans['full_answer'] = answer
+        return ans
+    
+    def clean_up_with_option(self, question, options, answer):
+        a_score = 0
+        b_score = 0
+        if answer is not None:
+            if answer[: 1] == 'A':
+                a_score = 10
+            elif answer[: 1] == 'B':
+                b_score = 10
+        return {'A': a_score, 'B': b_score, 'full_answer': answer}
+    
+    def convert_question(self, question, options):
+        prompt_dict = PROMPTS.get('with_image').get(self.mode)
+        if self.key in prompt_dict.keys():
+            key = self.key
+        else:
+            key = 'default'
+        tmp = prompt_dict.get(key)
+        if self.mode == 'no_option':
+            tmp = tmp.format(question)
+        elif self.mode == 'option_fwd':
+            tmp = tmp.format(question, options[0], options[1])
+        elif self.mode == 'option_gen':
+            tmp = tmp.format(question, options[0], options[1])
+        return tmp
+    
+    @staticmethod
+    def update_score_table(score, sample_score):
+        for key in score:
+            tmp = score.get(key)
+            for cat in tmp.keys():
+                tmp[cat] += sample_score.get(key).get(cat)
+
+    @staticmethod
+    def create_score_table(cat_1, cat_2, im1_correct, im2_correct, confused):
+        scores = {'set_score': {}, 'individual_score': {}, 'confused': {}}
+        for v in scores.values():
+            for key in STATS.keys():
+                v[key] = 0
+            v['total'] = 0
+        if confused == 1:
+            scores.get('confused')['total'] += 1
+            for c in (cat_1 + cat_2):
+                scores.get('confused')[c] += 1
+        if im1_correct == 1:
+            scores.get('individual_score')['total'] += 1
+            for c in cat_1:
+                scores.get('individual_score')[c] += 1
+        if im2_correct == 1:
+            scores.get('individual_score')['total'] += 1
+            for c in cat_2:
+                scores.get('individual_score')[c] += 1
+        if (im1_correct == 1) and (im2_correct == 1):
+            scores.get('set_score')['total'] += 1
+            for c in (cat_1 + cat_2):
+                scores.get('set_score')[c] += 1
+        return scores
+
+    @staticmethod
+    def print_score(score, precision=2):
+        print('\n')
+        # print_format = "{:<17} {:<10} {:<10} {:<10} {:<12} {:<12} {:<10}"
+        print_format = "{:<17} {:<10} {:<10} {:<12} {:<12}"
+        print(print_format.format('Category', 
+                                  'Total', 
+                                  'Set acc.', 
+                                  'Individual acc.', 
+                                  'Confused acc.'))
+        for cat in STATS.keys():
+            total = STATS.get(cat)
+            num = total / 100
+            set_acc = round(score.get('set_score').get(cat) / num, precision)
+            individual_acc = round(score.get('individual_score').get(cat) / num, precision)
+            confused = round(score.get('confused').get(cat) / num, precision)
+            print(print_format.format(cat, total, set_acc, individual_acc, confused))
+
+        total = len(DATA)
+        num = total / 100
+        set_acc = round(score.get('set_score').get('total') / num, precision)
+        individual_acc = round(score.get('individual_score').get('total') / num / 2, precision)
+        confused = round(score.get('confused').get('total') / num, precision)
+        print(print_format.format('All', total, set_acc, individual_acc, confused))
+            
+    
+    @staticmethod
+    def process_response(response):
+        if response is None:
+            return {
+            'A': 0,
+            'B': 0,
+            'gpt_reason': '',
+        }
+        tmp = response.replace('\n\n', '\n').split('\n')
+        ans = {
+            'A': int(tmp[0].replace('A: ', '')),
+            'B': int(tmp[1].replace('B: ', '')),
+            'gpt_reason': tmp[2].replace('Your explanation: ', ''),
+        }
+        return ans
+    
+    @staticmethod
+    def check_answer(answer, a_score, b_score, tr):
+        chosen = '-'
+        if a_score >= b_score + tr:
+            chosen = 'A'
+        elif b_score >= a_score + tr:
+            chosen = 'B'
+        if chosen == answer:
+            return 1, chosen
+        return 0, chosen
+
+    
+class GPTAnswering(BaseAnsweringModel):
+    def __init__(self, model_args, mode, data_path):
+        super().__init__('gpt', model_args, mode, data_path, load_image=False)
+
+    def set_model_params(self):
+        args = super().set_model_params()
+        self.temperature = args.get("temperature")
+        self.deployment_name = args.get("deployment_name")
+        self.client = gpt.get_client()
+        if self.mode == 'option_fwd':
+            raise ValueError(f'Cannot use forward for GPT!')
+
+    def ask_question(self, question, options, image_list):
+        qs = super().ask_question(question, options, image_list)
+        response_list = []
+        for image in image_list:
+            response = gpt.ask_question(self.client, image, qs, self.init_prompt, self.deployment_name, self.temperature)
+            response_list.append(response)
+        return response_list
+    
+class ClaudeAnswering(BaseAnsweringModel):
+    def __init__(self, model_args, mode, data_path):
+        super().__init__('claude', model_args, mode, data_path, load_image=False)
+
+    def set_model_params(self):
+        args = super().set_model_params()
+        self.temperature = args.get("temperature")
+        # self.deployment_name = args.get("deployment_name")
+        self.client = claude.get_client()
+        if self.mode == 'option_fwd':
+            raise ValueError(f'Cannot use forward for Claude!')
+
+    def ask_question(self, question, options, image_list):
+        super().ask_question(question, options, image_list)
+        qs = self.convert_question(question)
+        response_list = []
+        for image in image_list:
+            response = claude.ask_question(self.client, image, qs, self.init_prompt, self.temperature)
+            response_list.append(response)
+        return response_list
+    
+
+class GeminiAnswering(BaseAnsweringModel):
+    def __init__(self, model_args, mode, data_path):
+        super().__init__('gemini', model_args, mode, data_path, load_image=False)
+
+    def set_model_params(self):
+        args = super().set_model_params()
+        self.temperature = args.get("temperature")
+        # self.deployment_name = args.get("deployment_name")
+        self.model = gemini.load_model(self.init_prompt, self.temperature)
+        if self.mode == 'option_fwd':
+            raise ValueError(f'Cannot use forward for Claude!')
+
+    def ask_question(self, question, options, image_list):
+        super().ask_question(question, options, image_list)
+        qs = self.convert_question(question)
+        response_list = []
+        for image in image_list:
+            flag = True
+            counter = 0
+            while flag:
+                try:
+                    response = gemini.ask_question(self.model, image, qs)
+                    flag = False
+                except Exception as e:
+                    counter += 1
+                    print(counter, e)
+                time.sleep(60)
+            response_list.append(response)
+        return response_list
+
+
+class LLAVAMedAnswering(BaseAnsweringModel):
+    def __init__(self, model_args, mode, data_path):
+        super().__init__('llava_med', model_args, mode, data_path, load_image=True)
+
+    def set_model_params(self):
+        args = super().set_model_params()
+        
+        set_seed(0)
+        tokenizer, model, image_processor, context_len = \
+            llava.load_model(args.get("model_path"), args.get("model_base"))
+
+        self.model = model
+        self.tokenizer = tokenizer
+        self.image_processor = image_processor
+
+        self.top_p = args.get("top_p")
+        self.num_beams = args.get("num_beams")
+        self.conv_mode = args.get("conv_mode")
+        self.temperature = args.get("temperature")
+        self.use_im_start_end = args.get('use_im_start_end')
+
+    def convert_question(self, question):
+        tmp = super().convert_question(question)
+        tmp = '<image>\n' + tmp
+        qs = tmp.replace(llava.DEFAULT_IMAGE_TOKEN, '').strip()
+        if self.use_im_start_end:
+            qs = llava.DEFAULT_IM_START_TOKEN + llava.DEFAULT_IMAGE_TOKEN + llava.DEFAULT_IM_END_TOKEN + '\n' + qs
+        else:
+            qs = llava.DEFAULT_IMAGE_TOKEN + '\n' + qs
+        return qs
+
+    def ask_question(self, question, options, image_list):
+        question = super().ask_question(question, options, image_list)
+        response_list = []
+        input_ids = llava.get_input_id(self.tokenizer, question, self.conv_mode)
+        for image in image_list:
+            outputs = llava.ask_question(self.model, 
+                                         input_ids, 
+                                         image, 
+                                         self.image_processor, 
+                                         self.use_forward, 
+                                         self.tokenizer, 
+                                         temperature=self.temperature,
+                                         top_p=self.top_p, 
+                                         num_beams=self.num_beams)
+            response_list.append(outputs)
+
+        return response_list
+
+
+class RadFMAnswering(BaseAnsweringModel):
+    def __init__(self, model_args, mode, data_path):
+        super().__init__('radfm', model_args, mode, data_path, load_image=False)
+
+    def set_model_params(self):
+        args = super().set_model_params()
+        model, text_tokenizer, image_padding_tokens = radfm.load_model()
+        self.model = model
+        self.text_tokenizer = text_tokenizer
+        self.image_padding_tokens = image_padding_tokens
+
+    def ask_question(self, question, options, image_list):
+        question = super().ask_question(question, options, image_list)
+        response_list = []
+        for image_path in image_list:
+            outputs = radfm.ask_question(self.model, 
+                                         question, 
+                                         image_path, 
+                                         self.text_tokenizer, 
+                                         self.image_padding_tokens,
+                                         self.use_forward)
+            response_list.append(outputs)
+        return response_list
+
+class BLIP2Answering(BaseAnsweringModel):
+    def __init__(self, model_args, mode, data_path):
+        super().__init__('blip2', model_args, mode, data_path, load_image=False)
+
+    def set_model_params(self):
+        args = super().set_model_params()
+        model, processor = blip2.load_model()
+        self.model = model
+        self.processor = processor
+        self.num_beams = args.get('num_beams')
+        self.max_length = args.get('max_length')
+        self.top_p = args.get('top_p')
+        self.temperature = args.get('temperature')
+
+    def ask_question(self, question, options, image_list):
+        question = super().ask_question(question, options, image_list)
+        response_list = []
+        for image_path in image_list:
+            outputs = blip2.ask_question(self.model, 
+                                         question, 
+                                         image_path, 
+                                         self.processor,
+                                         self.num_beams,
+                                         self.max_length,
+                                         self.top_p,
+                                         self.temperature,
+                                         self.use_forward)
+            response_list.append(outputs)
+        return response_list
+    
+class InstructBLIPAnswering(BaseAnsweringModel):
+    def __init__(self, model_args, mode, data_path):
+        super().__init__('instructblip', model_args, mode, data_path, load_image=False)
+
+    def set_model_params(self):
+        args = super().set_model_params()
+        model, processor = instructblip.load_model()
+        self.model = model
+        self.processor = processor
+        self.num_beams = args.get('num_beams')
+        self.max_length = args.get('max_length')
+        self.top_p = args.get('top_p')
+        self.temperature = args.get('temperature')
+
+    def ask_question(self, question, options, image_list):
+        question = super().ask_question(question, options, image_list)
+        response_list = []
+        for image_path in image_list:
+            outputs = instructblip.ask_question(self.model, 
+                                                question, 
+                                                image_path, 
+                                                self.processor,
+                                                self.num_beams,
+                                                self.max_length,
+                                                self.top_p,
+                                                self.temperature,
+                                                self.use_forward)
+            response_list.append(outputs)
+        return response_list
+    
+
+class MedFlamingoAnswering(BaseAnsweringModel):
+    def __init__(self, model_args, mode, data_path):
+        super().__init__('med_flamingo', model_args, mode, data_path, load_image=False)
+
+    def set_model_params(self):
+        args = super().set_model_params()
+        model, processor = med_flamingo.load_model()
+        self.model = model
+        self.processor = processor
+        self.max_new_tokens = args.get('max_new_tokens')
+
+    def ask_question(self, question, options, image_list):
+        question = super().ask_question(question, options, image_list)
+        response_list = []
+        use_option = self.mode != 'no_option'
+        for image_path in image_list:
+            outputs = med_flamingo.ask_question(self.model, 
+                                                self.processor,
+                                                image_path, 
+                                                question, 
+                                                self.max_new_tokens,
+                                                self.use_forward,
+                                                use_option)
+            response_list.append(outputs)
+        return response_list
+
+ANSWERING_CLASS_DICT = {
+    'gpt': GPTAnswering,
+    'claude': ClaudeAnswering,
+    'gemini': GeminiAnswering,
+    'llava': LLAVAMedAnswering,
+    'radfm': RadFMAnswering,
+    'blip2': BLIP2Answering,
+    'instructblip': InstructBLIPAnswering,
+    'med_flamingo': MedFlamingoAnswering,
+}
+
+DEFAULT_MODEL_CONFIGS = {
+    'gpt': f'{ROOT}/configs/VLM/gpt/vanilla.json',
+    'claude': f'{ROOT}/configs/VLM/claude/vanilla.json',
+    'gemini': f'{ROOT}/configs/VLM/gemini/vanilla.json',
+    'llava': f'{ROOT}/configs/VLM/llava/vanilla.json',
+    'radfm': f'{ROOT}/configs/VLM/radfm/vanilla.json',
+    'blip2': f'{ROOT}/configs/VLM/blip2/vanilla.json',
+    'instructblip': f'{ROOT}/configs/VLM/instructblip/vanilla.json',
+    'med_flamingo': f'{ROOT}/configs/VLM/med_flamingo/vanilla.json',
+}

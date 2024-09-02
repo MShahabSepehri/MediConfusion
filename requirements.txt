@@ -1,0 +1,11 @@
+openai
+pyaml
+open_clip_torch
+torch==2.1.2
+transformers
+pandas
+oauth2client
+python-dotenv
+open_flamingo
+anthropic
+ipython
