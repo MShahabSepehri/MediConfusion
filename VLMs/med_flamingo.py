@@ -56,17 +56,18 @@ def process_prompt(prompt, use_option):
         prompt = prompt.replace(f'**Q{q+1}**', get_few_shot_sample(q, use_option))
     return prompt
 
-def ask_question(model, processor, image_path, question, max_new_tokens, use_forward, use_option):
+def ask_question(model, processor, image_path, question, max_new_tokens, mode):
     tmp = FEW_SHOT_IMAGES.copy()
     tmp.append(image_path)
     images = [Image.open(image_path) for image_path in tmp]
     pixels = processor.preprocess_images(images)
     pixels = repeat(pixels, 'N c h w -> b N T c h w', b=1, T=1)
-    question = process_prompt(question, use_option)
+    question = process_prompt(question, use_option=(mode=='mc'))
     tokenized_data = processor.encode_text(question)
-    if use_forward:
+    if mode == 'greedy':
         return do_forward(model, processor, pixels, tokenized_data)
-    return do_generation(model, processor, pixels, tokenized_data, max_new_tokens)
+    elif mode in ['mc', 'gpt4']:
+        return do_generation(model, processor, pixels, tokenized_data, max_new_tokens)
 
 
 @torch.no_grad()

@@ -62,12 +62,11 @@ def do_generation(model, input_ids, image_tensor, tokenizer, temperature, top_p,
     outputs = tokenizer.batch_decode(output_ids, skip_special_tokens=True)[0].strip()
     return outputs
 
-def ask_question(model, input_ids, image, image_processor, use_forward, tokenizer, temperature=0.2, top_p=None, num_beams=1):
+def ask_question(model, input_ids, image, image_processor, tokenizer, mode, temperature=0.2, top_p=None, num_beams=1):
     image_tensor = process_images([image], image_processor, model.config)[0]
 
-    if use_forward:
+    if mode == 'greedy':
         outputs = do_forward(model, input_ids, image_tensor, image.size, tokenizer)
-
-    else:
+    elif mode in ['mc', 'gpt4']:
         outputs = do_generation(model, input_ids, image_tensor, tokenizer, temperature, top_p, num_beams)
     return outputs

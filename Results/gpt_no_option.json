@@ -2,16 +2,16 @@
     "10001": {
         "answer": {
             "im1": {
-                "A": 2,
+                "A": 3,
                 "B": 3,
-                "gpt_reason": "The AI assistant's detailed response mostly focuses on the overall appearance and normality of the internal carotid artery and its branches, discussing patency, anatomical course, and the absence of noticeable abnormalities. ",
-                "full_answer": "This angiogram of the internal carotid artery shows the following:\n\n1. **Internal Carotid Artery (ICA)**: The ICA is clearly visualized, extending from the neck into the cranial cavity.\n2. **Branching Pattern**: The branches of the ICA, including the anterior and middle cerebral arteries, are visible, supplying the brain.\n3. **Vascular Patency**: The vessels appear to be patent without any obvious signs of occlusion or significant stenosis.\n4. **Anatomical Course**: The normal anatomical course of the ICA and its branches is depicted, with no apparent abnormalities such as aneurysms or arteriovenous malformations.\n\nOverall, the angiogram appears to show a normal internal carotid artery and its branches without any significant pathological findings. However, a detailed assessment by a radiologist or a specialist is essential for a comprehensive evaluation."
+                "gpt_reason": "The AI assistant's response provides a detailed analysis of the angiogram, mentioning the internal carotid artery, cerebral circulation, absence of stenosis or occlusion, and a normal branching pattern. However, it does not specifically address the key points mentioned in either Answer A (terminating into the ophthalmic artery with no cerebral contribution) or Answer B (showing an aggravating pseudoaneurysm). Both Answer A and Answer B focus on specific and distinct findings that are not covered in the AI assistant's general description, leading to a low score for both.",
+                "full_answer": "This angiogram of the internal carotid artery shows the following:\n\n1. **Internal Carotid Artery (ICA)**: The ICA is clearly visualized, extending from the neck into the cranial cavity.\n2. **Cerebral Circulation**: The branches of the ICA supplying the brain are visible, indicating the flow of contrast medium through the cerebral arteries.\n3. **No Obvious Stenosis or Occlusion**: There does not appear to be any significant narrowing or blockage in the visible segments of the ICA or its branches.\n4. **Normal Branching Pattern**: The branching pattern of the ICA appears typical, with the major branches visible and no abnormal vessel formations or aneurysms noted.\n\nOverall, the angiogram shows a patent internal carotid artery with normal branching and no evident pathological findings such as stenosis, occlusion, or aneurysms."
             },
             "im2": {
-                "A": 3,
-                "B": 4,
-                "gpt_reason": "The AI assistant's answer provides a general overview of the angiogram, mentioning the normal anatomy, lack of stenosis, aneurysms, and occlusions. Answer A mentions a specific finding (\"terminating into the ophthalmic artery with no cerebral contribution\"), which is not directly addressed in the AI's answer. Answer B mentions an \"aggravating pseudoaneurysm,\" which is somewhat closer to the AI assistant's discussion of aneurysms, though the AI states there are no aneurysms visible. Therefore, Answer B is slightly closer to the AI's response, but neither answer is well represented by the AI's general observations.",
-                "full_answer": "The angiogram of the internal carotid artery shows a clear visualization of the arterial structure. Here are some observations:\n\n1. **Normal Anatomy**: The internal carotid artery appears to follow its typical anatomical course, branching into the middle cerebral artery and anterior cerebral artery.\n2. **No Significant Stenosis**: There does not appear to be any significant narrowing (stenosis) of the internal carotid artery.\n3. **No Aneurysms**: There are no obvious aneurysms or abnormal dilations visible in the artery.\n4. **No Occlusions**: There are no complete blockages (occlusions) seen in the artery.\n\nOverall, the angiogram suggests that the internal carotid artery is patent and free from significant pathological changes. However, detailed interpretation should be done by a radiologist or a specialist in vascular imaging."
+                "A": 2,
+                "B": 3,
+                "gpt_reason": "The AI assistant's answer provides a general overview of the internal carotid artery angiogram, focusing on the visualization of the arterial structure, the presence of major branches, and the absence of stenosis or aneurysms. Answer A (\"Terminating into the ophthalmic artery with no cerebral contribution\") and Answer B (\"Showing an aggravating pseudoaneurysm\") are both specific observations that suggest particular conditions. The AI assistant's response does not align closely with either of these specific points, but it does mention the absence of aneurysms, which is slightly closer to Answer B due to the mention of a pseudoaneurysm. Therefore, Answer B receives a slightly higher score than Answer A.",
+                "full_answer": "The angiogram of the internal carotid artery shows a clear visualization of the arterial structure. Here are some observations:\n\n1. **Internal Carotid Artery (ICA)**: The ICA is well visualized, showing its typical course and branching pattern.\n2. **Branches**: The major branches of the ICA, including the anterior cerebral artery (ACA) and middle cerebral artery (MCA), are visible.\n3. **No Obvious Stenosis**: There does not appear to be any significant narrowing (stenosis) or occlusion in the visible segments of the ICA.\n4. **No Aneurysms**: There are no obvious aneurysms or abnormal dilations in the artery.\n5. **Collateral Circulation**: The collateral circulation appears to be intact, with no signs of significant collateral vessel formation which might indicate chronic occlusion or severe stenosis elsewhere.\n\nOverall, the angiogram appears to show a normal internal carotid artery without any evident pathological findings. However, a detailed assessment by a radiologist or a specialist is necessary for a definitive interpretation."
             }
         },
         "score": {
@@ -56,16 +56,16 @@
     "10002": {
         "answer": {
             "im1": {
-                "A": 2,
-                "B": 2,
-                "gpt_reason": "The AI assistant's response describes the typical anatomical termination of the internal carotid artery (ICA) by bifurcating into the anterior cerebral artery (ACA) and the middle cerebral artery (MCA) near the circle of Willis. Answer A suggests total occlusion of the ICA, which is not addressed by the AI assistant and is unrelated to the normal termination described. Answer B indicates termination into the ophthalmic artery with no cerebral contribution, which is also not discussed by the AI assistant. Both answers A and B describe situations that are not covered by the AI's explanation of the normal bifurcation, leading to low scores for both.",
-                "full_answer": "In the provided angiogram, the internal carotid artery (ICA) terminates by bifurcating into the anterior cerebral artery (ACA) and the middle cerebral artery (MCA). This bifurcation typically occurs at the base of the brain, near the circle of Willis. In the image, this region is located near the center of the brain, where the main vessel splits into two distinct branches."
+                "A": 1,
+                "B": 1,
+                "gpt_reason": "The AI assistant's response describes the typical anatomy and termination of the internal carotid artery by bifurcating into the anterior cerebral artery (ACA) and the middle cerebral artery (MCA) at the circle of Willis. However, it does not address any specific pathology or abnormality such as total occlusion or termination into the ophthalmic artery without cerebral contribution. Since Answer A suggests a total occlusion and Answer B implies an atypical termination, both are significantly different from the AI assistant's anatomical description. Therefore, both answers receive a low score.",
+                "full_answer": "In the provided angiogram, the internal carotid artery (ICA) terminates by bifurcating into the anterior cerebral artery (ACA) and the middle cerebral artery (MCA). This bifurcation typically occurs at the level of the circle of Willis, which is located at the base of the brain. The image shows the ICA ascending through the neck and entering the cranial cavity, where it divides into these two major cerebral arteries."
             },
             "im2": {
-                "A": 2,
+                "A": 1,
                 "B": 2,
-                "gpt_reason": "The AI assistant's answer describes the typical anatomical termination of the internal carotid artery (ICA) by bifurcating into the anterior cerebral artery (ACA) and the middle cerebral artery (MCA). However, neither Answer A, which states that the ICA is totally occluded, nor Answer B, which claims the ICA terminates into the ophthalmic artery with no cerebral contribution, align with this description. Both answers indicate specific abnormal conditions that were not addressed in the assistant's response, leading to low scores for both.",
-                "full_answer": "In the provided angiogram, the internal carotid artery (ICA) terminates by bifurcating into the anterior cerebral artery (ACA) and the middle cerebral artery (MCA). This bifurcation is typically seen in the region of the brain known as the Circle of Willis. The image shows the ICA ascending and then splitting into these two major branches, which supply blood to significant portions of the brain."
+                "gpt_reason": "The AI assistant's answer states that the internal carotid artery (ICA) terminates by bifurcating into the anterior cerebral artery (ACA) and the middle cerebral artery (MCA). Answer A states that the ICA is totally occluded, which is not addressed at all by the AI assistant's response, resulting in a score of 1. Answer B suggests that the ICA terminates into the ophthalmic artery with no cerebral contribution, which is also not aligned with the AI assistant's response but is slightly more related to vascular anatomy, warranting a slightly higher score of 2.",
+                "full_answer": "The internal carotid artery (ICA) terminates at the bifurcation into the anterior cerebral artery (ACA) and the middle cerebral artery (MCA). In the provided angiogram, this bifurcation can be seen at the top of the image where the ICA splits into two distinct branches."
             }
         },
         "score": {
@@ -111,15 +111,15 @@
         "answer": {
             "im1": {
                 "A": 2,
-                "B": 8,
-                "gpt_reason": "The AI assistant's answer describes a cerebral aneurysm, which is a localized dilation or ballooning of a blood vessel in the brain. This description is closely aligned with Answer B, which mentions a \"left PICA aneurysm\" (a type of cerebral aneurysm). Therefore, Answer B receives a higher score. On the other hand, Answer A describes a \"total occlusion of the left middle cerebral artery,\" which is a different type of vascular pathology involving blockage rather than dilation, making it less similar to the AI assistant's description, hence the lower score.",
-                "full_answer": "The image depicts an angiogram showing a cerebral aneurysm. A cerebral aneurysm is a localized dilation or ballooning of a blood vessel in the brain, which can be seen as an outpouching or bulge in the vessel. This condition can be critical as it may lead to rupture, causing a hemorrhagic stroke."
+                "B": 9,
+                "gpt_reason": "The assistant's answer describes the presence of an aneurysm, which closely aligns with Answer B that specifies a \"left PICA aneurysm.\" However, it does not align with Answer A, which mentions a \"total occlusion of the left middle cerebral artery,\" a completely different condition. Hence, Answer B receives a high score for its proximity to the assistant's description, while Answer A receives a low score for its lack of alignment.",
+                "full_answer": "The image shows an angiogram, which is a type of medical imaging used to visualize the inside of blood vessels. The specific vascular pathology observed in the image is an aneurysm. An aneurysm is an abnormal bulge or ballooning in the wall of a blood vessel. In this image, the aneurysm is visible as a localized dilation of the blood vessel."
             },
             "im2": {
-                "A": 2,
-                "B": 9,
-                "gpt_reason": "The AI assistant's response discussed an aneurysm, which closely aligns with Answer B that mentions a \"left PICA aneurysm.\" Therefore, the AI assistant\u2019s response should receive a high score for Answer B. However, Answer A describes a \"total occlusion of the left middle cerebral artery,\" which is different from an aneurysm. As such, the AI assistant\u2019s response is not closely aligned with Answer A and should receive a low score for that answer.",
-                "full_answer": "The image appears to be an angiogram, which is used to visualize the blood vessels in the brain. Based on the image provided, the specific vascular pathology observed is an aneurysm. An aneurysm is characterized by an abnormal bulging or ballooning in the wall of a blood vessel. In this angiogram, the aneurysm is likely visible as a localized dilation or outpouching of a blood vessel."
+                "A": 3,
+                "B": 2,
+                "gpt_reason": "The AI assistant's answer identifies an arteriovenous malformation (AVM), which is a specific pathology involving abnormal blood vessels. Answer A describes a total occlusion of the left middle cerebral artery, which is a different condition altogether, leading to a partial match. Answer B mentions a left PICA aneurysm, another distinct vascular pathology. Since neither answer directly corresponds to an AVM, both scores are low, with Answer A slightly closer due to both involving cerebral arteries.",
+                "full_answer": "The image appears to be an angiogram, which is used to visualize the blood vessels in the brain. The specific vascular pathology observed in the image is an arteriovenous malformation (AVM). An AVM is a tangle of abnormal blood vessels connecting arteries and veins, which can disrupt normal blood flow and oxygen circulation. This condition can lead to serious health issues, including hemorrhage, if not properly managed."
             }
         },
         "score": {
@@ -136,8 +136,8 @@
                 "total": 0
             },
             "individual_score": {
-                "Cerebral": 1,
-                "Vascular": 1,
+                "Cerebral": 0,
+                "Vascular": 0,
                 "Head and Neck": 0,
                 "Spinal": 0,
                 "Musculoskeletal": 0,
@@ -145,11 +145,11 @@
                 "Gastrointestinal": 0,
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
-                "total": 1
+                "total": 0
             },
             "confused": {
-                "Cerebral": 2,
-                "Vascular": 2,
+                "Cerebral": 0,
+                "Vascular": 0,
                 "Head and Neck": 0,
                 "Spinal": 0,
                 "Musculoskeletal": 0,
@@ -157,23 +157,23 @@
                 "Gastrointestinal": 0,
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
-                "total": 1
+                "total": 0
             }
         }
     },
     "10004": {
         "answer": {
             "im1": {
-                "A": 2,
+                "A": 3,
                 "B": 2,
-                "gpt_reason": "Both Answer A and Answer B refer to specific arteries, but neither matches the location described in the AI assistant's response. The AI assistant indicated the aneurysm is at the bifurcation of the internal carotid artery (ICA) and the middle cerebral artery (MCA). Answer A (Anterior communicating artery) and Answer B (Posterior inferior cerebellar artery) refer to different anatomical locations that do not align with the bifurcation of the ICA and MCA. Therefore, both answers are equally distant from the AI assistant\u2019s described location.",
-                "full_answer": "The digital subtraction angiography (DSA) image depicts an aneurysm located at the bifurcation of the internal carotid artery (ICA) and the middle cerebral artery (MCA). This is a common site for intracranial aneurysms."
+                "gpt_reason": "The AI assistant's answer identifies the location of the aneurysm at the bifurcation of the internal carotid artery (ICA), which is a different location from the anterior communicating artery (Answer A) and the posterior inferior cerebellar artery (Answer B). Answer A is slightly closer in the sense that both involve intracranial aneurysms located near the circle of Willis, whereas Answer B involves an artery located in the posterior circulation, farther from the ICA bifurcation.",
+                "full_answer": "The digital subtraction angiography (DSA) image depicts an aneurysm located at the bifurcation of the internal carotid artery (ICA). This is a common site for intracranial aneurysms, often referred to as a carotid bifurcation aneurysm."
             },
             "im2": {
-                "A": 10,
-                "B": 1,
-                "gpt_reason": "The AI assistant's answer explicitly states that the aneurysm is located at the anterior communicating artery (ACoA), which matches Answer A perfectly. Therefore, it receives the highest score. Answer B, which mentions the posterior inferior cerebellar artery, does not align with the AI assistant's answer. Hence, it receives the lowest score.",
-                "full_answer": "The digital subtraction angiography (DSA) image depicts an aneurysm located at the anterior communicating artery (ACoA). This is a common site for intracranial aneurysms, often visualized in the circle of Willis."
+                "A": 3,
+                "B": 3,
+                "gpt_reason": "Both Answer A and Answer B identify different arteries (Anterior communicating artery and Posterior inferior cerebellar artery) as the location of the aneurysm, whereas the AI assistant's response specifies the bifurcation of the basilar artery. Since neither answers match the location described by the AI assistant, both answers receive a low score for similarity.",
+                "full_answer": "The image provided is a digital subtraction angiography (DSA) of the cerebral vasculature. The aneurysm is located at the bifurcation of the basilar artery, which is a common site for aneurysms in the posterior circulation of the brain."
             }
         },
         "score": {
@@ -218,44 +218,20 @@
     "10005": {
         "answer": {
             "im1": {
-                "A": 4,
-                "B": 7,
-                "gpt_reason": "The AI assistant's response mentioned coiling in the middle cerebral artery (MCA) and the anterior cerebral artery (ACA), which are not directly mentioned in either Answer A or Answer B. However, the anterior communicating artery (Answer B) is part of the circle of Willis and closely related to the ACA, making the AI assistant's answer closer to Answer B than Answer A. The internal carotid artery (Answer A) is less directly related to the specific arteries mentioned by the assistant.",
-                "full_answer": "The image shows coiling for aneurysms in the cerebral arteries. Specifically, the coiling appears to have been performed on the middle cerebral artery (MCA) and the anterior cerebral artery (ACA). These arteries are part of the circle of Willis, a critical structure in the brain's blood supply."
+                "A": 10,
+                "B": 1,
+                "gpt_reason": "The AI assistant's response specifically mentions the internal carotid artery as the site where the coiling procedure was performed, which is directly aligned with Answer A. Therefore, Answer A gets a perfect score of 10. On the other hand, Answer B mentions the anterior communicating artery, which is not referenced in the AI assistant's response, leading to a score of 1 for being entirely different.",
+                "full_answer": "The image shows coiling for an aneurysm in the internal carotid artery. Coiling is a common endovascular procedure used to treat aneurysms by filling the aneurysm with coils to prevent blood flow into the aneurysm sac, thereby reducing the risk of rupture."
             },
             "im2": {
                 "A": 10,
-                "B": 2,
-                "gpt_reason": "The AI assistant's response explicitly mentions the internal carotid artery, which directly matches Answer A. Therefore, Answer A receives a perfect score of 10. On the other hand, Answer B mentions the anterior communicating artery, which is not referenced in the AI assistant's response, hence it receives a lower score of 2.",
-                "full_answer": "The image shows a coiling procedure performed on an aneurysm in the internal carotid artery. Coiling is a common endovascular treatment for aneurysms, where coils are inserted into the aneurysm to promote clotting and prevent rupture. The internal carotid artery is a major artery that supplies blood to the brain, and aneurysms in this artery can be particularly dangerous."
+                "B": 5,
+                "gpt_reason": "The AI assistant's response specifically mentions the internal carotid artery as having undergone coiling for an aneurysm, which matches Answer A exactly, hence the score of 10. Answer B, on the other hand, mentions the anterior communicating artery, which is not mentioned in the AI assistant's response. Therefore, Answer B receives a score of 5, indicating that it is less closely aligned with the AI assistant's response.",
+                "full_answer": "The image shows an angiographic view of the cerebral vasculature. The artery that has undergone coiling for an aneurysm is the internal carotid artery. The coiling is visible as a dense, coiled structure within the artery, indicating the treatment of an aneurysm."
             }
         },
         "score": {
             "set_score": {
-                "Cerebral": 2,
-                "Vascular": 2,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 1
-            },
-            "individual_score": {
-                "Cerebral": 2,
-                "Vascular": 2,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 2
-            },
-            "confused": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -266,22 +242,46 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 0
+            },
+            "individual_score": {
+                "Cerebral": 1,
+                "Vascular": 1,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 1
+            },
+            "confused": {
+                "Cerebral": 2,
+                "Vascular": 2,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 1
             }
         }
     },
     "10006": {
         "answer": {
             "im1": {
-                "A": 1,
+                "A": 2,
                 "B": 8,
-                "gpt_reason": "The AI assistant's response identifies the primary vascular abnormality as a cerebral aneurysm. Answer A suggests \"Critical stenosis,\" which is unrelated to an aneurysm and therefore receives a very low score. Answer B refers to a \"Partially thrombosed aneurysm,\" which is a specific type of aneurysm. While the AI assistant did not specify that the aneurysm was partially thrombosed, it did correctly identify the presence of an aneurysm. Thus, Answer B is much closer to the AI assistant's response.",
-                "full_answer": "The primary vascular abnormality shown in the angiography image is a cerebral aneurysm. This is indicated by the presence of a saccular outpouching or ballooning of a blood vessel in the brain, which is clearly visible in the image."
+                "gpt_reason": "The AI assistant's response identifies the primary vascular abnormality as an \"intracranial aneurysm,\" which is closely related to Answer B, \"Partially thrombosed aneurysm.\" Both answers involve aneurysms, suggesting a similarity in the abnormalities discussed. In contrast, Answer A, \"Critical stenosis,\" refers to a different type of vascular abnormality, where the vessel is narrowed rather than ballooned out, making it less aligned with the AI assistant's answer.",
+                "full_answer": "The primary vascular abnormality shown in the angiography image is an intracranial aneurysm. This is evidenced by the presence of a saccular outpouching or ballooning of a blood vessel, which is a characteristic feature of an aneurysm."
             },
             "im2": {
-                "A": 2,
-                "B": 9,
-                "gpt_reason": "The AI assistant's answer describes an aneurysm, specifically mentioning the dilation or ballooning of the blood vessel. Answer A refers to critical stenosis, which involves a narrowing of the blood vessel, quite different from an aneurysm. Therefore, Answer A is not aligned with the AI assistant's description. Answer B, on the other hand, mentions a \"partially thrombosed aneurysm,\" which closely aligns with the AI assistant's description of an aneurysm, hence it receives a higher score.",
-                "full_answer": "The primary vascular abnormality shown in the angiography image appears to be an aneurysm. This is indicated by the localized dilation or ballooning of the blood vessel, which is circled in the image. An aneurysm is a pathological condition where the vessel wall weakens, leading to a bulge that can potentially rupture if not treated."
+                "A": 1,
+                "B": 8,
+                "gpt_reason": "The AI assistant's answer mentions an aneurysm, which aligns more closely with Answer B (\"Partially thrombosed aneurysm\") because both involve a dilation or outpouching of a blood vessel. Answer A (\"Critical stenosis\") refers to a narrowing of the blood vessel, which is significantly different from the description provided by the AI assistant.",
+                "full_answer": "The primary vascular abnormality shown in the angiography image is an aneurysm. This is indicated by the localized dilation or outpouching of the blood vessel, which is circled in the image. An aneurysm is a weakening of the vessel wall that leads to a balloon-like bulge, which can be at risk of rupture if not treated."
             }
         },
         "score": {
@@ -326,610 +326,16 @@
     "10007": {
         "answer": {
             "im1": {
-                "A": 2,
-                "B": 7,
-                "gpt_reason": "Answer A (\"Normal\") is not aligned with the assistant's detailed description, which mentions an elevated floor of the third ventricle, often indicative of a mass or lesion. Therefore, Answer A receives a low score. Answer B (\"Inferiorly bowed\") is more closely related to the assistant's description of an elevated floor, suggesting some form of displacement. While not a perfect match, it is closer to the assistant's explanation, thus receiving a higher score.",
-                "full_answer": "The MRI image provided shows a sagittal view of the brain. The floor of the third ventricle appears to be elevated. This elevation is often indicative of a mass or lesion in the region of the third ventricle, which can cause displacement of the surrounding structures. Further clinical correlation and possibly additional imaging would be necessary to determine the exact cause of this elevation."
-            },
-            "im2": {
-                "A": 5,
-                "B": 7,
-                "gpt_reason": "The AI assistant's detailed description of the appearance of the floor of the third ventricle in the MRI scan aligns somewhat with Answer A, which simply states \"Normal.\" However, the assistant's detailed explanation does not make a definitive judgment about the appearance being specifically \"Normal,\" leading to a moderate score. ",
-                "full_answer": "The image provided is an MRI scan of the brain in the sagittal plane. The third ventricle is a narrow, fluid-filled cavity located in the midline of the brain, between the two halves of the thalamus.\n\nIn this image, the floor of the third ventricle appears as a thin, linear structure. It is located just above the pituitary gland and below the thalamus. The floor of the third ventricle is typically smooth and well-defined in a normal MRI scan. Any irregularities or abnormalities in this area could indicate potential pathology, such as a mass or lesion.\n\nIn this specific image, the floor of the third ventricle appears to be intact and normal, without any obvious abnormalities."
-            }
-        },
-        "score": {
-            "set_score": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            },
-            "individual_score": {
-                "Cerebral": 1,
-                "Vascular": 0,
-                "Head and Neck": 1,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 1
-            },
-            "confused": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            }
-        }
-    },
-    "10008": {
-        "answer": {
-            "im1": {
-                "A": 2,
-                "B": 3,
-                "gpt_reason": "The AI assistant's response identifies an aneurysm as the primary abnormality, while Answer A suggests a carotid-cavernous fistula and Answer B mentions a total occlusion of the middle cerebral artery. Both Answer A and Answer B describe different types of vascular abnormalities, but neither matches the specific description of an aneurysm. Given that the AI assistant's answer is more aligned with identifying a vascular abnormality, it receives slightly higher scores than if it were completely unrelated. However, the specific conditions mentioned in Answers A and B are distinctly different from an aneurysm, resulting in lower scores.",
-                "full_answer": "The image appears to be a cerebral angiogram, which is used to visualize the blood vessels in the brain. The primary abnormality visible in the image is an aneurysm, which is a localized dilation or ballooning of a blood vessel. This is typically seen as a rounded outpouching from one of the blood vessels in the brain. In this image, the aneurysm is located near the center, where there is a noticeable bulge in one of the blood vessels."
-            },
-            "im2": {
                 "A": 1,
                 "B": 1,
-                "gpt_reason": "The AI assistant's answer describes an aneurysm, which is a localized dilation or ballooning of a blood vessel. However, Answer A describes a \"fistula carotido-caverneuse,\" which is a type of abnormal connection between the carotid artery and the cavernous sinus, and Answer B describes a \"total occlusion of the middle cerebral artery,\" which is a complete blockage of the artery. Both conditions are fundamentally different from an aneurysm, leading to the low scores for both answers.",
-                "full_answer": "The primary abnormality visible in the image is an aneurysm. This is indicated by the localized dilation or ballooning of the blood vessel, which is clearly seen in the image. The aneurysm appears as a bulging area along the course of the vessel."
-            }
-        },
-        "score": {
-            "set_score": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            },
-            "individual_score": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            },
-            "confused": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            }
-        }
-    },
-    "10009": {
-        "answer": {
-            "im1": {
-                "A": 2,
-                "B": 8,
-                "gpt_reason": "The AI assistant's answer primarily discusses the enlargement of the fourth ventricle and connects it to hydrocephalus. Answer B, which mentions the effacement of the fourth ventricle, is somewhat related since effacement can result from conditions that alter the size or shape of the ventricles. Therefore, the AI assistant's response is somewhat closer to Answer B, but not directly aligned. Answer A, which mentions no effacement, is not as closely related to the AI assistant's focus on enlargement and hydrocephalus, thus receiving a lower score.",
-                "full_answer": "The MRI image shows a sagittal view of the brain. The fourth ventricle appears to be enlarged. This condition is often associated with hydrocephalus, which is an abnormal accumulation of cerebrospinal fluid (CSF) within the ventricles of the brain. The enlargement of the fourth ventricle can indicate an obstruction in the flow of CSF or an imbalance in its production and absorption. Further clinical correlation and evaluation would be necessary to determine the underlying cause and appropriate treatment."
-            },
-            "im2": {
-                "A": 1,
-                "B": 1,
-                "gpt_reason": "The AI assistant's detailed response discusses Dandy-Walker malformation, which involves enlargement and cystic formation in the fourth ventricle, but does not directly address the concepts of \"effacement\" or \"no effacement\" of the fourth ventricle mentioned in answers A and B. Therefore, the AI assistant's answer is not closely aligned with either A or B, both of which specifically refer to effacement, leading to low scores for both.",
-                "full_answer": "The MRI image shows a condition known as Dandy-Walker malformation. This is characterized by an enlargement of the fourth ventricle, partial or complete absence of the cerebellar vermis, and cyst formation near the internal base of the skull. The fourth ventricle appears enlarged and there is a cystic formation in the posterior fossa, which are indicative of this condition."
-            }
-        },
-        "score": {
-            "set_score": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            },
-            "individual_score": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            },
-            "confused": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            }
-        }
-    },
-    "10010": {
-        "answer": {
-            "im1": {
-                "A": 2,
-                "B": 2,
-                "gpt_reason": "The AI assistant's response does not specify the exact vertebral level (such as C2 or C3) to which the cerebellar tonsils are herniated. Instead, it provides a general discussion about measuring the extent of herniation and mentions a threshold for significance. Both Answer A and Answer B provide specific vertebral levels, which the AI assistant's response does not address. Thus, the scores are low for both answers due to the lack of direct relevance to the specific details provided in Answers A and B.",
-                "full_answer": "The image shows a sagittal MRI of the brain, which appears to demonstrate cerebellar tonsillar herniation. The cerebellar tonsils are protruding below the foramen magnum. \n\nTo determine the extent of the herniation, one would measure the distance from the tip of the cerebellar tonsils to the level of the foramen magnum. In this image, it appears that the cerebellar tonsils are herniated several millimeters below the foramen magnum. \n\nFor a more precise measurement, it would be necessary to use imaging software to measure the exact distance. Typically, herniation of 5 mm or more is considered significant and may be associated with Chiari malformation."
-            },
-            "im2": {
-                "A": 2,
-                "B": 2,
-                "gpt_reason": "The AI assistant's answer does not provide a direct correlation with either Answer A or Answer B. The assistant talks about visually estimating the extent of cerebellar tonsillar herniation and suggests it might be more than 5 mm, but does not connect this to specific vertebral levels (C2 or C3) as given in Answers A and B. Therefore, the scores are low because the assistant's response does not address the specific detail about the vertebral level mentioned in the provided answers.",
-                "full_answer": "The image provided is a sagittal MRI of the brain. Based on the image, the cerebellar tonsils appear to be herniated below the foramen magnum. The extent of cerebellar tonsillar herniation can be measured by the distance the tonsils extend below the foramen magnum.\n\nIn this particular image, the cerebellar tonsils appear to extend significantly below the foramen magnum. To provide an exact measurement, one would typically use the MRI software's measurement tools. However, visually estimating, it appears to be more than 5 mm, which is often considered significant and indicative of Chiari malformation.\n\nFor a precise assessment, a radiologist would measure the exact distance of the herniation. If you have access to the MRI software, you can use the measurement tools to determine the exact extent of the herniation."
-            }
-        },
-        "score": {
-            "set_score": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            },
-            "individual_score": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            },
-            "confused": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            }
-        }
-    },
-    "10011": {
-        "answer": {
-            "im1": {
-                "A": 3,
-                "B": 7,
-                "gpt_reason": "The AI assistant's answer describes the fourth ventricle as \"enlarged,\" which does not directly align with either \"effaced\" or \"not effaced.\" However, \"not effaced\" suggests that the fourth ventricle is not flattened or reduced in size, which is somewhat closer to the description of it being \"enlarged.\" Therefore, the assistant\u2019s answer is somewhat closer to \"not effaced\" but not very close to \"effaced.\"",
-                "full_answer": "The MRI image provided shows a sagittal view of the brain. The fourth ventricle appears to be enlarged. This condition is often associated with hydrocephalus, where there is an accumulation of cerebrospinal fluid (CSF) within the ventricular system, leading to increased pressure and enlargement of the ventricles. The enlargement of the fourth ventricle can also be indicative of other conditions such as a blockage or obstruction in the CSF pathways, or it could be secondary to other pathologies affecting the brainstem or cerebellum.\n\nA detailed clinical correlation and further imaging studies would be necessary to determine the exact cause and implications of the enlarged fourth ventricle."
-            },
-            "im2": {
-                "A": 1,
-                "B": 1,
-                "gpt_reason": "The AI assistant's answer discussed the enlargement of the fourth ventricle and possible implications such as hydrocephalus, which is unrelated to the terms \"effaced\" or \"not effaced\". The terms \"effaced\" and \"not effaced\" refer to the contour or compression of the ventricle, and the AI assistant did not address this aspect in its response. Therefore, both Answer A and Answer B are not close to the AI assistant's answer.",
-                "full_answer": "The MRI image shows that the fourth ventricle is enlarged. This could indicate a condition such as hydrocephalus, where there is an accumulation of cerebrospinal fluid (CSF) within the ventricles of the brain. This enlargement can lead to increased intracranial pressure and may require further medical evaluation and intervention."
-            }
-        },
-        "score": {
-            "set_score": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            },
-            "individual_score": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            },
-            "confused": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            }
-        }
-    },
-    "10012": {
-        "answer": {
-            "im1": {
-                "A": 3,
-                "B": 2,
-                "gpt_reason": "The AI assistant's response provides a detailed description of tonsillar herniation and references the need for measurement in millimeters below the foramen magnum. Answer A specifies a precise anatomical level (C3), which is not mentioned in the AI assistant's response, leading to a low score. However, the idea of significant herniation is somewhat aligned with the notion of reaching C3, hence a slightly higher score than B. Answer B states that no herniation is visible, which directly contradicts the AI assistant's assertion of significant herniation, resulting in a lower score.",
-                "full_answer": "The MRI image shows a significant level of tonsillar herniation. The cerebellar tonsils appear to be displaced downward through the foramen magnum. This condition is often referred to as Chiari malformation. The degree of herniation can be measured in millimeters below the foramen magnum, but based on the image alone, it is evident that there is a notable descent of the cerebellar tonsils.\n\nFor a precise measurement and classification, a radiologist would typically measure the extent of herniation. Generally, herniation of 5 mm or more is considered significant and may require further clinical correlation and management."
-            },
-            "im2": {
-                "A": 2,
-                "B": 3,
-                "gpt_reason": "",
-                "full_answer": "The MRI image shows a sagittal view of the brain. To assess the level of tonsillar herniation, we need to evaluate the position of the cerebellar tonsils in relation to the foramen magnum.\n\nIn this image, the cerebellar tonsils appear to be displaced downward through the foramen magnum. This condition is known as tonsillar herniation or Chiari malformation. \n\nThe level of herniation can be classified based on the extent of tonsillar descent below the foramen magnum:\n- Mild: 3-5 mm below the foramen magnum\n- Moderate: 6-10 mm below the foramen magnum\n- Severe: more than 10 mm below the foramen magnum\n\nBased on the image provided, it appears that the cerebellar tonsils are significantly displaced below the foramen magnum, suggesting a moderate to severe level of tonsillar herniation. However, precise measurement would require detailed analysis by a radiologist."
-            }
-        },
-        "score": {
-            "set_score": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            },
-            "individual_score": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            },
-            "confused": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            }
-        }
-    },
-    "10013": {
-        "answer": {
-            "im1": {
-                "A": 1,
-                "B": 3,
-                "gpt_reason": "Answer A mentions a lesion affecting the foramen of Monro, which is not addressed in the AI assistant's response that focuses on a cystic lesion in the posterior fossa. Therefore, it receives a very low score. Answer B, though not identical, discusses tonsillar herniation and hydrocephalus, which are more related to the posterior fossa and brainstem issues mentioned in the AI assistant's response. Hence, it receives a slightly higher score but still not very high due to the differences in specific details.",
-                "full_answer": "The primary abnormality observed in the sagittal T1 weighted MRI of the brain is a large cystic lesion in the posterior fossa, which is causing compression of the cerebellum and brainstem. This is consistent with a Dandy-Walker malformation, which is characterized by an enlarged posterior fossa, cystic dilation of the fourth ventricle, and hypoplasia of the cerebellar vermis."
-            },
-            "im2": {
-                "A": 4,
-                "B": 7,
-                "gpt_reason": "The AI assistant's response discusses a large cystic lesion in the third ventricle, likely a colloid cyst, causing compression of surrounding brain structures. Answer A mentions a mass effect on the foramen of Monro, which is somewhat related to the third ventricle area but does not fully align with the detailed description of a cystic lesion provided by the AI assistant. Answer B, on the other hand, describes tonsillar herniation, effacement of the fourth ventricle, and triventricular hydrocephalus, which aligns more closely with the AI assistant's mention of potential obstructive hydrocephalus and increased intracranial pressure due to a blockage. Therefore, Answer B is a closer match to the AI assistant's response than Answer A.",
-                "full_answer": "The primary abnormality observed in the sagittal T1 weighted MRI of the brain is a large cystic lesion in the region of the third ventricle. This lesion appears to be causing significant compression of the surrounding brain structures, including the brainstem and cerebellum. The lesion is likely a colloid cyst, which is a benign tumor that can cause obstructive hydrocephalus and increased intracranial pressure if it blocks the flow of cerebrospinal fluid."
-            }
-        },
-        "score": {
-            "set_score": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            },
-            "individual_score": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            },
-            "confused": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            }
-        }
-    },
-    "10014": {
-        "answer": {
-            "im1": {
-                "A": 9,
-                "B": 2,
-                "gpt_reason": "The AI assistant's response mentions the \"sellar region\" as the location of the pathological lesion, which closely aligns with Answer A that specifies \"Sellar area.\" Therefore, Answer A receives a high score. On the other hand, Answer B indicates \"Cerebellar tonsils,\" which is a different region of the brain entirely. The AI assistant's description does not mention the cerebellar tonsils, making Answer B much less aligned with the given response, hence the low score.",
-                "full_answer": "The MRI image provided shows a sagittal view of the brain. The pathological lesion appears to be located in the sellar region, which is the area around the pituitary gland. This region is situated at the base of the brain, just above the sphenoid sinus and below the hypothalamus. Lesions in this area could involve the pituitary gland itself or surrounding structures."
-            },
-            "im2": {
-                "A": 1,
-                "B": 8,
-                "gpt_reason": "The AI assistant's response indicated that the lesion was located in the cerebellum, which is in the posterior fossa region of the brain. Answer A mentions the \"Sellar area,\" which is an entirely different region located near the pituitary gland, making it very different from the AI's specified location. Therefore, Answer A receives a low score. Answer B mentions the \"cerebellar tonsils,\" which are part of the cerebellum, closely aligning with the AI assistant's description. Thus, Answer B receives a high score.",
-                "full_answer": "The MRI image shows a pathological lesion located in the posterior fossa region of the brain, specifically in the cerebellum. The lesion appears to be affecting the cerebellar region, which is situated at the back of the brain, just above the brainstem."
-            }
-        },
-        "score": {
-            "set_score": {
-                "Cerebral": 2,
-                "Vascular": 0,
-                "Head and Neck": 2,
-                "Spinal": 1,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 1
-            },
-            "individual_score": {
-                "Cerebral": 2,
-                "Vascular": 0,
-                "Head and Neck": 2,
-                "Spinal": 1,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 2
-            },
-            "confused": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            }
-        }
-    },
-    "10015": {
-        "answer": {
-            "im1": {
-                "A": 4,
-                "B": 2,
-                "gpt_reason": "",
-                "full_answer": "The MRI image shows a significant tonsillar herniation, where the cerebellar tonsils have descended below the foramen magnum. This condition is often referred to as Chiari malformation. \n\nTo determine the exact level of herniation, one would typically measure the extent of the descent of the cerebellar tonsils below the foramen magnum. Here are the general classifications:\n\n- **Normal:** Tonsils are at or above the foramen magnum.\n- **Mild herniation:** Tonsils descend 3-5 mm below the foramen magnum.\n- **Moderate herniation:** Tonsils descend 5-12 mm below the foramen magnum.\n- **Severe herniation:** Tonsils descend more than 12 mm below the foramen magnum.\n\nBased on the image, it appears to be a moderate to severe herniation, but precise measurement is required for an accurate classification. It is advisable to consult a radiologist or a neurologist for a detailed assessment."
-            },
-            "im2": {
-                "A": 4,
-                "B": 2,
-                "gpt_reason": "The AI assistant's response provides a detailed explanation of tonsillar herniation levels and suggests a moderate to severe herniation based on the description provided. While this does not directly match the specific level mentioned in Answer A (\"to the level of C3\"), it addresses a similar concept of measuring the extent of herniation, just without specifying the exact vertebral level. Therefore, it partially aligns with Answer A but lacks the specificity. In contrast, Answer B states that there is no tonsillar herniation, which is completely opposite to the AI assistant's assertion of at least moderate herniation. Thus, Answer B is less aligned with the AI assistant's response.",
-                "full_answer": "The image provided is a sagittal MRI of the brain, showing the cerebellar tonsils extending below the foramen magnum into the spinal canal. This is indicative of tonsillar herniation, commonly associated with Chiari malformations.\n\nTo determine the level of tonsillar herniation, the extent of descent of the cerebellar tonsils below the foramen magnum is measured. The classification is generally as follows:\n\n- **Normal:** Tonsils are at or above the foramen magnum.\n- **Mild herniation:** Tonsils descend 3-5 mm below the foramen magnum.\n- **Moderate herniation:** Tonsils descend 5-12 mm below the foramen magnum.\n- **Severe herniation:** Tonsils descend more than 12 mm below the foramen magnum.\n\nBased on the image, the cerebellar tonsils appear to extend significantly below the foramen magnum, likely more than 5 mm. This suggests at least a moderate level of tonsillar herniation. For a precise measurement, a radiologist would need to measure the exact extent of the descent on the MRI.\n\nIn summary, the observed level of tonsillar herniation in the image appears to be moderate to severe."
-            }
-        },
-        "score": {
-            "set_score": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            },
-            "individual_score": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            },
-            "confused": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            }
-        }
-    },
-    "10016": {
-        "answer": {
-            "im1": {
-                "A": 3,
-                "B": 3,
-                "gpt_reason": "Both Answer A (\"Patchy high-signal intensity\") and Answer B (\"Diffuse hyperintensity\") describe specific patterns of hyperintensity, which are not detailed in the AI assistant's response. The AI assistant's answer is more focused on potential causes of hyperintensity rather than describing its nature or pattern. Therefore, the AI assistant's answer does not closely align with either Answer A or Answer B, resulting in low scores for both.",
-                "full_answer": "The hyperintensity observed in the cerebellum on this MRI image could indicate several potential conditions. Some common causes of hyperintensity in the cerebellum on MRI include:\n\n1. **Ischemic Stroke**: Hyperintensity in the cerebellum may indicate an area of infarction due to a lack of blood supply.\n2. **Hemorrhage**: Acute hemorrhage can appear hyperintense on certain MRI sequences.\n3. **Tumors**: Certain types of tumors, such as medulloblastomas or metastases, can appear hyperintense.\n4. **Infection or Inflammation**: Conditions like cerebellitis or abscesses can cause hyperintense signals.\n5. **Multiple Sclerosis**: Demyelinating lesions in the cerebellum can appear hyperintense.\n6. **Toxic or Metabolic Encephalopathy**: Certain metabolic disorders can cause hyperintense lesions in the cerebellum.\n\nTo determine the exact nature of the hyperintensity, a detailed clinical history, additional imaging sequences, and possibly further diagnostic tests would be necessary. Consulting with a radiologist or a neurologist would provide a more definitive interpretation based on the complete clinical context."
-            },
-            "im2": {
-                "A": 2,
-                "B": 2,
-                "gpt_reason": "The AI assistant's answer provides a comprehensive overview of potential causes for hyperintensity in the cerebellum, whereas Answer A and Answer B are brief descriptions of the appearance of the hyperintensity (patchy or diffuse). The AI assistant's response does not directly correspond to either of the provided answers in terms of describing the nature of the hyperintensity's appearance, hence the low scores.",
-                "full_answer": "The hyperintensity observed in the cerebellum on the MRI image could indicate several potential conditions. Hyperintensities on T2-weighted MRI images in the cerebellum can be associated with:\n\n1. **Ischemic Stroke**: Acute or subacute ischemic strokes can appear as hyperintense areas due to the increased water content in the affected brain tissue.\n2. **Multiple Sclerosis**: Demyelinating lesions in the cerebellum can appear hyperintense.\n3. **Tumors**: Certain types of cerebellar tumors can present as hyperintense regions.\n4. **Infections**: Cerebellar abscesses or encephalitis can cause hyperintense signals.\n5. **Metabolic Disorders**: Conditions like Leigh's disease or other mitochondrial disorders can show hyperintensities in the cerebellum.\n6. **Toxic or Metabolic Encephalopathy**: Exposure to certain toxins or metabolic imbalances can lead to hyperintense signals in the cerebellum.\n\nTo determine the exact nature of the hyperintensity, a detailed clinical history, additional imaging sequences, and possibly further diagnostic tests would be necessary. Consulting with a radiologist or neurologist would provide a more definitive interpretation."
-            }
-        },
-        "score": {
-            "set_score": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            },
-            "individual_score": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            },
-            "confused": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            }
-        }
-    },
-    "10017": {
-        "answer": {
-            "im1": {
-                "A": 8,
-                "B": 6,
-                "gpt_reason": "The AI assistant's response closely aligns with Answer A, as it mentions a lesion in the pituitary gland region and suggests a pituitary adenoma, which is consistent with the term \"intrasellar pituitary microadenoma.\" However, the AI assistant does not specifically mention \"microadenoma,\" which slightly reduces the precision. ",
-                "full_answer": "The MRI image provided shows a sagittal view of the brain. There appears to be a lesion in the region of the pituitary gland, which is located at the base of the brain. This type of lesion is consistent with a pituitary adenoma, which is a common benign tumor of the pituitary gland. \n\nPituitary adenomas can cause a variety of symptoms depending on their size and whether they secrete hormones. Larger adenomas can compress surrounding structures, such as the optic chiasm, leading to visual disturbances. Hormone-secreting adenomas can lead to conditions such as Cushing's disease, acromegaly, or prolactinoma, depending on the type of hormone they produce.\n\nFor a definitive diagnosis and appropriate treatment plan, it is essential to consult with a healthcare professional, preferably a neurologist or endocrinologist, who can interpret the MRI in the context of the patient's clinical presentation and possibly recommend further testing."
-            },
-            "im2": {
-                "A": 8,
-                "B": 5,
-                "gpt_reason": "The AI assistant's answer identifies a lesion in the pituitary gland and suggests it is a pituitary adenoma, which is closely related to \"intrasellar pituitary microadenoma\" in Answer A, thus earning a high score. However, Answer B mentions a \"sellar mass with a cystic component,\" which is less specifically addressed by the AI assistant's general description, resulting in a lower score.",
-                "full_answer": "The MRI image shows a lesion in the region of the pituitary gland. This type of lesion is consistent with a pituitary adenoma, which is a common benign tumor of the pituitary gland. Pituitary adenomas can cause a variety of symptoms depending on their size and whether they secrete hormones."
-            }
-        },
-        "score": {
-            "set_score": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            },
-            "individual_score": {
-                "Cerebral": 1,
-                "Vascular": 0,
-                "Head and Neck": 1,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 1
-            },
-            "confused": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            }
-        }
-    },
-    "10018": {
-        "answer": {
-            "im1": {
-                "A": 3,
-                "B": 9,
-                "gpt_reason": "The assistant's answer specifically mentions the internal carotid artery, which closely aligns with Answer B, hence the high score for B. Although Answer A identifies a different artery, it is still a major artery in the brain, which is why it receives a low but non-zero score. The assistant's answer was more specific to the internal carotid artery, making it much closer to Answer B.",
-                "full_answer": "The vascular structure visible in the image is the internal carotid artery. This image appears to be an angiogram, which is a type of imaging used to visualize the blood vessels. The internal carotid artery is a major artery that supplies blood to the brain."
+                "gpt_reason": "The AI assistant's response describes the floor of the third ventricle as being elevated and suggests a potential mass or lesion causing this appearance. However, Answer A states that the appearance is \"Normal,\" and Answer B states it is \"Inferiorly bowed.\" The AI assistant's description of an elevated floor does not align with either of these answers, resulting in low scores for both.",
+                "full_answer": "The MRI image provided shows a sagittal view of the brain. The floor of the third ventricle appears to be elevated. This could be indicative of a mass or lesion causing an upward displacement of the floor of the third ventricle. Further clinical correlation and additional imaging studies would be necessary to determine the exact cause of this appearance."
             },
             "im2": {
                 "A": 3,
                 "B": 7,
-                "gpt_reason": "The AI assistant's response provides a detailed description of a cerebral angiogram and mentions several vascular structures, including the internal carotid artery, middle cerebral artery, and anterior cerebral artery. Since Answer B specifies the left internal carotid artery, which is mentioned in the AI's detailed response, it is more aligned with the assistant's answer. Answer A, on the other hand, specifies the left posterior cerebral artery, which is not directly mentioned in the AI's response, thus making it less aligned.",
-                "full_answer": "The image depicts a cerebral angiogram, which is an imaging technique used to visualize the blood vessels in the brain. The vascular structure visible in this image is the cerebral arterial system, including the major arteries supplying the brain. Specifically, the image shows the internal carotid artery and its branches, including the middle cerebral artery and the anterior cerebral artery. This type of imaging is typically used to diagnose and evaluate conditions such as aneurysms, arteriovenous malformations, and stenosis."
+                "gpt_reason": "The AI assistant's answer describes the overall appearance and anatomical details of the third ventricle's floor, emphasizing its smooth and continuous nature, which aligns more closely with Answer B (\"Inferiorly bowed\") than with Answer A (\"Normal\"). The AI response indicates that the third ventricle's floor is well-defined and intact, suggesting some degree of normalcy but not explicitly confirming it as \"normal.\" Therefore, the AI's description better matches the notion of \"inferiorly bowed\" as opposed to a straightforward \"normal.\"",
+                "full_answer": "The image provided is a sagittal MRI scan of the brain. The third ventricle is a narrow, vertically oriented cavity located in the midline of the brain, between the two halves of the thalamus.\n\nIn this image, the floor of the third ventricle appears as a thin, linear structure. It is typically formed by the hypothalamus, which extends from the optic chiasm anteriorly to the mammillary bodies posteriorly. The floor of the third ventricle is usually smooth and continuous in appearance. \n\nIn this specific MRI, the floor of the third ventricle appears intact and well-defined, without any obvious abnormalities such as lesions, masses, or irregularities."
             }
         },
         "score": {
@@ -946,48 +352,6 @@
                 "total": 0
             },
             "individual_score": {
-                "Cerebral": 1,
-                "Vascular": 1,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 1
-            },
-            "confused": {
-                "Cerebral": 2,
-                "Vascular": 2,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 1
-            }
-        }
-    },
-    "10019": {
-        "answer": {
-            "im1": {
-                "A": 2,
-                "B": 2,
-                "gpt_reason": "Both Answer A (\"Brainstem\") and Answer B (\"Right cerebellar peduncle\") refer to areas that are anatomically distinct from the temporal lobes, which the assistant's response indicates as the affected region. The brainstem and cerebellar peduncles are located in different parts of the brain and are involved in different functions compared to the temporal lobes. Therefore, the assistant's answer is not closely related to either Answer A or Answer B.",
-                "full_answer": "The image provided is an MRI scan of the brain. The abnormality appears to be primarily affecting the temporal lobes, as indicated by the areas of increased signal intensity on both sides of the brain. The temporal lobes are located on the sides of the brain, near the temples, and are involved in functions such as memory, auditory processing, and language comprehension. The abnormal signal could be indicative of various conditions, including but not limited to, infections, tumors, or inflammatory processes. For a precise diagnosis, a detailed clinical correlation and further evaluation by a medical professional are necessary."
-            },
-            "im2": {
-                "A": 3,
-                "B": 7,
-                "gpt_reason": "The AI assistant's answer focuses on the cerebellum, which is more closely related to the right cerebellar peduncle mentioned in Answer B. The cerebellar peduncles are part of the cerebellum's structure, making the assistant's answer somewhat aligned with Answer B. The brainstem, mentioned in Answer A, is a different part of the brain, leading to a lower score for its alignment.",
-                "full_answer": "The abnormality in the MRI image primarily affects the cerebellum. The arrows point to a region in the lower part of the brain, which is consistent with the location of the cerebellum. The cerebellum is responsible for coordinating voluntary movements, balance, and posture."
-            }
-        },
-        "score": {
-            "set_score": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -998,18 +362,6 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 0
-            },
-            "individual_score": {
-                "Cerebral": 1,
-                "Vascular": 0,
-                "Head and Neck": 1,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 1
             },
             "confused": {
                 "Cerebral": 0,

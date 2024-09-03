@@ -14,17 +14,18 @@ def load_model():
     model.to(get_device())
     return model, processor
 
-def ask_question(model, question, image_path, processor, num_beams, max_length, top_p, temperature, use_forward):
-    if use_forward:
+def ask_question(model, question, image_path, processor, num_beams, max_length, top_p, temperature, mode):
+    if mode == 'greedy':
         return do_forward(model, processor, image_path, question)
-    return do_generation(model, 
-                         processor, 
-                         image_path, 
-                         question,
-                         num_beams=num_beams,
-                         top_p=top_p,
-                         temperature=temperature,
-                         max_new_tokens=max_length)
+    elif mode in ['mc', 'gpt4']:
+        return do_generation(model, 
+                            processor, 
+                            image_path, 
+                            question,
+                            num_beams=num_beams,
+                            top_p=top_p,
+                            temperature=temperature,
+                            max_new_tokens=max_length)
 
 @torch.no_grad()
 def do_generation(model, 

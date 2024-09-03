@@ -1,0 +1,38 @@
+{
+    "set_score": {
+        "Cerebral": 14,
+        "Vascular": 25,
+        "Head and Neck": 7,
+        "Spinal": 13,
+        "Musculoskeletal": 4,
+        "Cardiac": 10,
+        "Gastrointestinal": 7,
+        "Pulmonary": 5,
+        "Nuclear Medicine": 2,
+        "total": 34
+    },
+    "individual_score": {
+        "Cerebral": 48,
+        "Vascular": 49,
+        "Head and Neck": 40,
+        "Spinal": 30,
+        "Musculoskeletal": 20,
+        "Cardiac": 27,
+        "Gastrointestinal": 24,
+        "Pulmonary": 13,
+        "Nuclear Medicine": 6,
+        "total": 198
+    },
+    "confused": {
+        "Cerebral": 65,
+        "Vascular": 48,
+        "Head and Neck": 58,
+        "Spinal": 34,
+        "Musculoskeletal": 34,
+        "Cardiac": 34,
+        "Gastrointestinal": 34,
+        "Pulmonary": 15,
+        "Nuclear Medicine": 8,
+        "total": 130
+    }
+}

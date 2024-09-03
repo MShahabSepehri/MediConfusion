@@ -74,7 +74,7 @@ def load_model():
     model.eval()
     return model, text_tokenizer, image_padding_tokens
     
-def ask_question(model, question, image_path, text_tokenizer, image_padding_tokens, use_forward):
+def ask_question(model, question, image_path, text_tokenizer, image_padding_tokens, mode):
     image =[
             {
                 'img_path': image_path,
@@ -86,10 +86,10 @@ def ask_question(model, question, image_path, text_tokenizer, image_padding_toke
     with torch.no_grad():
         lang_x = text_tokenizer(text, max_length=2048, truncation=True, return_tensors="pt")['input_ids'].to('cuda')
         vision_x = vision_x.to('cuda')
-        if use_forward:
-            return do_forward(model, text_tokenizer, lang_x, vision_x)
-        else:
-            return do_generation(model, text_tokenizer, lang_x, vision_x)
+    if mode == 'greedy':
+        return do_forward(model, text_tokenizer, lang_x, vision_x)
+    elif mode in ['mc', 'gpt4']:
+        return do_generation(model, text_tokenizer, lang_x, vision_x)
 
 @torch.no_grad()
 def do_generation(model, text_tokenizer, lang_x, vision_x):

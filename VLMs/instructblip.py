@@ -8,20 +8,21 @@ def load_model():
     return model, processor
 
 
-def ask_question(model, question, image_path, processor, num_beams, max_length, top_p, temperature, use_forward):
+def ask_question(model, question, image_path, processor, num_beams, max_length, top_p, temperature, mode):
     image = Image.open(image_path).convert("RGB")
     inputs = processor(images=image, text=question, return_tensors="pt").to(device="cuda", dtype=torch.float16)
-    if use_forward:
+    if mode == 'greedy':
         return do_forward(model, processor, inputs)
-    return do_generation(model, 
-                         processor, 
-                         inputs,
-                         num_beams=num_beams,
-                         top_p=top_p,
-                         repetition_penalty=1.5,
-                         length_penalty=1,
-                         temperature=temperature,
-                         max_new_tokens=max_length)
+    elif mode in ['mc', 'gpt4']:
+        return do_generation(model, 
+                             processor, 
+                             inputs,
+                             num_beams=num_beams,
+                             top_p=top_p,
+                             repetition_penalty=1.5,
+                             length_penalty=1,
+                             temperature=temperature,
+                             max_new_tokens=max_length)
 
 @torch.no_grad()
 def do_generation(model, 

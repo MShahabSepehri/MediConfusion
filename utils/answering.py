@@ -32,23 +32,21 @@ class BaseAnsweringModel():
         self.conversion = io_tools.load_json(PROMPTS_LOC).get('conversion')
         self.mode = mode
         self.data_path = data_path
+        self.prompt_key = 'with_image'
         self.set_model_params()
 
     def set_model_params(self):
         args = io_tools.load_json(self.model_args_path)
         self.set_init_prompt(args.get('init_prompt_id'))
         self.tr = args.get('tr')
-        if self.mode == 'no_option':
+        if self.mode == 'greedy':
             self.clean_up = self.clean_up_no_option
         else:
             self.clean_up = self.clean_up_with_option
-        self.use_forward = (self.mode == 'option_fwd')
         return args
 
     def ask_question(self, question, options, image_list):
-        tmp = self.convert_question(question, options)
-        # raise ValueError(tmp)
-        return tmp
+        return self.convert_question(question, options)
 
     def set_init_prompt(self, init_prompt_id):
         self.init_prompt = None
@@ -86,6 +84,8 @@ class BaseAnsweringModel():
         options = [sample.get('option_A'), sample.get('option_B')]
         im1_ans = sample.get('im_1_correct')
         im2_ans = sample.get('im_2_correct')
+        cap1 = sample.get('cap_1')
+        cap2 = sample.get('cap_2')
         responses = self.ask_question(question, options, image_list)
         ans_dict = {'im1': self.clean_up(question, options, responses[0]), 
                     'im2': self.clean_up(question, options, responses[1])}
@@ -103,9 +103,9 @@ class BaseAnsweringModel():
     def get_clean_up_prompt(self, question, options, response):
         role = self.conversion.get('role')
         return (f'[Question]\n{question}\n\n'
-                f'[{role}]\n{response}\n\n[End of {role} 1]\n\n'
-                f'[Answer A]\nA: {options[0]}\n\n[End of {role} 2]\n\n'
-                f'[Answer B]\nB: {options[1]}\n\n[End of {role} 2]\n\n'
+                f'[Answer A]\n{options[0]}\n\n'
+                f'[Answer B]\n{options[1]}\n\n'
+                f'[{role}]\n{response}\n\n[End of {role}]\n\n'
                 f'[System]\n{self.conversion.get("instruct_prompt")}\n\n')
 
     def get_score(self, ans_dict, im1_ans, im2_ans):
@@ -125,6 +125,7 @@ class BaseAnsweringModel():
     def clean_up_no_option(self, question, options, answer):
         client = gpt.get_client()
         prompt = self.get_clean_up_prompt(question, options, answer)
+        raise ValueError(prompt)
         response = gpt.get_response(client=client,
                                     deployment_name=self.conversion.get('gpt_deployment_name'),
                                     init_prompt=self.conversion.get('init_prompt'),
@@ -146,19 +147,24 @@ class BaseAnsweringModel():
         return {'A': a_score, 'B': b_score, 'full_answer': answer}
     
     def convert_question(self, question, options):
-        prompt_dict = PROMPTS.get('with_image').get(self.mode)
+        prompt_dict = PROMPTS.get(self.prompt_key).get(self.mode)
         if self.key in prompt_dict.keys():
             key = self.key
         else:
             key = 'default'
+        
         tmp = prompt_dict.get(key)
-        if self.mode == 'no_option':
-            tmp = tmp.format(question)
-        elif self.mode == 'option_fwd':
-            tmp = tmp.format(question, options[0], options[1])
-        elif self.mode == 'option_gen':
-            tmp = tmp.format(question, options[0], options[1])
-        return tmp
+        if self.mode == 'gpt4':
+            output = tmp.format(question)
+        elif self.mode == 'greedy':
+            output = tmp.format(question, options[0], options[1])
+        elif self.mode == 'mc':
+            output = tmp.format(question, options[0], options[1])
+        elif self.mode == 'prefix':
+            op_a = tmp.format(question, options[0])
+            op_b = tmp.format(question, options[1])
+            output = (op_a, op_b)
+        return output
     
     @staticmethod
     def update_score_table(score, sample_score):
@@ -195,7 +201,7 @@ class BaseAnsweringModel():
     @staticmethod
     def print_score(score, precision=2):
         print('\n')
-        # print_format = "{:<17} {:<10} {:<10} {:<10} {:<12} {:<12} {:<10}"
+        # print_format = "{:<17} {:<10} {:<10} {:<10} {:<12} {:<17} {:<10}"
         print_format = "{:<17} {:<10} {:<10} {:<12} {:<12}"
         print(print_format.format('Category', 
                                   'Total', 
@@ -255,7 +261,7 @@ class GPTAnswering(BaseAnsweringModel):
         self.temperature = args.get("temperature")
         self.deployment_name = args.get("deployment_name")
         self.client = gpt.get_client()
-        if self.mode == 'option_fwd':
+        if self.mode in ['greedy', 'prefix']:
             raise ValueError(f'Cannot use forward for GPT!')
 
     def ask_question(self, question, options, image_list):
@@ -275,12 +281,11 @@ class ClaudeAnswering(BaseAnsweringModel):
         self.temperature = args.get("temperature")
         # self.deployment_name = args.get("deployment_name")
         self.client = claude.get_client()
-        if self.mode == 'option_fwd':
+        if self.mode in ['greedy', 'prefix']:
             raise ValueError(f'Cannot use forward for Claude!')
 
     def ask_question(self, question, options, image_list):
-        super().ask_question(question, options, image_list)
-        qs = self.convert_question(question)
+        qs = super().ask_question(question, options, image_list)
         response_list = []
         for image in image_list:
             response = claude.ask_question(self.client, image, qs, self.init_prompt, self.temperature)
@@ -297,12 +302,11 @@ class GeminiAnswering(BaseAnsweringModel):
         self.temperature = args.get("temperature")
         # self.deployment_name = args.get("deployment_name")
         self.model = gemini.load_model(self.init_prompt, self.temperature)
-        if self.mode == 'option_fwd':
+        if self.mode in ['greedy', 'prefix']:
             raise ValueError(f'Cannot use forward for Claude!')
 
     def ask_question(self, question, options, image_list):
-        super().ask_question(question, options, image_list)
-        qs = self.convert_question(question)
+        qs = super().ask_question(question, options, image_list)
         response_list = []
         for image in image_list:
             flag = True
@@ -314,7 +318,7 @@ class GeminiAnswering(BaseAnsweringModel):
                 except Exception as e:
                     counter += 1
                     print(counter, e)
-                time.sleep(60)
+                time.sleep(10)
             response_list.append(response)
         return response_list
 
@@ -342,12 +346,13 @@ class LLAVAMedAnswering(BaseAnsweringModel):
 
     def convert_question(self, question):
         tmp = super().convert_question(question)
-        tmp = '<image>\n' + tmp
-        qs = tmp.replace(llava.DEFAULT_IMAGE_TOKEN, '').strip()
-        if self.use_im_start_end:
-            qs = llava.DEFAULT_IM_START_TOKEN + llava.DEFAULT_IMAGE_TOKEN + llava.DEFAULT_IM_END_TOKEN + '\n' + qs
-        else:
-            qs = llava.DEFAULT_IMAGE_TOKEN + '\n' + qs
+        if self.prompt_key == 'with_image':
+            tmp = '<image>\n' + tmp
+            qs = tmp.replace(llava.DEFAULT_IMAGE_TOKEN, '').strip()
+            if self.use_im_start_end:
+                qs = llava.DEFAULT_IM_START_TOKEN + llava.DEFAULT_IMAGE_TOKEN + llava.DEFAULT_IM_END_TOKEN + '\n' + qs
+            else:
+                qs = llava.DEFAULT_IMAGE_TOKEN + '\n' + qs
         return qs
 
     def ask_question(self, question, options, image_list):
@@ -359,8 +364,8 @@ class LLAVAMedAnswering(BaseAnsweringModel):
                                          input_ids, 
                                          image, 
                                          self.image_processor, 
-                                         self.use_forward, 
                                          self.tokenizer, 
+                                         self.mode,
                                          temperature=self.temperature,
                                          top_p=self.top_p, 
                                          num_beams=self.num_beams)
@@ -389,7 +394,7 @@ class RadFMAnswering(BaseAnsweringModel):
                                          image_path, 
                                          self.text_tokenizer, 
                                          self.image_padding_tokens,
-                                         self.use_forward)
+                                         self.mode)
             response_list.append(outputs)
         return response_list
 
@@ -419,7 +424,7 @@ class BLIP2Answering(BaseAnsweringModel):
                                          self.max_length,
                                          self.top_p,
                                          self.temperature,
-                                         self.use_forward)
+                                         self.mode)
             response_list.append(outputs)
         return response_list
     
@@ -449,7 +454,7 @@ class InstructBLIPAnswering(BaseAnsweringModel):
                                                 self.max_length,
                                                 self.top_p,
                                                 self.temperature,
-                                                self.use_forward)
+                                                self.mode)
             response_list.append(outputs)
         return response_list
     
@@ -468,15 +473,13 @@ class MedFlamingoAnswering(BaseAnsweringModel):
     def ask_question(self, question, options, image_list):
         question = super().ask_question(question, options, image_list)
         response_list = []
-        use_option = self.mode != 'no_option'
         for image_path in image_list:
             outputs = med_flamingo.ask_question(self.model, 
                                                 self.processor,
                                                 image_path, 
                                                 question, 
                                                 self.max_new_tokens,
-                                                self.use_forward,
-                                                use_option)
+                                                self.mode)
             response_list.append(outputs)
         return response_list
 
