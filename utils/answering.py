@@ -5,12 +5,6 @@ from tqdm import tqdm
 from PIL import Image
 from utils import io_tools
 from transformers import set_seed, logging
-from VLMs import gpt, llava, blip2, instructblip, med_flamingo, claude, gemini, llava_med
-
-# try:
-#     from VLMs import llava_med
-# except:
-#     from VLMs import radfm
 
 
 os.environ["TOKENIZERS_PARALLELISM"] = "true"
@@ -47,8 +41,10 @@ class BaseAnsweringModel():
             self.temperature = 0
             self.top_p = None
             self.max_new_tokens = 1
-        if self.mode == 'greedy':
+        if self.mode == 'gpt':
             self.clean_up = self.clean_up_no_option
+            global gpt
+            from VLMs import gpt
         else:
             self.clean_up = self.clean_up_with_option
         return args
@@ -66,9 +62,10 @@ class BaseAnsweringModel():
         else:
             self.init_prompt = PROMPTS.get('init_prompts').get('default')
 
-    def evaluate(self, resume_path, save_path):
+    def evaluate(self, resume_path, save_dir):
         results = io_tools.load_resume_dict(resume_path)
         score = self.create_score_table([], [], 0, 0, 0, 0, 0)
+        save_path = self.check_folder(save_dir)
         for id in tqdm(DATA.keys()):
             if id in results.keys():
                 continue
@@ -78,10 +75,11 @@ class BaseAnsweringModel():
             self.update_score_table(score, sample_score)
             results[id] = {'answer': ans_dict, 'score': sample_score}
             if save_path is not None:
-                io_tools.save_json(results, save_path)
+                io_tools.save_json(results, f'{save_path}/{self.key}_{self.mode}.json')
         self.print_score(score)
         if save_path is not None:
-            io_tools.save_json(score, save_path.replace('.json', '_scores.json'))
+            tmp = save_path.replace('.json', f'{save_path}/{self.key}_{self.mode}_score.json')
+            io_tools.save_json(score, )
         return results, score
     
     def sample_eval(self, sample):
@@ -173,6 +171,14 @@ class BaseAnsweringModel():
             op_b = tmp.format(question, options[1])
             output = (op_a, op_b)
         return output
+    
+    def check_folder(self, save_dir):
+        if save_dir is None:
+            return None
+        save_path = f'{save_dir}/{self.key}'
+        if not os.path.isdir(save_path):
+            os.makedirs(save_path)
+        return save_path
     
     @staticmethod
     def update_score_table(score, sample_score):
@@ -278,6 +284,7 @@ class BaseAnsweringModel():
 class GPTAnswering(BaseAnsweringModel):
 
     def set_model_params(self):
+        global gpt
         from VLMs import gpt
         self.key = 'gpt'
         args = super().set_model_params()
@@ -297,6 +304,8 @@ class GPTAnswering(BaseAnsweringModel):
 class ClaudeAnswering(BaseAnsweringModel):
 
     def set_model_params(self):
+        global claude
+        from VLMs import claude
         self.key = 'claude'
         args = super().set_model_params()
         # self.deployment_name = args.get("deployment_name")
@@ -315,6 +324,8 @@ class ClaudeAnswering(BaseAnsweringModel):
 
 class GeminiAnswering(BaseAnsweringModel):
     def set_model_params(self):
+        global gemini
+        from VLMs import gemini
         self.key = 'gemini'
         args = super().set_model_params()
         # self.deployment_name = args.get("deployment_name")
@@ -343,6 +354,8 @@ class GeminiAnswering(BaseAnsweringModel):
 class LLAVAMedAnswering(BaseAnsweringModel):
 
     def set_model_params(self):
+        global llava_med
+        from VLMs import llava_med
         self.key = 'llava_med'
         args = super().set_model_params()
         
@@ -357,8 +370,8 @@ class LLAVAMedAnswering(BaseAnsweringModel):
         self.conv_mode = args.get("conv_mode")
         self.use_im_start_end = args.get('use_im_start_end')
 
-    def convert_question(self, question):
-        tmp = super().convert_question(question)
+    def convert_question(self, question, options):
+        tmp = super().convert_question(question, options)
         if self.prompt_key == 'with_image':
             tmp = '<image>\n' + tmp
             qs = tmp.replace(llava_med.DEFAULT_IMAGE_TOKEN, '').strip()
@@ -392,7 +405,9 @@ class LLAVAMedAnswering(BaseAnsweringModel):
 class LLAVAAnswering(BaseAnsweringModel):
 
     def set_model_params(self):
-        self.key = 'llava_med'
+        global llava
+        from VLMs import llava
+        self.key = 'llava'
         args = super().set_model_params()
         
         set_seed(0)
@@ -426,6 +441,8 @@ class LLAVAAnswering(BaseAnsweringModel):
 class RadFMAnswering(BaseAnsweringModel):
 
     def set_model_params(self):
+        global radfm
+        from VLMs import radfm
         self.key = 'radfm'
         args = super().set_model_params()
         model, text_tokenizer, image_padding_tokens = radfm.load_model()
@@ -449,6 +466,8 @@ class RadFMAnswering(BaseAnsweringModel):
 class BLIP2Answering(BaseAnsweringModel):
 
     def set_model_params(self):
+        global blip2
+        from VLMs import blip2
         self.key = 'blip2'
         args = super().set_model_params()
         model, processor = blip2.load_model()
@@ -474,6 +493,8 @@ class BLIP2Answering(BaseAnsweringModel):
 class InstructBLIPAnswering(BaseAnsweringModel):
 
     def set_model_params(self):
+        global instructblip
+        from VLMs import instructblip
         self.key = 'instructblip'
         args = super().set_model_params()
         model, processor = instructblip.load_model()
@@ -500,6 +521,8 @@ class InstructBLIPAnswering(BaseAnsweringModel):
 class MedFlamingoAnswering(BaseAnsweringModel):
 
     def set_model_params(self):
+        global med_flamingo
+        from VLMs import med_flamingo
         self.key = 'med_flamingo'
         args = super().set_model_params()
         model, processor = med_flamingo.load_model()

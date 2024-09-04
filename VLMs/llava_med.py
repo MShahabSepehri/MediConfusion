@@ -1,16 +1,11 @@
 import os
 import torch
-from .. import io_tools
+from utils import io_tools
 from llava.utils import disable_torch_init
 from llava.conversation import conv_templates
 from llava.model.builder import load_pretrained_model
 from llava.mm_utils import get_model_name_from_path, tokenizer_image_token, process_images
 from llava.constants import IMAGE_TOKEN_INDEX, DEFAULT_IMAGE_TOKEN, DEFAULT_IM_START_TOKEN, DEFAULT_IM_END_TOKEN
-
-
-tmp = io_tools.get_root(__file__, 4)
-PROMPT_LOC = f'{tmp}/data/prompts/llava.jsonl'
-prompts = io_tools.load_json(PROMPT_LOC)
 
 def load_model(model_path, model_base):
     disable_torch_init()

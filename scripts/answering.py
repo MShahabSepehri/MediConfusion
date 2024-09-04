@@ -28,7 +28,7 @@ if __name__ == "__main__":
     args = get_args()
     ROOT = io_tools.get_root(__file__, 2)
 
-    save_path = f'{ROOT}/Results/{args.vlm_name}_{args.mode}.json'
+    save_path = f'{ROOT}/Results/'
 
     answering_class = ANSWERING_CLASS_DICT.get(args.vlm_name)
 
