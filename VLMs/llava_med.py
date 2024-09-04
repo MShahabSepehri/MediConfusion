@@ -63,5 +63,5 @@ def ask_question(model, input_ids, image, image_processor, tokenizer, mode, temp
     if mode == 'greedy':
         outputs = do_forward(model, input_ids, image_tensor, image.size, tokenizer)
     elif mode in ['mc', 'gpt4']:
-        outputs = do_generation(model, input_ids, image_tensor, tokenizer, temperature, top_p, num_beams)
+        outputs = do_generation(model, input_ids, image_tensor, tokenizer, temperature, top_p, num_beams, max_new_tokens)
     return outputs
