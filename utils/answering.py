@@ -78,8 +78,7 @@ class BaseAnsweringModel():
                 io_tools.save_json(results, f'{save_path}/{self.key}_{self.mode}.json')
         self.print_score(score)
         if save_path is not None:
-            tmp = save_path.replace('.json', f'{save_path}/{self.key}_{self.mode}_score.json')
-            io_tools.save_json(score, )
+            io_tools.save_json(score, f'{save_path}/{self.key}_{self.mode}_score.json')
         return results, score
     
     def sample_eval(self, sample):
