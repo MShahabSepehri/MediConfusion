@@ -5,11 +5,12 @@ from tqdm import tqdm
 from PIL import Image
 from utils import io_tools
 from transformers import set_seed, logging
-from VLMs import gpt, blip2, instructblip, med_flamingo, claude, gemini
-try:
-    from VLMs import llava
-except:
-    from VLMs import radfm
+from VLMs import gpt, llava, blip2, instructblip, med_flamingo, claude, gemini, llava_med
+
+# try:
+#     from VLMs import llava_med
+# except:
+#     from VLMs import radfm
 
 
 os.environ["TOKENIZERS_PARALLELISM"] = "true"
@@ -25,12 +26,12 @@ PROMPTS = io_tools.load_json(PROMPTS_LOC)
 
 
 class BaseAnsweringModel():
-    def __init__(self, key, model_args_path, mode, data_path, load_image=False):
-        self.key = key
-        self.load_image = load_image
+    def __init__(self, model_args_path, mode, data_path, tr=3):
+        self.key = None
         self.model_args_path = model_args_path
         self.conversion = io_tools.load_json(PROMPTS_LOC).get('conversion')
         self.mode = mode
+        self.tr = tr
         self.data_path = data_path
         self.prompt_key = 'with_image'
         self.set_model_params()
@@ -38,7 +39,14 @@ class BaseAnsweringModel():
     def set_model_params(self):
         args = io_tools.load_json(self.model_args_path)
         self.set_init_prompt(args.get('init_prompt_id'))
-        self.tr = args.get('tr')
+        self.temperature = args.get("temperature")
+        self.num_beams = args.get('num_beams')
+        self.max_new_tokens = args.get('max_new_tokens')
+        self.top_p = args.get('top_p')
+        if self.mode == 'mc':
+            self.temperature = 0
+            self.top_p = None
+            self.max_new_tokens = 1
         if self.mode == 'greedy':
             self.clean_up = self.clean_up_no_option
         else:
@@ -60,7 +68,7 @@ class BaseAnsweringModel():
 
     def evaluate(self, resume_path, save_path):
         results = io_tools.load_resume_dict(resume_path)
-        score = self.create_score_table([], [], 0, 0, 0)
+        score = self.create_score_table([], [], 0, 0, 0, 0, 0)
         for id in tqdm(DATA.keys()):
             if id in results.keys():
                 continue
@@ -78,23 +86,23 @@ class BaseAnsweringModel():
     
     def sample_eval(self, sample):
         image_list = [f"{self.data_path}/{sample.get('im_1')}",  f"{self.data_path}/{sample.get('im_2')}"]
-        if self.load_image:
-            image_list = [Image.open(x) for x in image_list]
         question = sample.get('question')
         options = [sample.get('option_A'), sample.get('option_B')]
         im1_ans = sample.get('im_1_correct')
         im2_ans = sample.get('im_2_correct')
-        cap1 = sample.get('cap_1')
-        cap2 = sample.get('cap_2')
+        # cap1 = sample.get('cap_1')
+        # cap2 = sample.get('cap_2')
         responses = self.ask_question(question, options, image_list)
         ans_dict = {'im1': self.clean_up(question, options, responses[0]), 
                     'im2': self.clean_up(question, options, responses[1])}
-        im1_correct, im2_correct, confused = self.get_score(ans_dict, im1_ans, im2_ans)
+        im1_correct, im1_invalid, im2_correct, im2_invalid, confused = self.get_score(ans_dict, im1_ans, im2_ans)
         scores = self.create_score_table(sample.get('category_1'), 
                                          sample.get('category_2'), 
                                          im1_correct, 
                                          im2_correct, 
-                                         confused
+                                         im1_invalid,
+                                         im2_invalid,
+                                         confused,
                                          )
         
 
@@ -113,26 +121,26 @@ class BaseAnsweringModel():
                                             ans_dict.get('im1').get('A'), 
                                             ans_dict.get('im1').get('B'), 
                                             self.tr)
+        invalid1 = (c1 == '-')
         im2_correct, c2 = self.check_answer(im2_ans, 
                                             ans_dict.get('im2').get('A'), 
                                             ans_dict.get('im2').get('B'), 
                                             self.tr)
-        # set_score = 1 * ((im1_ans == 1) and (im2_ans == 1))
-        # single_score = 1 * (im1_ans == 1) + 1 * (im2_ans == 1)
+        invalid2 = (c2 == '-')
         confused = 1 * ((c1 == c2) and (c1 != '-'))
-        return im1_correct, im2_correct, confused
+        ans_dict
+        return im1_correct, invalid1, im2_correct, invalid2, confused
     
     def clean_up_no_option(self, question, options, answer):
         client = gpt.get_client()
         prompt = self.get_clean_up_prompt(question, options, answer)
-        raise ValueError(prompt)
         response = gpt.get_response(client=client,
                                     deployment_name=self.conversion.get('gpt_deployment_name'),
                                     init_prompt=self.conversion.get('init_prompt'),
                                     prompt=prompt,
                                     temperature=float(self.conversion.get('temperature')),
                                     )
-        ans = self.process_response(response)
+        ans = self.process_gpt_response(response)
         ans['full_answer'] = answer
         return ans
     
@@ -174,8 +182,8 @@ class BaseAnsweringModel():
                 tmp[cat] += sample_score.get(key).get(cat)
 
     @staticmethod
-    def create_score_table(cat_1, cat_2, im1_correct, im2_correct, confused):
-        scores = {'set_score': {}, 'individual_score': {}, 'confused': {}}
+    def create_score_table(cat_1, cat_2, im1_correct, im2_correct, im1_invalid, im2_invalid, confused):
+        scores = {'set_score': {}, 'individual_score': {}, 'confused': {}, 'invalid': {}}
         for v in scores.values():
             for key in STATS.keys():
                 v[key] = 0
@@ -184,6 +192,7 @@ class BaseAnsweringModel():
             scores.get('confused')['total'] += 1
             for c in (cat_1 + cat_2):
                 scores.get('confused')[c] += 1
+
         if im1_correct == 1:
             scores.get('individual_score')['total'] += 1
             for c in cat_1:
@@ -192,6 +201,16 @@ class BaseAnsweringModel():
             scores.get('individual_score')['total'] += 1
             for c in cat_2:
                 scores.get('individual_score')[c] += 1
+
+        if im1_invalid == 1:
+            scores.get('invalid')['total'] += 1
+            for c in cat_1:
+                scores.get('invalid')[c] += 1
+        if im2_invalid == 1:
+            scores.get('invalid')['total'] += 1
+            for c in cat_2:
+                scores.get('invalid')[c] += 1
+
         if (im1_correct == 1) and (im2_correct == 1):
             scores.get('set_score')['total'] += 1
             for c in (cat_1 + cat_2):
@@ -202,30 +221,34 @@ class BaseAnsweringModel():
     def print_score(score, precision=2):
         print('\n')
         # print_format = "{:<17} {:<10} {:<10} {:<10} {:<12} {:<17} {:<10}"
-        print_format = "{:<17} {:<10} {:<10} {:<12} {:<12}"
+        print_format = "{:<17} {:<10} {:<10} {:<17} {:<15} {:<15}"
         print(print_format.format('Category', 
                                   'Total', 
                                   'Set acc.', 
                                   'Individual acc.', 
-                                  'Confused acc.'))
+                                  'Confused acc.',
+                                  'Invalid acc.',
+                                  ))
         for cat in STATS.keys():
             total = STATS.get(cat)
             num = total / 100
             set_acc = round(score.get('set_score').get(cat) / num, precision)
             individual_acc = round(score.get('individual_score').get(cat) / num, precision)
             confused = round(score.get('confused').get(cat) / num, precision)
-            print(print_format.format(cat, total, set_acc, individual_acc, confused))
+            invalid = round(score.get('invalid').get(cat) / num, precision)
+            print(print_format.format(cat, total, set_acc, individual_acc, confused, invalid))
 
         total = len(DATA)
         num = total / 100
         set_acc = round(score.get('set_score').get('total') / num, precision)
         individual_acc = round(score.get('individual_score').get('total') / num / 2, precision)
         confused = round(score.get('confused').get('total') / num, precision)
-        print(print_format.format('All', total, set_acc, individual_acc, confused))
+        invalid = round(score.get('invalid').get('total') / num / 2, precision)
+        print(print_format.format('All', total, set_acc, individual_acc, confused, invalid))
             
     
     @staticmethod
-    def process_response(response):
+    def process_gpt_response(response):
         if response is None:
             return {
             'A': 0,
@@ -253,12 +276,11 @@ class BaseAnsweringModel():
 
     
 class GPTAnswering(BaseAnsweringModel):
-    def __init__(self, model_args, mode, data_path):
-        super().__init__('gpt', model_args, mode, data_path, load_image=False)
 
     def set_model_params(self):
+        from VLMs import gpt
+        self.key = 'gpt'
         args = super().set_model_params()
-        self.temperature = args.get("temperature")
         self.deployment_name = args.get("deployment_name")
         self.client = gpt.get_client()
         if self.mode in ['greedy', 'prefix']:
@@ -273,12 +295,10 @@ class GPTAnswering(BaseAnsweringModel):
         return response_list
     
 class ClaudeAnswering(BaseAnsweringModel):
-    def __init__(self, model_args, mode, data_path):
-        super().__init__('claude', model_args, mode, data_path, load_image=False)
 
     def set_model_params(self):
+        self.key = 'claude'
         args = super().set_model_params()
-        self.temperature = args.get("temperature")
         # self.deployment_name = args.get("deployment_name")
         self.client = claude.get_client()
         if self.mode in ['greedy', 'prefix']:
@@ -294,12 +314,9 @@ class ClaudeAnswering(BaseAnsweringModel):
     
 
 class GeminiAnswering(BaseAnsweringModel):
-    def __init__(self, model_args, mode, data_path):
-        super().__init__('gemini', model_args, mode, data_path, load_image=False)
-
     def set_model_params(self):
+        self.key = 'gemini'
         args = super().set_model_params()
-        self.temperature = args.get("temperature")
         # self.deployment_name = args.get("deployment_name")
         self.model = gemini.load_model(self.init_prompt, self.temperature)
         if self.mode in ['greedy', 'prefix']:
@@ -324,46 +341,77 @@ class GeminiAnswering(BaseAnsweringModel):
 
 
 class LLAVAMedAnswering(BaseAnsweringModel):
-    def __init__(self, model_args, mode, data_path):
-        super().__init__('llava_med', model_args, mode, data_path, load_image=True)
 
     def set_model_params(self):
+        self.key = 'llava_med'
         args = super().set_model_params()
         
         set_seed(0)
         tokenizer, model, image_processor, context_len = \
-            llava.load_model(args.get("model_path"), args.get("model_base"))
+            llava_med.load_model(args.get("model_path"), args.get("model_base"))
 
         self.model = model
         self.tokenizer = tokenizer
         self.image_processor = image_processor
 
-        self.top_p = args.get("top_p")
-        self.num_beams = args.get("num_beams")
         self.conv_mode = args.get("conv_mode")
-        self.temperature = args.get("temperature")
         self.use_im_start_end = args.get('use_im_start_end')
 
     def convert_question(self, question):
         tmp = super().convert_question(question)
         if self.prompt_key == 'with_image':
             tmp = '<image>\n' + tmp
-            qs = tmp.replace(llava.DEFAULT_IMAGE_TOKEN, '').strip()
+            qs = tmp.replace(llava_med.DEFAULT_IMAGE_TOKEN, '').strip()
             if self.use_im_start_end:
-                qs = llava.DEFAULT_IM_START_TOKEN + llava.DEFAULT_IMAGE_TOKEN + llava.DEFAULT_IM_END_TOKEN + '\n' + qs
+                qs = llava_med.DEFAULT_IM_START_TOKEN + llava_med.DEFAULT_IMAGE_TOKEN + llava_med.DEFAULT_IM_END_TOKEN + '\n' + qs
             else:
-                qs = llava.DEFAULT_IMAGE_TOKEN + '\n' + qs
+                qs = llava_med.DEFAULT_IMAGE_TOKEN + '\n' + qs
         return qs
 
     def ask_question(self, question, options, image_list):
         question = super().ask_question(question, options, image_list)
         response_list = []
-        input_ids = llava.get_input_id(self.tokenizer, question, self.conv_mode)
+        input_ids = llava_med.get_input_id(self.tokenizer, question, self.conv_mode)
+        image_list = [Image.open(x) for x in image_list]
+        for image in image_list:
+            outputs = llava_med.ask_question(self.model, 
+                                             input_ids, 
+                                             image, 
+                                             self.image_processor, 
+                                             self.tokenizer, 
+                                             self.mode,
+                                             temperature=self.temperature,
+                                             top_p=self.top_p, 
+                                             num_beams=self.num_beams,
+                                             max_new_tokens=self.max_new_tokens)
+            response_list.append(outputs)
+
+        return response_list
+
+
+class LLAVAAnswering(BaseAnsweringModel):
+
+    def set_model_params(self):
+        self.key = 'llava_med'
+        args = super().set_model_params()
+        
+        set_seed(0)
+        tokenizer, model, processor = llava.load_model(args.get("model_path"), args.get("model_base"))
+
+        self.model = model
+        self.tokenizer = tokenizer
+        self.processor = processor
+        self.conv_mode = args.get("conv_mode")
+
+    def ask_question(self, question, options, image_list):
+        question = super().ask_question(question, options, image_list)
+        response_list = []
+        image_list = [Image.open(x) for x in image_list]
         for image in image_list:
             outputs = llava.ask_question(self.model, 
-                                         input_ids, 
+                                         question, 
                                          image, 
-                                         self.image_processor, 
+                                         self.processor, 
                                          self.tokenizer, 
                                          self.mode,
                                          temperature=self.temperature,
@@ -374,11 +422,11 @@ class LLAVAMedAnswering(BaseAnsweringModel):
         return response_list
 
 
+
 class RadFMAnswering(BaseAnsweringModel):
-    def __init__(self, model_args, mode, data_path):
-        super().__init__('radfm', model_args, mode, data_path, load_image=False)
 
     def set_model_params(self):
+        self.key = 'radfm'
         args = super().set_model_params()
         model, text_tokenizer, image_padding_tokens = radfm.load_model()
         self.model = model
@@ -399,18 +447,13 @@ class RadFMAnswering(BaseAnsweringModel):
         return response_list
 
 class BLIP2Answering(BaseAnsweringModel):
-    def __init__(self, model_args, mode, data_path):
-        super().__init__('blip2', model_args, mode, data_path, load_image=False)
 
     def set_model_params(self):
+        self.key = 'blip2'
         args = super().set_model_params()
         model, processor = blip2.load_model()
         self.model = model
         self.processor = processor
-        self.num_beams = args.get('num_beams')
-        self.max_length = args.get('max_length')
-        self.top_p = args.get('top_p')
-        self.temperature = args.get('temperature')
 
     def ask_question(self, question, options, image_list):
         question = super().ask_question(question, options, image_list)
@@ -429,18 +472,13 @@ class BLIP2Answering(BaseAnsweringModel):
         return response_list
     
 class InstructBLIPAnswering(BaseAnsweringModel):
-    def __init__(self, model_args, mode, data_path):
-        super().__init__('instructblip', model_args, mode, data_path, load_image=False)
 
     def set_model_params(self):
+        self.key = 'instructblip'
         args = super().set_model_params()
         model, processor = instructblip.load_model()
         self.model = model
         self.processor = processor
-        self.num_beams = args.get('num_beams')
-        self.max_length = args.get('max_length')
-        self.top_p = args.get('top_p')
-        self.temperature = args.get('temperature')
 
     def ask_question(self, question, options, image_list):
         question = super().ask_question(question, options, image_list)
@@ -460,15 +498,13 @@ class InstructBLIPAnswering(BaseAnsweringModel):
     
 
 class MedFlamingoAnswering(BaseAnsweringModel):
-    def __init__(self, model_args, mode, data_path):
-        super().__init__('med_flamingo', model_args, mode, data_path, load_image=False)
 
     def set_model_params(self):
+        self.key = 'med_flamingo'
         args = super().set_model_params()
         model, processor = med_flamingo.load_model()
         self.model = model
         self.processor = processor
-        self.max_new_tokens = args.get('max_new_tokens')
 
     def ask_question(self, question, options, image_list):
         question = super().ask_question(question, options, image_list)
@@ -487,7 +523,8 @@ ANSWERING_CLASS_DICT = {
     'gpt': GPTAnswering,
     'claude': ClaudeAnswering,
     'gemini': GeminiAnswering,
-    'llava': LLAVAMedAnswering,
+    'llava_med': LLAVAMedAnswering,
+    'llava': LLAVAAnswering,
     'radfm': RadFMAnswering,
     'blip2': BLIP2Answering,
     'instructblip': InstructBLIPAnswering,
@@ -498,6 +535,7 @@ DEFAULT_MODEL_CONFIGS = {
     'gpt': f'{ROOT}/configs/VLM/gpt/vanilla.json',
     'claude': f'{ROOT}/configs/VLM/claude/vanilla.json',
     'gemini': f'{ROOT}/configs/VLM/gemini/vanilla.json',
+    'llava_med': f'{ROOT}/configs/VLM/llava_med/vanilla.json',
     'llava': f'{ROOT}/configs/VLM/llava/vanilla.json',
     'radfm': f'{ROOT}/configs/VLM/radfm/vanilla.json',
     'blip2': f'{ROOT}/configs/VLM/blip2/vanilla.json',

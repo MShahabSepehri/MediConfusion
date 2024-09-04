@@ -11,6 +11,7 @@ ROOT = io_tools.get_root(__file__, 2)
 
 def get_args():
     parser = argparse.ArgumentParser()
+    parser.add_argument("--tr", type=int, default=3)
     parser.add_argument("--vlm_name", type=str, required=True)
     parser.add_argument("--resume_path", type=str, default=None)
     parser.add_argument("--model_args_path", type=str, default=None)
@@ -31,5 +32,5 @@ if __name__ == "__main__":
 
     answering_class = ANSWERING_CLASS_DICT.get(args.vlm_name)
 
-    ans_obj = answering_class(args.model_args_path, args.mode, args.data_path)
+    ans_obj = answering_class(args.model_args_path, args.mode, args.data_path, args.tr)
     ans_obj.evaluate(args.resume_path, save_path)

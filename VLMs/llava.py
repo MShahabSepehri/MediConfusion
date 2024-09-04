@@ -1,36 +1,36 @@
-import os
 import torch
-from .. import io_tools
-from llava.utils import disable_torch_init
-from llava.conversation import conv_templates
-from llava.model.builder import load_pretrained_model
-from llava.mm_utils import get_model_name_from_path, tokenizer_image_token, process_images
-from llava.constants import IMAGE_TOKEN_INDEX, DEFAULT_IMAGE_TOKEN, DEFAULT_IM_START_TOKEN, DEFAULT_IM_END_TOKEN
+from transformers import LlavaNextProcessor, LlavaNextForConditionalGeneration
 
 
-tmp = io_tools.get_root(__file__, 4)
-PROMPT_LOC = f'{tmp}/data/prompts/llava.jsonl'
-prompts = io_tools.load_json(PROMPT_LOC)
+conversation = [
+    {
+      "role": "user",
+      "content": [
+          {"type": "text", "text": "What is shown in this image?"},
+          {"type": "image"},
+        ],
+    },
+]
 
-def load_model(model_path, model_base):
-    disable_torch_init()
-    model_path = os.path.expanduser(model_path)
-    model_name = get_model_name_from_path(model_path)
-    tokenizer, model, image_processor, context_len = load_pretrained_model(model_path, model_base, model_name)
-    return tokenizer, model, image_processor, context_len
+def load_model():
+    processor = LlavaNextProcessor.from_pretrained("llava-hf/llava-v1.6-mistral-7b-hf")
+    model = LlavaNextForConditionalGeneration.from_pretrained("llava-hf/llava-v1.6-mistral-7b-hf", torch_dtype=torch.float16, low_cpu_mem_usage=True) 
+    model.to("cuda:0")
+    return model, processor
 
-def get_input_id(tokenizer, question, conv_mode):
-    # qs = convert_question(question, mm_use_im_start_end, use_options)
-    conv = conv_templates[conv_mode].copy()
-    conv.append_message(conv.roles[0], question)
-    conv.append_message(conv.roles[1], None)
-    prompt = conv.get_prompt()
+def ask_question(model, question, image, processor, tokenizer, mode, temperature=0.2, top_p=None, num_beams=1, max_new_tokens=100):
+    prompt = processor.apply_chat_template(conversation, add_generation_prompt=True)
+    inputs = processor(images=image, text=prompt, return_tensors="pt").to("cuda:0")
 
-    input_ids = tokenizer_image_token(prompt, tokenizer, IMAGE_TOKEN_INDEX, return_tensors='pt').unsqueeze(0).cuda()
-    return input_ids
+    if mode == 'greedy':
+        outputs = do_forward(model, input_ids, image_tensor, image.size, tokenizer)
+    elif mode in ['mc', 'gpt4']:
+        outputs = do_generation(model, inputs, temperature, top_p, num_beams, max_new_tokens)
+    return outputs
+
 
 @torch.no_grad()
-def do_forward(model, input_ids, image_tensor, image_size, tokenizer):
+def do_forward(model, inputs, processor):
     VALID_ANSWERS = ['A', 'B']
     TOKEN_ID_A = tokenizer.encode("A", add_special_tokens=False)
     TOKEN_ID_B = tokenizer.encode("B", add_special_tokens=False)
@@ -48,25 +48,6 @@ def do_forward(model, input_ids, image_tensor, image_size, tokenizer):
     return outputs
 
 @torch.no_grad()
-def do_generation(model, input_ids, image_tensor, tokenizer, temperature, top_p, num_beams):
-    with torch.inference_mode():
-        output_ids = model.generate(input_ids,
-                                    images=image_tensor.unsqueeze(0).half().cuda(),
-                                    do_sample=True if temperature > 0 else False,
-                                    temperature=temperature,
-                                    top_p=top_p,
-                                    num_beams=num_beams,
-                                    max_new_tokens=1024,
-                                    use_cache=True)
-
-    outputs = tokenizer.batch_decode(output_ids, skip_special_tokens=True)[0].strip()
-    return outputs
-
-def ask_question(model, input_ids, image, image_processor, tokenizer, mode, temperature=0.2, top_p=None, num_beams=1):
-    image_tensor = process_images([image], image_processor, model.config)[0]
-
-    if mode == 'greedy':
-        outputs = do_forward(model, input_ids, image_tensor, image.size, tokenizer)
-    elif mode in ['mc', 'gpt4']:
-        outputs = do_generation(model, input_ids, image_tensor, tokenizer, temperature, top_p, num_beams)
-    return outputs
+def do_generation(model, inputs, processor, max_new_tokens):
+    output = model.generate(**inputs, max_new_tokens=max_new_tokens)
+    return processor.decode(output[0], skip_special_tokens=True)

@@ -48,6 +48,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 0
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -100,6 +112,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -111,9 +135,9 @@
                 "full_answer": "B"
             },
             "im2": {
-                "A": 0,
-                "B": 10,
-                "full_answer": "B"
+                "A": 10,
+                "B": 0,
+                "full_answer": "A"
             }
         },
         "score": {
@@ -130,8 +154,8 @@
                 "total": 0
             },
             "individual_score": {
-                "Cerebral": 1,
-                "Vascular": 1,
+                "Cerebral": 0,
+                "Vascular": 0,
                 "Head and Neck": 0,
                 "Spinal": 0,
                 "Musculoskeletal": 0,
@@ -139,11 +163,11 @@
                 "Gastrointestinal": 0,
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
-                "total": 1
+                "total": 0
             },
             "confused": {
-                "Cerebral": 2,
-                "Vascular": 2,
+                "Cerebral": 0,
+                "Vascular": 0,
                 "Head and Neck": 0,
                 "Spinal": 0,
                 "Musculoskeletal": 0,
@@ -151,7 +175,19 @@
                 "Gastrointestinal": 0,
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
-                "total": 1
+                "total": 0
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -204,6 +240,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -212,7 +260,7 @@
             "im1": {
                 "A": 0,
                 "B": 10,
-                "full_answer": "B: Anterior communicating artery"
+                "full_answer": "B"
             },
             "im2": {
                 "A": 10,
@@ -256,6 +304,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 0
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -267,13 +327,37 @@
                 "full_answer": "B"
             },
             "im2": {
-                "A": 0,
-                "B": 10,
-                "full_answer": "B"
+                "A": 10,
+                "B": 0,
+                "full_answer": "A"
             }
         },
         "score": {
             "set_score": {
+                "Cerebral": 2,
+                "Vascular": 2,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 1
+            },
+            "individual_score": {
+                "Cerebral": 2,
+                "Vascular": 2,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 2
+            },
+            "confused": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -285,9 +369,9 @@
                 "Nuclear Medicine": 0,
                 "total": 0
             },
-            "individual_score": {
-                "Cerebral": 1,
-                "Vascular": 1,
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
                 "Head and Neck": 0,
                 "Spinal": 0,
                 "Musculoskeletal": 0,
@@ -295,19 +379,7 @@
                 "Gastrointestinal": 0,
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
-                "total": 1
-            },
-            "confused": {
-                "Cerebral": 2,
-                "Vascular": 2,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 1
+                "total": 0
             }
         }
     },
@@ -360,6 +432,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -412,6 +496,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -454,6 +550,18 @@
                 "total": 2
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -516,6 +624,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -527,13 +647,37 @@
                 "full_answer": "A"
             },
             "im2": {
-                "A": 10,
-                "B": 0,
-                "full_answer": "A"
+                "A": 0,
+                "B": 10,
+                "full_answer": "B"
             }
         },
         "score": {
             "set_score": {
+                "Cerebral": 2,
+                "Vascular": 0,
+                "Head and Neck": 1,
+                "Spinal": 1,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 1
+            },
+            "individual_score": {
+                "Cerebral": 2,
+                "Vascular": 0,
+                "Head and Neck": 1,
+                "Spinal": 1,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 2
+            },
+            "confused": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -545,29 +689,17 @@
                 "Nuclear Medicine": 0,
                 "total": 0
             },
-            "individual_score": {
-                "Cerebral": 1,
+            "invalid": {
+                "Cerebral": 0,
                 "Vascular": 0,
-                "Head and Neck": 1,
-                "Spinal": 1,
+                "Head and Neck": 0,
+                "Spinal": 0,
                 "Musculoskeletal": 0,
                 "Cardiac": 0,
                 "Gastrointestinal": 0,
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
-                "total": 1
-            },
-            "confused": {
-                "Cerebral": 2,
-                "Vascular": 0,
-                "Head and Neck": 1,
-                "Spinal": 1,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 1
+                "total": 0
             }
         }
     },
@@ -620,6 +752,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -672,20 +816,32 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
     "10014": {
         "answer": {
             "im1": {
-                "A": 0,
-                "B": 10,
-                "full_answer": "B"
+                "A": 10,
+                "B": 0,
+                "full_answer": "A"
             },
             "im2": {
-                "A": 0,
-                "B": 10,
-                "full_answer": "B"
+                "A": 10,
+                "B": 0,
+                "full_answer": "A"
             }
         },
         "score": {
@@ -705,7 +861,7 @@
                 "Cerebral": 1,
                 "Vascular": 0,
                 "Head and Neck": 1,
-                "Spinal": 1,
+                "Spinal": 0,
                 "Musculoskeletal": 0,
                 "Cardiac": 0,
                 "Gastrointestinal": 0,
@@ -724,6 +880,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -776,6 +944,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -787,13 +967,37 @@
                 "full_answer": "A"
             },
             "im2": {
-                "A": 0,
-                "B": 10,
-                "full_answer": "B"
+                "A": 10,
+                "B": 0,
+                "full_answer": "A"
             }
         },
         "score": {
             "set_score": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "individual_score": {
+                "Cerebral": 1,
+                "Vascular": 0,
+                "Head and Neck": 1,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 1
+            },
+            "confused": {
                 "Cerebral": 2,
                 "Vascular": 0,
                 "Head and Neck": 1,
@@ -805,19 +1009,7 @@
                 "Nuclear Medicine": 0,
                 "total": 1
             },
-            "individual_score": {
-                "Cerebral": 2,
-                "Vascular": 0,
-                "Head and Neck": 1,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 2
-            },
-            "confused": {
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -880,6 +1072,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -932,6 +1136,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -984,6 +1200,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -1036,6 +1264,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -1047,13 +1287,37 @@
                 "full_answer": "B"
             },
             "im2": {
-                "A": 0,
-                "B": 10,
-                "full_answer": "B"
+                "A": 10,
+                "B": 0,
+                "full_answer": "A"
             }
         },
         "score": {
             "set_score": {
+                "Cerebral": 2,
+                "Vascular": 0,
+                "Head and Neck": 2,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 1
+            },
+            "individual_score": {
+                "Cerebral": 2,
+                "Vascular": 0,
+                "Head and Neck": 2,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 2
+            },
+            "confused": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -1065,29 +1329,17 @@
                 "Nuclear Medicine": 0,
                 "total": 0
             },
-            "individual_score": {
-                "Cerebral": 1,
+            "invalid": {
+                "Cerebral": 0,
                 "Vascular": 0,
-                "Head and Neck": 1,
+                "Head and Neck": 0,
                 "Spinal": 0,
                 "Musculoskeletal": 0,
                 "Cardiac": 0,
                 "Gastrointestinal": 0,
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
-                "total": 1
-            },
-            "confused": {
-                "Cerebral": 2,
-                "Vascular": 0,
-                "Head and Neck": 2,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 1
+                "total": 0
             }
         }
     },
@@ -1140,6 +1392,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -1192,6 +1456,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -1234,6 +1510,18 @@
                 "total": 2
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -1296,6 +1584,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -1348,6 +1648,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -1390,6 +1702,18 @@
                 "total": 2
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -1452,6 +1776,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -1504,15 +1840,27 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
     "10030": {
         "answer": {
             "im1": {
-                "A": 10,
-                "B": 0,
-                "full_answer": "A"
+                "A": 0,
+                "B": 10,
+                "full_answer": "B"
             },
             "im2": {
                 "A": 10,
@@ -1522,6 +1870,30 @@
         },
         "score": {
             "set_score": {
+                "Cerebral": 2,
+                "Vascular": 0,
+                "Head and Neck": 1,
+                "Spinal": 2,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 1
+            },
+            "individual_score": {
+                "Cerebral": 2,
+                "Vascular": 0,
+                "Head and Neck": 1,
+                "Spinal": 2,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 2
+            },
+            "confused": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -1533,29 +1905,17 @@
                 "Nuclear Medicine": 0,
                 "total": 0
             },
-            "individual_score": {
-                "Cerebral": 1,
+            "invalid": {
+                "Cerebral": 0,
                 "Vascular": 0,
-                "Head and Neck": 1,
-                "Spinal": 1,
+                "Head and Neck": 0,
+                "Spinal": 0,
                 "Musculoskeletal": 0,
                 "Cardiac": 0,
                 "Gastrointestinal": 0,
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
-                "total": 1
-            },
-            "confused": {
-                "Cerebral": 2,
-                "Vascular": 0,
-                "Head and Neck": 1,
-                "Spinal": 2,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 1
+                "total": 0
             }
         }
     },
@@ -1608,6 +1968,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -1619,13 +1991,37 @@
                 "full_answer": "A"
             },
             "im2": {
-                "A": 10,
-                "B": 0,
-                "full_answer": "A"
+                "A": 0,
+                "B": 10,
+                "full_answer": "B"
             }
         },
         "score": {
             "set_score": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 2,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 1
+            },
+            "individual_score": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 2,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 2
+            },
+            "confused": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -1637,29 +2033,17 @@
                 "Nuclear Medicine": 0,
                 "total": 0
             },
-            "individual_score": {
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
-                "Spinal": 1,
+                "Spinal": 0,
                 "Musculoskeletal": 0,
                 "Cardiac": 0,
                 "Gastrointestinal": 0,
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
-                "total": 1
-            },
-            "confused": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 2,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 1
+                "total": 0
             }
         }
     },
@@ -1702,6 +2086,18 @@
                 "total": 2
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -1764,6 +2160,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -1806,6 +2214,18 @@
                 "total": 0
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -1868,6 +2288,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 0
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -1910,6 +2342,18 @@
                 "total": 0
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -1972,6 +2416,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -2024,6 +2480,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -2066,6 +2534,18 @@
                 "total": 2
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -2128,6 +2608,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 0
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -2180,15 +2672,27 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
     "10043": {
         "answer": {
             "im1": {
-                "A": 0,
-                "B": 10,
-                "full_answer": "B"
+                "A": 10,
+                "B": 0,
+                "full_answer": "A"
             },
             "im2": {
                 "A": 0,
@@ -2201,19 +2705,7 @@
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            },
-            "individual_score": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 1,
+                "Spinal": 2,
                 "Musculoskeletal": 0,
                 "Cardiac": 0,
                 "Gastrointestinal": 0,
@@ -2221,7 +2713,7 @@
                 "Nuclear Medicine": 0,
                 "total": 1
             },
-            "confused": {
+            "individual_score": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -2231,7 +2723,31 @@
                 "Gastrointestinal": 0,
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
-                "total": 1
+                "total": 2
+            },
+            "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -2274,6 +2790,18 @@
                 "total": 2
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -2336,6 +2864,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 0
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -2388,6 +2928,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -2440,6 +2992,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -2492,15 +3056,27 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
     "10049": {
         "answer": {
             "im1": {
-                "A": 0,
-                "B": 10,
-                "full_answer": "B"
+                "A": 10,
+                "B": 0,
+                "full_answer": "A"
             },
             "im2": {
                 "A": 10,
@@ -2515,13 +3091,25 @@
                 "Head and Neck": 0,
                 "Spinal": 0,
                 "Musculoskeletal": 0,
-                "Cardiac": 2,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "individual_score": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 1,
                 "Gastrointestinal": 0,
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
             },
-            "individual_score": {
+            "confused": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -2531,9 +3119,9 @@
                 "Gastrointestinal": 0,
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
-                "total": 2
+                "total": 1
             },
-            "confused": {
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -2596,6 +3184,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 0
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -2648,6 +3248,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -2700,6 +3312,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -2752,6 +3376,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 0
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -2760,7 +3396,7 @@
             "im1": {
                 "A": 10,
                 "B": 0,
-                "full_answer": "A: Left anterior descending artery"
+                "full_answer": "A"
             },
             "im2": {
                 "A": 10,
@@ -2804,6 +3440,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -2846,6 +3494,18 @@
                 "total": 0
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -2908,15 +3568,27 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
     "10057": {
         "answer": {
             "im1": {
-                "A": 10,
-                "B": 0,
-                "full_answer": "A"
+                "A": 0,
+                "B": 10,
+                "full_answer": "B"
             },
             "im2": {
                 "A": 0,
@@ -2943,13 +3615,25 @@
                 "Head and Neck": 0,
                 "Spinal": 0,
                 "Musculoskeletal": 0,
-                "Cardiac": 0,
+                "Cardiac": 1,
                 "Gastrointestinal": 0,
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
-                "total": 0
+                "total": 1
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 2,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 1
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -3012,6 +3696,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -3064,6 +3760,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -3116,6 +3824,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -3168,6 +3888,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -3220,6 +3952,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -3272,6 +4016,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -3283,13 +4039,37 @@
                 "full_answer": "B"
             },
             "im2": {
-                "A": 0,
-                "B": 10,
-                "full_answer": "B"
+                "A": 10,
+                "B": 0,
+                "full_answer": "A"
             }
         },
         "score": {
             "set_score": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 2,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 1
+            },
+            "individual_score": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 2,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 2
+            },
+            "confused": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -3301,29 +4081,17 @@
                 "Nuclear Medicine": 0,
                 "total": 0
             },
-            "individual_score": {
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
                 "Spinal": 0,
                 "Musculoskeletal": 0,
-                "Cardiac": 1,
+                "Cardiac": 0,
                 "Gastrointestinal": 0,
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
-                "total": 1
-            },
-            "confused": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 2,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 1
+                "total": 0
             }
         }
     },
@@ -3366,6 +4134,18 @@
                 "total": 2
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -3428,6 +4208,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -3480,6 +4272,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -3532,6 +4336,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -3584,15 +4400,27 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 0
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
     "10070": {
         "answer": {
             "im1": {
-                "A": 0,
-                "B": 10,
-                "full_answer": "B"
+                "A": 10,
+                "B": 0,
+                "full_answer": "A"
             },
             "im2": {
                 "A": 10,
@@ -3620,12 +4448,24 @@
                 "Spinal": 0,
                 "Musculoskeletal": 0,
                 "Cardiac": 0,
-                "Gastrointestinal": 0,
+                "Gastrointestinal": 1,
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
-                "total": 0
+                "total": 1
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 2,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 1
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -3688,6 +4528,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -3740,6 +4592,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -3792,15 +4656,27 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
     "10074": {
         "answer": {
             "im1": {
-                "A": 0,
-                "B": 10,
-                "full_answer": "B"
+                "A": 10,
+                "B": 0,
+                "full_answer": "A"
             },
             "im2": {
                 "A": 0,
@@ -3816,24 +4692,12 @@
                 "Spinal": 0,
                 "Musculoskeletal": 0,
                 "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            },
-            "individual_score": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 1,
+                "Gastrointestinal": 2,
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
             },
-            "confused": {
+            "individual_score": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -3843,7 +4707,31 @@
                 "Gastrointestinal": 2,
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
-                "total": 1
+                "total": 2
+            },
+            "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -3896,6 +4784,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -3948,6 +4848,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -3990,6 +4902,18 @@
                 "total": 2
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -4052,6 +4976,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -4104,6 +5040,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -4156,6 +5104,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -4164,7 +5124,7 @@
             "im1": {
                 "A": 0,
                 "B": 10,
-                "full_answer": "B: No"
+                "full_answer": "B"
             },
             "im2": {
                 "A": 0,
@@ -4208,6 +5168,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -4260,6 +5232,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -4312,6 +5296,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -4364,6 +5360,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -4416,6 +5424,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -4468,6 +5488,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -4479,13 +5511,37 @@
                 "full_answer": "B"
             },
             "im2": {
-                "A": 10,
-                "B": 0,
-                "full_answer": "A"
+                "A": 0,
+                "B": 10,
+                "full_answer": "B"
             }
         },
         "score": {
             "set_score": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "individual_score": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 1,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 1
+            },
+            "confused": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -4497,19 +5553,7 @@
                 "Nuclear Medicine": 0,
                 "total": 1
             },
-            "individual_score": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 2,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 2
-            },
-            "confused": {
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -4572,6 +5616,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 0
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -4624,6 +5680,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -4676,6 +5744,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -4728,6 +5808,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -4770,6 +5862,18 @@
                 "total": 2
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -4832,6 +5936,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 0
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -4884,20 +6000,32 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
     "10095": {
         "answer": {
             "im1": {
-                "A": 10,
-                "B": 0,
-                "full_answer": "A"
+                "A": 0,
+                "B": 10,
+                "full_answer": "B"
             },
             "im2": {
-                "A": 10,
-                "B": 0,
-                "full_answer": "A"
+                "A": 0,
+                "B": 10,
+                "full_answer": "B"
             }
         },
         "score": {
@@ -4936,6 +6064,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -4988,6 +6128,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -5040,6 +6192,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -5051,9 +6215,9 @@
                 "full_answer": "B"
             },
             "im2": {
-                "A": 10,
-                "B": 0,
-                "full_answer": "A"
+                "A": 0,
+                "B": 10,
+                "full_answer": "B"
             }
         },
         "score": {
@@ -5074,14 +6238,26 @@
                 "Vascular": 0,
                 "Head and Neck": 0,
                 "Spinal": 0,
-                "Musculoskeletal": 0,
+                "Musculoskeletal": 1,
                 "Cardiac": 0,
                 "Gastrointestinal": 0,
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
-                "total": 0
+                "total": 1
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 2,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 1
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -5144,6 +6320,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -5196,6 +6384,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -5248,6 +6448,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -5300,6 +6512,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -5352,6 +6576,18 @@
                 "Pulmonary": 2,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -5404,6 +6640,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -5456,15 +6704,27 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
     "10106": {
         "answer": {
             "im1": {
-                "A": 0,
-                "B": 10,
-                "full_answer": "B"
+                "A": 10,
+                "B": 0,
+                "full_answer": "A"
             },
             "im2": {
                 "A": 0,
@@ -5478,26 +6738,14 @@
                 "Vascular": 0,
                 "Head and Neck": 0,
                 "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
-            },
-            "individual_score": {
-                "Cerebral": 0,
-                "Vascular": 0,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 1,
+                "Musculoskeletal": 2,
                 "Cardiac": 0,
                 "Gastrointestinal": 0,
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
             },
-            "confused": {
+            "individual_score": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -5507,7 +6755,31 @@
                 "Gastrointestinal": 0,
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
-                "total": 1
+                "total": 2
+            },
+            "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -5560,6 +6832,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -5612,6 +6896,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -5654,6 +6950,18 @@
                 "total": 2
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -5716,6 +7024,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -5768,6 +7088,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -5810,6 +7142,18 @@
                 "total": 0
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -5872,15 +7216,27 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
     "10114": {
         "answer": {
             "im1": {
-                "A": 0,
-                "B": 10,
-                "full_answer": "B"
+                "A": 10,
+                "B": 0,
+                "full_answer": "A"
             },
             "im2": {
                 "A": 10,
@@ -5890,6 +7246,30 @@
         },
         "score": {
             "set_score": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "individual_score": {
+                "Cerebral": 1,
+                "Vascular": 1,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 1
+            },
+            "confused": {
                 "Cerebral": 2,
                 "Vascular": 2,
                 "Head and Neck": 0,
@@ -5901,19 +7281,7 @@
                 "Nuclear Medicine": 0,
                 "total": 1
             },
-            "individual_score": {
-                "Cerebral": 2,
-                "Vascular": 2,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 2
-            },
-            "confused": {
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -5976,6 +7344,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -6018,6 +7398,18 @@
                 "total": 2
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -6080,6 +7472,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -6132,6 +7536,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -6174,6 +7590,18 @@
                 "total": 2
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -6236,6 +7664,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -6288,6 +7728,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -6340,6 +7792,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -6392,6 +7856,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -6444,6 +7920,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -6496,6 +7984,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -6548,15 +8048,27 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
     "10127": {
         "answer": {
             "im1": {
-                "A": 0,
-                "B": 10,
-                "full_answer": "B"
+                "A": 10,
+                "B": 0,
+                "full_answer": "A"
             },
             "im2": {
                 "A": 10,
@@ -6566,6 +8078,30 @@
         },
         "score": {
             "set_score": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "individual_score": {
+                "Cerebral": 0,
+                "Vascular": 1,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 1
+            },
+            "confused": {
                 "Cerebral": 0,
                 "Vascular": 2,
                 "Head and Neck": 0,
@@ -6577,19 +8113,7 @@
                 "Nuclear Medicine": 0,
                 "total": 1
             },
-            "individual_score": {
-                "Cerebral": 0,
-                "Vascular": 2,
-                "Head and Neck": 0,
-                "Spinal": 0,
-                "Musculoskeletal": 0,
-                "Cardiac": 0,
-                "Gastrointestinal": 0,
-                "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 2
-            },
-            "confused": {
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -6652,6 +8176,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 0
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -6704,6 +8240,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -6746,6 +8294,18 @@
                 "total": 2
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -6808,6 +8368,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 0
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -6860,6 +8432,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -6912,6 +8496,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -6964,6 +8560,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -7016,6 +8624,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -7068,6 +8688,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -7120,6 +8752,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -7172,6 +8816,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 2,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -7214,6 +8870,18 @@
                 "total": 2
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -7276,6 +8944,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 0
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -7328,6 +9008,18 @@
                 "Pulmonary": 2,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -7380,6 +9072,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 2,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -7432,6 +9136,18 @@
                 "Pulmonary": 2,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -7443,9 +9159,9 @@
                 "full_answer": "A"
             },
             "im2": {
-                "A": 10,
-                "B": 0,
-                "full_answer": "A"
+                "A": 0,
+                "B": 10,
+                "full_answer": "B"
             }
         },
         "score": {
@@ -7457,9 +9173,9 @@
                 "Musculoskeletal": 0,
                 "Cardiac": 0,
                 "Gastrointestinal": 0,
-                "Pulmonary": 0,
+                "Pulmonary": 2,
                 "Nuclear Medicine": 0,
-                "total": 0
+                "total": 1
             },
             "individual_score": {
                 "Cerebral": 0,
@@ -7469,9 +9185,9 @@
                 "Musculoskeletal": 0,
                 "Cardiac": 0,
                 "Gastrointestinal": 0,
-                "Pulmonary": 1,
+                "Pulmonary": 2,
                 "Nuclear Medicine": 0,
-                "total": 1
+                "total": 2
             },
             "confused": {
                 "Cerebral": 0,
@@ -7481,9 +9197,21 @@
                 "Musculoskeletal": 0,
                 "Cardiac": 0,
                 "Gastrointestinal": 0,
-                "Pulmonary": 2,
+                "Pulmonary": 0,
                 "Nuclear Medicine": 0,
-                "total": 1
+                "total": 0
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -7536,6 +9264,18 @@
                 "Pulmonary": 2,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -7578,6 +9318,18 @@
                 "total": 0
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -7640,6 +9392,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 0
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -7682,6 +9446,18 @@
                 "total": 2
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -7744,15 +9520,27 @@
                 "Pulmonary": 2,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
     "10150": {
         "answer": {
             "im1": {
-                "A": 0,
-                "B": 10,
-                "full_answer": "B"
+                "A": 10,
+                "B": 0,
+                "full_answer": "A"
             },
             "im2": {
                 "A": 0,
@@ -7781,21 +9569,33 @@
                 "Musculoskeletal": 0,
                 "Cardiac": 0,
                 "Gastrointestinal": 0,
-                "Pulmonary": 1,
+                "Pulmonary": 0,
                 "Nuclear Medicine": 0,
-                "total": 1
+                "total": 0
             },
             "confused": {
-                "Cerebral": 1,
+                "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
                 "Spinal": 0,
                 "Musculoskeletal": 0,
                 "Cardiac": 0,
                 "Gastrointestinal": 0,
-                "Pulmonary": 1,
+                "Pulmonary": 0,
                 "Nuclear Medicine": 0,
-                "total": 1
+                "total": 0
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -7848,6 +9648,18 @@
                 "Pulmonary": 2,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -7900,6 +9712,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 2,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -7952,6 +9776,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 2,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -8004,6 +9840,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -8056,6 +9904,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -8098,6 +9958,18 @@
                 "total": 0
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -8160,6 +10032,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 0
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -8212,6 +10096,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -8264,6 +10160,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -8316,6 +10224,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -8368,6 +10288,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -8420,6 +10352,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -8472,6 +10416,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -8483,9 +10439,9 @@
                 "full_answer": "A"
             },
             "im2": {
-                "A": 0,
-                "B": 10,
-                "full_answer": "B"
+                "A": 10,
+                "B": 0,
+                "full_answer": "A"
             }
         },
         "score": {
@@ -8510,10 +10466,22 @@
                 "Cardiac": 0,
                 "Gastrointestinal": 0,
                 "Pulmonary": 0,
-                "Nuclear Medicine": 0,
-                "total": 0
+                "Nuclear Medicine": 1,
+                "total": 1
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 2,
+                "total": 1
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -8576,6 +10544,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -8628,6 +10608,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -8680,6 +10672,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -8732,6 +10736,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -8784,6 +10800,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -8826,6 +10854,18 @@
                 "total": 2
             },
             "confused": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
+            },
+            "invalid": {
                 "Cerebral": 0,
                 "Vascular": 0,
                 "Head and Neck": 0,
@@ -8888,6 +10928,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -8940,6 +10992,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -8992,6 +11056,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -9044,6 +11120,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -9096,6 +11184,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     },
@@ -9148,6 +11248,18 @@
                 "Pulmonary": 0,
                 "Nuclear Medicine": 0,
                 "total": 1
+            },
+            "invalid": {
+                "Cerebral": 0,
+                "Vascular": 0,
+                "Head and Neck": 0,
+                "Spinal": 0,
+                "Musculoskeletal": 0,
+                "Cardiac": 0,
+                "Gastrointestinal": 0,
+                "Pulmonary": 0,
+                "Nuclear Medicine": 0,
+                "total": 0
             }
         }
     }
