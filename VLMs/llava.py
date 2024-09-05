@@ -38,7 +38,6 @@ def do_forward(model, inputs, processor):
         out = model.forward(**inputs)
         
     logits = out.logits[0, -1, :]
-    raise ValueError (logits)
     soft_max = torch.nn.Softmax(dim=0)
     probs = soft_max(torch.cat([logits[TOKEN_ID_A], logits[TOKEN_ID_B]][:len(VALID_ANSWERS)]))
     outputs = VALID_ANSWERS[probs.argmax().item()]
