@@ -410,10 +410,9 @@ class LLAVAAnswering(BaseAnsweringModel):
         args = super().set_model_params()
         
         set_seed(0)
-        tokenizer, model, processor = llava.load_model(args.get("model_path"), args.get("model_base"))
+        model, processor = llava.load_model()
 
         self.model = model
-        self.tokenizer = tokenizer
         self.processor = processor
         self.conv_mode = args.get("conv_mode")
 
@@ -423,10 +422,9 @@ class LLAVAAnswering(BaseAnsweringModel):
         image_list = [Image.open(x) for x in image_list]
         for image in image_list:
             outputs = llava.ask_question(self.model, 
+                                         self.processor, 
                                          question, 
                                          image, 
-                                         self.processor, 
-                                         self.tokenizer, 
                                          self.mode,
                                          temperature=self.temperature,
                                          top_p=self.top_p, 

@@ -1,8 +1,8 @@
 openai
 pyaml
 open_clip_torch
-torch==2.1.2
-transformers
+torch
+transformers==4.37.2
 pandas
 oauth2client
 python-dotenv
