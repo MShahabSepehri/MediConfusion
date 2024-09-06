@@ -58,7 +58,7 @@ def ask_question(model, processor, image_path, question, max_new_tokens, mode, I
     images = [Image.open(image_path) for image_path in tmp]
     pixels = processor.preprocess_images(images)
     pixels = repeat(pixels, 'N c h w -> b N T c h w', b=1, T=1)
-    question = process_prompt(question, use_option=(mode=='mc'))
+    question = process_prompt(question, use_option=(mode!='gpt4'))
     tokenized_data = processor.encode_text(question)
     if mode == 'greedy':
         return do_forward(model, processor, pixels, tokenized_data)
