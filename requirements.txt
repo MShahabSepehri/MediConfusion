@@ -9,3 +9,4 @@ python-dotenv
 open_flamingo
 anthropic
 ipython
+peft

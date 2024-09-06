@@ -562,6 +562,40 @@ class MedFlamingoAnswering(BaseAnsweringModel):
             response_list.append(outputs)
         return response_list
 
+
+class MedVInTAnswering(BaseAnsweringModel):
+
+    def set_model_params(self):
+        global med_flamingo
+        from VLMs import medvint
+        self.key = 'medvint'
+        args = super().set_model_params()
+        self.model_args = medvint.ModelArguments()
+        self.model_args.embed_dim = args.get("EMBED_DIM")
+        self.model_args.pretrained_tokenizer = args.get("PRETRAINED_TOKENIZER")
+        self.model_args.pretrained_model = args.get("PRETRAINED_MODEL")
+        self.model_args.image_encoder = args.get("IMAGE_ENCODER")
+        self.model_args.pmcclip_pretrained = args.get("PMCCLIP_PRETRAINED")
+        self.model_args.clip_pretrained = args.get("CLIP_PRETRAINED")
+        self.model_args.ckp = args.get("CKP")
+        model, image_transform, tokenizer = medvint.load_model(self.model_args)
+        self.model = model
+        self.image_transform = image_transform
+        self.tokenizer = tokenizer
+
+    def ask_question(self, question, options, image_list):
+        question = super().ask_question(question, options, image_list)
+        image_list = [Image.open(x).convert('RGB') for x in image_list]
+        response_list = []
+        for image in image_list:
+            image = self.image_transform(image)
+            outputs = med_flamingo.ask_question(self.model, 
+                                                self.tokenizer, 
+                                                question, 
+                                                image,
+                                                )
+            response_list.append(outputs)
+        return response_list
 ANSWERING_CLASS_DICT = {
     'gpt': GPTAnswering,
     'claude': ClaudeAnswering,
@@ -572,6 +606,7 @@ ANSWERING_CLASS_DICT = {
     'blip2': BLIP2Answering,
     'instructblip': InstructBLIPAnswering,
     'med_flamingo': MedFlamingoAnswering,
+    'medvint': MedVInTAnswering,
 }
 
 DEFAULT_MODEL_CONFIGS = {
@@ -584,4 +619,5 @@ DEFAULT_MODEL_CONFIGS = {
     'blip2': f'{ROOT}/configs/VLM/blip2/vanilla.json',
     'instructblip': f'{ROOT}/configs/VLM/instructblip/vanilla.json',
     'med_flamingo': f'{ROOT}/configs/VLM/med_flamingo/vanilla.json',
+    'medvint': f'{ROOT}/configs/VLM/medvint/vanilla.json',
 }

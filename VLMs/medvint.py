@@ -16,17 +16,17 @@ from torch.nn import functional as F
 from torch.utils.data import DataLoader 
 from transformers import LlamaTokenizer
 from dataclasses import dataclass, field
-from MedVInT.llama.vqa_model import Binary_VQA_Model
-from MedVInT.dataset.randaugment import RandomAugment
+from .MedVInT.llama.vqa_model import Binary_VQA_Model
+from .MedVInT.dataset.randaugment import RandomAugment
 
-EMBED_DIM = 768
-IMAGE_RES = 512
-PRETRAINED_TOKENIZER = "../../LLAMA_Model/tokenizer"
-PRETRAINED_MODEL = "../../LLAMA_Model/llama-7b-hf"
-IMAGE_ENCODER = "CLIP"
-PMCCLIP_PRETRAINED = "./models/pmc_clip/checkpoint.pt"
-CLIP_PRETRAINED = "openai/clip-vit-base-patch32"
-CKP = "./Results/VQA_lora_noclip/vqa/checkpoint-6500"
+# EMBED_DIM = 768
+# IMAGE_RES = 512
+# PRETRAINED_TOKENIZER = "../../LLAMA_Model/tokenizer"
+# PRETRAINED_MODEL = "../../LLAMA_Model/llama-7b-hf"
+# IMAGE_ENCODER = "CLIP"
+# PMCCLIP_PRETRAINED = "./models/pmc_clip/checkpoint.pt"
+# CLIP_PRETRAINED = "openai/clip-vit-base-patch32"
+# CKP = "./Results/VQA_lora_noclip/vqa/checkpoint-6500"
 
 @dataclass
 class ModelArguments:
@@ -65,21 +65,13 @@ def find_most_similar_index(str_list, target_str):
     # Return the index of the most similar string
     return most_similar_index
   
-def get_generated_texts(label,outputs,tokenizer):
+def get_generated_texts(label, outputs, tokenizer):
     #1,256
     outputs = outputs[label!=0][1:-1]
     generated_text = tokenizer.decode(outputs)
     return generated_text
 
-def load_model():
-    model_args = ModelArguments()
-    model_args.embed_dim = EMBED_DIM
-    model_args.pretrained_tokenizer = PRETRAINED_TOKENIZER
-    model_args.pretrained_model = PRETRAINED_MODEL
-    model_args.image_encoder = IMAGE_ENCODER
-    model_args.pmcclip_pretrained = PMCCLIP_PRETRAINED
-    model_args.clip_pretrained = CLIP_PRETRAINED
-    model_args.ckp = CKP
+def load_model(model_args):
 
     ckp = model_args.ckp + '/pytorch_model.bin'
     model = Binary_VQA_Model(model_args)
@@ -107,9 +99,9 @@ def load_model():
     return model, tokenizer, image_transform
 
 
-def encode_mlm(self, question_text, question_text_with_answer, mask_token= '</s>', pad_token='<unk>', eos_token = '</s>'):
+def encode_mlm(tokenizer, question_text, question_text_with_answer, mask_token= '</s>', pad_token='<unk>', eos_token = '</s>'):
         def measure_word_len(word):
-            token_ids = self.tokenizer.encode(word)
+            token_ids = tokenizer.encode(word)
             # tokens = [tokenizer.decode(x) for x in token_ids]
             return len(token_ids) - 1
         
@@ -137,39 +129,38 @@ def encode_mlm(self, question_text, question_text_with_answer, mask_token= '</s>
         return bert_input, bert_label
 
 
-with open(os.path.join(training_args.output_dir,'result.csv'), mode='w') as outfile:
-    writer = csv.writer(outfile)
-    writer.writerow(['Figure_path','Pred','Label','Correct'])
-    for sample in tqdm.tqdm(Test_dataloader):
-        img_path = sample['image_path']
-        image = sample['image'].to('cuda')
-        label = sample['label'].to('cuda')[:,0,:]
-        question_inputids = sample['encoded_input_ids'].to('cuda')[:,0,:]
-        question_attenmask = sample['encoded_attention_mask'].to('cuda')[:,0,:]
-        with torch.no_grad():
-            outputs = model(image,question_inputids,question_attenmask)# 
-        loss = F.nll_loss(outputs.transpose(1, 2), label, ignore_index=0)
+def ask_question(model, tokenizer, question, image, max_length=256):
+    image = image.to('cuda')
+    answer = '-'
+    answer_label = '-'
+    question_text = question
+    question_text_with_answer = question_text + answer_label
+    bert_input, bert_label = encode_mlm(tokenizer, question_text, question_text_with_answer)
+
+    encoded_input = tokenizer(bert_input, add_special_tokens=True, padding='max_length', truncation=True, max_length=max_length,return_tensors="pt")
+    encoded_label = tokenizer(bert_label, add_special_tokens=True, padding='max_length', truncation=True, max_length=max_length,return_tensors="pt")
         
-        generated_texts = get_generated_texts(label,outputs.argmax(-1),Test_dataset.tokenizer)
-        Choice_A = sample['Choice_A'][0]
-        Choice_B = sample['Choice_B'][0]
-        Choice_C = sample['Choice_C'][0]
-        Choice_D = sample['Choice_D'][0] 
-        Answer_label = sample['Answer_label'][0] 
-        # print(loss,Answer_label,generated_texts)
-        Choice_list = [Choice_A, Choice_B, Choice_C, Choice_D]
-        index_pred = find_most_similar_index(['A','B','C','D'], generated_texts)
-        index_label  = find_most_similar_index(['A','B','C','D'], Answer_label)
-        corret = 0
-        if index_pred == index_label:
-            ACC = ACC +1
-            corret = 1 
-        writer.writerow([img_path,Answer_label,generated_texts,corret])
-        cc = cc + 1
-    print(ACC/cc)  
-    writer.writerow([ACC/cc])
-
-
-if __name__ == "__main__":
-    main()
+    label = encoded_label['input_ids'].to('cuda')[:,0,:]
+    question_inputids = encoded_input['input_ids'].to('cuda')[:,0,:]
+    question_attenmask = encoded_input['attention_mask'].to('cuda')[:,0,:]
+    with torch.no_grad():
+        outputs = model(image, question_inputids, question_attenmask)
+    raise ValueError (outputs)
+    loss = F.nll_loss(outputs.transpose(1, 2), label, ignore_index=0)
     
+    generated_texts = get_generated_texts(label, outputs.argmax(-1), tokenizer)
+    Choice_A = sample['Choice_A'][0]
+    Choice_B = sample['Choice_B'][0]
+    Choice_C = sample['Choice_C'][0]
+    Choice_D = sample['Choice_D'][0] 
+    Answer_label = sample['Answer_label'][0] 
+    # print(loss,Answer_label,generated_texts)
+    Choice_list = [Choice_A, Choice_B, Choice_C, Choice_D]
+    index_pred = find_most_similar_index(['A','B','C','D'], generated_texts)
+    index_label  = find_most_similar_index(['A','B','C','D'], Answer_label)
+    corret = 0
+    if index_pred == index_label:
+        ACC = ACC +1
+        corret = 1 
+    writer.writerow([img_path,Answer_label,generated_texts,corret])
+    cc = cc + 1
