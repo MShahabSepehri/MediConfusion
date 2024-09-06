@@ -10,6 +10,9 @@ def load_model():
 
 def ask_question(model, question, image_path, processor, num_beams, max_length, top_p, temperature, mode):
     image = Image.open(image_path).convert("RGB")
+
+    if mode == 'prefix':
+        return do_prefix_forward(model, question, image, processor)
     inputs = processor(images=image, text=question, return_tensors="pt").to(device="cuda", dtype=torch.float16)
     if mode == 'greedy':
         return do_forward(model, processor, inputs)
@@ -60,3 +63,40 @@ def do_forward(model, processor, inputs):
     probs = soft_max(torch.cat([logits[TOKEN_ID_A], logits[TOKEN_ID_B]][:len(VALID_ANSWERS)]))
     outputs = VALID_ANSWERS[probs.argmax().item()]
     return outputs
+
+@torch.no_grad()
+def do_prefix_forward(model, problem, image, processor):
+    PREFIX_PROMPT_TEMPLATE = "Question: {} Answer: {}"
+    #python scripts/answering.py --vlm_name instructblip --mode mc
+    scores = []
+    questions = []
+    qs = problem["question"]
+
+    for option in [problem["option_A"], problem["option_B"]]:
+        prompt = PREFIX_PROMPT_TEMPLATE.format(qs, option)
+        questions.append(prompt)
+        inputs = processor(images=image, text=prompt, return_tensors="pt").to(device="cuda", dtype=torch.float16)
+        answer_tokens = processor.tokenizer.encode(" " + option, add_special_tokens=False)[1:]
+        num_answer_tokens = len(answer_tokens)
+        input_ids = inputs["input_ids"]
+
+        # try to find the answer tokens in input ids
+        for i in range(input_ids.size(1) - num_answer_tokens + 1):
+            if torch.equal(input_ids[0, i:i+num_answer_tokens], torch.tensor(answer_tokens).cuda()):
+                break
+        else:
+            raise ValueError("Answer tokens not found in input_ids")
+        answer_start = i
+        answer_start_from_back = answer_start - input_ids.size(1)
+        with torch.inference_mode():
+            out = model(**inputs
+                )
+            # shift by 1 compared to input
+            logits = out.logits[0, answer_start_from_back-1:answer_start_from_back-1+num_answer_tokens]
+            probs = torch.nn.functional.softmax(logits, dim=-1)
+
+            # Pick the probabilities corresponding to each of the answer tokens
+            probs = torch.gather(probs, 1, torch.tensor(answer_tokens).cuda().unsqueeze(0))
+            prefix_score = torch.prod(probs.pow(1/num_answer_tokens))
+            scores.append(prefix_score.item())
+    return do_forward(model, processor, inputs)

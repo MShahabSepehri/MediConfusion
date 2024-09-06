@@ -174,9 +174,7 @@ class BaseAnsweringModel():
         elif self.mode == 'mc':
             output = tmp.format(question, options[0], options[1])
         elif self.mode == 'prefix':
-            op_a = tmp.format(question, options[0])
-            op_b = tmp.format(question, options[1])
-            output = (op_a, op_b)
+            output = {"question": question, "option_A": options[0], "option_B": options[1]}
         return output
     
     def check_folder(self, save_dir):
@@ -379,27 +377,37 @@ class LLAVAMedAnswering(BaseAnsweringModel):
 
     def convert_question(self, question, options):
         tmp = super().convert_question(question, options)
+        if self.mode == 'prefix':
+            to_process = tmp["question"]
+        else:
+            to_process = tmp
+
         if self.prompt_key == 'with_image':
-            tmp = '<image>\n' + tmp
-            qs = tmp.replace(llava_med.DEFAULT_IMAGE_TOKEN, '').strip()
+            to_process = '<image>\n' + to_process
+            qs = to_process.replace(llava_med.DEFAULT_IMAGE_TOKEN, '').strip()
             if self.use_im_start_end:
                 qs = llava_med.DEFAULT_IM_START_TOKEN + llava_med.DEFAULT_IMAGE_TOKEN + llava_med.DEFAULT_IM_END_TOKEN + '\n' + qs
             else:
                 qs = llava_med.DEFAULT_IMAGE_TOKEN + '\n' + qs
-        return qs
+        
+        if self.mode == 'prefix':
+            tmp["question"] = qs
+            return tmp
+        else:
+            return qs
 
     def ask_question(self, question, options, image_list):
         question = super().ask_question(question, options, image_list)
         response_list = []
-        input_ids = llava_med.get_input_id(self.tokenizer, question, self.conv_mode)
         image_list = [Image.open(x) for x in image_list]
         for image in image_list:
             outputs = llava_med.ask_question(self.model, 
-                                             input_ids, 
+                                             question, 
                                              image, 
                                              self.image_processor, 
                                              self.tokenizer, 
                                              self.mode,
+                                             conv_mode=self.conv_mode,
                                              temperature=self.temperature,
                                              top_p=self.top_p, 
                                              num_beams=self.num_beams,
@@ -490,7 +498,7 @@ class BLIP2Answering(BaseAnsweringModel):
                                          image_path, 
                                          self.processor,
                                          self.num_beams,
-                                         self.max_length,
+                                         self.max_new_tokens,
                                          self.top_p,
                                          self.temperature,
                                          self.mode)
@@ -517,7 +525,7 @@ class InstructBLIPAnswering(BaseAnsweringModel):
                                                 image_path, 
                                                 self.processor,
                                                 self.num_beams,
-                                                self.max_length,
+                                                self.max_new_tokens,
                                                 self.top_p,
                                                 self.temperature,
                                                 self.mode)
