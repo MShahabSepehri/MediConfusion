@@ -83,12 +83,14 @@ def do_prefix_forward(model, problem, image, processor):
         num_answer_tokens = len(answer_tokens)
         input_ids = inputs["input_ids"]
         # try to find the answer tokens in input ids
+        start_indices = []
         for i in range(input_ids.size(1) - num_answer_tokens + 1):
             if torch.equal(input_ids[0, i:i+num_answer_tokens], torch.tensor(answer_tokens).cuda()):
-                break
-        else:
+                start_indices.append(i)
+        
+        if len(start_indices) == 0:
             raise ValueError("Answer tokens not found in input_ids")
-        answer_start = i
+        answer_start = start_indices[-1]
         answer_start_from_back = answer_start - input_ids.size(1)
 
         with torch.inference_mode():

@@ -86,14 +86,16 @@ def do_prefix_forward(model, problem, image_tensor, image_size, tokenizer, conv_
         answer_tokens = tokenizer.encode(" " + option, add_special_tokens=False)[1:]
         num_answer_tokens = len(answer_tokens)
         input_ids = tokenizer_image_token(prompt, tokenizer, IMAGE_TOKEN_INDEX, return_tensors='pt').unsqueeze(0).cuda()
-        print(f"Prompt: {prompt}, image: {image_tensor.sum()}")
         # try to find the answer tokens in input ids
+        start_indices = []
         for i in range(input_ids.size(1) - num_answer_tokens + 1):
             if torch.equal(input_ids[0, i:i+num_answer_tokens], torch.tensor(answer_tokens).cuda()):
-                break
-        else:
+                start_indices.append(i)
+        
+        if len(start_indices) == 0:
             raise ValueError("Answer tokens not found in input_ids")
-        answer_start = i
+        answer_start = start_indices[-1]
+        answer_start_from_back = answer_start - input_ids.size(1)
 
         with torch.inference_mode():
             out = model(
@@ -101,9 +103,7 @@ def do_prefix_forward(model, problem, image_tensor, image_size, tokenizer, conv_
                 images=image_tensor.unsqueeze(0).half().cuda(),
                 use_cache=True
                 )
-            NUM_IMG_TOKENS = 576
-            answer_start_output = NUM_IMG_TOKENS - 2 + answer_start
-            logits = out.logits[0, answer_start_output:answer_start_output+num_answer_tokens]
+            logits = out.logits[0, answer_start_from_back-1:answer_start_from_back-1+num_answer_tokens]
             probs = torch.nn.functional.softmax(logits, dim=-1)
 
             # Pick the probabilities corresponding to each of the answer tokens
