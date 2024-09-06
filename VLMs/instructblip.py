@@ -67,7 +67,6 @@ def do_forward(model, processor, inputs):
 @torch.no_grad()
 def do_prefix_forward(model, problem, image, processor):
     PREFIX_PROMPT_TEMPLATE = "Question: {} Answer: {}"
-    #python scripts/answering.py --vlm_name instructblip --mode mc
     scores = []
     questions = []
     qs = problem["question"]
