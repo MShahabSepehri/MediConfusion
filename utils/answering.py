@@ -488,7 +488,7 @@ class BLIP2Answering(BaseAnsweringModel):
                                          image_path, 
                                          self.processor,
                                          self.num_beams,
-                                         self.max_length,
+                                         self.max_new_tokens,
                                          self.top_p,
                                          self.temperature,
                                          self.mode)
@@ -515,7 +515,7 @@ class InstructBLIPAnswering(BaseAnsweringModel):
                                                 image_path, 
                                                 self.processor,
                                                 self.num_beams,
-                                                self.max_length,
+                                                self.max_new_tokens,
                                                 self.top_p,
                                                 self.temperature,
                                                 self.mode)

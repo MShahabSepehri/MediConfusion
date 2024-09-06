@@ -104,32 +104,3 @@ def do_prefix_forward(model, problem, image, processor):
             scores.append(prefix_score.item())
     outputs = "A" if scores[0] > scores[1] else "B"
     return outputs
-
-
-convv_template = [
-    {
-        "role": "user",
-        "content": [
-            {"type": "image"},
-            {"type": "text", "text": "{}"},
-            ],
-    },
-    {
-        "role": "assistant",
-        "content": [
-            {"type": "text", "text": "{}"},
-            ],
-    }
-]
-
-# conversation_2 = [
-#     {
-#         "role": "user",
-#         "content": [
-#             {"type": "image"},
-#             {"type": "text", "text": "What is shown in this image?"},
-#             ],
-#     },
-# ]
-
-# prompt_1 = processor.apply_chat_template(conversation_1, add_generation_prompt=True)
