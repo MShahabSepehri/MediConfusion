@@ -19,7 +19,7 @@ from ..pmc_oa.pmc_clip import PMC_CLIP
 
 # from blocks import Transformer
 
-from peft import (
+from ..peft import (
     get_peft_model,
     LoraConfig,
     PrefixTuningConfig,
@@ -49,7 +49,8 @@ class PEFTArguments:
 def get_peft_config(peft_args: PEFTArguments):
     if peft_args.peft_mode == "lora":
         peft_config = LoraConfig(
-            task_type=TaskType.LM, inference_mode=False,
+            task_type=TaskType.LM, 
+            inference_mode=False,
             r=peft_args.lora_rank,
             lora_alpha=32, lora_dropout=0.1
         )

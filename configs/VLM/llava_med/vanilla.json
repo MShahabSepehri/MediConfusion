@@ -4,11 +4,7 @@
     "top_p": null,
     "num_beams": 1,
     "conv_mode": "mistral_instruct",
-<<<<<<< HEAD
-    "temperature": 0.2,
-=======
     "temperature": 0.0,
->>>>>>> 59d57d6c9480e055c46c3759be40df47f1ef0dfa
     "init_prompt_id": 1,
     "use_im_start_end": false,
     "max_new_tokens": 100

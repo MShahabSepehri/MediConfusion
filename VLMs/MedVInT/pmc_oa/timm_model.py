@@ -14,7 +14,7 @@ try:
 except ImportError as e:
     timm = None
 
-from models.pmc_oa.utils import freeze_batch_norm_2d
+from .utils import freeze_batch_norm_2d
 # from utils import freeze_batch_norm_2d
 
 
