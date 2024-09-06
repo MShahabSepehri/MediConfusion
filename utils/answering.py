@@ -41,7 +41,7 @@ class BaseAnsweringModel():
             self.temperature = 0
             self.top_p = None
             self.max_new_tokens = 1
-        if self.mode == 'gpt':
+        if self.mode == 'gpt4':
             self.clean_up = self.clean_up_no_option
             global gpt
             from VLMs import gpt
@@ -149,6 +149,14 @@ class BaseAnsweringModel():
                 a_score = 10
             elif answer[: 1] == 'B':
                 b_score = 10
+            else: # for mc
+                if ('A ' in answer) or (' A' in answer):
+                    a_score = 10
+                if ('B ' in answer) or (' B' in answer):
+                    b_score = 10
+        if (a_score == 10) and (b_score == 10):
+            a_score = 0
+            b_score = 0
         return {'A': a_score, 'B': b_score, 'full_answer': answer}
     
     def convert_question(self, question, options):
@@ -442,7 +450,9 @@ class RadFMAnswering(BaseAnsweringModel):
         from VLMs import radfm
         self.key = 'radfm'
         args = super().set_model_params()
-        model, text_tokenizer, image_padding_tokens = radfm.load_model()
+        self.language_files_path = args.get("language_files_path")
+        self.model_path = args.get("model_path")
+        model, text_tokenizer, image_padding_tokens = radfm.load_model(self.language_files_path, self.model_path)
         self.model = model
         self.text_tokenizer = text_tokenizer
         self.image_padding_tokens = image_padding_tokens
@@ -522,7 +532,10 @@ class MedFlamingoAnswering(BaseAnsweringModel):
         from VLMs import med_flamingo
         self.key = 'med_flamingo'
         args = super().set_model_params()
-        model, processor = med_flamingo.load_model()
+        self.LLaMa_PATH = args.get('LLaMa_PATH')
+        self.CHECKPOINT_PATH = args.get('CHECKPOINT_PATH')
+        self.IMAGE_PATH = args.get('IMAGE_PATH')
+        model, processor = med_flamingo.load_model(self.LLaMa_PATH, self.CHECKPOINT_PATH)
         self.model = model
         self.processor = processor
 
@@ -535,7 +548,9 @@ class MedFlamingoAnswering(BaseAnsweringModel):
                                                 image_path, 
                                                 question, 
                                                 self.max_new_tokens,
-                                                self.mode)
+                                                self.mode,
+                                                self.IMAGE_PATH,
+                                                )
             response_list.append(outputs)
         return response_list
 

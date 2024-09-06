@@ -2,5 +2,12 @@
     "num_beams": 5,
     "max_new_tokens": 10,
     "top_p": 0.9,
-    "temperature": 1
+    "temperature": 1,
+    "EMBED_DIM": 768,
+    "PRETRAINED_TOKENIZER": "/data/models/llama",
+    "PRETRAINED_MODEL": "/data/models/llama",
+    "IMAGE_ENCODER": "CLIP",
+    "PMCCLIP_PRETRAINED": "./models/pmc_clip/checkpoint.pt",
+    "CLIP_PRETRAINED": "openai/clip-vit-base-patch32",
+    "CKP": "./Results/VQA_lora_noclip/vqa/checkpoint-6500"
 }

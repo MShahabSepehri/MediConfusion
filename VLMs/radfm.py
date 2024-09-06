@@ -65,10 +65,10 @@ def combine_and_preprocess(question,image_list,image_padding_tokens):
     text = ''.join(new_qestions) 
     return text, vision_x, 
     
-def load_model():
-    text_tokenizer, image_padding_tokens = get_tokenizer('/data/models/radfm/Language_files')
-    model = MultiLLaMAForCausalLM(lang_model_path='/data/models/radfm/Language_files')
-    ckpt = torch.load('/data/models/radfm/pytorch_model.bin', map_location='cpu')
+def load_model(language_files_path, model_path):
+    text_tokenizer, image_padding_tokens = get_tokenizer(language_files_path)
+    model = MultiLLaMAForCausalLM(lang_model_path=language_files_path)
+    ckpt = torch.load(model_path, map_location='cpu')
     model.load_state_dict(ckpt)
     model = model.to('cuda')
     model.eval()

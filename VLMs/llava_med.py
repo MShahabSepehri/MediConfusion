@@ -1,11 +1,11 @@
 import os
 import torch
 from utils import io_tools
-from .LLaVA_Med.llava.utils import disable_torch_init
-from .LLaVA_Med.llava.conversation import conv_templates
-from .LLaVA_Med.llava.model.builder import load_pretrained_model
-from .LLaVA_Med.llava.mm_utils import get_model_name_from_path, tokenizer_image_token, process_images
-from .LLaVA_Med.llava.constants import IMAGE_TOKEN_INDEX, DEFAULT_IMAGE_TOKEN, DEFAULT_IM_START_TOKEN, DEFAULT_IM_END_TOKEN
+from llava.utils import disable_torch_init
+from llava.conversation import conv_templates
+from llava.model.builder import load_pretrained_model
+from llava.mm_utils import get_model_name_from_path, tokenizer_image_token, process_images
+from llava.constants import IMAGE_TOKEN_INDEX, DEFAULT_IMAGE_TOKEN, DEFAULT_IM_START_TOKEN, DEFAULT_IM_END_TOKEN
 
 def load_model(model_path, model_base):
     disable_torch_init()

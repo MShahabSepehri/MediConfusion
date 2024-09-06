@@ -4,15 +4,11 @@ from einops import repeat
 from .Med_Flamingo.src.utils import FlamingoProcessor
 from open_flamingo import create_model_and_transforms
 
-LLaMa_PATH = '/data/models/llama'
-CHECKPOINT_PATH = '/data/models/med_flamingo/model.pt' 
-IMAGE_PATH = '/data/datasets/pmc/images/'
 FEW_SHOT_IMAGES = [
     'PMC1064097_F2.jpg',
     'PMC1065025_F1.jpg',
     'PMC1087855_F3.jpg',
 ]
-FEW_SHOT_IMAGES = [(IMAGE_PATH + IM) for IM in FEW_SHOT_IMAGES]
 FEW_SHOT_QUESTIONS = [
     'What radiological technique was used to confirm the diagnosis?',
     'What did the CT scan show?',
@@ -29,7 +25,7 @@ FEW_SHOT_OPTIONS = [
     ['A: To indicate the formation of lobes around the contracting nucleus.', 'B: To indicate the normal lentoid shape of hypocotyl nuclei.']
 ]
 
-def load_model():
+def load_model(LLaMa_PATH, CHECKPOINT_PATH):
     model, image_processor, tokenizer = create_model_and_transforms(
         clip_vision_encoder_path="ViT-L-14",
         clip_vision_encoder_pretrained="openai",
@@ -56,8 +52,8 @@ def process_prompt(prompt, use_option):
         prompt = prompt.replace(f'**Q{q+1}**', get_few_shot_sample(q, use_option))
     return prompt
 
-def ask_question(model, processor, image_path, question, max_new_tokens, mode):
-    tmp = FEW_SHOT_IMAGES.copy()
+def ask_question(model, processor, image_path, question, max_new_tokens, mode, IMAGE_DIR):
+    tmp = [(IMAGE_DIR + IM) for IM in FEW_SHOT_IMAGES]
     tmp.append(image_path)
     images = [Image.open(image_path) for image_path in tmp]
     pixels = processor.preprocess_images(images)
