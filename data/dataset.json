@@ -2,8 +2,8 @@
     "10001": {
         "im_1": "train/radiology/images/ROCO_28778.jpg",
         "im_2": "train/radiology/images/ROCO_62117.jpg",
-        "im_1_local": 10192,
-        "im_2_local": 10053,
+        "im_1_local": 20192,
+        "im_2_local": 20053,
         "cap_1": " Selective injection in the left internal carotid artery on digital subtraction angiography showing the internal carotid artery terminating into the ophthalmic artery with no contribution to cerebral vasculature.",
         "cap_2": " After 1 week, repeated cerebral angiogram showed the pseudoaneurysm changed more aggravating appearance.",
         "category_1": [
@@ -28,8 +28,8 @@
     "10002": {
         "im_1": "train/radiology/images/ROCO_28778.jpg",
         "im_2": "train/radiology/images/ROCO_38225.jpg",
-        "im_1_local": 10192,
-        "im_2_local": 10014,
+        "im_1_local": 20192,
+        "im_2_local": 20014,
         "cap_1": " Selective injection in the left internal carotid artery on digital subtraction angiography showing the internal carotid artery terminating into the ophthalmic artery with no contribution to cerebral vasculature.",
         "cap_2": " Total occlusion of the horizontal portion of the left middle cerebral artery is clear on emergent cerebral angiogram.",
         "category_1": [
@@ -54,8 +54,8 @@
     "10003": {
         "im_1": "train/radiology/images/ROCO_38225.jpg",
         "im_2": "train/radiology/images/ROCO_56053.jpg",
-        "im_1_local": 10014,
-        "im_2_local": 10040,
+        "im_1_local": 20014,
+        "im_2_local": 20040,
         "cap_1": " Total occlusion of the horizontal portion of the left middle cerebral artery is clear on emergent cerebral angiogram.",
         "cap_2": " DSA in AP (2a) and lateral (2b) projections showing an approximately 9 \u00d7 9 mm left PICA aneurysm (black arrow) located at the level of the caudal loop (tonsillomedullary segment). The aneurysm appears to have both intracranial (1) and extracranial (2) components in Figure 2b",
         "category_1": [
@@ -80,8 +80,8 @@
     "10004": {
         "im_1": "train/radiology/images/ROCO_20285.jpg",
         "im_2": "train/radiology/images/ROCO_56053.jpg",
-        "im_1_local": 10069,
-        "im_2_local": 10040,
+        "im_1_local": 20069,
+        "im_2_local": 20040,
         "cap_1": " Digital subtraction angiography, right internal carotid artery injection showing partially thrombosed anterior com artery aneurysm (white arrow)",
         "cap_2": " DSA in AP (2a) and lateral (2b) projections showing an approximately 9 \u00d7 9 mm left PICA aneurysm (black arrow) located at the level of the caudal loop (tonsillomedullary segment). The aneurysm appears to have both intracranial (1) and extracranial (2) components in Figure 2b",
         "category_1": [
@@ -106,8 +106,8 @@
     "10005": {
         "im_1": "train/radiology/images/ROCO_24437.jpg",
         "im_2": "train/radiology/images/ROCO_35078.jpg",
-        "im_1_local": 10142,
-        "im_2_local": 10058,
+        "im_1_local": 20142,
+        "im_2_local": 20058,
         "cap_1": " Digital substraction angiography shows coiling of anterior communicating artery and left middle cerebral artery bifurcation aneurysm",
         "cap_2": " Angiogram of the right internal carotid artery. Coil embolization of the pseudoaneurysm and successfully deployed endovascular stent.",
         "category_1": [
@@ -132,8 +132,8 @@
     "10006": {
         "im_1": "train/radiology/images/ROCO_20285.jpg",
         "im_2": "train/radiology/images/ROCO_36456.jpg",
-        "im_1_local": 10069,
-        "im_2_local": 10177,
+        "im_1_local": 20069,
+        "im_2_local": 20177,
         "cap_1": " Digital subtraction angiography, right internal carotid artery injection showing partially thrombosed anterior com artery aneurysm (white arrow)",
         "cap_2": " Example patient 1's pre-intervention angiography. Pre-intervention angiography of proximal basilar artery demonstrating critical stenosis",
         "category_1": [
@@ -158,8 +158,8 @@
     "10007": {
         "im_1": "train/radiology/images/ROCO_34001.jpg",
         "im_2": "validation/radiology/images/ROCO_32831.jpg",
-        "im_1_local": 10066,
-        "im_2_local": 10081,
+        "im_1_local": 20066,
+        "im_2_local": 20081,
         "cap_1": " Preoperative T1 sagittal magnetic resonance imaging scan demonstrating an inferiorly bowed floor of the third ventricle",
         "cap_2": " Postoperative (sagittal) image of same patient showing normal aerated sphenoid with no residual lesion",
         "category_1": [
@@ -184,8 +184,8 @@
     "10008": {
         "im_1": "test/radiology/images/ROCO_43209.jpg",
         "im_2": "train/radiology/images/ROCO_38225.jpg",
-        "im_1_local": 10113,
-        "im_2_local": 10014,
+        "im_1_local": 20113,
+        "im_2_local": 20014,
         "cap_1": " Art\u00e9riographie carotidienne gauche montrant au temps art\u00e9riel une fistule carotido-caverneuse avec opacification pr\u00e9coce des sinus caverneux",
         "cap_2": " Total occlusion of the horizontal portion of the left middle cerebral artery is clear on emergent cerebral angiogram.",
         "category_1": [
@@ -210,8 +210,8 @@
     "10009": {
         "im_1": "train/radiology/images/ROCO_12537.jpg",
         "im_2": "train/radiology/images/ROCO_26019.jpg",
-        "im_1_local": 10027,
-        "im_2_local": 10157,
+        "im_1_local": 20027,
+        "im_2_local": 20157,
         "cap_1": " Magnetic Resonance Imaging of Brain Sagittal Section of T1 Sequence Showing Cerebellar Cortical Atrophy.No white matter changes in the cerebellar peduncle",
         "cap_2": " Mid-sagittal T1 weighted MRI of the brain shows tonsillar herniation to the level of C3. There is effacement of the fourth ventricle and Triventricular hydrocephalus.",
         "category_1": [
@@ -236,8 +236,8 @@
     "10010": {
         "im_1": "train/radiology/images/ROCO_07207.jpg",
         "im_2": "train/radiology/images/ROCO_26019.jpg",
-        "im_1_local": 10218,
-        "im_2_local": 10157,
+        "im_1_local": 20218,
+        "im_2_local": 20157,
         "cap_1": " Sagittal T1 weighted image demonstrates herniation of the cerebellar tonsils 2.2\u00a0cm below the foramen magnum with downward pointing.",
         "cap_2": " Mid-sagittal T1 weighted MRI of the brain shows tonsillar herniation to the level of C3. There is effacement of the fourth ventricle and Triventricular hydrocephalus.",
         "category_1": [
@@ -263,8 +263,8 @@
     "10011": {
         "im_1": "train/radiology/images/ROCO_26019.jpg",
         "im_2": "validation/radiology/images/ROCO_08708.jpg",
-        "im_1_local": 10157,
-        "im_2_local": 10208,
+        "im_1_local": 20157,
+        "im_2_local": 20208,
         "cap_1": " Mid-sagittal T1 weighted MRI of the brain shows tonsillar herniation to the level of C3. There is effacement of the fourth ventricle and Triventricular hydrocephalus.",
         "cap_2": " Midsagittal T1-weighted brain MRI from a 28-year-old woman affected by ataxia with oculomotor apraxia type 4This section displays moderate cerebellar atrophy but no evidence of brainstem atrophy.",
         "category_1": [
@@ -289,8 +289,8 @@
     "10012": {
         "im_1": "train/radiology/images/ROCO_26019.jpg",
         "im_2": "validation/radiology/images/ROCO_33649.jpg",
-        "im_1_local": 10157,
-        "im_2_local": 10196,
+        "im_1_local": 20157,
+        "im_2_local": 20196,
         "cap_1": " Mid-sagittal T1 weighted MRI of the brain shows tonsillar herniation to the level of C3. There is effacement of the fourth ventricle and Triventricular hydrocephalus.",
         "cap_2": " Sagittal T1-weighted magnetic resonance imaging demonstrating erosion of the inferior aspect of the clivus consistent with rheumatoid pannus.",
         "category_1": [
@@ -316,8 +316,8 @@
     "10013": {
         "im_1": "train/radiology/images/ROCO_26019.jpg",
         "im_2": "train/radiology/images/ROCO_35856.jpg",
-        "im_1_local": 10157,
-        "im_2_local": 10193,
+        "im_1_local": 20157,
+        "im_2_local": 20193,
         "cap_1": " Mid-sagittal T1 weighted MRI of the brain shows tonsillar herniation to the level of C3. There is effacement of the fourth ventricle and Triventricular hydrocephalus.",
         "cap_2": " Initial MRI (pre-contrast)T1 sagittal pre-contrast MRI scan showing mass effect of the lesion on the foramen of Monro.",
         "category_1": [
@@ -342,8 +342,8 @@
     "10014": {
         "im_1": "train/radiology/images/ROCO_22947.jpg",
         "im_2": "train/radiology/images/ROCO_26019.jpg",
-        "im_1_local": 10176,
-        "im_2_local": 10157,
+        "im_1_local": 20176,
+        "im_2_local": 20157,
         "cap_1": " Head MRI: two pathological lesions of sellar area: one dumbbell-shaped mass located intrasellar and suprasellar region (10 mm \u00d7 15 mm in size) adhered to the hypothalamus and optic chiasm; the second one in the stalk of pituitary gland with 3 mm dimension",
         "cap_2": " Mid-sagittal T1 weighted MRI of the brain shows tonsillar herniation to the level of C3. There is effacement of the fourth ventricle and Triventricular hydrocephalus.",
         "category_1": [
@@ -369,8 +369,8 @@
     "10015": {
         "im_1": "train/radiology/images/ROCO_26019.jpg",
         "im_2": "train/radiology/images/ROCO_34389.jpg",
-        "im_1_local": 10157,
-        "im_2_local": 10170,
+        "im_1_local": 20157,
+        "im_2_local": 20170,
         "cap_1": " Mid-sagittal T1 weighted MRI of the brain shows tonsillar herniation to the level of C3. There is effacement of the fourth ventricle and Triventricular hydrocephalus.",
         "cap_2": " Platybasia in a 9-year-old child with no symptoms. The clivus\u2013axis angle (of Wackenheim) is about 100\u00b0. No CVJ compression is present",
         "category_1": [
@@ -396,8 +396,8 @@
     "10016": {
         "im_1": "train/radiology/images/ROCO_79809.jpg",
         "im_2": "validation/radiology/images/ROCO_56150.jpg",
-        "im_1_local": 10172,
-        "im_2_local": 10220,
+        "im_1_local": 20172,
+        "im_2_local": 20220,
         "cap_1": " MRI at the onset of neurological symptoms. Axial T2-weighted fluid-attenuated inversion recovery (FLAIR) shows patchy high-signal intensity PML lesions in the right cerebellar peduncle.",
         "cap_2": " Cerebellitis caused by infection with the Epstein-Barr virus. Axial slice in a fluid-attenuated inversion recovery sequence, showing diffuse hyperintensity in the cerebellum, especially in the right hemisphere.",
         "category_1": [
@@ -421,8 +421,8 @@
     "10017": {
         "im_1": "train/radiology/images/ROCO_12111.jpg",
         "im_2": "train/radiology/images/ROCO_28314.jpg",
-        "im_1_local": 10121,
-        "im_2_local": 10164,
+        "im_1_local": 20121,
+        "im_2_local": 20164,
         "cap_1": " Initial MRI obtained at the time of diagnosisInitial T1 sagittal MRI again showing a sellar mass with a small cystic component in the superior aspect.",
         "cap_2": " A girl with global developmental delay who presented with bilateral breast enlargement. T1WI Sagittal MRI of the brain (post-gadolinium dynamic protocol) shows an intrasellar lesion representing pituitary microadenoma (arrow).",
         "category_1": [
@@ -447,8 +447,8 @@
     "10018": {
         "im_1": "test/radiology/images/ROCO_49681.jpg",
         "im_2": "train/radiology/images/ROCO_10207.jpg",
-        "im_1_local": 10034,
-        "im_2_local": 10147,
+        "im_1_local": 20034,
+        "im_2_local": 20147,
         "cap_1": " Postoperative left vertebral angiograms demonstrating complete recanalization of the left posterior cerebral artery.",
         "cap_2": " Angiography of the Left Anterior Circulation of the Brain\u2014Following ThrombolysisAntero-posterior view demonstrates a renewed flow in the left internal carotid artery and the left hemisphere.",
         "category_1": [
@@ -473,8 +473,8 @@
     "10019": {
         "im_1": "test/radiology/images/ROCO_56284.jpg",
         "im_2": "train/radiology/images/ROCO_79809.jpg",
-        "im_1_local": 10155,
-        "im_2_local": 10172,
+        "im_1_local": 20155,
+        "im_2_local": 20172,
         "cap_1": " Brain magnetic resonance images of fluid attenuation inversion recovery sequence obtained in a 42-year-old female with systemic lupus erythematosus on immunosuppression, pulsed with steroids, demonstrates marked vasogenic edema involving the brainstem",
         "cap_2": " MRI at the onset of neurological symptoms. Axial T2-weighted fluid-attenuated inversion recovery (FLAIR) shows patchy high-signal intensity PML lesions in the right cerebellar peduncle.",
         "category_1": [
@@ -498,8 +498,8 @@
     "10020": {
         "im_1": "train/radiology/images/ROCO_46426.jpg",
         "im_2": "train/radiology/images/ROCO_79809.jpg",
-        "im_1_local": 10008,
-        "im_2_local": 10172,
+        "im_1_local": 20008,
+        "im_2_local": 20172,
         "cap_1": " Magnetic resonance imaging T2-weighted fluid attenuated inversion recovery on arrival showed high signal intensity of brain stem involving a ventral part of cerebellum",
         "cap_2": " MRI at the onset of neurological symptoms. Axial T2-weighted fluid-attenuated inversion recovery (FLAIR) shows patchy high-signal intensity PML lesions in the right cerebellar peduncle.",
         "category_1": [
@@ -523,8 +523,8 @@
     "10021": {
         "im_1": "train/radiology/images/ROCO_79809.jpg",
         "im_2": "validation/radiology/images/ROCO_14863.jpg",
-        "im_1_local": 10172,
-        "im_2_local": 10209,
+        "im_1_local": 20172,
+        "im_2_local": 20209,
         "cap_1": " MRI at the onset of neurological symptoms. Axial T2-weighted fluid-attenuated inversion recovery (FLAIR) shows patchy high-signal intensity PML lesions in the right cerebellar peduncle.",
         "cap_2": " T2 and flair sequence hyperintense lobulated well-encapsulated lesion was seen in the superomedial aspect of the right orbit involving both intra- and extra-conal space",
         "category_1": [
@@ -549,8 +549,8 @@
     "10022": {
         "im_1": "train/radiology/images/ROCO_62193.jpg",
         "im_2": "train/radiology/images/ROCO_79809.jpg",
-        "im_1_local": 10195,
-        "im_2_local": 10172,
+        "im_1_local": 20195,
+        "im_2_local": 20172,
         "cap_1": " MRI of brain T1 axial + gadolinium with resolution of previously visualized enhancing lesion, after anti-TB treatment.",
         "cap_2": " MRI at the onset of neurological symptoms. Axial T2-weighted fluid-attenuated inversion recovery (FLAIR) shows patchy high-signal intensity PML lesions in the right cerebellar peduncle.",
         "category_1": [
@@ -574,8 +574,8 @@
     "10023": {
         "im_1": "train/radiology/images/ROCO_17682.jpg",
         "im_2": "train/radiology/images/ROCO_24334.jpg",
-        "im_1_local": 10045,
-        "im_2_local": 10073,
+        "im_1_local": 20045,
+        "im_2_local": 20073,
         "cap_1": " MR examination \u2013 sagittal plane, T2-weighted image \u2013 anterior subluxation of C1 vertebra relative to C2 with severe spinal canal stenosis causing severe cord compression.",
         "cap_2": "  Sagittal T-2 weight magnetic resonance imaging of the craniocervical junction demonstrating severe spinal cord compression secondary to C1\u2013C2 instability.",
         "category_1": [
@@ -598,8 +598,8 @@
     "10024": {
         "im_1": "train/radiology/images/ROCO_17682.jpg",
         "im_2": "train/radiology/images/ROCO_21373.jpg",
-        "im_1_local": 10045,
-        "im_2_local": 10153,
+        "im_1_local": 20045,
+        "im_2_local": 20153,
         "cap_1": " MR examination \u2013 sagittal plane, T2-weighted image \u2013 anterior subluxation of C1 vertebra relative to C2 with severe spinal canal stenosis causing severe cord compression.",
         "cap_2": " Rathke\u2019s cleft cyst. Sagittal T2-weighted image shows low signal within the cyst which is typically located between the anterior and posterior pituitary lobes.",
         "category_1": [
@@ -622,8 +622,8 @@
     "10025": {
         "im_1": "train/radiology/images/ROCO_17682.jpg",
         "im_2": "train/radiology/images/ROCO_50808.jpg",
-        "im_1_local": 10045,
-        "im_2_local": 10032,
+        "im_1_local": 20045,
+        "im_2_local": 20032,
         "cap_1": " MR examination \u2013 sagittal plane, T2-weighted image \u2013 anterior subluxation of C1 vertebra relative to C2 with severe spinal canal stenosis causing severe cord compression.",
         "cap_2": " T2-weighed sagittal magnetic resonance image. Shows massive thickening of her skull base due to fibrous dysplasia and a pituitary adenoma.",
         "category_1": [
@@ -647,8 +647,8 @@
     "10026": {
         "im_1": "train/radiology/images/ROCO_04892.jpg",
         "im_2": "train/radiology/images/ROCO_31119.jpg",
-        "im_1_local": 10029,
-        "im_2_local": 10161,
+        "im_1_local": 20029,
+        "im_2_local": 20161,
         "cap_1": " A T2-weighted sagittal image of the cervical spine of a 42-year-old man with low back pain incidentally revealed atlantoaxial dislocation.",
         "cap_2": " T2-weighted magnetic resonance image reveals a horizontal line of high signal intensity in the cervical spinal cord at the C5/6 disc space level which represents spinal cord transection. Severe cord swelling around the injured level and edema of the C5, C6 vertebral bodies are also noted.",
         "category_1": [
@@ -671,8 +671,8 @@
     "10027": {
         "im_1": "train/radiology/images/ROCO_09352.jpg",
         "im_2": "train/radiology/images/ROCO_31119.jpg",
-        "im_1_local": 10150,
-        "im_2_local": 10161,
+        "im_1_local": 20150,
+        "im_2_local": 20161,
         "cap_1": " Hyperintense well-defined mass at the C2-C3 level of cervical spinal cord with wide dural attachment on T1W images of the MRI scan",
         "cap_2": " T2-weighted magnetic resonance image reveals a horizontal line of high signal intensity in the cervical spinal cord at the C5/6 disc space level which represents spinal cord transection. Severe cord swelling around the injured level and edema of the C5, C6 vertebral bodies are also noted.",
         "category_1": [
@@ -695,8 +695,8 @@
     "10028": {
         "im_1": "train/radiology/images/ROCO_31119.jpg",
         "im_2": "validation/radiology/images/ROCO_39258.jpg",
-        "im_1_local": 10161,
-        "im_2_local": 10038,
+        "im_1_local": 20161,
+        "im_2_local": 20038,
         "cap_1": " T2-weighted magnetic resonance image reveals a horizontal line of high signal intensity in the cervical spinal cord at the C5/6 disc space level which represents spinal cord transection. Severe cord swelling around the injured level and edema of the C5, C6 vertebral bodies are also noted.",
         "cap_2": " MRI of cervical spine shows continuity of the vertebral body of C2 and C3. There is fusion of the vertebral bodies of C4 and C5. Marked disc narrowing and spondylotic changes at C3-4 (level of Cloward procedure).",
         "category_1": [
@@ -719,8 +719,8 @@
     "10029": {
         "im_1": "train/radiology/images/ROCO_40628.jpg",
         "im_2": "train/radiology/images/ROCO_66160.jpg",
-        "im_1_local": 10131,
-        "im_2_local": 10003,
+        "im_1_local": 20131,
+        "im_2_local": 20003,
         "cap_1": " Sagittal C-spine CT scan obtained as part of the initial ATLS survey demonstrating an occiput C2 distractive injury.",
         "cap_2": "  Six months' follow-up postreduction sagittal reconstruction computed tomography through right C1\u2013C2 facet. Note solid bony ankylosis of occiput to C2. Lower cervical facets appear normal.",
         "category_1": [
@@ -744,8 +744,8 @@
     "10030": {
         "im_1": "test/radiology/images/ROCO_20327.jpg",
         "im_2": "train/radiology/images/ROCO_26019.jpg",
-        "im_1_local": 10002,
-        "im_2_local": 10157,
+        "im_1_local": 20002,
+        "im_2_local": 20157,
         "cap_1": " A preoperative T1 sagittal spin echo MRI of the brain shows a Chiari I malformation with tonsillar descent beyond the level of the C1 lamina and syringomyelia and syringobulbia with dilation throughout the cervical spinal cord and no evidence of hydrocephalus",
         "cap_2": " Mid-sagittal T1 weighted MRI of the brain shows tonsillar herniation to the level of C3. There is effacement of the fourth ventricle and Triventricular hydrocephalus.",
         "category_1": [
@@ -771,8 +771,8 @@
     "10031": {
         "im_1": "train/radiology/images/ROCO_06181.jpg",
         "im_2": "train/radiology/images/ROCO_29740.jpg",
-        "im_1_local": 10012,
-        "im_2_local": 10216,
+        "im_1_local": 20012,
+        "im_2_local": 20216,
         "cap_1": " A magnetic resonance imaging showing retro-odontoid pannus compressing the spinal cord, that appears as an area of mixed intensity on sagittal T2-weighted image (arrow).",
         "cap_2": " A sagittal STIR-weighted MR image of the spine. A hyperintense area pointed by an arrow represents edema of the spinal cord.",
         "category_1": [
@@ -795,8 +795,8 @@
     "10032": {
         "im_1": "train/radiology/images/ROCO_34261.jpg",
         "im_2": "train/radiology/images/ROCO_53813.jpg",
-        "im_1_local": 10004,
-        "im_2_local": 10136,
+        "im_1_local": 20004,
+        "im_2_local": 20136,
         "cap_1": " Sagittal T2W image shows collapse of C5 with preservation of adjacent disc spaces. Soft tissue mass extends posteriorly into the anterior epidural spaces, compressing on the spinal cord.",
         "cap_2": " Marked improvement of previous intramedullary high signal intensity at cervical spinal cord, since last MRI.",
         "category_1": [
@@ -819,8 +819,8 @@
     "10033": {
         "im_1": "train/radiology/images/ROCO_53813.jpg",
         "im_2": "validation/radiology/images/ROCO_39258.jpg",
-        "im_1_local": 10136,
-        "im_2_local": 10038,
+        "im_1_local": 20136,
+        "im_2_local": 20038,
         "cap_1": " Marked improvement of previous intramedullary high signal intensity at cervical spinal cord, since last MRI.",
         "cap_2": " MRI of cervical spine shows continuity of the vertebral body of C2 and C3. There is fusion of the vertebral bodies of C4 and C5. Marked disc narrowing and spondylotic changes at C3-4 (level of Cloward procedure).",
         "category_1": [
@@ -843,8 +843,8 @@
     "10034": {
         "im_1": "train/radiology/images/ROCO_46814.jpg",
         "im_2": "train/radiology/images/ROCO_66856.jpg",
-        "im_1_local": 10016,
-        "im_2_local": 10188,
+        "im_1_local": 20016,
+        "im_2_local": 20188,
         "cap_1": " Parsagittal (off to the side) T2-weighted. MRI showing sequestrated discs below L4-L5 interspace. This parasagittal T2-weighted MRI (CSF spinal fluid turns white/hyperintense) shows a sequestrated fragment of disc that has migrated inferior to the L4-L5 disc space",
         "cap_2": " Sagittal T2-weighted MR showing marked L4-L5 spinal stenosis. On sagittal T2 MR (the spinal fluid is white or hyperintense) image, there is multilevel compression of the thecal sac (dural sac containing nerve roots of the lumbar spinal canal; cauda equina). This results in scalloping anteriorly (arthritic changes of the discs in the front) and posterior compression (hypertrophy/ossification of the yellow ligament and laminae from the back). Also note a minimal grade I slip at the L4-L5 level (spondylolisthesis) contributing to the narrowing",
         "category_1": [
@@ -867,8 +867,8 @@
     "10035": {
         "im_1": "train/radiology/images/ROCO_37683.jpg",
         "im_2": "train/radiology/images/ROCO_46814.jpg",
-        "im_1_local": 10160,
-        "im_2_local": 10016,
+        "im_1_local": 20160,
+        "im_2_local": 20016,
         "cap_1": " Sagittal T2 WI shows a disc herniation at L5-S1 with compression of the adjacent nerve roots. Note the isthmus connecting the herniated disc to the parent disc is narrower in this case when compared to case 1. These findings are consistent with an extrusion.",
         "cap_2": " Parsagittal (off to the side) T2-weighted. MRI showing sequestrated discs below L4-L5 interspace. This parasagittal T2-weighted MRI (CSF spinal fluid turns white/hyperintense) shows a sequestrated fragment of disc that has migrated inferior to the L4-L5 disc space",
         "category_1": [
@@ -891,8 +891,8 @@
     "10036": {
         "im_1": "train/radiology/images/ROCO_46814.jpg",
         "im_2": "train/radiology/images/ROCO_78993.jpg",
-        "im_1_local": 10016,
-        "im_2_local": 10154,
+        "im_1_local": 20016,
+        "im_2_local": 20154,
         "cap_1": " Parsagittal (off to the side) T2-weighted. MRI showing sequestrated discs below L4-L5 interspace. This parasagittal T2-weighted MRI (CSF spinal fluid turns white/hyperintense) shows a sequestrated fragment of disc that has migrated inferior to the L4-L5 disc space",
         "cap_2": " Sagittal T2WI. Anterolisthesis of L4 on L5 of approximately 25%. This has caused unveiling of the L4-L5 intervertebral disc which demonstrates a generalized bulge. There is buckling of the ligamentum flavum at this level. The spinal canal is congenitally narrow.",
         "category_1": [
@@ -915,8 +915,8 @@
     "10037": {
         "im_1": "train/radiology/images/ROCO_14355.jpg",
         "im_2": "train/radiology/images/ROCO_46338.jpg",
-        "im_1_local": 10049,
-        "im_2_local": 10025,
+        "im_1_local": 20049,
+        "im_2_local": 20025,
         "cap_1": "  Preoperative sagittal T2-weighted magnetic resonance imaging demonstrating a compression fracture of the L1 vertebral body and impingement of the conus medullaris and nerve roots of the cauda equina.",
         "cap_2": " Mid-sagittal T2-weighted MR image (TR 2200, TE 70) shows a uni-segmental degenerated disc at L5-S1 with a high-intensity zone in the posterior annulus (arrow).",
         "category_1": [
@@ -939,8 +939,8 @@
     "10038": {
         "im_1": "train/radiology/images/ROCO_00519.jpg",
         "im_2": "train/radiology/images/ROCO_46338.jpg",
-        "im_1_local": 10163,
-        "im_2_local": 10025,
+        "im_1_local": 20163,
+        "im_2_local": 20025,
         "cap_1": "  Magnetic resonance imaging scan 6 weeks after the first operation showing the intraspinal mass lesion.",
         "cap_2": " Mid-sagittal T2-weighted MR image (TR 2200, TE 70) shows a uni-segmental degenerated disc at L5-S1 with a high-intensity zone in the posterior annulus (arrow).",
         "category_1": [
@@ -963,8 +963,8 @@
     "10039": {
         "im_1": "train/radiology/images/ROCO_46338.jpg",
         "im_2": "validation/radiology/images/ROCO_80980.jpg",
-        "im_1_local": 10025,
-        "im_2_local": 10022,
+        "im_1_local": 20025,
+        "im_2_local": 20022,
         "cap_1": " Mid-sagittal T2-weighted MR image (TR 2200, TE 70) shows a uni-segmental degenerated disc at L5-S1 with a high-intensity zone in the posterior annulus (arrow).",
         "cap_2": " On the MRI image tethering of the spinal cord was seen at L5-S1 level. Additonally a herniation of an intervertebral disc is seen (asymptomatic and left untouched at surgery).",
         "category_1": [
@@ -987,8 +987,8 @@
     "10040": {
         "im_1": "train/radiology/images/ROCO_46338.jpg",
         "im_2": "train/radiology/images/ROCO_70598.jpg",
-        "im_1_local": 10025,
-        "im_2_local": 10091,
+        "im_1_local": 20025,
+        "im_2_local": 20091,
         "cap_1": " Mid-sagittal T2-weighted MR image (TR 2200, TE 70) shows a uni-segmental degenerated disc at L5-S1 with a high-intensity zone in the posterior annulus (arrow).",
         "cap_2": " Magnetic resonance imaging scan (T2-weighted sequence, sagittal view) of the lumbosacral spine showing a well-defined cystic lesion along the traversing left L4 nerve root suggestive of perineural cyst",
         "category_1": [
@@ -1011,8 +1011,8 @@
     "10041": {
         "im_1": "train/radiology/images/ROCO_46338.jpg",
         "im_2": "train/radiology/images/ROCO_58846.jpg",
-        "im_1_local": 10025,
-        "im_2_local": 10060,
+        "im_1_local": 20025,
+        "im_2_local": 20060,
         "cap_1": " Mid-sagittal T2-weighted MR image (TR 2200, TE 70) shows a uni-segmental degenerated disc at L5-S1 with a high-intensity zone in the posterior annulus (arrow).",
         "cap_2": " MRI showing disc degeneration involving L5-S1 level with no evidence of any significant disc herniation",
         "category_1": [
@@ -1035,8 +1035,8 @@
     "10042": {
         "im_1": "train/radiology/images/ROCO_06069.jpg",
         "im_2": "train/radiology/images/ROCO_50748.jpg",
-        "im_1_local": 10000,
-        "im_2_local": 10181,
+        "im_1_local": 20000,
+        "im_2_local": 20181,
         "cap_1": " MRI of the cervical spine, sagittal T1 TSE CM image. Effusion, thickened and enhancing synovium of the C1/C2 articulation, bone marrow edema of the odontoid process",
         "cap_2": " Sagittal T1-weighted scan of cervical and dorsolumbar spine after intravenous Gadolinium, three days following surgery. There has been resolution of the epidural abscess in the cervical and upper dorsal spine, with reduction in its extent in the lower dorsal and lumbar spine. Note enhancement of C5/6 intervertebral disc",
         "category_1": [
@@ -1059,8 +1059,8 @@
     "10043": {
         "im_1": "train/radiology/images/ROCO_52097.jpg",
         "im_2": "validation/radiology/images/ROCO_63793.jpg",
-        "im_1_local": 10098,
-        "im_2_local": 10162,
+        "im_1_local": 20098,
+        "im_2_local": 20162,
         "cap_1": " Sagittal T2 weighted MRI without contrast 12-month after surgery just shows linear high signal intensity in the upper cervical cord.",
         "cap_2": " T2 weighted sagittal MRI of the cervical spine without contrast. There is hyperintesity underneath the tectorial membrane extending from C2 to the upper margin of the clivus with apparent discontinuity of the apical ligament.",
         "category_1": [
@@ -1083,8 +1083,8 @@
     "10044": {
         "im_1": "train/radiology/images/ROCO_52999.jpg",
         "im_2": "train/radiology/images/ROCO_66035.jpg",
-        "im_1_local": 10107,
-        "im_2_local": 10047,
+        "im_1_local": 20107,
+        "im_2_local": 20047,
         "cap_1": " Left main CAA. Located distally near the bifurcation into the left anterior descending artery and the left circumflex artery.",
         "cap_2": " Subocclusive left anterior descending artery incidentally detected in an asymptomatic patient with anterior wall hypocontractility on routine echocardiographic exam 8 months after transplantation.",
         "category_1": [
@@ -1107,8 +1107,8 @@
     "10045": {
         "im_1": "train/radiology/images/ROCO_66035.jpg",
         "im_2": "validation/radiology/images/ROCO_62185.jpg",
-        "im_1_local": 10047,
-        "im_2_local": 10015,
+        "im_1_local": 20047,
+        "im_2_local": 20015,
         "cap_1": " Subocclusive left anterior descending artery incidentally detected in an asymptomatic patient with anterior wall hypocontractility on routine echocardiographic exam 8 months after transplantation.",
         "cap_2": " Antero-posterior (AP) cranial view showing post procedural TIMI III flow of left anterior descending (LAD) artery.",
         "category_1": [
@@ -1131,8 +1131,8 @@
     "10046": {
         "im_1": "train/radiology/images/ROCO_17031.jpg",
         "im_2": "train/radiology/images/ROCO_66035.jpg",
-        "im_1_local": 10217,
-        "im_2_local": 10047,
+        "im_1_local": 20217,
+        "im_2_local": 20047,
         "cap_1": " Left anterior oblique view of the left coronary artery. A JL4 catheter is seen engaging the left coronary artery. The ostial left main is tapered and has a 70% stenosis.",
         "cap_2": " Subocclusive left anterior descending artery incidentally detected in an asymptomatic patient with anterior wall hypocontractility on routine echocardiographic exam 8 months after transplantation.",
         "category_1": [
@@ -1155,8 +1155,8 @@
     "10047": {
         "im_1": "test/radiology/images/ROCO_77968.jpg",
         "im_2": "train/radiology/images/ROCO_18204.jpg",
-        "im_1_local": 10092,
-        "im_2_local": 10117,
+        "im_1_local": 20092,
+        "im_2_local": 20117,
         "cap_1": " It shows woven coronary artery anomaly at the proximal segment of the left coronary arteries in the right anterior oblique. Also, it reveals normal blood flow just distal segment of the anomaly (case 3).",
         "cap_2": " Critical narrowing of left anterior descending artery in the presented patient close to the apical region with flow cessation possibly with residual thrombus, no evidence of significant narrowing in other vessels.",
         "category_1": [
@@ -1179,8 +1179,8 @@
     "10048": {
         "im_1": "train/radiology/images/ROCO_18204.jpg",
         "im_2": "train/radiology/images/ROCO_49208.jpg",
-        "im_1_local": 10117,
-        "im_2_local": 10082,
+        "im_1_local": 20117,
+        "im_2_local": 20082,
         "cap_1": " Critical narrowing of left anterior descending artery in the presented patient close to the apical region with flow cessation possibly with residual thrombus, no evidence of significant narrowing in other vessels.",
         "cap_2": " Left coronary angiography reveals severe stenosis of the proximal LAD and normal circumflex artery. Additionally, blood flow is observed into the LIMA from the LAD (right anterior oblique projection). LAD, left anterior descending; LIMA, left internal mammary artery.",
         "category_1": [
@@ -1203,8 +1203,8 @@
     "10049": {
         "im_1": "train/radiology/images/ROCO_18204.jpg",
         "im_2": "train/radiology/images/ROCO_68615.jpg",
-        "im_1_local": 10117,
-        "im_2_local": 10086,
+        "im_1_local": 20117,
+        "im_2_local": 20086,
         "cap_1": " Critical narrowing of left anterior descending artery in the presented patient close to the apical region with flow cessation possibly with residual thrombus, no evidence of significant narrowing in other vessels.",
         "cap_2": " Subacute stent thrombosis: coronary angiography showed total occlusion of middle left anterior descending artery.",
         "category_1": [
@@ -1227,8 +1227,8 @@
     "10050": {
         "im_1": "train/radiology/images/ROCO_18204.jpg",
         "im_2": "train/radiology/images/ROCO_63659.jpg",
-        "im_1_local": 10117,
-        "im_2_local": 10075,
+        "im_1_local": 20117,
+        "im_2_local": 20075,
         "cap_1": " Critical narrowing of left anterior descending artery in the presented patient close to the apical region with flow cessation possibly with residual thrombus, no evidence of significant narrowing in other vessels.",
         "cap_2": " RAO cranial view post thrombosuction showing fully patent LAD and D2 without any underlying atherosclerosis.",
         "category_1": [
@@ -1251,8 +1251,8 @@
     "10051": {
         "im_1": "train/radiology/images/ROCO_18204.jpg",
         "im_2": "train/radiology/images/ROCO_51660.jpg",
-        "im_1_local": 10117,
-        "im_2_local": 10020,
+        "im_1_local": 20117,
+        "im_2_local": 20020,
         "cap_1": " Critical narrowing of left anterior descending artery in the presented patient close to the apical region with flow cessation possibly with residual thrombus, no evidence of significant narrowing in other vessels.",
         "cap_2": " Right Coronary Artery Originating from the midportion Left Anterior Descending Artery with coursing to the familiar area of the RCA.",
         "category_1": [
@@ -1275,8 +1275,8 @@
     "10052": {
         "im_1": "train/radiology/images/ROCO_18204.jpg",
         "im_2": "validation/radiology/images/ROCO_22682.jpg",
-        "im_1_local": 10117,
-        "im_2_local": 10104,
+        "im_1_local": 20117,
+        "im_2_local": 20104,
         "cap_1": " Critical narrowing of left anterior descending artery in the presented patient close to the apical region with flow cessation possibly with residual thrombus, no evidence of significant narrowing in other vessels.",
         "cap_2": " Post PCI: middle left anterior descending artery was successfully addressed by PCI performed with stent implantation. PCI: percutaneous coronary intervention.",
         "category_1": [
@@ -1299,8 +1299,8 @@
     "10053": {
         "im_1": "train/radiology/images/ROCO_18204.jpg",
         "im_2": "train/radiology/images/ROCO_20723.jpg",
-        "im_1_local": 10117,
-        "im_2_local": 10156,
+        "im_1_local": 20117,
+        "im_2_local": 20156,
         "cap_1": " Critical narrowing of left anterior descending artery in the presented patient close to the apical region with flow cessation possibly with residual thrombus, no evidence of significant narrowing in other vessels.",
         "cap_2": " Coronary angiography. Posteroanterior cranial view showing contained dissection of mid left anterior descending artery (LAD).",
         "category_1": [
@@ -1323,8 +1323,8 @@
     "10054": {
         "im_1": "train/radiology/images/ROCO_18204.jpg",
         "im_2": "validation/radiology/images/ROCO_58591.jpg",
-        "im_1_local": 10117,
-        "im_2_local": 10151,
+        "im_1_local": 20117,
+        "im_2_local": 20151,
         "cap_1": " Critical narrowing of left anterior descending artery in the presented patient close to the apical region with flow cessation possibly with residual thrombus, no evidence of significant narrowing in other vessels.",
         "cap_2": " Coronary angiography showed slow coronary flow of the circumflex (Cx) and left anterior descending (LAD) coronary arteries.",
         "category_1": [
@@ -1347,8 +1347,8 @@
     "10055": {
         "im_1": "train/radiology/images/ROCO_52702.jpg",
         "im_2": "train/radiology/images/ROCO_62765.jpg",
-        "im_1_local": 10030,
-        "im_2_local": 10130,
+        "im_1_local": 20030,
+        "im_2_local": 20130,
         "cap_1": " Initial coronary angiography showed diffuse stenosis in the proximal and mid portions of the LAD. LAD: left anterior descending artery.",
         "cap_2": " RCA CTO - Multiple parallel septal collateral channels and also distal epicardial collaterals from LAD to Right posterolateral branch.",
         "category_1": [
@@ -1371,8 +1371,8 @@
     "10056": {
         "im_1": "test/radiology/images/ROCO_77968.jpg",
         "im_2": "train/radiology/images/ROCO_52702.jpg",
-        "im_1_local": 10092,
-        "im_2_local": 10030,
+        "im_1_local": 20092,
+        "im_2_local": 20030,
         "cap_1": " It shows woven coronary artery anomaly at the proximal segment of the left coronary arteries in the right anterior oblique. Also, it reveals normal blood flow just distal segment of the anomaly (case 3).",
         "cap_2": " Initial coronary angiography showed diffuse stenosis in the proximal and mid portions of the LAD. LAD: left anterior descending artery.",
         "category_1": [
@@ -1395,8 +1395,8 @@
     "10057": {
         "im_1": "train/radiology/images/ROCO_52702.jpg",
         "im_2": "train/radiology/images/ROCO_72230.jpg",
-        "im_1_local": 10030,
-        "im_2_local": 10167,
+        "im_1_local": 20030,
+        "im_2_local": 20167,
         "cap_1": " Initial coronary angiography showed diffuse stenosis in the proximal and mid portions of the LAD. LAD: left anterior descending artery.",
         "cap_2": " Left coronary artery showing the dissecting lesion after dilation with a 4.0\u2009\u00d7\u200915-mm Quantum Marverick balloon catheter",
         "category_1": [
@@ -1419,8 +1419,8 @@
     "10058": {
         "im_1": "train/radiology/images/ROCO_52702.jpg",
         "im_2": "validation/radiology/images/ROCO_67837.jpg",
-        "im_1_local": 10030,
-        "im_2_local": 10119,
+        "im_1_local": 20030,
+        "im_2_local": 20119,
         "cap_1": " Initial coronary angiography showed diffuse stenosis in the proximal and mid portions of the LAD. LAD: left anterior descending artery.",
         "cap_2": " Coronary angiogram showing left main aneurysm (14 \u00d7 28) with obstructive leison at LAD ostial level.",
         "category_1": [
@@ -1443,8 +1443,8 @@
     "10059": {
         "im_1": "train/radiology/images/ROCO_17031.jpg",
         "im_2": "train/radiology/images/ROCO_52702.jpg",
-        "im_1_local": 10217,
-        "im_2_local": 10030,
+        "im_1_local": 20217,
+        "im_2_local": 20030,
         "cap_1": " Left anterior oblique view of the left coronary artery. A JL4 catheter is seen engaging the left coronary artery. The ostial left main is tapered and has a 70% stenosis.",
         "cap_2": " Initial coronary angiography showed diffuse stenosis in the proximal and mid portions of the LAD. LAD: left anterior descending artery.",
         "category_1": [
@@ -1467,8 +1467,8 @@
     "10060": {
         "im_1": "train/radiology/images/ROCO_04544.jpg",
         "im_2": "train/radiology/images/ROCO_52702.jpg",
-        "im_1_local": 10200,
-        "im_2_local": 10030,
+        "im_1_local": 20200,
+        "im_2_local": 20030,
         "cap_1": " The left coronary angiogram in a right anterior oblique caudal projection showed a significant ostial lesion (arrow) in the left circumflex coronary artery.",
         "cap_2": " Initial coronary angiography showed diffuse stenosis in the proximal and mid portions of the LAD. LAD: left anterior descending artery.",
         "category_1": [
@@ -1491,8 +1491,8 @@
     "10061": {
         "im_1": "train/radiology/images/ROCO_52702.jpg",
         "im_2": "train/radiology/images/ROCO_68615.jpg",
-        "im_1_local": 10030,
-        "im_2_local": 10086,
+        "im_1_local": 20030,
+        "im_2_local": 20086,
         "cap_1": " Initial coronary angiography showed diffuse stenosis in the proximal and mid portions of the LAD. LAD: left anterior descending artery.",
         "cap_2": " Subacute stent thrombosis: coronary angiography showed total occlusion of middle left anterior descending artery.",
         "category_1": [
@@ -1515,8 +1515,8 @@
     "10062": {
         "im_1": "train/radiology/images/ROCO_52702.jpg",
         "im_2": "train/radiology/images/ROCO_63659.jpg",
-        "im_1_local": 10030,
-        "im_2_local": 10075,
+        "im_1_local": 20030,
+        "im_2_local": 20075,
         "cap_1": " Initial coronary angiography showed diffuse stenosis in the proximal and mid portions of the LAD. LAD: left anterior descending artery.",
         "cap_2": " RAO cranial view post thrombosuction showing fully patent LAD and D2 without any underlying atherosclerosis.",
         "category_1": [
@@ -1539,8 +1539,8 @@
     "10063": {
         "im_1": "train/radiology/images/ROCO_52702.jpg",
         "im_2": "validation/radiology/images/ROCO_22682.jpg",
-        "im_1_local": 10030,
-        "im_2_local": 10104,
+        "im_1_local": 20030,
+        "im_2_local": 20104,
         "cap_1": " Initial coronary angiography showed diffuse stenosis in the proximal and mid portions of the LAD. LAD: left anterior descending artery.",
         "cap_2": " Post PCI: middle left anterior descending artery was successfully addressed by PCI performed with stent implantation. PCI: percutaneous coronary intervention.",
         "category_1": [
@@ -1563,8 +1563,8 @@
     "10064": {
         "im_1": "train/radiology/images/ROCO_02865.jpg",
         "im_2": "train/radiology/images/ROCO_52702.jpg",
-        "im_1_local": 10028,
-        "im_2_local": 10030,
+        "im_1_local": 20028,
+        "im_2_local": 20030,
         "cap_1": " Coronary angiogram after balloon dilatation showed no residual stenosis and relatively good distal flow.",
         "cap_2": " Initial coronary angiography showed diffuse stenosis in the proximal and mid portions of the LAD. LAD: left anterior descending artery.",
         "category_1": [
@@ -1587,8 +1587,8 @@
     "10065": {
         "im_1": "train/radiology/images/ROCO_20723.jpg",
         "im_2": "train/radiology/images/ROCO_52702.jpg",
-        "im_1_local": 10156,
-        "im_2_local": 10030,
+        "im_1_local": 20156,
+        "im_2_local": 20030,
         "cap_1": " Coronary angiography. Posteroanterior cranial view showing contained dissection of mid left anterior descending artery (LAD).",
         "cap_2": " Initial coronary angiography showed diffuse stenosis in the proximal and mid portions of the LAD. LAD: left anterior descending artery.",
         "category_1": [
@@ -1611,8 +1611,8 @@
     "10066": {
         "im_1": "train/radiology/images/ROCO_52702.jpg",
         "im_2": "validation/radiology/images/ROCO_58591.jpg",
-        "im_1_local": 10030,
-        "im_2_local": 10151,
+        "im_1_local": 20030,
+        "im_2_local": 20151,
         "cap_1": " Initial coronary angiography showed diffuse stenosis in the proximal and mid portions of the LAD. LAD: left anterior descending artery.",
         "cap_2": " Coronary angiography showed slow coronary flow of the circumflex (Cx) and left anterior descending (LAD) coronary arteries.",
         "category_1": [
@@ -1635,8 +1635,8 @@
     "10067": {
         "im_1": "train/radiology/images/ROCO_52702.jpg",
         "im_2": "train/radiology/images/ROCO_56364.jpg",
-        "im_1_local": 10030,
-        "im_2_local": 10227,
+        "im_1_local": 20030,
+        "im_2_local": 20227,
         "cap_1": " Initial coronary angiography showed diffuse stenosis in the proximal and mid portions of the LAD. LAD: left anterior descending artery.",
         "cap_2": " Rich collateral formations between left circumflex artery and right lung assumed as multiple fistulas.",
         "category_1": [
@@ -1659,8 +1659,8 @@
     "10068": {
         "im_1": "train/radiology/images/ROCO_52702.jpg",
         "im_2": "validation/radiology/images/ROCO_70055.jpg",
-        "im_1_local": 10030,
-        "im_2_local": 10051,
+        "im_1_local": 20030,
+        "im_2_local": 20051,
         "cap_1": " Initial coronary angiography showed diffuse stenosis in the proximal and mid portions of the LAD. LAD: left anterior descending artery.",
         "cap_2": " Coronary angiography depicting the severely tortuous coronary artery fistula originating from the proximal left anterior descending artery.",
         "category_1": [
@@ -1683,8 +1683,8 @@
     "10069": {
         "im_1": "train/radiology/images/ROCO_10245.jpg",
         "im_2": "train/radiology/images/ROCO_41444.jpg",
-        "im_1_local": 10210,
-        "im_2_local": 10211,
+        "im_1_local": 20210,
+        "im_2_local": 20211,
         "cap_1": " Angiogram of the deployment of the coils in the distal left internal mammary artery. The catheter is accessing the LIMA via the left subclavian artery.",
         "cap_2": " Flow guided pacing catheter in the right ventricular outflow tract. This is then brought down to the right ventricular apex for pacing. Note balloon at tip of flow guided catheter. The pigtail catheter at the apex of the arch of the aorta.",
         "category_1": [
@@ -1709,8 +1709,8 @@
     "10070": {
         "im_1": "train/radiology/images/ROCO_07577.jpg",
         "im_2": "train/radiology/images/ROCO_11801.jpg",
-        "im_1_local": 10221,
-        "im_2_local": 10013,
+        "im_1_local": 20221,
+        "im_2_local": 20013,
         "cap_1": " Endoscopic ultrasonography showing a homogeneous, hypoechoic, clearly demarcated mass in the submuscosal layer.",
         "cap_2": " Endoscopic ultrasound image of the lesion. Endoscopic ultrasonography shows homogenous, hypoechoic lesion within the mucosal layer.",
         "category_1": [
@@ -1733,8 +1733,8 @@
     "10071": {
         "im_1": "train/radiology/images/ROCO_11801.jpg",
         "im_2": "train/radiology/images/ROCO_25355.jpg",
-        "im_1_local": 10013,
-        "im_2_local": 10007,
+        "im_1_local": 20013,
+        "im_2_local": 20007,
         "cap_1": " Endoscopic ultrasound image of the lesion. Endoscopic ultrasonography shows homogenous, hypoechoic lesion within the mucosal layer.",
         "cap_2": " Endoscopic ultrasound image showing a linear echogenic structure with central lucency without acoustic shadow effect in common bile duct",
         "category_1": [
@@ -1757,8 +1757,8 @@
     "10072": {
         "im_1": "train/radiology/images/ROCO_11801.jpg",
         "im_2": "train/radiology/images/ROCO_49350.jpg",
-        "im_1_local": 10013,
-        "im_2_local": 10175,
+        "im_1_local": 20013,
+        "im_2_local": 20175,
         "cap_1": " Endoscopic ultrasound image of the lesion. Endoscopic ultrasonography shows homogenous, hypoechoic lesion within the mucosal layer.",
         "cap_2": " Endoscopic ultrasound demonstrating the polypoid lesion with extension through the submucosal layer.",
         "category_1": [
@@ -1781,8 +1781,8 @@
     "10073": {
         "im_1": "train/radiology/images/ROCO_11801.jpg",
         "im_2": "validation/radiology/images/ROCO_77116.jpg",
-        "im_1_local": 10013,
-        "im_2_local": 10165,
+        "im_1_local": 20013,
+        "im_2_local": 20165,
         "cap_1": " Endoscopic ultrasound image of the lesion. Endoscopic ultrasonography shows homogenous, hypoechoic lesion within the mucosal layer.",
         "cap_2": " EUS demonstrating a diffusely enlarged pancreas, especially in the head and neck region, with normal, non-dilated pancreatic duct measuring 1.6 mm, and no focal mass lesion.",
         "category_1": [
@@ -1805,8 +1805,8 @@
     "10074": {
         "im_1": "train/radiology/images/ROCO_11801.jpg",
         "im_2": "train/radiology/images/ROCO_30230.jpg",
-        "im_1_local": 10013,
-        "im_2_local": 10052,
+        "im_1_local": 20013,
+        "im_2_local": 20052,
         "cap_1": " Endoscopic ultrasound image of the lesion. Endoscopic ultrasonography shows homogenous, hypoechoic lesion within the mucosal layer.",
         "cap_2": " Aspect endoscopique d'une formation tumorale sous muqueuse d'allure kystique mesurant 32 mm sans atteinte des organes de voisinage ni des ganglions d'allure suspecte",
         "category_1": [
@@ -1829,8 +1829,8 @@
     "10075": {
         "im_1": "train/radiology/images/ROCO_35577.jpg",
         "im_2": "validation/radiology/images/ROCO_68405.jpg",
-        "im_1_local": 10105,
-        "im_2_local": 10133,
+        "im_1_local": 20105,
+        "im_2_local": 20133,
         "cap_1": " Post endoscopic treatment; 40 mm coronal MIP reformat of the MRCP. The ampulla of the accessory pancreatic duct is no longer visible.",
         "cap_2": " Magnetic resonance cholangiopancreatography image of a 42-year-old woman presenting with a choledochal cyst 68 months after receiving a cholecystectomy.",
         "category_1": [
@@ -1853,8 +1853,8 @@
     "10076": {
         "im_1": "train/radiology/images/ROCO_39982.jpg",
         "im_2": "validation/radiology/images/ROCO_68405.jpg",
-        "im_1_local": 10071,
-        "im_2_local": 10133,
+        "im_1_local": 20071,
+        "im_2_local": 20133,
         "cap_1": " MRCP showing the cystic dilatation along the lateral wall of the bile duct mimicking a Type II choledochal cyst with GB seen separately.",
         "cap_2": " Magnetic resonance cholangiopancreatography image of a 42-year-old woman presenting with a choledochal cyst 68 months after receiving a cholecystectomy.",
         "category_1": [
@@ -1877,8 +1877,8 @@
     "10077": {
         "im_1": "train/radiology/images/ROCO_20933.jpg",
         "im_2": "train/radiology/images/ROCO_40445.jpg",
-        "im_1_local": 10068,
-        "im_2_local": 10189,
+        "im_1_local": 20068,
+        "im_2_local": 20189,
         "cap_1": " Endoscopic retrograde cholangiopancreatogram of choledochal cyst (Todani type IVb) and anomalous union of pancreaticobiliary duct (Kimura type I).",
         "cap_2": " Endoscopic retrograde cholangiopancreatography showed common hepatic duct stricture of 2 cm with upstream bilateral intrahepatic ductal dilation.",
         "category_1": [
@@ -1901,8 +1901,8 @@
     "10078": {
         "im_1": "train/radiology/images/ROCO_00986.jpg",
         "im_2": "train/radiology/images/ROCO_40445.jpg",
-        "im_1_local": 10149,
-        "im_2_local": 10189,
+        "im_1_local": 20149,
+        "im_2_local": 20189,
         "cap_1": " Endoscopic cholangiopancreatography (ERCP) shows a short duct in the uncinate process and head; the duct of Santorini drains into the minor papilla.",
         "cap_2": " Endoscopic retrograde cholangiopancreatography showed common hepatic duct stricture of 2 cm with upstream bilateral intrahepatic ductal dilation.",
         "category_1": [
@@ -1925,8 +1925,8 @@
     "10079": {
         "im_1": "train/radiology/images/ROCO_25927.jpg",
         "im_2": "train/radiology/images/ROCO_52597.jpg",
-        "im_1_local": 10001,
-        "im_2_local": 10126,
+        "im_1_local": 20001,
+        "im_2_local": 20126,
         "cap_1": " 56-year-old man with intrahepatic biliary intraductal oncocytic papillary carcinoma. Coronal 3D respiratory triggered MRCP sequence demonstrates the cystic component to be communicating with the dilated intrahepatic biliary tree. Note the irregular lesion (white arrows) is clearly situated with the lumen of the cystic component.",
         "cap_2": " Magnetic resonance cholangiopancreatography reveals stricture of the intrahepatic bile ducts with prestenotic dilatation in the left lateral segment (arrows).",
         "category_1": [
@@ -1949,8 +1949,8 @@
     "10080": {
         "im_1": "train/radiology/images/ROCO_38374.jpg",
         "im_2": "train/radiology/images/ROCO_76859.jpg",
-        "im_1_local": 10205,
-        "im_2_local": 10037,
+        "im_1_local": 20205,
+        "im_2_local": 20037,
         "cap_1": " ERCP demonstrates a normal common bile duct, common hepatic duct and right and left hepatic ducts without evidence of intraluminal filling defects.",
         "cap_2": " During the repeat ERCP a stent was placed in the terminal bile duct. Intrahepatic biliary ducts appear significantly narrowed.",
         "category_1": [
@@ -1973,8 +1973,8 @@
     "10081": {
         "im_1": "train/radiology/images/ROCO_26026.jpg",
         "im_2": "train/radiology/images/ROCO_46224.jpg",
-        "im_1_local": 10152,
-        "im_2_local": 10198,
+        "im_1_local": 20152,
+        "im_2_local": 20198,
         "cap_1": " Magnetic resonance cholangiopancreatographic finding. The dorsal pancreatic duct was slightly enlarged with stenosis at the minor papilla. Furthermore, it crossed over the common bile duct. The ventral duct appeared to be normal and there was no communication between the dorsal and ventral ducts, indicating pancreas divisum.",
         "cap_2": " MRCP showing pancreatic cyst in the head of the organ with dilation of the main and branch pancreatic ducts as well as of the extra- intra hepatic biliary tree.",
         "category_1": [
@@ -1997,8 +1997,8 @@
     "10082": {
         "im_1": "train/radiology/images/ROCO_26026.jpg",
         "im_2": "train/radiology/images/ROCO_78814.jpg",
-        "im_1_local": 10152,
-        "im_2_local": 10116,
+        "im_1_local": 20152,
+        "im_2_local": 20116,
         "cap_1": " Magnetic resonance cholangiopancreatographic finding. The dorsal pancreatic duct was slightly enlarged with stenosis at the minor papilla. Furthermore, it crossed over the common bile duct. The ventral duct appeared to be normal and there was no communication between the dorsal and ventral ducts, indicating pancreas divisum.",
         "cap_2": " Thick-slice, T2-weighted MRI showing a dilated main pancreatic duct with smooth aspect of main pancreatic duct wall and bulging ampulla (image courtesy of Dr. Marie Pierre Vullierme, H\u00f4pital Beaujon).",
         "category_1": [
@@ -2021,8 +2021,8 @@
     "10083": {
         "im_1": "train/radiology/images/ROCO_38374.jpg",
         "im_2": "train/radiology/images/ROCO_52190.jpg",
-        "im_1_local": 10205,
-        "im_2_local": 10009,
+        "im_1_local": 20205,
+        "im_2_local": 20009,
         "cap_1": " ERCP demonstrates a normal common bile duct, common hepatic duct and right and left hepatic ducts without evidence of intraluminal filling defects.",
         "cap_2": " Fluoroscopic picture showing contrast cast after embolization of the right portal vein branches. A right external and a left internal-external drain is also placed prior to surgical resection of the right liver lobe",
         "category_1": [
@@ -2045,8 +2045,8 @@
     "10084": {
         "im_1": "train/radiology/images/ROCO_52190.jpg",
         "im_2": "validation/radiology/images/ROCO_76809.jpg",
-        "im_1_local": 10009,
-        "im_2_local": 10112,
+        "im_1_local": 20009,
+        "im_2_local": 20112,
         "cap_1": " Fluoroscopic picture showing contrast cast after embolization of the right portal vein branches. A right external and a left internal-external drain is also placed prior to surgical resection of the right liver lobe",
         "cap_2": " Preoperative Percutaneous Transhepatic Cholangiography (PTC) Showing Biliary Duct Ligation Following Previous Laparoscopic Cholecystectomy",
         "category_1": [
@@ -2069,8 +2069,8 @@
     "10085": {
         "im_1": "train/radiology/images/ROCO_00124.jpg",
         "im_2": "train/radiology/images/ROCO_33192.jpg",
-        "im_1_local": 10010,
-        "im_2_local": 10041,
+        "im_1_local": 20010,
+        "im_2_local": 20041,
         "cap_1": " Endoscopic ultrasonography revealed avascular a heteroechoic submucosal mass at the posterolateral wall of the duodenum.",
         "cap_2": " The mass was non-circumferential with poorly defined borders and encompassed approximately 50% of the circumference of the distal rectum.",
         "category_1": [
@@ -2093,8 +2093,8 @@
     "10086": {
         "im_1": "train/radiology/images/ROCO_33192.jpg",
         "im_2": "train/radiology/images/ROCO_61346.jpg",
-        "im_1_local": 10041,
-        "im_2_local": 10026,
+        "im_1_local": 20041,
+        "im_2_local": 20026,
         "cap_1": " The mass was non-circumferential with poorly defined borders and encompassed approximately 50% of the circumference of the distal rectum.",
         "cap_2": "  \u2003Endoscopic ultrasound image obtained with a 12-MHz miniprobe showing a 15-mm hypoechoic round mass with calcification emerging from the gastric muscular layer.",
         "category_1": [
@@ -2117,8 +2117,8 @@
     "10087": {
         "im_1": "train/radiology/images/ROCO_06239.jpg",
         "im_2": "train/radiology/images/ROCO_45414.jpg",
-        "im_1_local": 10148,
-        "im_2_local": 10166,
+        "im_1_local": 20148,
+        "im_2_local": 20166,
         "cap_1": " Same patient (patient B) as in Fig.\u00a02. Selective digital subtraction angiogram of the celiac axis showing multiple areas of contrast extravasation from peripheral branches of the splenic artery",
         "cap_2": " Hepatic angiography of the liver shows no definite tumor staining in the liver parenchyme. Lipiodol test injection was performed (Case 2).",
         "category_1": [
@@ -2141,8 +2141,8 @@
     "10088": {
         "im_1": "train/radiology/images/ROCO_50034.jpg",
         "im_2": "validation/radiology/images/ROCO_78617.jpg",
-        "im_1_local": 10088,
-        "im_2_local": 10064,
+        "im_1_local": 20088,
+        "im_2_local": 20064,
         "cap_1": " Selective mesenteric angiography showing extravasation of contrast medium from a pseudoaneurysm originating from the inferior pancreaticoduodenal artery (arrow).",
         "cap_2": " The angiogram shows a pseudo-aneurysm (white arrow) in the middle part of the right internal carotid artery at the nasopharyngeal level with the adjacent parent vessel, exhibiting moderate stenosis",
         "category_1": [
@@ -2166,8 +2166,8 @@
     "10089": {
         "im_1": "train/radiology/images/ROCO_40786.jpg",
         "im_2": "validation/radiology/images/ROCO_79518.jpg",
-        "im_1_local": 10197,
-        "im_2_local": 10042,
+        "im_1_local": 20197,
+        "im_2_local": 20042,
         "cap_1": " Upper gastrointestinal series shows an abrupt cutoff of the third portion of the duodenum and dilatations of the first and second portions of the duodenum.",
         "cap_2": " A large filling defect with central ulceration about 6\u00d73 cm in size in the anterior wall side of the residual stomach body.",
         "category_1": [
@@ -2190,8 +2190,8 @@
     "10090": {
         "im_1": "train/radiology/images/ROCO_22814.jpg",
         "im_2": "train/radiology/images/ROCO_39982.jpg",
-        "im_1_local": 10087,
-        "im_2_local": 10071,
+        "im_1_local": 20087,
+        "im_2_local": 20071,
         "cap_1": " MRCP appearance. An MRCP examination reveals dilated whole biliary tree and hook shaped distal choledochus. MRCP did not delineate bile duct stones.",
         "cap_2": " MRCP showing the cystic dilatation along the lateral wall of the bile duct mimicking a Type II choledochal cyst with GB seen separately.",
         "category_1": [
@@ -2214,8 +2214,8 @@
     "10091": {
         "im_1": "train/radiology/images/ROCO_21136.jpg",
         "im_2": "train/radiology/images/ROCO_46224.jpg",
-        "im_1_local": 10145,
-        "im_2_local": 10198,
+        "im_1_local": 20145,
+        "im_2_local": 20198,
         "cap_1": " MRCP showing prominent intrahepatic biliary ductal dilatation proximal to the location of the previously noted hilar mass.",
         "cap_2": " MRCP showing pancreatic cyst in the head of the organ with dilation of the main and branch pancreatic ducts as well as of the extra- intra hepatic biliary tree.",
         "category_1": [
@@ -2238,8 +2238,8 @@
     "10092": {
         "im_1": "train/radiology/images/ROCO_10810.jpg",
         "im_2": "train/radiology/images/ROCO_23482.jpg",
-        "im_1_local": 10135,
-        "im_2_local": 10225,
+        "im_1_local": 20135,
+        "im_2_local": 20225,
         "cap_1": " Scout radiograph film showing a fully covered, self-expandable metalic stent with the right and left internal drain in place.",
         "cap_2": " Passage of a 0.035-inch Hydra Jagwire (Boston Scientific) into the gallbladder though the 19 G needle (Cook Endoscopy) from the transduodenal position.",
         "category_1": [
@@ -2264,8 +2264,8 @@
     "10093": {
         "im_1": "train/radiology/images/ROCO_02690.jpg",
         "im_2": "train/radiology/images/ROCO_80484.jpg",
-        "im_1_local": 10083,
-        "im_2_local": 10078,
+        "im_1_local": 20083,
+        "im_2_local": 20078,
         "cap_1": " Magnetic resonance imaging findings show high signal intensity on T2-weighted images, despite maintenance of continuity.",
         "cap_2": " 41-year-old male with periosteal osteoblastoma. Sagittal T1-weighted MR image demonstrates T1 hyperintensity and cortical disruption.",
         "category_1": [
@@ -2288,8 +2288,8 @@
     "10094": {
         "im_1": "train/radiology/images/ROCO_02690.jpg",
         "im_2": "train/radiology/images/ROCO_75983.jpg",
-        "im_1_local": 10083,
-        "im_2_local": 10035,
+        "im_1_local": 20083,
+        "im_2_local": 20035,
         "cap_1": " Magnetic resonance imaging findings show high signal intensity on T2-weighted images, despite maintenance of continuity.",
         "cap_2": " Severe hypertrophy of cartilage implant 104\u00a0weeks after MACT surgery on a sagittal T2-weighted FSE image",
         "category_1": [
@@ -2312,8 +2312,8 @@
     "10095": {
         "im_1": "train/radiology/images/ROCO_75983.jpg",
         "im_2": "validation/radiology/images/ROCO_26319.jpg",
-        "im_1_local": 10035,
-        "im_2_local": 10005,
+        "im_1_local": 20035,
+        "im_2_local": 20005,
         "cap_1": " Severe hypertrophy of cartilage implant 104\u00a0weeks after MACT surgery on a sagittal T2-weighted FSE image",
         "cap_2": " Gradient-echo-based MRI image from a patient with recurrent t-GCT (right knee). There was very low signal intensity corresponding to hemosiderin depositions anterior to the lateral meniscus, extending to the infrapatellar fat pad. Furthermore, there was a hemosiderin deposition in the recessus lateralis posterior to the lateral femoral condyle. These localizations corresponded to recurrent Dt-GCT, which was confirmed by surgical removal.",
         "category_1": [
@@ -2336,8 +2336,8 @@
     "10096": {
         "im_1": "train/radiology/images/ROCO_37503.jpg",
         "im_2": "train/radiology/images/ROCO_66438.jpg",
-        "im_1_local": 10057,
-        "im_2_local": 10212,
+        "im_1_local": 20057,
+        "im_2_local": 20212,
         "cap_1": " T2 sagittal MRI of the ankle demonstrating grade II stress fracture/stress reaction of the talar neck",
         "cap_2": " Bone marrow edema in the bony part of the plantar fascia enthesis and edema of the adjacent soft tissues. Bone marrow edema in the bony part of the Achilles tendon enthesis, increased signal of the soft tissues of the Achilles tendon bursa (bursitis); at the bursal level, the tendon shows intratendinous damage",
         "category_1": [
@@ -2360,8 +2360,8 @@
     "10097": {
         "im_1": "test/radiology/images/ROCO_24120.jpg",
         "im_2": "train/radiology/images/ROCO_19922.jpg",
-        "im_1_local": 10184,
-        "im_2_local": 10199,
+        "im_1_local": 20184,
+        "im_2_local": 20199,
         "cap_1": " Magnetic resonance imaging of the left shoulder. Coronal T2 fat suppression image showing low-signal intensity calcific foci within and beneath the deltoid muscle with no intra-articular involvement.",
         "cap_2": " T2-weighted coronal magnetic resonance imaging arthrogram of a right shoulder, demonstrating a small defect suspicious for minor tendon discontinuity.",
         "category_1": [
@@ -2384,8 +2384,8 @@
     "10098": {
         "im_1": "test/radiology/images/ROCO_43661.jpg",
         "im_2": "train/radiology/images/ROCO_55477.jpg",
-        "im_1_local": 10077,
-        "im_2_local": 10065,
+        "im_1_local": 20077,
+        "im_2_local": 20065,
         "cap_1": " Preoperative coronal MR image demonstrates massive tear and proximal retraction (arrow) of the rotator cuff",
         "cap_2": " Coronal magnetic resonance arthrogram depicting gadolinium in the SASD bursa from a full-thickness rotator cuff tear.",
         "category_1": [
@@ -2408,8 +2408,8 @@
     "10099": {
         "im_1": "test/radiology/images/ROCO_43661.jpg",
         "im_2": "train/radiology/images/ROCO_46828.jpg",
-        "im_1_local": 10077,
-        "im_2_local": 10143,
+        "im_1_local": 20077,
+        "im_2_local": 20143,
         "cap_1": " Preoperative coronal MR image demonstrates massive tear and proximal retraction (arrow) of the rotator cuff",
         "cap_2": " T2-weighted coronal view two months postoperatively, of a patient with poor UCLA score, showing suture dehiscence.",
         "category_1": [
@@ -2432,8 +2432,8 @@
     "10100": {
         "im_1": "train/radiology/images/ROCO_39233.jpg",
         "im_2": "validation/radiology/images/ROCO_26319.jpg",
-        "im_1_local": 10024,
-        "im_2_local": 10005,
+        "im_1_local": 20024,
+        "im_2_local": 20005,
         "cap_1": " Sagittal magnetic resonance imaging scan showing complete rupture of the patellar tendon at the tibial tuberosity",
         "cap_2": " Gradient-echo-based MRI image from a patient with recurrent t-GCT (right knee). There was very low signal intensity corresponding to hemosiderin depositions anterior to the lateral meniscus, extending to the infrapatellar fat pad. Furthermore, there was a hemosiderin deposition in the recessus lateralis posterior to the lateral femoral condyle. These localizations corresponded to recurrent Dt-GCT, which was confirmed by surgical removal.",
         "category_1": [
@@ -2456,8 +2456,8 @@
     "10101": {
         "im_1": "test/radiology/images/ROCO_54039.jpg",
         "im_2": "train/radiology/images/ROCO_66160.jpg",
-        "im_1_local": 10219,
-        "im_2_local": 10003,
+        "im_1_local": 20219,
+        "im_2_local": 20003,
         "cap_1": " Computed tomography scan of the patient showing ankylosing spondylitis along with traumatic dislocation at cervico-dorsal junction (arrow)",
         "cap_2": "  Six months' follow-up postreduction sagittal reconstruction computed tomography through right C1\u2013C2 facet. Note solid bony ankylosis of occiput to C2. Lower cervical facets appear normal.",
         "category_1": [
@@ -2482,8 +2482,8 @@
     "10102": {
         "im_1": "train/radiology/images/ROCO_01976.jpg",
         "im_2": "train/radiology/images/ROCO_76236.jpg",
-        "im_1_local": 10144,
-        "im_2_local": 10061,
+        "im_1_local": 20144,
+        "im_2_local": 20061,
         "cap_1": " Ultrasonography revealed a hypoechoic lesion with an irregular margin and no acoustic shadow. The mass extended from the anterior border of the mammary gland.",
         "cap_2": " The ultrasound (US) scan of US-guided biopsy reveals a well-defined soft tissue mass and prominent acoustic shadowing caused by internal ossifications.",
         "category_1": [
@@ -2506,8 +2506,8 @@
     "10103": {
         "im_1": "train/radiology/images/ROCO_77395.jpg",
         "im_2": "validation/radiology/images/ROCO_46491.jpg",
-        "im_1_local": 10054,
-        "im_2_local": 10132,
+        "im_1_local": 20054,
+        "im_2_local": 20132,
         "cap_1": " MRI scan showing the large soft tissue mass within the left lung apex extending along the medial aspect of the mediastinum to the level of the aortic arch",
         "cap_2": " A T1-weighted gadolinium enhanced sagittal MRI scan demonstrating heterogeneous signal intensity between the trapezius and splenius capitis muscle layer.",
         "category_1": [
@@ -2532,8 +2532,8 @@
     "10104": {
         "im_1": "train/radiology/images/ROCO_03795.jpg",
         "im_2": "train/radiology/images/ROCO_50711.jpg",
-        "im_1_local": 10190,
-        "im_2_local": 10204,
+        "im_1_local": 20190,
+        "im_2_local": 20204,
         "cap_1": " 18-month post-surgery, T2-weighted coronal magnetic resonance imaging of his right knee. The medial joint space was observed clearly, and the lateral meniscus had no tear.",
         "cap_2": " MRI of the left knee revealing marked bone marrow edema and focal subchondral fracture in the weight-bearing region of the lateral femoral condyle.",
         "category_1": [
@@ -2556,8 +2556,8 @@
     "10105": {
         "im_1": "train/radiology/images/ROCO_03795.jpg",
         "im_2": "validation/radiology/images/ROCO_60785.jpg",
-        "im_1_local": 10190,
-        "im_2_local": 10178,
+        "im_1_local": 20190,
+        "im_2_local": 20178,
         "cap_1": " 18-month post-surgery, T2-weighted coronal magnetic resonance imaging of his right knee. The medial joint space was observed clearly, and the lateral meniscus had no tear.",
         "cap_2": " Sagittal T2-weighted MR image reveals tear in the anterior horn of lateral meniscus that appears globular signal of increased intensity extending to superior and inferior articular surfaces. (arrow) The tear was not recognized at arthroscopy performed 7 days after MR imaging and therefore constituting a false-positive diagnosis at MR.",
         "category_1": [
@@ -2580,8 +2580,8 @@
     "10106": {
         "im_1": "train/radiology/images/ROCO_03795.jpg",
         "im_2": "train/radiology/images/ROCO_27150.jpg",
-        "im_1_local": 10190,
-        "im_2_local": 10102,
+        "im_1_local": 20190,
+        "im_2_local": 20102,
         "cap_1": " 18-month post-surgery, T2-weighted coronal magnetic resonance imaging of his right knee. The medial joint space was observed clearly, and the lateral meniscus had no tear.",
         "cap_2": " Sagittal proton density weighted images of anterior cruciate ligament reconstruction with Gracilis and Semitendinosus Autograft in a 26-year-old male at 1.5 years follow-up. It is possible to appreciate a localized area of low to intermediate signal intensity extending anterior to the distal anterior cruciate ligament graft (black arrows) consistent with local arthrofibrosis.",
         "category_1": [
@@ -2604,8 +2604,8 @@
     "10107": {
         "im_1": "test/radiology/images/ROCO_47119.jpg",
         "im_2": "train/radiology/images/ROCO_59334.jpg",
-        "im_1_local": 10093,
-        "im_2_local": 10146,
+        "im_1_local": 20093,
+        "im_2_local": 20146,
         "cap_1": " Computed tomography image at 13 months after surgery. No recurrence is noted in the intermuscular space.",
         "cap_2": " Axial CT section of the floor of the mouth showed a 1.38 \u00d7 1.18 in hypodense, non-enhancing mass located within the sublingual space, over the geniohyoid muscle.",
         "category_1": [
@@ -2629,8 +2629,8 @@
     "10108": {
         "im_1": "train/radiology/images/ROCO_78776.jpg",
         "im_2": "validation/radiology/images/ROCO_26319.jpg",
-        "im_1_local": 10031,
-        "im_2_local": 10005,
+        "im_1_local": 20031,
+        "im_2_local": 20005,
         "cap_1": " T2 weighted magnetic resonance image of the left knee and popliteal fossa. The hyperintense lesion represents the Baker\u2019s cyst.",
         "cap_2": " Gradient-echo-based MRI image from a patient with recurrent t-GCT (right knee). There was very low signal intensity corresponding to hemosiderin depositions anterior to the lateral meniscus, extending to the infrapatellar fat pad. Furthermore, there was a hemosiderin deposition in the recessus lateralis posterior to the lateral femoral condyle. These localizations corresponded to recurrent Dt-GCT, which was confirmed by surgical removal.",
         "category_1": [
@@ -2653,8 +2653,8 @@
     "10109": {
         "im_1": "train/radiology/images/ROCO_14607.jpg",
         "im_2": "train/radiology/images/ROCO_19972.jpg",
-        "im_1_local": 10019,
-        "im_2_local": 10100,
+        "im_1_local": 20019,
+        "im_2_local": 20100,
         "cap_1": " Clinical radiograph demonstrating the appearance of the distal tibia following the result of the multiple drill hole osteotomy being performed",
         "cap_2": "  An intraprocedural contrast radiograph shows the flow through intraosseous and soft tissue lesions of the left thumb.",
         "category_1": [
@@ -2677,8 +2677,8 @@
     "10110": {
         "im_1": "train/radiology/images/ROCO_62889.jpg",
         "im_2": "train/radiology/images/ROCO_64661.jpg",
-        "im_1_local": 10138,
-        "im_2_local": 10101,
+        "im_1_local": 20138,
+        "im_2_local": 20101,
         "cap_1": " The T2-weighted axial images at L3 level were analyzed using PiView digital image viewing software. The regions of interest were outlined with a graphic cursor around the back muscle. The fat signal level was determined using a histogram.",
         "cap_2": " MRI of the lumbosacral spine showing diffuse paraspinal muscle edema from L2 to the sacrum, without evidence of osseous metastasis to the spine.",
         "category_1": [
@@ -2701,8 +2701,8 @@
     "10111": {
         "im_1": "train/radiology/images/ROCO_32030.jpg",
         "im_2": "train/radiology/images/ROCO_53061.jpg",
-        "im_1_local": 10067,
-        "im_2_local": 10182,
+        "im_1_local": 20067,
+        "im_2_local": 20182,
         "cap_1": " 7 Tesla gradient-echo image of the knee joint in the coronal plane. The cartilage layers and the menisci are shown in high resolution and exquisite detail and will help to detect even subtle pathologies of these structures. Additionally, the trabecular structure of the bones is shown in ultra-high resolution, which may promote osteoporosis research.",
         "cap_2": " Sagittal proton density MRI of the knee (TR = 5067 milliseconds, TE = 25 milliseconds), 29-year-old male professional basketball player. Image shows thickening of the patellar tendon and intermediate signal intensity within the tendon indicative of patellar tendinitis.",
         "category_1": [
@@ -2725,8 +2725,8 @@
     "10112": {
         "im_1": "train/radiology/images/ROCO_02691.jpg",
         "im_2": "train/radiology/images/ROCO_32030.jpg",
-        "im_1_local": 10122,
-        "im_2_local": 10067,
+        "im_1_local": 20122,
+        "im_2_local": 20067,
         "cap_1": " Magnetic resonance imaging inversion recovery sequence coronal section showing hyperintense lesion located between femoral condyle medially and iliotibial band laterally and limited inferiorly by lateral tibiofemoral joint line.",
         "cap_2": " 7 Tesla gradient-echo image of the knee joint in the coronal plane. The cartilage layers and the menisci are shown in high resolution and exquisite detail and will help to detect even subtle pathologies of these structures. Additionally, the trabecular structure of the bones is shown in ultra-high resolution, which may promote osteoporosis research.",
         "category_1": [
@@ -2749,8 +2749,8 @@
     "10113": {
         "im_1": "train/radiology/images/ROCO_32030.jpg",
         "im_2": "validation/radiology/images/ROCO_26319.jpg",
-        "im_1_local": 10067,
-        "im_2_local": 10005,
+        "im_1_local": 20067,
+        "im_2_local": 20005,
         "cap_1": " 7 Tesla gradient-echo image of the knee joint in the coronal plane. The cartilage layers and the menisci are shown in high resolution and exquisite detail and will help to detect even subtle pathologies of these structures. Additionally, the trabecular structure of the bones is shown in ultra-high resolution, which may promote osteoporosis research.",
         "cap_2": " Gradient-echo-based MRI image from a patient with recurrent t-GCT (right knee). There was very low signal intensity corresponding to hemosiderin depositions anterior to the lateral meniscus, extending to the infrapatellar fat pad. Furthermore, there was a hemosiderin deposition in the recessus lateralis posterior to the lateral femoral condyle. These localizations corresponded to recurrent Dt-GCT, which was confirmed by surgical removal.",
         "category_1": [
@@ -2773,8 +2773,8 @@
     "10114": {
         "im_1": "train/radiology/images/ROCO_16164.jpg",
         "im_2": "train/radiology/images/ROCO_28778.jpg",
-        "im_1_local": 10114,
-        "im_2_local": 10192,
+        "im_1_local": 20114,
+        "im_2_local": 20192,
         "cap_1": " 25-year old woman involved in a rollover motor vehicle collision. On admission to the hospital, a screening four-vessel angiogram revealed a pseudoaneurysm of the left vertebral artery at the level of the C1\u2013C2 disc space. Follow-up angiography performed 7 days later revealed enlargement of the pseudoaneurysm and concomitant narrowing of the vertebral artery. Due to the tortuosity of the vertebral artery, stent placement was not deemed a viable option and the vertebral artery was embolized. Lateral digital subtraction angiogram, left vertebral artery. Notice the pseudoaneurysm arising from the distal vertebral artery (arrow), and the adjacent vertebral artery narrowing.",
         "cap_2": " Selective injection in the left internal carotid artery on digital subtraction angiography showing the internal carotid artery terminating into the ophthalmic artery with no contribution to cerebral vasculature.",
         "category_1": [
@@ -2799,8 +2799,8 @@
     "10115": {
         "im_1": "train/radiology/images/ROCO_11812.jpg",
         "im_2": "train/radiology/images/ROCO_28778.jpg",
-        "im_1_local": 10044,
-        "im_2_local": 10192,
+        "im_1_local": 20044,
+        "im_2_local": 20192,
         "cap_1": " Left subclavian angiogram, showing multifocal stenosis of the left vertebral artery with faint flow to basilar artery.",
         "cap_2": " Selective injection in the left internal carotid artery on digital subtraction angiography showing the internal carotid artery terminating into the ophthalmic artery with no contribution to cerebral vasculature.",
         "category_1": [
@@ -2825,8 +2825,8 @@
     "10116": {
         "im_1": "test/radiology/images/ROCO_66709.jpg",
         "im_2": "train/radiology/images/ROCO_28778.jpg",
-        "im_1_local": 10213,
-        "im_2_local": 10192,
+        "im_1_local": 20213,
+        "im_2_local": 20192,
         "cap_1": " Selective injection of the left lateral thoracic artery failed to demonstrate any discrete communication with the breast mass or bleeding site.",
         "cap_2": " Selective injection in the left internal carotid artery on digital subtraction angiography showing the internal carotid artery terminating into the ophthalmic artery with no contribution to cerebral vasculature.",
         "category_1": [
@@ -2850,8 +2850,8 @@
     "10117": {
         "im_1": "train/radiology/images/ROCO_28778.jpg",
         "im_2": "validation/radiology/images/ROCO_45351.jpg",
-        "im_1_local": 10192,
-        "im_2_local": 10123,
+        "im_1_local": 20192,
+        "im_2_local": 20123,
         "cap_1": " Selective injection in the left internal carotid artery on digital subtraction angiography showing the internal carotid artery terminating into the ophthalmic artery with no contribution to cerebral vasculature.",
         "cap_2": " After embolization of the recurrent fistula, the DAVF is no longer visible on right external carotid artery angiogram.",
         "category_1": [
@@ -2876,8 +2876,8 @@
     "10118": {
         "im_1": "train/radiology/images/ROCO_28778.jpg",
         "im_2": "train/radiology/images/ROCO_70184.jpg",
-        "im_1_local": 10192,
-        "im_2_local": 10222,
+        "im_1_local": 20192,
+        "im_2_local": 20222,
         "cap_1": " Selective injection in the left internal carotid artery on digital subtraction angiography showing the internal carotid artery terminating into the ophthalmic artery with no contribution to cerebral vasculature.",
         "cap_2": " Post-procedure angiogram after simultaneous retrieval of both stent retrievers demonstrates patency of the basilar artery, superior cerebellar arteries and left posterior cerebral artery. Occlusion of the distal right posterior cerebral artery and the left superior cerebellar arteries were due to clot fragmentation.",
         "category_1": [
@@ -2902,8 +2902,8 @@
     "10119": {
         "im_1": "train/radiology/images/ROCO_35078.jpg",
         "im_2": "train/radiology/images/ROCO_72065.jpg",
-        "im_1_local": 10058,
-        "im_2_local": 10201,
+        "im_1_local": 20058,
+        "im_2_local": 20201,
         "cap_1": " Angiogram of the right internal carotid artery. Coil embolization of the pseudoaneurysm and successfully deployed endovascular stent.",
         "cap_2": " Left internal carotid artery angiogram depicting a broad-based aneurysm arising from the posterior wall of the left internal carotid artery.",
         "category_1": [
@@ -2928,8 +2928,8 @@
     "10120": {
         "im_1": "train/radiology/images/ROCO_31423.jpg",
         "im_2": "train/radiology/images/ROCO_51900.jpg",
-        "im_1_local": 10108,
-        "im_2_local": 10106,
+        "im_1_local": 20108,
+        "im_2_local": 20106,
         "cap_1": " Digitally subtracted image of the left hypogastric artery status after coiling of the small site of extravasation from the small segmental branch arising from the anterior division of the left hypogastric artery.",
         "cap_2": " Brachiocephalic arteriography of the right opercular-cervical region where we observe the presence of bleeding dependent of the cervical muscular branch of the right subclavian artery.",
         "category_1": [
@@ -2952,8 +2952,8 @@
     "10121": {
         "im_1": "train/radiology/images/ROCO_14905.jpg",
         "im_2": "train/radiology/images/ROCO_21866.jpg",
-        "im_1_local": 10072,
-        "im_2_local": 10109,
+        "im_1_local": 20072,
+        "im_2_local": 20109,
         "cap_1": " Digital subtraction angiogram with injection of the right middle meningeal artery. Note the microcatheter tip in the mid-segment of the right middle meningeal artery (arrow). There is a jet of contrast filling the large pseudoaneurysm in the soft tissues just beneath the right middle cranial fossa (double arrow).\"Right\" indicates the patient's right side.",
         "cap_2": " Lateral digital subtraction angiography showing the tip of the microcatheter in the mid-segment of the right middle meningeal artery (arrow). Note the jet of contrast filling the large pseudoaneurysm just below the base of the skull (double arrows).\"Right\" indicates the patient's right side.",
         "category_1": [
@@ -2976,8 +2976,8 @@
     "10122": {
         "im_1": "train/radiology/images/ROCO_51900.jpg",
         "im_2": "train/radiology/images/ROCO_66056.jpg",
-        "im_1_local": 10106,
-        "im_2_local": 10224,
+        "im_1_local": 20106,
+        "im_2_local": 20224,
         "cap_1": " Brachiocephalic arteriography of the right opercular-cervical region where we observe the presence of bleeding dependent of the cervical muscular branch of the right subclavian artery.",
         "cap_2": " 22-year-old female with uterine artery pseudoaneurysm. DSA image demonstrates distal injection of the left uterine artery with backfilling of the pseudoaneurysm.",
         "category_1": [
@@ -3000,8 +3000,8 @@
     "10123": {
         "im_1": "train/radiology/images/ROCO_51900.jpg",
         "im_2": "train/radiology/images/ROCO_52712.jpg",
-        "im_1_local": 10106,
-        "im_2_local": 10223,
+        "im_1_local": 20106,
+        "im_2_local": 20223,
         "cap_1": " Brachiocephalic arteriography of the right opercular-cervical region where we observe the presence of bleeding dependent of the cervical muscular branch of the right subclavian artery.",
         "cap_2": " 22-year-old female with uterine artery pseudoaneurysm. DSA image demonstrates the uterine artery in spasm.",
         "category_1": [
@@ -3024,8 +3024,8 @@
     "10124": {
         "im_1": "train/radiology/images/ROCO_31533.jpg",
         "im_2": "train/radiology/images/ROCO_51900.jpg",
-        "im_1_local": 10194,
-        "im_2_local": 10106,
+        "im_1_local": 20194,
+        "im_2_local": 20106,
         "cap_1": " Pre-particle embolization images of the left internal mammary artery demonstrate proximal occlusion of the vessel and its mammary branches.",
         "cap_2": " Brachiocephalic arteriography of the right opercular-cervical region where we observe the presence of bleeding dependent of the cervical muscular branch of the right subclavian artery.",
         "category_1": [
@@ -3048,8 +3048,8 @@
     "10125": {
         "im_1": "train/radiology/images/ROCO_51900.jpg",
         "im_2": "validation/radiology/images/ROCO_09106.jpg",
-        "im_1_local": 10106,
-        "im_2_local": 10099,
+        "im_1_local": 20106,
+        "im_2_local": 20099,
         "cap_1": " Brachiocephalic arteriography of the right opercular-cervical region where we observe the presence of bleeding dependent of the cervical muscular branch of the right subclavian artery.",
         "cap_2": " Selective right intercostal artery angiography was performed through a 5-French Michelson catheter from the supreme right intercostal artery to the right 12th intercostal artery. A common trunk of the right ninth and 10th intercostal arteries is pictured. No discrete bleeding source or arterial irregularity was identified.",
         "category_1": [
@@ -3072,8 +3072,8 @@
     "10126": {
         "im_1": "train/radiology/images/ROCO_12400.jpg",
         "im_2": "train/radiology/images/ROCO_51900.jpg",
-        "im_1_local": 10128,
-        "im_2_local": 10106,
+        "im_1_local": 20128,
+        "im_2_local": 20106,
         "cap_1": " Hepatic artery pseudoaneurysm has been embolized. Collaterals to the right hemiliver via the left accessory hepatic artery are visible.",
         "cap_2": " Brachiocephalic arteriography of the right opercular-cervical region where we observe the presence of bleeding dependent of the cervical muscular branch of the right subclavian artery.",
         "category_1": [
@@ -3096,8 +3096,8 @@
     "10127": {
         "im_1": "validation/radiology/images/ROCO_25199.jpg",
         "im_2": "validation/radiology/images/ROCO_75449.jpg",
-        "im_1_local": 10202,
-        "im_2_local": 10168,
+        "im_1_local": 20202,
+        "im_2_local": 20168,
         "cap_1": " Venogram demonstrating the line position and persistent left-sided SVC. Contrast injection showed variant drainage of the neck and arm veins with right and left brachiocephalic veins dividing to drain into a normally placed right SVC and a persistent left-sided SVC which is draining into the right atrium inferiorly. This patient has a persistent left-sided SVC draining into the right atrium, the line tips are in this vessel, giving good flow in both lumens.",
         "cap_2": " Intraoperative aortic arch angiography visualizing the origin of the left subclavian artery. Aortic coarctation is also demonstrated",
         "category_1": [
@@ -3120,8 +3120,8 @@
     "10128": {
         "im_1": "train/radiology/images/ROCO_66354.jpg",
         "im_2": "validation/radiology/images/ROCO_75449.jpg",
-        "im_1_local": 10011,
-        "im_2_local": 10168,
+        "im_1_local": 20011,
+        "im_2_local": 20168,
         "cap_1": " 60-year-old African-American male with pulmonary artery pseudoaneurysm. Microcatheter at the neck of the pseudoaneurysm.",
         "cap_2": " Intraoperative aortic arch angiography visualizing the origin of the left subclavian artery. Aortic coarctation is also demonstrated",
         "category_1": [
@@ -3144,8 +3144,8 @@
     "10129": {
         "im_1": "train/radiology/images/ROCO_11812.jpg",
         "im_2": "train/radiology/images/ROCO_66056.jpg",
-        "im_1_local": 10044,
-        "im_2_local": 10224,
+        "im_1_local": 20044,
+        "im_2_local": 20224,
         "cap_1": " Left subclavian angiogram, showing multifocal stenosis of the left vertebral artery with faint flow to basilar artery.",
         "cap_2": " 22-year-old female with uterine artery pseudoaneurysm. DSA image demonstrates distal injection of the left uterine artery with backfilling of the pseudoaneurysm.",
         "category_1": [
@@ -3169,8 +3169,8 @@
     "10130": {
         "im_1": "train/radiology/images/ROCO_61927.jpg",
         "im_2": "train/radiology/images/ROCO_66056.jpg",
-        "im_1_local": 10046,
-        "im_2_local": 10224,
+        "im_1_local": 20046,
+        "im_2_local": 20224,
         "cap_1": " Selective right renal arterial branch angiogram demonstrates one of the feeding vessels to the tumour before embolisation.",
         "cap_2": " 22-year-old female with uterine artery pseudoaneurysm. DSA image demonstrates distal injection of the left uterine artery with backfilling of the pseudoaneurysm.",
         "category_1": [
@@ -3193,8 +3193,8 @@
     "10131": {
         "im_1": "train/radiology/images/ROCO_66056.jpg",
         "im_2": "validation/radiology/images/ROCO_09106.jpg",
-        "im_1_local": 10224,
-        "im_2_local": 10099,
+        "im_1_local": 20224,
+        "im_2_local": 20099,
         "cap_1": " 22-year-old female with uterine artery pseudoaneurysm. DSA image demonstrates distal injection of the left uterine artery with backfilling of the pseudoaneurysm.",
         "cap_2": " Selective right intercostal artery angiography was performed through a 5-French Michelson catheter from the supreme right intercostal artery to the right 12th intercostal artery. A common trunk of the right ninth and 10th intercostal arteries is pictured. No discrete bleeding source or arterial irregularity was identified.",
         "category_1": [
@@ -3217,8 +3217,8 @@
     "10132": {
         "im_1": "train/radiology/images/ROCO_11735.jpg",
         "im_2": "train/radiology/images/ROCO_55872.jpg",
-        "im_1_local": 10070,
-        "im_2_local": 10084,
+        "im_1_local": 20070,
+        "im_2_local": 20084,
         "cap_1": " Right renal artery angiogram illustrating absence of adrenal capsular supply. Note the coils in the anomalous phrenic branch (top) and right lateral adrenal artery (bottom).",
         "cap_2": " Control angiography of the right renal artery showed a complete occlusion of both the aneurysm and the fistula.",
         "category_1": [
@@ -3241,8 +3241,8 @@
     "10133": {
         "im_1": "train/radiology/images/ROCO_11735.jpg",
         "im_2": "train/radiology/images/ROCO_33944.jpg",
-        "im_1_local": 10070,
-        "im_2_local": 10079,
+        "im_1_local": 20070,
+        "im_2_local": 20079,
         "cap_1": " Right renal artery angiogram illustrating absence of adrenal capsular supply. Note the coils in the anomalous phrenic branch (top) and right lateral adrenal artery (bottom).",
         "cap_2": " Angiography under CT guidance. Absence of portal and splenic opacification (thombosis).Abbreviation: CT, computed tomography.",
         "category_1": [
@@ -3265,8 +3265,8 @@
     "10134": {
         "im_1": "train/radiology/images/ROCO_11735.jpg",
         "im_2": "train/radiology/images/ROCO_65564.jpg",
-        "im_1_local": 10070,
-        "im_2_local": 10085,
+        "im_1_local": 20070,
+        "im_2_local": 20085,
         "cap_1": " Right renal artery angiogram illustrating absence of adrenal capsular supply. Note the coils in the anomalous phrenic branch (top) and right lateral adrenal artery (bottom).",
         "cap_2": " Selective angiography of a stenosis of right RA. This image has been obtained from the same patient of figure 2 at the time of percutaneous angioplasty. The stenosis of the right RA is evident.",
         "category_1": [
@@ -3289,8 +3289,8 @@
     "10135": {
         "im_1": "train/radiology/images/ROCO_11735.jpg",
         "im_2": "train/radiology/images/ROCO_64197.jpg",
-        "im_1_local": 10070,
-        "im_2_local": 10017,
+        "im_1_local": 20070,
+        "im_2_local": 20017,
         "cap_1": " Right renal artery angiogram illustrating absence of adrenal capsular supply. Note the coils in the anomalous phrenic branch (top) and right lateral adrenal artery (bottom).",
         "cap_2": " Digital subtraction angiography using contrast enhancement. The findings were not typical of a pseudolesion from vascular malformation.",
         "category_1": [
@@ -3313,8 +3313,8 @@
     "10136": {
         "im_1": "test/radiology/images/ROCO_14725.jpg",
         "im_2": "train/radiology/images/ROCO_11735.jpg",
-        "im_1_local": 10207,
-        "im_2_local": 10070,
+        "im_1_local": 20207,
+        "im_2_local": 20070,
         "cap_1": " Splenic angiography obtained after the selective embolization with Bead Block microspheres (diameter range, 700\u2013900 \u03bcm) via a Progreat 2.8 Fr microcatheter shows a complete haemostasis. No extravasation is seen.",
         "cap_2": " Right renal artery angiogram illustrating absence of adrenal capsular supply. Note the coils in the anomalous phrenic branch (top) and right lateral adrenal artery (bottom).",
         "category_1": [
@@ -3337,8 +3337,8 @@
     "10137": {
         "im_1": "train/radiology/images/ROCO_38948.jpg",
         "im_2": "train/radiology/images/ROCO_76672.jpg",
-        "im_1_local": 10215,
-        "im_2_local": 10115,
+        "im_1_local": 20215,
+        "im_2_local": 20115,
         "cap_1": " Eight weeks post treatment MR Angiogram TOF images appeared normal. Previously mentioned spasms are not visualized in the present scan",
         "cap_2": " Magnetic resonance angiography (MRA). Coronal maximum intensity projection from MRA reveals occlusion of the right vertebral artery, which is likely due to artery dissection",
         "category_1": [
@@ -3363,8 +3363,8 @@
     "10138": {
         "im_1": "test/radiology/images/ROCO_14887.jpg",
         "im_2": "validation/radiology/images/ROCO_81353.jpg",
-        "im_1_local": 10174,
-        "im_2_local": 10036,
+        "im_1_local": 20174,
+        "im_2_local": 20036,
         "cap_1": " Image clearly showing 18FDG the in the descending colon (DC) and the sigmoid and rectum (S&R).The outline of the caecum and ascending colon (C&AC) can also be clearly seen. Note that only the left hand end (right hand end on the image) of the transverse colon (TC) is clearly visible. The transverse colon (TC) is approximately horizontal and extends from just below the lowest point in the liver (which can be clearly seen) to the top of the descending colon.",
         "cap_2": " Maximum intensity projection (MIP) showing no other pathological FDG uptake in body (except previously described pleural lesions)",
         "category_1": [
@@ -3387,8 +3387,8 @@
     "10139": {
         "im_1": "test/radiology/images/ROCO_33619.jpg",
         "im_2": "test/radiology/images/ROCO_46639.jpg",
-        "im_1_local": 10137,
-        "im_2_local": 10089,
+        "im_1_local": 20137,
+        "im_2_local": 20089,
         "cap_1": " Right sided pulmonary artery angiography performed at Giessen indicating chronic thromboembolic pulmonary hypertension which was also demonstrated by two ventilation/perfusion (V/Q) mismatches.",
         "cap_2": " Angiography of the right pulmonary demonstrating a large arteriovenous malformation with multiple feeder vessels.",
         "category_1": [
@@ -3413,8 +3413,8 @@
     "10140": {
         "im_1": "train/radiology/images/ROCO_61778.jpg",
         "im_2": "validation/radiology/images/ROCO_08632.jpg",
-        "im_1_local": 10048,
-        "im_2_local": 10080,
+        "im_1_local": 20048,
+        "im_2_local": 20080,
         "cap_1": " High resolution computer tomography (HRCT) shows bilateral patchy involvement of alveolar consolidation in mainly both lower lobe and focal ground-glass lesion is also noted.",
         "cap_2": " A case of myelofibrosis with ANC of 200/\u00b5l. HRCT chest shows multiple small randomly distributed nodules (2-3 mm) in both lungs with tree-in-bud appearance at places suggestive of miliary tuberculosis. Patient\u2032s sputum was positive for AFB",
         "category_1": [
@@ -3437,8 +3437,8 @@
     "10141": {
         "im_1": "train/radiology/images/ROCO_16288.jpg",
         "im_2": "train/radiology/images/ROCO_76138.jpg",
-        "im_1_local": 10124,
-        "im_2_local": 10125,
+        "im_1_local": 20124,
+        "im_2_local": 20125,
         "cap_1": " HRCT at the level of the upper lobes shows nodular ground glass opacities with a predominately centrilobular distribution.",
         "cap_2": " HRCT. HRCT scan shows diffuse miliary nodules and ground glass opacity in both the lungs and pleural effusion in the right lobe. Patchy consolidation in the left lower lobe can be noted on the CT scan.",
         "category_1": [
@@ -3461,8 +3461,8 @@
     "10142": {
         "im_1": "train/radiology/images/ROCO_41047.jpg",
         "im_2": "validation/radiology/images/ROCO_81353.jpg",
-        "im_1_local": 10158,
-        "im_2_local": 10036,
+        "im_1_local": 20158,
+        "im_2_local": 20036,
         "cap_1": " 55-year-old man with recurrent mantle cell lymphoma. Full body coronal reformatted PET scan shows abnormal intense tracheal uptake and other areas of expected uptake.",
         "cap_2": " Maximum intensity projection (MIP) showing no other pathological FDG uptake in body (except previously described pleural lesions)",
         "category_1": [
@@ -3485,8 +3485,8 @@
     "10143": {
         "im_1": "train/radiology/images/ROCO_47414.jpg",
         "im_2": "validation/radiology/images/ROCO_56172.jpg",
-        "im_1_local": 10139,
-        "im_2_local": 10171,
+        "im_1_local": 20139,
+        "im_2_local": 20171,
         "cap_1": " Transverse view of upper lung field with tumor located in the right upper lung apex. Chest computed tomography (CT) done post intubation shows ground-glass opacities, blebs confined to the right upper lung apex, and diffuse ground-glass attenuation, blebs in the marginal areas, airspace consolidation, and fibrosis in the bilateral upper and lower lung fields.",
         "cap_2": " Unenhanced computed tomogram image of thorax demonstrating diffuse ground glass opacification with subpleural sparing and septal thickening consistent with an atypical pneumonia.",
         "category_1": [
@@ -3509,8 +3509,8 @@
     "10144": {
         "im_1": "train/radiology/images/ROCO_11371.jpg",
         "im_2": "validation/radiology/images/ROCO_56172.jpg",
-        "im_1_local": 10118,
-        "im_2_local": 10171,
+        "im_1_local": 20118,
+        "im_2_local": 20171,
         "cap_1": " 28-year-old man with acute pulmonary edema. High-resolution CT scan at level of main bronchi demonstrates areas of consolidation and ground-glass attenuation with superimposed interlobular septal thickening defining \"crazy-paving\" pattern. Lesions predominated on left upper lobe. Bilateral pleural effusion is also observed.",
         "cap_2": " Unenhanced computed tomogram image of thorax demonstrating diffuse ground glass opacification with subpleural sparing and septal thickening consistent with an atypical pneumonia.",
         "category_1": [
@@ -3533,8 +3533,8 @@
     "10145": {
         "im_1": "train/radiology/images/ROCO_09042.jpg",
         "im_2": "train/radiology/images/ROCO_31680.jpg",
-        "im_1_local": 10055,
-        "im_2_local": 10183,
+        "im_1_local": 20055,
+        "im_2_local": 20183,
         "cap_1": " Transverse view of the lower lung field. Chest computed tomography (CT) done post intubation shows ground-glass opacities, blebs confined to the right upper lung apex, and diffuse ground-glass attenuation, blebs in the marginal areas, airspace consolidation, and fibrosis in the bilateral upper and lower lung fields.",
         "cap_2": " HRCT of the chest showing sub pleural patchy airspace consolidation and ground glass opacification with airbronchogram in bilateral basel regions with sparing of upper and middle zones, which was compatible with OP",
         "category_1": [
@@ -3557,8 +3557,8 @@
     "10146": {
         "im_1": "train/radiology/images/ROCO_50234.jpg",
         "im_2": "train/radiology/images/ROCO_60136.jpg",
-        "im_1_local": 10203,
-        "im_2_local": 10180,
+        "im_1_local": 20203,
+        "im_2_local": 20180,
         "cap_1": " Maximum intensity projection image of a 78-year-old woman with Rosai-Dorfman disease accompanied by IgG4+ plasma cell infiltration. Besides the hypermetabolic lesion of the right breast, mild 18F-fluoro-deoxyglucose uptake was illustrated at the hila of the lungs and neck bilaterally.",
         "cap_2": " FDG/PET performed 58 days after the start of gefitinib treatment revealed no uptake of radiotracer to the tumor, bone, and lymph nodes. The clinician evaluated the patient as partial response (PR) and continued gefitinib therapy.",
         "category_1": [
@@ -3581,8 +3581,8 @@
     "10147": {
         "im_1": "train/radiology/images/ROCO_23315.jpg",
         "im_2": "train/radiology/images/ROCO_32382.jpg",
-        "im_1_local": 10134,
-        "im_2_local": 10127,
+        "im_1_local": 20134,
+        "im_2_local": 20127,
         "cap_1": " PET-torso image shows increased SUVmax of the lymph nodes in both the supraclavicular areas and anterior mediastinum.",
         "cap_2": " Follow-up whole body (18F)-FDG-PET-CT scan showing no pathological FDG uptake, indicative of a complete response.Abbreviations: CT, computed tomography; FDG, fluorodeoxyglucose; PET, positron emission tomography.",
         "category_1": [
@@ -3605,8 +3605,8 @@
     "10148": {
         "im_1": "validation/radiology/images/ROCO_15256.jpg",
         "im_2": "validation/radiology/images/ROCO_55975.jpg",
-        "im_1_local": 10185,
-        "im_2_local": 10023,
+        "im_1_local": 20185,
+        "im_2_local": 20023,
         "cap_1": " In a patient with left lower lobe hemorrhage, arteriography of combined right and left bronchial trunk demonstrates mild dilatation of right bronchial artery with hypervascularity in all, more prominent upper lobe, and thin left bronchial artery with extravasation of the contrast material into the lower lobe bronchial lumen (arrow).",
         "cap_2": " Vertebral angiography. At T4 level, there was stagnation of contrast at the anterior spinal canal portion, pseudoaneurysm (arrow) was suspected.",
         "category_1": [
@@ -3629,8 +3629,8 @@
     "10149": {
         "im_1": "test/radiology/images/ROCO_18846.jpg",
         "im_2": "train/radiology/images/ROCO_09202.jpg",
-        "im_1_local": 10214,
-        "im_2_local": 10050,
+        "im_1_local": 20214,
+        "im_2_local": 20050,
         "cap_1": " Thoracic CT of a 32-year-old woman with 2009 H1N1 influenza virus infection. Ground-glass opacities increased bronchovascular markings, and left lower lobe ill-defined consolidation is seen.",
         "cap_2": " Non contrast-enhanced chest computed tomography (CT) in a case of acute fibrinous organizing pneumonia (AFOP). Non contrast-enhanced chest computed tomography (CT) shows consolidation of the left lower lobe with an air bronchogram.",
         "category_1": [
@@ -3653,8 +3653,8 @@
     "10150": {
         "im_1": "train/radiology/images/ROCO_13508.jpg",
         "im_2": "train/radiology/images/ROCO_36675.jpg",
-        "im_1_local": 10140,
-        "im_2_local": 10097,
+        "im_1_local": 20140,
+        "im_2_local": 20097,
         "cap_1": " A 24-week-old fetus with BPS on the right sideHomogeneous hyperintense lesion with regular contours with direct branching vessel from the thoracic aorta can be observed on axial HASTE image (arrow).",
         "cap_2": " Head of the fetus in the mother's pelvis. The T2-weighted MRI images show hematoma in the bilateral subdural areas and enlargement of the left lateral ventricle due to compression.",
         "category_1": [
@@ -3677,8 +3677,8 @@
     "10151": {
         "im_1": "test/radiology/images/ROCO_62204.jpg",
         "im_2": "train/radiology/images/ROCO_50099.jpg",
-        "im_1_local": 10103,
-        "im_2_local": 10006,
+        "im_1_local": 20103,
+        "im_2_local": 20006,
         "cap_1": " CT scan with lung window settings at the level of the lung bases, showing multiple nodules of various sizes, many of which were cavitated, with a predominant peripheral distribution.",
         "cap_2": " A 51-year-old, male, liver transplant recipient with novel influenza A (H1N1). Axial CT demonstrates patchy bilateral GGO and consolidation with a peribronchial distribution. There is also airway thickening associated with these abnormalities",
         "category_1": [
@@ -3701,8 +3701,8 @@
     "10152": {
         "im_1": "validation/radiology/images/ROCO_21013.jpg",
         "im_2": "validation/radiology/images/ROCO_81353.jpg",
-        "im_1_local": 10021,
-        "im_2_local": 10036,
+        "im_1_local": 20021,
+        "im_2_local": 20036,
         "cap_1": " After chemotherapy, PET scan showed a localized uptake of 18F-fluoro-deoxy-glucose (FDG) and no uptake in the liver or peritoneum.",
         "cap_2": " Maximum intensity projection (MIP) showing no other pathological FDG uptake in body (except previously described pleural lesions)",
         "category_1": [
@@ -3725,8 +3725,8 @@
     "10153": {
         "im_1": "train/radiology/images/ROCO_27261.jpg",
         "im_2": "validation/radiology/images/ROCO_81353.jpg",
-        "im_1_local": 10159,
-        "im_2_local": 10036,
+        "im_1_local": 20159,
+        "im_2_local": 20036,
         "cap_1": " In the meantime, additional diagnostic work-up performed two days prior to the 18F-FDG PET/CT, came back with positive Chikungunya IgG and IgM serology. Given the patient\u2019s recent travel to India, the clinical course and positive Chikungunya serology, the patient\u2019s abnormal 18F-FDG PET/CT scan was most likely secondary to acute Chikungunya infection and no lymph node biopsy was performed or further evaluations considered. After 12 weeks of gradually decreasing dosage of prednisolone the patient returned to her job as a cleaning lady, but was still reliant on pain-medication. A follow-up 18F-FDG PET/CT scan 10 days after ending steroid treatment and 14 weeks after the first 18F-FDG PET/CT, showed complete regression of the reactive lymph nodes as well as the 18F-FDG uptake in the left breast and only discrete 18F-FDG uptake of the right shoulder joint, consistent with the patient\u2019s clinical improvement. Any lingering suspicion of underlying lymphoma was therefore rebuked. A needle biopsy from the left breast showed chronic inflammation but no malignancy. The Chikungunya virus is transmitted by the mosquito vector Aedes aegypti and albopictus in many parts of the world, including India. Chikungunya viral infection is characterised by flu-like symptoms with high grade fever, headache, myalgia, polyarthralgia (usually symmetrical arthralgia, involving multiple joints) and often accompanied by a maculopapular rash [1]. Severe prolonged arthralgia months to years after infection is a recognised post-infectious manifestation of Chikungunya infection. Symptoms of acute Chikungunya are most likely caused by direct cellular damage and local inflammation with muscles, joints, lymph nodes, skin, liver and spleen as primary sites of replication. Chronic disease seems to be mediated by persistent virus and inflammation [2]. To our knowledge, 18F-FDG uptake in a case with confirmed Chikungunya infection has not previously been reported. The 18F-FDG PET/CT scan confirmed inflammation of several joints and lymph nodes four weeks after the patient\u2019s initial symptoms. Changes that regressed almost completely. In one report, an Indian patient with suspected Chikungunya infection had 18F-FDG uptake in lymph nodes on both sides of the diaphragm including splenic activity and active subcutaneous nodules. However, lymph node biopsy revealed angioimmunoblastic/peripheral T-cell lymphoma [3]. Recently, increased 18F-FDG uptake in the spleen and multiple lymph nodes was detected in a patient diagnosed with dengue fever and 18F-FDG has been suggested to be a novel Dengue infection-associated inflammation biomarker for assessing treatment response during therapeutic intervention trials [4,5]. 18F-FDG PET/CT may be of value in assessing patients suspected for long-term morbidity of Chikungunya infection due to persistent arthralgia.",
         "cap_2": " Maximum intensity projection (MIP) showing no other pathological FDG uptake in body (except previously described pleural lesions)",
         "category_1": [
@@ -3749,8 +3749,8 @@
     "10154": {
         "im_1": "train/radiology/images/ROCO_09034.jpg",
         "im_2": "train/radiology/images/ROCO_68501.jpg",
-        "im_1_local": 10056,
-        "im_2_local": 10095,
+        "im_1_local": 20056,
+        "im_2_local": 20095,
         "cap_1": " 49-year-old woman with sensorineural hearing loss. Sagittal T1 image demonstrates a mass isointense to CSF in the prepontine cistern that extends into the suprasellar region. The mass posteriorly displaces the pons, anteriorly bows the pituitary stalk (white arrow), and superiorly displaces the optic chiasm.",
         "cap_2": " MRI pituitary sagittal view showing pituitary fossa filled with cerebrospinal fluid and stalk touching the base of pituitary floor; features suggestive of empty sella",
         "category_1": [
@@ -3774,8 +3774,8 @@
     "10155": {
         "im_1": "train/radiology/images/ROCO_09034.jpg",
         "im_2": "validation/radiology/images/ROCO_32831.jpg",
-        "im_1_local": 10056,
-        "im_2_local": 10081,
+        "im_1_local": 20056,
+        "im_2_local": 20081,
         "cap_1": " 49-year-old woman with sensorineural hearing loss. Sagittal T1 image demonstrates a mass isointense to CSF in the prepontine cistern that extends into the suprasellar region. The mass posteriorly displaces the pons, anteriorly bows the pituitary stalk (white arrow), and superiorly displaces the optic chiasm.",
         "cap_2": " Postoperative (sagittal) image of same patient showing normal aerated sphenoid with no residual lesion",
         "category_1": [
@@ -3799,8 +3799,8 @@
     "10156": {
         "im_1": "test/radiology/images/ROCO_72435.jpg",
         "im_2": "validation/radiology/images/ROCO_24456.jpg",
-        "im_1_local": 10043,
-        "im_2_local": 10179,
+        "im_1_local": 20043,
+        "im_2_local": 20179,
         "cap_1": " CT scan of the orbits and brain, coronal view. The swelling extended into the soft tissues of the infra-orbital region, but there was little pre-septal soft tissue swelling.",
         "cap_2": " Patient 1 at presentation. Orbit computed tomography showing pansinusitis and subperiosteal abscesses involving the left medial (4\u00a0\u00d7 16-mm-) and upper orbital (6\u00a0\u00d7 15-mm-) walls. There is inferiotemporal displacement of the left globe by the infectious collections.",
         "category_1": [
@@ -3823,8 +3823,8 @@
     "10157": {
         "im_1": "train/radiology/images/ROCO_72094.jpg",
         "im_2": "validation/radiology/images/ROCO_24456.jpg",
-        "im_1_local": 10033,
-        "im_2_local": 10179,
+        "im_1_local": 20033,
+        "im_2_local": 20179,
         "cap_1": " CT scan of the orbits and brain, coronal view. Soft tissue density collection on the floor of the right orbit, elevating the inferior rectus muscle, extending posteriorly to the apex of the orbit.",
         "cap_2": " Patient 1 at presentation. Orbit computed tomography showing pansinusitis and subperiosteal abscesses involving the left medial (4\u00a0\u00d7 16-mm-) and upper orbital (6\u00a0\u00d7 15-mm-) walls. There is inferiotemporal displacement of the left globe by the infectious collections.",
         "category_1": [
@@ -3847,8 +3847,8 @@
     "10158": {
         "im_1": "train/radiology/images/ROCO_12111.jpg",
         "im_2": "validation/radiology/images/ROCO_38935.jpg",
-        "im_1_local": 10121,
-        "im_2_local": 10111,
+        "im_1_local": 20121,
+        "im_2_local": 20111,
         "cap_1": " Initial MRI obtained at the time of diagnosisInitial T1 sagittal MRI again showing a sellar mass with a small cystic component in the superior aspect.",
         "cap_2": " MRI T2 image (frontal view) sellar/suprasellar mass that was isohyperintense with peripheral hyperintensity",
         "category_1": [
@@ -3872,8 +3872,8 @@
     "10159": {
         "im_1": "train/radiology/images/ROCO_79217.jpg",
         "im_2": "train/radiology/images/ROCO_79809.jpg",
-        "im_1_local": 10094,
-        "im_2_local": 10172,
+        "im_1_local": 20094,
+        "im_2_local": 20172,
         "cap_1": " FLAIR axial MRI image shows well delineated pontine lesions. Pontine lesions and extra temporal involvement in herpes simplex encephalitis is rare.",
         "cap_2": " MRI at the onset of neurological symptoms. Axial T2-weighted fluid-attenuated inversion recovery (FLAIR) shows patchy high-signal intensity PML lesions in the right cerebellar peduncle.",
         "category_1": [
@@ -3898,8 +3898,8 @@
     "10160": {
         "im_1": "test/radiology/images/ROCO_80895.jpg",
         "im_2": "train/radiology/images/ROCO_41017.jpg",
-        "im_1_local": 10169,
-        "im_2_local": 10226,
+        "im_1_local": 20169,
+        "im_2_local": 20226,
         "cap_1": " Preoperatively there is fluid intensity in the tympanic cavity and mastoid air cells. Note the irregularity in the bone covering the sigmoid sinus.",
         "cap_2": "  Bone axial computed tomographic image obtained immediately after surgery in a patient who underwent cochlear implant surgery with a flap.",
         "category_1": [
@@ -3922,8 +3922,8 @@
     "10161": {
         "im_1": "train/radiology/images/ROCO_31554.jpg",
         "im_2": "train/radiology/images/ROCO_68501.jpg",
-        "im_1_local": 10074,
-        "im_2_local": 10095,
+        "im_1_local": 20074,
+        "im_2_local": 20095,
         "cap_1": " Control MRI repeated 3 mo after surgery (sagittal view) showing a heterogeneous signal in the sellar area, mostly due to cerebrospinal fluid. The pituitary gland is poorly defined and flattened on the sellar floor. The pituitary stalk size and morphology are normal.",
         "cap_2": " MRI pituitary sagittal view showing pituitary fossa filled with cerebrospinal fluid and stalk touching the base of pituitary floor; features suggestive of empty sella",
         "category_1": [
@@ -3947,8 +3947,8 @@
     "10162": {
         "im_1": "train/radiology/images/ROCO_14808.jpg",
         "im_2": "validation/radiology/images/ROCO_10051.jpg",
-        "im_1_local": 10206,
-        "im_2_local": 10187,
+        "im_1_local": 20206,
+        "im_2_local": 20187,
         "cap_1": " Axial computed tomography bone window showing the breach in the lingual cortical plate and extension of the lesion into the adjacent connective tissue.",
         "cap_2": " Axial CT image shows expansion of the right mandibular buccal cortical plate with radiopaque and radiolucent changes.",
         "category_1": [
@@ -3971,8 +3971,8 @@
     "10163": {
         "im_1": "train/radiology/images/ROCO_28204.jpg",
         "im_2": "validation/radiology/images/ROCO_10051.jpg",
-        "im_1_local": 10062,
-        "im_2_local": 10187,
+        "im_1_local": 20062,
+        "im_2_local": 20187,
         "cap_1": " Axial CT image of case III (20/M) shows the osteoma located at the lingual surface of mandibular premolar area.",
         "cap_2": " Axial CT image shows expansion of the right mandibular buccal cortical plate with radiopaque and radiolucent changes.",
         "category_1": [
@@ -3995,8 +3995,8 @@
     "10164": {
         "im_1": "train/radiology/images/ROCO_47082.jpg",
         "im_2": "validation/radiology/images/ROCO_38505.jpg",
-        "im_1_local": 10090,
-        "im_2_local": 10063,
+        "im_1_local": 20090,
+        "im_2_local": 20063,
         "cap_1": " 99mTc-DMSA renal scintigraphy of the patient while on enalapril. The posterior image shows decreased radiotracer uptake in both kidneys. Radiotracer uptake in the liver and background is increased. This pattern is suggestive of renal failure.",
         "cap_2": " Technetium-99m thyroid scan showing a nonhomogeneous uptake pattern and multiple nonfunctioning thyroid nodules located throughout the bilateral thyroid glands.",
         "category_1": [
@@ -4019,8 +4019,8 @@
     "10165": {
         "im_1": "validation/radiology/images/ROCO_08963.jpg",
         "im_2": "validation/radiology/images/ROCO_32831.jpg",
-        "im_1_local": 10018,
-        "im_2_local": 10081,
+        "im_1_local": 20018,
+        "im_2_local": 20081,
         "cap_1": " Cerebral MRI, T1-weighted, sagittal midline. Platybasia, short clivus, and small posterior cranial fossa. Arachnoidocele of the sella turcica.",
         "cap_2": " Postoperative (sagittal) image of same patient showing normal aerated sphenoid with no residual lesion",
         "category_1": [
@@ -4045,8 +4045,8 @@
     "10166": {
         "im_1": "train/radiology/images/ROCO_00732.jpg",
         "im_2": "train/radiology/images/ROCO_54188.jpg",
-        "im_1_local": 10186,
-        "im_2_local": 10141,
+        "im_1_local": 20186,
+        "im_2_local": 20141,
         "cap_1": " MRI of esthesioneuroblastoma/inverted papilloma collision tumor. Mass can be visualized in addition to inspissated secretions in the surrounding sinuses.",
         "cap_2": " Coronal fat supressed T2 weighted image showing thickened extra ocular muscles bilaterally. Note the hyperintense signals in the bilateral inferior recti muscles and the left superior rectus suggestive of active thyroid eye disease",
         "category_1": [
@@ -4069,8 +4069,8 @@
     "10167": {
         "im_1": "train/radiology/images/ROCO_20481.jpg",
         "im_2": "train/radiology/images/ROCO_42326.jpg",
-        "im_1_local": 10110,
-        "im_2_local": 10191,
+        "im_1_local": 20110,
+        "im_2_local": 20191,
         "cap_1": " MRI brain of case 1, T2 axial, arrow denotes pontine cleft (split pons sign) (c) MRI spine of case 1, T2 coronal",
         "cap_2": " Preoperative axial magnetic resonance FIESTA image demonstrates glossopharyngeal nerve compression from the left vertebral artery",
         "category_1": [
@@ -4093,8 +4093,8 @@
     "10168": {
         "im_1": "test/radiology/images/ROCO_72435.jpg",
         "im_2": "train/radiology/images/ROCO_16870.jpg",
-        "im_1_local": 10043,
-        "im_2_local": 10096,
+        "im_1_local": 20043,
+        "im_2_local": 20096,
         "cap_1": " CT scan of the orbits and brain, coronal view. The swelling extended into the soft tissues of the infra-orbital region, but there was little pre-septal soft tissue swelling.",
         "cap_2": " Enhanced extraconal and intraconal infiltrations in the left orbit, and an inferolateral view of the silicone ball sphere in the eyelid.",
         "category_1": [
@@ -4117,8 +4117,8 @@
     "10169": {
         "im_1": "train/radiology/images/ROCO_16870.jpg",
         "im_2": "train/radiology/images/ROCO_72094.jpg",
-        "im_1_local": 10096,
-        "im_2_local": 10033,
+        "im_1_local": 20096,
+        "im_2_local": 20033,
         "cap_1": " Enhanced extraconal and intraconal infiltrations in the left orbit, and an inferolateral view of the silicone ball sphere in the eyelid.",
         "cap_2": " CT scan of the orbits and brain, coronal view. Soft tissue density collection on the floor of the right orbit, elevating the inferior rectus muscle, extending posteriorly to the apex of the orbit.",
         "category_1": [
@@ -4141,8 +4141,8 @@
     "10170": {
         "im_1": "train/radiology/images/ROCO_27574.jpg",
         "im_2": "train/radiology/images/ROCO_43161.jpg",
-        "im_1_local": 10129,
-        "im_2_local": 10076,
+        "im_1_local": 20129,
+        "im_2_local": 20076,
         "cap_1": " Cervical CT demonstrating multiple enlarged lymph nodes in the paratracheal, subcarinal, bilateral supraclavicular, and cervical regions.",
         "cap_2": " Axial contrast-enhanced chest CT scan demonstrates extravasation of non- ionic CM into the right subcutaneous cervical region",
         "category_1": [
@@ -4165,8 +4165,8 @@
     "10171": {
         "im_1": "train/radiology/images/ROCO_56075.jpg",
         "im_2": "validation/radiology/images/ROCO_32831.jpg",
-        "im_1_local": 10039,
-        "im_2_local": 10081,
+        "im_1_local": 20039,
+        "im_2_local": 20081,
         "cap_1": " A brain magnetic resonance imaging image of patient showing atrophy of the brainstem with sparing of the spinal cord and cerebral hemispheres",
         "cap_2": " Postoperative (sagittal) image of same patient showing normal aerated sphenoid with no residual lesion",
         "category_1": [
@@ -4190,8 +4190,8 @@
     "10172": {
         "im_1": "train/radiology/images/ROCO_35744.jpg",
         "im_2": "train/radiology/images/ROCO_41017.jpg",
-        "im_1_local": 10120,
-        "im_2_local": 10226,
+        "im_1_local": 20120,
+        "im_2_local": 20226,
         "cap_1": " 24-year-old female with endolymphatic sac tumor. Axial CT image demonstrates a destructive lesion along the medial petrosal bone, in the location of the left endolymphatic sac.",
         "cap_2": "  Bone axial computed tomographic image obtained immediately after surgery in a patient who underwent cochlear implant surgery with a flap.",
         "category_1": [
@@ -4214,8 +4214,8 @@
     "10173": {
         "im_1": "train/radiology/images/ROCO_12537.jpg",
         "im_2": "train/radiology/images/ROCO_68501.jpg",
-        "im_1_local": 10027,
-        "im_2_local": 10095,
+        "im_1_local": 20027,
+        "im_2_local": 20095,
         "cap_1": " Magnetic Resonance Imaging of Brain Sagittal Section of T1 Sequence Showing Cerebellar Cortical Atrophy.No white matter changes in the cerebellar peduncle",
         "cap_2": " MRI pituitary sagittal view showing pituitary fossa filled with cerebrospinal fluid and stalk touching the base of pituitary floor; features suggestive of empty sella",
         "category_1": [
@@ -4239,8 +4239,8 @@
     "10174": {
         "im_1": "train/radiology/images/ROCO_52594.jpg",
         "im_2": "train/radiology/images/ROCO_68501.jpg",
-        "im_1_local": 10173,
-        "im_2_local": 10095,
+        "im_1_local": 20173,
+        "im_2_local": 20095,
         "cap_1": " MRI taken 3 months postoperatively showing disappearance of previous sellar cyst and preserved pituitary gland and stalk. MRI: magnetic resonance imaging.",
         "cap_2": " MRI pituitary sagittal view showing pituitary fossa filled with cerebrospinal fluid and stalk touching the base of pituitary floor; features suggestive of empty sella",
         "category_1": [
@@ -4264,8 +4264,8 @@
     "10175": {
         "im_1": "train/radiology/images/ROCO_26897.jpg",
         "im_2": "train/radiology/images/ROCO_68501.jpg",
-        "im_1_local": 10059,
-        "im_2_local": 10095,
+        "im_1_local": 20059,
+        "im_2_local": 20095,
         "cap_1": " Presurgical magnetic resonance imaging images, sagittal view, showing a mass within the lower clival region",
         "cap_2": " MRI pituitary sagittal view showing pituitary fossa filled with cerebrospinal fluid and stalk touching the base of pituitary floor; features suggestive of empty sella",
         "category_1": [
@@ -4289,8 +4289,8 @@
     "10176": {
         "im_1": "train/radiology/images/ROCO_07207.jpg",
         "im_2": "train/radiology/images/ROCO_68501.jpg",
-        "im_1_local": 10218,
-        "im_2_local": 10095,
+        "im_1_local": 20218,
+        "im_2_local": 20095,
         "cap_1": " Sagittal T1 weighted image demonstrates herniation of the cerebellar tonsils 2.2\u00a0cm below the foramen magnum with downward pointing.",
         "cap_2": " MRI pituitary sagittal view showing pituitary fossa filled with cerebrospinal fluid and stalk touching the base of pituitary floor; features suggestive of empty sella",
         "category_1": [
