@@ -75,7 +75,17 @@ def load_model(model_args):
 
     ckp = model_args.ckp + '/pytorch_model.bin'
     model = Binary_VQA_Model(model_args)
-    model.load_state_dict(torch.load(ckp, map_location='cpu'))
+    state_dict = torch.load(ckp, map_location='cpu')
+    # key_list = list(state_dict.keys())
+    # for key in key_list:
+    #     if '.weight' in key:
+    #         new_key = key.replace('.weight', '.default.weight')
+    #         state_dict[new_key] = state_dict.pop(key)
+    #     if '.bias' in key:
+    #         new_key = key.replace('.bias', '.default.bias')
+    #         state_dict[new_key] = state_dict.pop(key)
+        
+    model.load_state_dict(state_dict)
     model = model.to('cuda')
     model.eval()
 

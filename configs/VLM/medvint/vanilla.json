@@ -5,5 +5,5 @@
     "IMAGE_ENCODER": "CLIP",
     "PMCCLIP_PRETRAINED": "./models/pmc_clip/checkpoint.pt",
     "CLIP_PRETRAINED": "openai/clip-vit-base-patch32",
-    "CKP": "/data/models/medvint/VQA_lora/vqa/checkpoint-6500"
+    "CKP": "/data/models/medvint/VQA_lora_pmcclip/vqa/checkpoint-13500"
 }
