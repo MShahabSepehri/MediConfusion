@@ -149,7 +149,9 @@ class BaseAnsweringModel():
         if answer is not None:
             tmp = answer.split(' ')
             for la in labels:
-                if (f'{la}' in tmp) or (f'{la}:' in tmp) or (f'.{la}' in tmp) or (f'.{la}:' in tmp) or (f'{la}.' in tmp) or (f'{la}\")' in tmp):
+                valid_list = [f'{la}', f'{la}:', f'.{la}', f'.{la}:', f'{la}.', f'{la}\")', f'{la}\n', f'\n{la}']
+                correct = any([x in tmp for x in valid_list])
+                if correct:
                     scores[la] = 10
         tmp = [1 for x in scores.values() if x==10]
         if sum(tmp) > 1:
