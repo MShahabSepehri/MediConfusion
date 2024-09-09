@@ -142,22 +142,36 @@ class BaseAnsweringModel():
         return ans
     
     def clean_up_with_option(self, question, options, answer):
-        a_score = 0
-        b_score = 0
+        labels = ['A', 'B']
+        scores = {'full_answer': answer}
+        for key in labels:
+            scores[key] = 0
         if answer is not None:
-            if answer[: 1] == 'A':
-                a_score = 10
-            elif answer[: 1] == 'B':
-                b_score = 10
-            else: # for mc
-                if ('A ' in answer) or (' A' in answer):
-                    a_score = 10
-                if ('B ' in answer) or (' B' in answer):
-                    b_score = 10
-        if (a_score == 10) and (b_score == 10):
-            a_score = 0
-            b_score = 0
-        return {'A': a_score, 'B': b_score, 'full_answer': answer}
+            tmp = answer.split(' ')
+            for la in labels:
+                if (f'{la}' in tmp) or (f'{la}:' in tmp) or (f'.{la}' in tmp) or (f'.{la}:' in tmp) or (f'{la}.' in tmp) or (f'{la}\")' in tmp):
+                    scores[la] = 10
+        tmp = [1 for x in scores.values() if x==10]
+        if sum(tmp) > 1:
+            for key in labels:
+                scores[key] = 0
+        return scores
+        # a_score = 0
+        # b_score = 0
+        # if answer is not None:
+        #     if answer[: 1] == 'A':
+        #         a_score = 10
+        #     elif answer[: 1] == 'B':
+        #         b_score = 10
+        #     else: # for mc
+        #         if ('A ' in answer) or (' A' in answer):
+        #             a_score = 10
+        #         if ('B ' in answer) or (' B' in answer):
+        #             b_score = 10
+        # if (a_score == 10) and (b_score == 10):
+        #     a_score = 0
+        #     b_score = 0
+        # return {'A': a_score, 'B': b_score, 'full_answer': answer}
     
     def convert_question(self, question, options):
         prompt_dict = PROMPTS.get(self.prompt_key).get(self.mode)

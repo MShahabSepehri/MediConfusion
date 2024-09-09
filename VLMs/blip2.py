@@ -48,14 +48,13 @@ def do_generation(model,
 @torch.no_grad()
 def do_forward(model, processor, image, question):
     VALID_ANSWERS = ['A', 'B']
-    TOKEN_ID_A = processor.tokenizer("A", return_tensors="pt", add_special_tokens=False).get('input_ids')
-    TOKEN_ID_B = processor.tokenizer("B", return_tensors="pt", add_special_tokens=False).get('input_ids')
+    TOKEN_IDs = [processor.tokenizer(x, return_tensors="pt", add_special_tokens=False).get('input_ids') for x in VALID_ANSWERS]
     inputs = processor(images=image, text=question, return_tensors="pt").to(device=get_device(), dtype=torch.float16)
     logits = model.forward(**inputs).logits
     logits = logits[0, -1, :]
     logits = logits.reshape(-1, 1)
     soft_max = torch.nn.Softmax(dim=0)
-    probs = soft_max(torch.cat([logits[TOKEN_ID_A], logits[TOKEN_ID_B]][:len(VALID_ANSWERS)]))
+    probs = soft_max(torch.cat([logits[x] for x in TOKEN_IDs][:len(VALID_ANSWERS)]))
     outputs = VALID_ANSWERS[probs.argmax().item()]
     return outputs
 

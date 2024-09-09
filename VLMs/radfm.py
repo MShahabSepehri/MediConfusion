@@ -103,13 +103,12 @@ def do_generation(model, text_tokenizer, lang_x, vision_x):
 @torch.no_grad()
 def do_forward(model, text_tokenizer, lang_x, vision_x):
     VALID_ANSWERS = ['A', 'B']
-    TOKEN_ID_A = text_tokenizer.encode("A", add_special_tokens=False)
-    TOKEN_ID_B = text_tokenizer.encode("B", add_special_tokens=False)
+    TOKEN_IDs = [text_tokenizer.encode(x, return_tensors="pt", add_special_tokens=False).get('input_ids') for x in VALID_ANSWERS]
     input_embedding, _= model.embedding_layer(lang_x, vision_x, key_words_query=None) 
     out = model.lang_model(inputs_embeds=input_embedding, attention_mask=None, labels=None)
     logits = out['logits'][0, -1, :]
     soft_max = torch.nn.Softmax(dim=0)
-    probs = soft_max(torch.cat([logits[TOKEN_ID_A], logits[TOKEN_ID_B]][:len(VALID_ANSWERS)]))
+    probs = soft_max(torch.cat([logits[x] for x in TOKEN_IDs]))
     outputs = VALID_ANSWERS[probs.argmax().item()]
     return outputs
 
