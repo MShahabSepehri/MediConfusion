@@ -81,6 +81,9 @@ def ask_question(model, question, image_path, text_tokenizer, image_padding_toke
                 'position': 0, #indicate where to put the images in the text string, range from [0,len(question)-1]
             }, # can add abitrary number of imgs
         ] 
+    
+    if mode == 'prefix':
+        return do_prefix_forward(model, question, text_tokenizer, image_padding_tokens, image)
         
     text, vision_x = combine_and_preprocess(question, image, image_padding_tokens)
     with torch.no_grad():
@@ -102,9 +105,51 @@ def do_forward(model, text_tokenizer, lang_x, vision_x):
     VALID_ANSWERS = ['A', 'B']
     TOKEN_ID_A = text_tokenizer.encode("A", add_special_tokens=False)
     TOKEN_ID_B = text_tokenizer.encode("B", add_special_tokens=False)
-    out = model(lang_x, vision_x, attention_mask=None, labels=None, loss_reweight=None, key_words_query=None)
-    logits = out.logits[0, -1, :]
+    input_embedding, _= model.embedding_layer(lang_x, vision_x, key_words_query=None) 
+    out = model.lang_model(inputs_embeds=input_embedding, attention_mask=None, labels=None)
+    logits = out['logits'][0, -1, :]
     soft_max = torch.nn.Softmax(dim=0)
     probs = soft_max(torch.cat([logits[TOKEN_ID_A], logits[TOKEN_ID_B]][:len(VALID_ANSWERS)]))
     outputs = VALID_ANSWERS[probs.argmax().item()]
+    return outputs
+
+@torch.no_grad()
+def do_prefix_forward(model, problem, text_tokenizer, image_padding_tokens, image):
+    PREFIX_PROMPT_TEMPLATE = "{} {}"
+    scores = []
+    questions = []
+    qs = problem["question"]
+
+    for option in [problem["option_A"], problem["option_B"]]:
+        prompt = PREFIX_PROMPT_TEMPLATE.format(qs, option)
+        questions.append(prompt)
+        text, vision_x = combine_and_preprocess(prompt, image, image_padding_tokens)
+        with torch.no_grad():
+            lang_x = text_tokenizer(text, max_length=2048, truncation=True, return_tensors="pt")['input_ids'].to('cuda')
+            vision_x = vision_x.to('cuda')
+        answer_tokens = text_tokenizer.encode(" " + option, add_special_tokens=False)[1:]
+        num_answer_tokens = len(answer_tokens)
+
+        # try to find the answer tokens in input ids
+        start_indices = []
+        for i in range(lang_x.size(1) - num_answer_tokens + 1):
+            if torch.equal(lang_x[0, i:i+num_answer_tokens], torch.tensor(answer_tokens).cuda()):
+                start_indices.append(i)
+        
+        if len(start_indices) == 0:
+            raise ValueError("Answer tokens not found in input_ids")
+        answer_start = start_indices[-1]
+        answer_start_from_back = answer_start - lang_x.size(1)
+        with torch.inference_mode():
+            input_embedding, _= model.embedding_layer(lang_x, vision_x, key_words_query=None) 
+            output = model.lang_model(inputs_embeds=input_embedding, attention_mask=None, labels=None)
+            # shift by 1 compared to input
+            logits = output['logits'][0, answer_start_from_back-1:answer_start_from_back-1+num_answer_tokens]
+            probs = torch.nn.functional.softmax(logits, dim=-1)
+
+            # Pick the probabilities corresponding to each of the answer tokens
+            probs = torch.gather(probs, 1, torch.tensor(answer_tokens).cuda().unsqueeze(0))
+            prefix_score = torch.prod(probs.pow(1/num_answer_tokens))
+            scores.append(prefix_score.item())
+    outputs = "A" if scores[0] > scores[1] else "B"
     return outputs
