@@ -20,12 +20,13 @@ PROMPTS = io_tools.load_json(PROMPTS_LOC)
 
 
 class BaseAnsweringModel():
-    def __init__(self, model_args_path, mode, data_path, tr=3):
+    def __init__(self, model_args_path, mode, data_path, tr=3, max_samples=-1):
         self.key = None
         self.model_args_path = model_args_path
         self.conversion = io_tools.load_json(PROMPTS_LOC).get('conversion')
         self.mode = mode
         self.tr = tr
+        self.max_samples = max_samples
         self.data_path = data_path
         self.prompt_key = 'with_image'
         self.set_model_params()
@@ -62,11 +63,13 @@ class BaseAnsweringModel():
         else:
             self.init_prompt = PROMPTS.get('init_prompts').get('default')
 
-    def evaluate(self, resume_path, save_dir, max_samples=100):
+    def evaluate(self, resume_path, save_dir):
         results = io_tools.load_resume_dict(resume_path)
         score = self.create_score_table(0, 0)
         save_path = self.check_folder(save_dir)
-        key_list = list(DATA.keys())[: max_samples]
+        key_list = list(DATA.keys())
+        if self.max_samples != -1:
+            key_list = key_list[: self.max_samples]
         for id in tqdm(key_list):
             if id in results.keys():
                 sample_score = results.get(id).get('score')
