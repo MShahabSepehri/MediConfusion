@@ -136,7 +136,7 @@ class BaseAnsweringModel():
         if answer is not None:
             tmp = answer.split(' ')
             for la in labels:
-                if (f'{la}' in tmp) or (f'{la}:' in tmp) or (f'.{la}' in tmp) or (f'.{la}:' in tmp) or (f'{la}.' in tmp):
+                if (f'{la}' in tmp) or (f'{la}:' in tmp) or (f'.{la}' in tmp) or (f'.{la}:' in tmp) or (f'{la}.' in tmp) or (f'{la}\")' in tmp):
                     scores[la] = 10
             # if answer[: 1] == 'A':
             #     if (len(answer) == 1) or (answer[1] == ' '):
@@ -477,6 +477,8 @@ class InstructBLIPAnswering(BaseAnsweringModel):
         model, processor = instructblip.load_model()
         self.model = model
         self.processor = processor
+        if self.temperature == 0:
+            self.temperature = 0.2
 
     def ask_question(self, question, options, image_list):
         question = super().ask_question(question, options, image_list)
