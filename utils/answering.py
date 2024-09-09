@@ -63,7 +63,7 @@ class BaseAnsweringModel():
         else:
             self.init_prompt = PROMPTS.get('init_prompts').get('default')
 
-<<<<<<< HEAD
+
     def evaluate(self, resume_path, save_dir):
         results = io_tools.load_resume_dict(resume_path)
         score = self.create_score_table(0, 0)
@@ -71,15 +71,6 @@ class BaseAnsweringModel():
         key_list = list(DATA.keys())
         if self.max_samples != -1:
             key_list = key_list[: self.max_samples]
-=======
-    def evaluate(self, resume_path, save_dir, max_samples=-1):
-        results = io_tools.load_resume_dict(resume_path)
-        score = self.create_score_table(0, 0)
-        save_path = self.check_folder(save_dir)
-        if max_samples == -1:
-            max_samples = len(DATA)
-        key_list = list(DATA.keys())[: max_samples]
->>>>>>> eae7d838578dcea19777eb499aae15e2c81fef9a
         for id in tqdm(key_list):
             if id in results.keys():
                 sample_score = results.get(id).get('score')
@@ -92,7 +83,7 @@ class BaseAnsweringModel():
             results[id] = {'answer': ans_dict, 'score': sample_score}
             if save_path is not None:
                 io_tools.save_json(results, f'{save_path}/{self.key}_{self.mode}_test.json')
-        self.print_score(score, num_samples=max_samples)
+        self.print_score(score, num_samples=self.max_samples)
         if save_path is not None:
             io_tools.save_json(score, f'{save_path}/{self.key}_{self.mode}_test_score.json')
         return results, score
