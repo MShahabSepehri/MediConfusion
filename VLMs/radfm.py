@@ -104,6 +104,6 @@ def do_forward(model, text_tokenizer, lang_x, vision_x):
     out = model(lang_x, vision_x, attention_mask=None, labels=None, loss_reweight=None, key_words_query=None)
     logits = out.logits[0, -1, :]
     soft_max = torch.nn.Softmax(dim=0)
-    probs = soft_max(torch.cat(TOKEN_IDs[:len(VALID_ANSWERS)]))
+    probs = soft_max(torch.cat([logits[x] for x in TOKEN_IDs]))
     outputs = VALID_ANSWERS[probs.argmax().item()]
     return outputs

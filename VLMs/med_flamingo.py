@@ -72,9 +72,8 @@ def ask_question(model, processor, image_path, question, max_new_tokens, mode, I
 
 @torch.no_grad()
 def do_forward(model, processor, pixels, tokenized_data):
-    VALID_ANSWERS = ['A', 'B']
-    TOKEN_ID_A = processor.tokenizer("A", return_tensors="pt", add_special_tokens=False).get('input_ids')
-    TOKEN_ID_B = processor.tokenizer("B", return_tensors="pt", add_special_tokens=False).get('input_ids')
+    VALID_ANSWERS = ['A', 'B', 'C', 'D']
+    TOKEN_IDs = [processor.tokenizer(x, return_tensors="pt", add_special_tokens=False).get('input_ids') for x in VALID_ANSWERS]
     device = 'cuda'
     outputs = model.forward(vision_x=pixels.to(device),
                             lang_x=tokenized_data["input_ids"].to(device),
@@ -82,7 +81,7 @@ def do_forward(model, processor, pixels, tokenized_data):
     logits = outputs.logits[0, -1, :]
     logits = logits.reshape(-1, 1)
     soft_max = torch.nn.Softmax(dim=0)
-    probs = soft_max(torch.cat([logits[TOKEN_ID_A], logits[TOKEN_ID_B]][:len(VALID_ANSWERS)]))
+    probs = soft_max(torch.cat([logits[x] for x in TOKEN_IDs]))
     outputs = VALID_ANSWERS[probs.argmax().item()]
     return outputs
 

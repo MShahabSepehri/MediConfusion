@@ -39,7 +39,7 @@ def do_forward(model, input_ids, image_tensor, image_size, tokenizer):
         
         logits = out.logits[0, -1, :]
         soft_max = torch.nn.Softmax(dim=0)
-        probs = soft_max(torch.cat(TOKEN_IDs[:len(VALID_ANSWERS)]))
+        probs = soft_max(torch.cat([logits[x] for x in TOKEN_IDs]))
         outputs = VALID_ANSWERS[probs.argmax().item()]
     return outputs
 
