@@ -108,7 +108,7 @@ def do_prefix_forward(model, problem, pixels, processor):
     questions = []
     qs = problem["question"]
     device = model.lang_encoder.device
-    for option in [problem["option_A"], problem["option_B"]]:
+    for option in [problem["option_A"], problem["option_B"], problem["option_C"], problem["option_D"]]:
         prompt = PREFIX_PROMPT_TEMPLATE.format(qs, option)
         prompt = process_prompt(prompt, use_option=False)
         tokenized_data = processor.encode_text(prompt)
@@ -138,5 +138,8 @@ def do_prefix_forward(model, problem, pixels, processor):
             probs = torch.gather(probs, 1, torch.tensor(answer_tokens).cuda().unsqueeze(0))
             prefix_score = torch.prod(probs.pow(1/num_answer_tokens))
             scores.append(prefix_score.item())
-    outputs = "A" if scores[0] > scores[1] else "B"
+    
+    labels = ['A', 'B', 'C', 'D']
+    outputs = labels[scores.index(max(scores))]
+    # outputs = "A" if scores[0] > scores[1] else "B"
     return outputs

@@ -76,7 +76,7 @@ def do_prefix_forward(model, problem, image_tensor, image_size, tokenizer, conv_
     scores = []
     questions = []
     qs = problem["question"]
-    for option in [problem["option_A"], problem["option_B"]]:
+    for option in [problem["option_A"], problem["option_B"], problem["option_C"], problem["option_D"]]:
         conv = conv_templates[conv_mode].copy()
         conv.append_message(conv.roles[0], qs)
         conv.append_message(conv.roles[1], option)
@@ -109,5 +109,8 @@ def do_prefix_forward(model, problem, image_tensor, image_size, tokenizer, conv_
             probs = torch.gather(probs, 1, torch.tensor(answer_tokens).cuda().unsqueeze(0))
             prefix_score = torch.prod(probs.pow(1/num_answer_tokens))
             scores.append(prefix_score.item())
-    outputs = "A" if scores[0] > scores[1] else "B"
+    
+    labels = ['A', 'B', 'C', 'D']
+    outputs = labels[scores.index(max(scores))]
+    # outputs = "A" if scores[0] > scores[1] else "B"
     return outputs

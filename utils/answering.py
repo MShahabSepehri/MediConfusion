@@ -484,7 +484,7 @@ class InstructBLIPAnswering(BaseAnsweringModel):
         self.model = model
         self.processor = processor
         if self.temperature == 0:
-            self.temperature = 0.2
+            self.temperature = 0
 
     def ask_question(self, question, options, image_list):
         question = super().ask_question(question, options, image_list)
