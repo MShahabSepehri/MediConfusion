@@ -12,10 +12,10 @@ logging.set_verbosity_error()
 
 ROOT = io_tools.get_root(__file__, 2)
 PROMPTS_LOC = f'{ROOT}/configs/prompts/answering.json'
-DATA_PATH = f'{ROOT}/data/dataset.json'
-STATS_PATH = f'{ROOT}/data/stats/statistics.json'
+DATA_PATH = f'{ROOT}/data/test_dataset.json'
+# STATS_PATH = f'{ROOT}/data/stats/test_statistics.json'
 DATA = io_tools.load_json(DATA_PATH)
-STATS = io_tools.load_json(STATS_PATH)
+# STATS = io_tools.load_json(STATS_PATH)
 PROMPTS = io_tools.load_json(PROMPTS_LOC)
 
 
@@ -40,7 +40,7 @@ class BaseAnsweringModel():
         if self.mode == 'mc':
             self.temperature = 0
             self.top_p = None
-            self.max_new_tokens = 1
+            self.max_new_tokens = 32
         if self.mode == 'gpt4':
             self.clean_up = self.clean_up_no_option
             global gpt
@@ -62,12 +62,15 @@ class BaseAnsweringModel():
         else:
             self.init_prompt = PROMPTS.get('init_prompts').get('default')
 
-    def evaluate(self, resume_path, save_dir):
+    def evaluate(self, resume_path, save_dir, max_samples=100):
         results = io_tools.load_resume_dict(resume_path)
-        score = self.create_score_table([], [], 0, 0, 0, 0, 0)
+        score = self.create_score_table(0, 0)
         save_path = self.check_folder(save_dir)
-        for id in tqdm(DATA.keys()):
+        key_list = list(DATA.keys())[: max_samples]
+        for id in tqdm(key_list):
             if id in results.keys():
+                sample_score = results.get(id).get('score')
+                self.update_score_table(score, sample_score)
                 continue
             sample = DATA.get(id)
             ans_dict, sample_score = self.sample_eval(sample)
@@ -75,34 +78,23 @@ class BaseAnsweringModel():
             self.update_score_table(score, sample_score)
             results[id] = {'answer': ans_dict, 'score': sample_score}
             if save_path is not None:
-                io_tools.save_json(results, f'{save_path}/{self.key}_{self.mode}.json')
-        self.print_score(score)
+                io_tools.save_json(results, f'{save_path}/{self.key}_{self.mode}_test.json')
+        self.print_score(score, num_samples=max_samples)
         if save_path is not None:
-            io_tools.save_json(score, f'{save_path}/{self.key}_{self.mode}_score.json')
+            io_tools.save_json(score, f'{save_path}/{self.key}_{self.mode}_test_score.json')
         return results, score
     
     def sample_eval(self, sample):
-        image_list = [f"{self.data_path}/{sample.get('im_1')}",  f"{self.data_path}/{sample.get('im_2')}"]
+        image_list = [f"{self.data_path}/{sample.get('im')}"]
         question = sample.get('question')
-        options = [sample.get('option_A'), sample.get('option_B')]
-        im1_ans = sample.get('im_1_correct')
-        im2_ans = sample.get('im_2_correct')
-        # cap1 = sample.get('cap_1')
-        # cap2 = sample.get('cap_2')
+        # options = [sample.get('option_A'), sample.get('option_B')]
+        options = [sample.get('option_A'), sample.get('option_B'), sample.get('option_C'), sample.get('option_D')]
+        ans = sample.get('correct')
         responses = self.ask_question(question, options, image_list)
-        ans_dict = {'im1': self.clean_up(question, options, responses[0]), 
-                    'im2': self.clean_up(question, options, responses[1])}
-        im1_correct, im1_invalid, im2_correct, im2_invalid, confused = self.get_score(ans_dict, im1_ans, im2_ans)
-        scores = self.create_score_table(sample.get('category_1'), 
-                                         sample.get('category_2'), 
-                                         im1_correct, 
-                                         im2_correct, 
-                                         im1_invalid,
-                                         im2_invalid,
-                                         confused,
-                                         )
+        ans_dict = self.clean_up(question, options, responses[0])
+        correct, invalid = self.get_score(ans_dict, ans)
+        scores = self.create_score_table(correct, invalid)
         
-
         return ans_dict, scores
         
     def get_clean_up_prompt(self, question, options, response):
@@ -113,20 +105,15 @@ class BaseAnsweringModel():
                 f'[{role}]\n{response}\n\n[End of {role}]\n\n'
                 f'[System]\n{self.conversion.get("instruct_prompt")}\n\n')
 
-    def get_score(self, ans_dict, im1_ans, im2_ans):
-        im1_correct, c1 = self.check_answer(im1_ans, 
-                                            ans_dict.get('im1').get('A'), 
-                                            ans_dict.get('im1').get('B'), 
-                                            self.tr)
-        invalid1 = (c1 == '-')
-        im2_correct, c2 = self.check_answer(im2_ans, 
-                                            ans_dict.get('im2').get('A'), 
-                                            ans_dict.get('im2').get('B'), 
-                                            self.tr)
-        invalid2 = (c2 == '-')
-        confused = 1 * ((c1 == c2) and (c1 != '-'))
-        ans_dict
-        return im1_correct, invalid1, im2_correct, invalid2, confused
+    def get_score(self, ans_dict, ans):
+        correct, c = self.check_answer(ans, 
+                                        ans_dict.get('A'), 
+                                        ans_dict.get('B'), 
+                                        ans_dict.get('C'), 
+                                        ans_dict.get('D'), 
+                                        self.tr)
+        invalid = 1 * (c == '-')
+        return correct, invalid
     
     def clean_up_no_option(self, question, options, answer):
         client = gpt.get_client()
@@ -142,22 +129,31 @@ class BaseAnsweringModel():
         return ans
     
     def clean_up_with_option(self, question, options, answer):
-        a_score = 0
-        b_score = 0
+        labels = ['A', 'B', 'C', 'D']
+        scores = {'full_answer': answer}
+        for key in labels:
+            scores[key] = 0
         if answer is not None:
-            if answer[: 1] == 'A':
-                a_score = 10
-            elif answer[: 1] == 'B':
-                b_score = 10
-            else: # for mc
-                if ('A ' in answer) or (' A' in answer):
-                    a_score = 10
-                if ('B ' in answer) or (' B' in answer):
-                    b_score = 10
-        if (a_score == 10) and (b_score == 10):
-            a_score = 0
-            b_score = 0
-        return {'A': a_score, 'B': b_score, 'full_answer': answer}
+            tmp = answer.split(' ')
+            for la in labels:
+                if (f'{la}' in tmp) or (f'{la}:' in tmp) or (f'.{la}' in tmp) or (f'.{la}:' in tmp) or (f'{la}.' in tmp):
+                    scores[la] = 10
+            # if answer[: 1] == 'A':
+            #     if (len(answer) == 1) or (answer[1] == ' '):
+            #         a_score = 10
+            # elif answer[: 1] == 'B':
+            #     if (len(answer) == 1) or (answer[1] == ' '):
+            #         b_score = 10
+            # else: # for mc
+            #     if ('A ' in answer) or (' A' in answer):
+            #         a_score = 10
+            #     if ('B ' in answer) or (' B' in answer):
+            #         b_score = 10
+        tmp = [1 for x in scores.values() if x==10]
+        if sum(tmp) > 1:
+            for key in labels:
+                scores[key] = 0
+        return scores
     
     def convert_question(self, question, options):
         prompt_dict = PROMPTS.get(self.prompt_key).get(self.mode)
@@ -170,11 +166,11 @@ class BaseAnsweringModel():
         if self.mode == 'gpt4':
             output = tmp.format(question)
         elif self.mode == 'greedy':
-            output = tmp.format(question, options[0], options[1])
+            output = tmp.format(question, options[0], options[1], options[2], options[3])
         elif self.mode == 'mc':
-            output = tmp.format(question, options[0], options[1])
+            output = tmp.format(question, options[0], options[1], options[2], options[3])
         elif self.mode == 'prefix':
-            output = {"question": question, "option_A": options[0], "option_B": options[1]}
+            output = {"question": question, "option_A": options[0], "option_B": options[1], "option_C": options[2], "option_D": options[3]}
         return output
     
     def check_folder(self, save_dir):
@@ -188,74 +184,34 @@ class BaseAnsweringModel():
     @staticmethod
     def update_score_table(score, sample_score):
         for key in score:
-            tmp = score.get(key)
-            for cat in tmp.keys():
-                tmp[cat] += sample_score.get(key).get(cat)
+            score[key] += sample_score.get(key)
 
     @staticmethod
-    def create_score_table(cat_1, cat_2, im1_correct, im2_correct, im1_invalid, im2_invalid, confused):
-        scores = {'set_score': {}, 'individual_score': {}, 'confused': {}, 'invalid': {}}
-        for v in scores.values():
-            for key in STATS.keys():
-                v[key] = 0
-            v['total'] = 0
-        if confused == 1:
-            scores.get('confused')['total'] += 1
-            for c in (cat_1 + cat_2):
-                scores.get('confused')[c] += 1
-
-        if im1_correct == 1:
-            scores.get('individual_score')['total'] += 1
-            for c in cat_1:
-                scores.get('individual_score')[c] += 1
-        if im2_correct == 1:
-            scores.get('individual_score')['total'] += 1
-            for c in cat_2:
-                scores.get('individual_score')[c] += 1
-
-        if im1_invalid == 1:
-            scores.get('invalid')['total'] += 1
-            for c in cat_1:
-                scores.get('invalid')[c] += 1
-        if im2_invalid == 1:
-            scores.get('invalid')['total'] += 1
-            for c in cat_2:
-                scores.get('invalid')[c] += 1
-
-        if (im1_correct == 1) and (im2_correct == 1):
-            scores.get('set_score')['total'] += 1
-            for c in (cat_1 + cat_2):
-                scores.get('set_score')[c] += 1
-        return scores
+    def create_score_table(correct, invalid):
+        score_table = {
+            'individual_score': correct,
+            'invalid': invalid,
+        }
+        return score_table
 
     @staticmethod
-    def print_score(score, precision=2):
+    def print_score(score, num_samples=None, precision=2):
         print('\n')
         # print_format = "{:<17} {:<10} {:<10} {:<10} {:<12} {:<17} {:<10}"
-        print_format = "{:<17} {:<10} {:<10} {:<17} {:<15} {:<15}"
-        print(print_format.format('Category', 
-                                  'Total', 
-                                  'Set acc.', 
+        print_format = "{:<10} {:<17} {:<15}"
+        print(print_format.format('Total', 
                                   'Individual acc.', 
-                                  'Confused acc.',
                                   'Invalid acc.',
                                   ))
-        for cat in STATS.keys():
-            total = STATS.get(cat)
-            num = total / 100
-            set_acc = round(score.get('set_score').get(cat) / num, precision)
-            individual_acc = round(score.get('individual_score').get(cat) / num, precision)
-            confused = round(score.get('confused').get(cat) / num, precision)
-            invalid = round(score.get('invalid').get(cat) / num, precision)
-            print(print_format.format(cat, total, set_acc, individual_acc, confused, invalid))
 
-        total = len(DATA)
+        if num_samples is None:
+            total = len(DATA)
+        else:
+            total = num_samples
         num = total / 100
-        set_acc = round(score.get('set_score').get('total') / num, precision)
-        individual_acc = round(score.get('individual_score').get('total') / num / 2, precision)
-        confused = round(score.get('confused').get('total') / num, precision)
-        invalid = round(score.get('invalid').get('total') / num / 2, precision)
-        print(print_format.format('All', total, set_acc, individual_acc, confused, invalid))
+        individual_acc = round(score.get('individual_score') / num, precision)
+        invalid = round(score.get('invalid') / num, precision)
+        print(print_format.format(total, individual_acc, invalid))
             
     
     @staticmethod
@@ -264,23 +220,29 @@ class BaseAnsweringModel():
             return {
             'A': 0,
             'B': 0,
+            'C': 0,
+            'D': 0,
             'gpt_reason': '',
         }
         tmp = response.replace('\n\n', '\n').split('\n')
         ans = {
             'A': int(tmp[0].replace('A: ', '')),
             'B': int(tmp[1].replace('B: ', '')),
+            'C': int(tmp[1].replace('C: ', '')),
+            'D': int(tmp[1].replace('D: ', '')),
             'gpt_reason': tmp[2].replace('Your explanation: ', ''),
         }
         return ans
     
     @staticmethod
-    def check_answer(answer, a_score, b_score, tr):
+    def check_answer(answer, a_score, b_score, c_score, d_score, tr):
         chosen = '-'
-        if a_score >= b_score + tr:
-            chosen = 'A'
-        elif b_score >= a_score + tr:
-            chosen = 'B'
+        labels = ['A', 'B', 'C', 'D']
+        score_list = [a_score, b_score, c_score, d_score]
+        max_score = max(score_list)
+        tmp = max([max_score - score for score in score_list])
+        if tmp >= tr:
+            chosen = labels[score_list.index(max_score)]
         if chosen == answer:
             return 1, chosen
         return 0, chosen

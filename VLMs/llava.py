@@ -36,16 +36,15 @@ def ask_question(model, processor, question, image, mode, temperature=0.2, top_p
 
 @torch.no_grad()
 def do_forward(model, inputs, processor):
-    VALID_ANSWERS = ['A', 'B']
-    TOKEN_ID_A = processor.tokenizer.encode("A", add_special_tokens=False)
-    TOKEN_ID_B = processor.tokenizer.encode("B", add_special_tokens=False)
+    VALID_ANSWERS = ['A', 'B', 'C', 'D']
+    TOKEN_IDs = [processor.tokenizer(x, return_tensors="pt", add_special_tokens=False).get('input_ids') for x in VALID_ANSWERS]
 
     with torch.inference_mode():
         out = model.forward(**inputs)
         
     logits = out.logits[0, -1, :]
     soft_max = torch.nn.Softmax(dim=0)
-    probs = soft_max(torch.cat([logits[TOKEN_ID_A], logits[TOKEN_ID_B]][:len(VALID_ANSWERS)]))
+    probs = soft_max(torch.cat(TOKEN_IDs[:len(VALID_ANSWERS)]))
     outputs = VALID_ANSWERS[probs.argmax().item()]
     return outputs
 
