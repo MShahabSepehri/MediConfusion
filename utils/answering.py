@@ -63,6 +63,7 @@ class BaseAnsweringModel():
         else:
             self.init_prompt = PROMPTS.get('init_prompts').get('default')
 
+<<<<<<< HEAD
     def evaluate(self, resume_path, save_dir):
         results = io_tools.load_resume_dict(resume_path)
         score = self.create_score_table(0, 0)
@@ -70,6 +71,15 @@ class BaseAnsweringModel():
         key_list = list(DATA.keys())
         if self.max_samples != -1:
             key_list = key_list[: self.max_samples]
+=======
+    def evaluate(self, resume_path, save_dir, max_samples=-1):
+        results = io_tools.load_resume_dict(resume_path)
+        score = self.create_score_table(0, 0)
+        save_path = self.check_folder(save_dir)
+        if max_samples == -1:
+            max_samples = len(DATA)
+        key_list = list(DATA.keys())[: max_samples]
+>>>>>>> eae7d838578dcea19777eb499aae15e2c81fef9a
         for id in tqdm(key_list):
             if id in results.keys():
                 sample_score = results.get(id).get('score')
@@ -139,7 +149,9 @@ class BaseAnsweringModel():
         if answer is not None:
             tmp = answer.split(' ')
             for la in labels:
-                if (f'{la}' in tmp) or (f'{la}:' in tmp) or (f'.{la}' in tmp) or (f'.{la}:' in tmp) or (f'{la}.' in tmp) or (f'{la}\")' in tmp):
+                valid_list = [f'{la}', f'{la}:', f'.{la}', f'.{la}:', f'{la}.', f'{la}\")', f'{la}\n', f'\n{la}']
+                correct = any([x in tmp for x in valid_list])
+                if correct:
                     scores[la] = 10
             # if answer[: 1] == 'A':
             #     if (len(answer) == 1) or (answer[1] == ' '):
