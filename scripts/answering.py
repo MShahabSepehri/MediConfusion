@@ -16,7 +16,7 @@ def get_args():
     parser.add_argument("--vlm_name", type=str, required=True)
     parser.add_argument("--resume_path", type=str, default=None)
     parser.add_argument("--model_args_path", type=str, default=None)
-    parser.add_argument("--data_path", type=str, default='/data/datasets/pmc/figures')
+    parser.add_argument("--data_path", type=str, default='/data/datasets/pmc/images')
     parser.add_argument("--mode", type=str, required=True, choices={'gpt4', 'mc', 'greedy', 'prefix'})
     args = parser.parse_args()
 
