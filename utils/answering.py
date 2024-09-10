@@ -106,6 +106,8 @@ class BaseAnsweringModel():
         return (f'[Question]\n{question}\n\n'
                 f'[Answer A]\n{options[0]}\n\n'
                 f'[Answer B]\n{options[1]}\n\n'
+                f'[Answer C]\n{options[2]}\n\n'
+                f'[Answer D]\n{options[3]}\n\n'
                 f'[{role}]\n{response}\n\n[End of {role}]\n\n'
                 f'[System]\n{self.conversion.get("instruct_prompt")}\n\n')
 
@@ -231,12 +233,13 @@ class BaseAnsweringModel():
             'gpt_reason': '',
         }
         tmp = response.replace('\n\n', '\n').split('\n')
+
         ans = {
             'A': int(tmp[0].replace('A: ', '')),
             'B': int(tmp[1].replace('B: ', '')),
-            'C': int(tmp[1].replace('C: ', '')),
-            'D': int(tmp[1].replace('D: ', '')),
-            'gpt_reason': tmp[2].replace('Your explanation: ', ''),
+            'C': int(tmp[2].replace('C: ', '')),
+            'D': int(tmp[3].replace('D: ', '')),
+            'gpt_reason': tmp[4].replace('Your explanation: ', ''),
         }
         return ans
     

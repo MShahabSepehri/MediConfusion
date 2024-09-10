@@ -52,6 +52,6 @@
         "role": "AI Assistant",
         "init_prompt": "You are a helpful and precise assistant for checking the quality of the answer.",
         "gpt_deployment_name": "gpt4o",
-        "temperature": 0.2
+        "temperature": 0.7
     }
 }
