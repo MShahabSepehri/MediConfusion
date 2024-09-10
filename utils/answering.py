@@ -70,12 +70,12 @@ class BaseAnsweringModel():
             if id in results.keys():
                 sample_score = results.get(id).get(sample_score)
                 self.update_score_table(score, sample_score)
-                continue
-            sample = DATA.get(id)
-            ans_dict, sample_score = self.sample_eval(sample)
+            else:
+                sample = DATA.get(id)
+                ans_dict, sample_score = self.sample_eval(sample)
+                results[id] = {'answer': ans_dict, 'score': sample_score}
             
             self.update_score_table(score, sample_score)
-            results[id] = {'answer': ans_dict, 'score': sample_score}
             if save_path is not None:
                 io_tools.save_json(results, f'{save_path}/{self.key}_{self.mode}.json')
         self.print_score(score)
