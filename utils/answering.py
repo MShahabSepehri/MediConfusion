@@ -289,11 +289,19 @@ class ClaudeAnswering(BaseAnsweringModel):
         if self.mode in ['greedy', 'prefix']:
             raise ValueError(f'Cannot use forward for Claude!')
 
-    def ask_question(self, question, options, image_list):
+    def ask_question(self, question, options, image_list, max_retry=3):
         qs = super().ask_question(question, options, image_list)
         response_list = []
         for image in image_list:
-            response = claude.ask_question(self.client, image, qs, self.init_prompt, self.temperature)
+            counter = 0
+            response = None
+            while counter < max_retry:
+                try:
+                    response = claude.ask_question(self.client, image, qs, self.init_prompt, self.temperature)
+                    break
+                except Exception as e:
+                    counter += 1
+                    print(counter, e)
             response_list.append(response)
         return response_list
     
@@ -309,20 +317,20 @@ class GeminiAnswering(BaseAnsweringModel):
         if self.mode in ['greedy', 'prefix']:
             raise ValueError(f'Cannot use forward for Claude!')
 
-    def ask_question(self, question, options, image_list):
+    def ask_question(self, question, options, image_list, max_retry=3):
         qs = super().ask_question(question, options, image_list)
         response_list = []
         for image in image_list:
-            flag = True
+            response = None
             counter = 0
-            while flag:
+            while counter < max_retry:
                 try:
                     response = gemini.ask_question(self.model, image, qs)
-                    flag = False
+                    break
                 except Exception as e:
                     counter += 1
                     print(counter, e)
-                time.sleep(10)
+                # time.sleep(10)
             response_list.append(response)
         return response_list
 

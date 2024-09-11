@@ -23,4 +23,5 @@ def load_model(init_prompt, temperature, deployment_name="gemini-1.5-pro"):
 def ask_question(model, image_path, question):
     img = Image(image_path)
     response = model.generate_content([question, img])
+    # print(response.prompt_feedback)
     return response.text
