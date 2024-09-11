@@ -103,7 +103,7 @@ def do_generation(model, text_tokenizer, lang_x, vision_x):
 @torch.no_grad()
 def do_forward(model, text_tokenizer, lang_x, vision_x):
     VALID_ANSWERS = ['A', 'B']
-    TOKEN_IDs = [text_tokenizer.encode(x, return_tensors="pt", add_special_tokens=False).get('input_ids') for x in VALID_ANSWERS]
+    TOKEN_IDs = [text_tokenizer.encode(x, return_tensors="pt", add_special_tokens=False) for x in VALID_ANSWERS]
     input_embedding, _= model.embedding_layer(lang_x, vision_x, key_words_query=None) 
     out = model.lang_model(inputs_embeds=input_embedding, attention_mask=None, labels=None)
     logits = out['logits'][0, -1, :]
