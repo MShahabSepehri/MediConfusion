@@ -8,7 +8,7 @@ from llava.constants import IMAGE_TOKEN_INDEX
 def load_model():
     processor = LlavaNextProcessor.from_pretrained("llava-hf/llava-v1.6-mistral-7b-hf")
     model = LlavaNextForConditionalGeneration.from_pretrained("llava-hf/llava-v1.6-mistral-7b-hf", torch_dtype=torch.float16, low_cpu_mem_usage=True) 
-    model.to("cuda:0")
+    model.to("cuda")
     return model, processor
 
 def ask_question(model, processor, question, image, mode, temperature=0.2, top_p=None, num_beams=1, max_new_tokens=100):
