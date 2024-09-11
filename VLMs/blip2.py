@@ -42,7 +42,6 @@ def do_generation(model,
     inputs = processor(images=image, text=question, return_tensors="pt").to(device="cuda", dtype=torch.float16)
     outputs = model.generate(**inputs, num_beams=num_beams, top_p=top_p, temperature=temperature, max_new_tokens=max_new_tokens)
     generated_text = processor.decode(outputs[0], skip_special_tokens=True)
-    print(generated_text)
     return generated_text
 
 @torch.no_grad()
