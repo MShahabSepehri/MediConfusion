@@ -1,5 +1,6 @@
 openai
 pyaml
+llava-torch
 open_clip_torch
 torch
 transformers==4.37.2
