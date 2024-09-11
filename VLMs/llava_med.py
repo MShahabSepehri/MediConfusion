@@ -29,7 +29,7 @@ def get_input_id(tokenizer, question, conv_mode):
 @torch.no_grad()
 def do_forward(model, input_ids, image_tensor, image_size, tokenizer):
     VALID_ANSWERS = ['A', 'B']
-    TOKEN_IDs = [tokenizer(x, return_tensors="pt", add_special_tokens=False).get('input_ids') for x in VALID_ANSWERS]
+    TOKEN_IDs = [tokenizer(x, return_tensors="pt", add_special_tokens=False) for x in VALID_ANSWERS]
 
     with torch.inference_mode():
         out = model(input_ids,
