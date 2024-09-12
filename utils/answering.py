@@ -69,7 +69,6 @@ class BaseAnsweringModel():
         for id in tqdm(DATA.keys()):
             if id in results.keys():
                 sample_score = results.get(id).get(sample_score)
-                self.update_score_table(score, sample_score)
             else:
                 sample = DATA.get(id)
                 ans_dict, sample_score = self.sample_eval(sample)
