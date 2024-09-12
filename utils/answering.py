@@ -68,7 +68,7 @@ class BaseAnsweringModel():
         save_path = self.check_folder(save_dir)
         for id in tqdm(DATA.keys()):
             if id in results.keys():
-                sample_score = results.get(id).get(sample_score)
+                sample_score = results.get(id).get('score')
             else:
                 sample = DATA.get(id)
                 ans_dict, sample_score = self.sample_eval(sample)
