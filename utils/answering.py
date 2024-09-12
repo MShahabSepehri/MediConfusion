@@ -42,11 +42,11 @@ class BaseAnsweringModel():
             self.top_p = None
             self.max_new_tokens = 1
         if self.mode == 'gpt4':
-            self.clean_up = self.clean_up_no_option
+            self.clean_up = self.clean_up_gpt
             global gpt
             from VLMs import gpt
         else:
-            self.clean_up = self.clean_up_with_option
+            self.clean_up = self.clean_up_manual
         return args
 
     def ask_question(self, question, options, image_list):
@@ -89,8 +89,6 @@ class BaseAnsweringModel():
         options = [sample.get('option_A'), sample.get('option_B')]
         im1_ans = sample.get('im_1_correct')
         im2_ans = sample.get('im_2_correct')
-        # cap1 = sample.get('cap_1')
-        # cap2 = sample.get('cap_2')
         responses = self.ask_question(question, options, image_list)
         ans_dict = {'im1': self.clean_up(question, options, responses[0]), 
                     'im2': self.clean_up(question, options, responses[1])}
@@ -130,7 +128,7 @@ class BaseAnsweringModel():
         ans_dict
         return im1_correct, invalid1, im2_correct, invalid2, confused
     
-    def clean_up_no_option(self, question, options, answer):
+    def clean_up_gpt(self, question, options, answer):
         client = gpt.get_client()
         prompt = self.get_clean_up_prompt(question, options, answer)
         response = gpt.get_response(client=client,
@@ -143,7 +141,7 @@ class BaseAnsweringModel():
         ans['full_answer'] = answer
         return ans
     
-    def clean_up_with_option(self, question, options, answer):
+    def clean_up_manual(self, question, options, answer):
         labels = ['A', 'B']
         scores = {'full_answer': answer}
         for key in labels:
@@ -160,22 +158,6 @@ class BaseAnsweringModel():
             for key in labels:
                 scores[key] = 0
         return scores
-        # a_score = 0
-        # b_score = 0
-        # if answer is not None:
-        #     if answer[: 1] == 'A':
-        #         a_score = 10
-        #     elif answer[: 1] == 'B':
-        #         b_score = 10
-        #     else: # for mc
-        #         if ('A ' in answer) or (' A' in answer):
-        #             a_score = 10
-        #         if ('B ' in answer) or (' B' in answer):
-        #             b_score = 10
-        # if (a_score == 10) and (b_score == 10):
-        #     a_score = 0
-        #     b_score = 0
-        # return {'A': a_score, 'B': b_score, 'full_answer': answer}
     
     def convert_question(self, question, options):
         prompt_dict = PROMPTS.get(self.prompt_key).get(self.mode)
