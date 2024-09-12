@@ -72,7 +72,6 @@ class BaseAnsweringModel():
         for id in tqdm(key_list):
             if id in results.keys():
                 sample_score = results.get(id).get('score')
-                self.update_score_table(score, sample_score)
             else:
                 sample = DATA.get(id)
                 ans_dict, sample_score = self.sample_eval(sample)
@@ -352,13 +351,13 @@ class LLAVAMedAnswering(BaseAnsweringModel):
         else:
             to_process = tmp
 
-        if self.prompt_key == 'with_image':
-            to_process = '<image>\n' + to_process
-            qs = to_process.replace(llava_med.DEFAULT_IMAGE_TOKEN, '').strip()
-            if self.use_im_start_end:
-                qs = llava_med.DEFAULT_IM_START_TOKEN + llava_med.DEFAULT_IMAGE_TOKEN + llava_med.DEFAULT_IM_END_TOKEN + '\n' + qs
-            else:
-                qs = llava_med.DEFAULT_IMAGE_TOKEN + '\n' + qs
+        # if self.prompt_key == 'with_image':
+        to_process = '<image>\n' + to_process
+        qs = to_process.replace(llava_med.DEFAULT_IMAGE_TOKEN, '').strip()
+        if self.use_im_start_end:
+            qs = llava_med.DEFAULT_IM_START_TOKEN + llava_med.DEFAULT_IMAGE_TOKEN + llava_med.DEFAULT_IM_END_TOKEN + '\n' + qs
+        else:
+            qs = llava_med.DEFAULT_IMAGE_TOKEN + '\n' + qs
         
         if self.mode == 'prefix':
             tmp["question"] = qs
