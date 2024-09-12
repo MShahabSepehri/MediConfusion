@@ -146,17 +146,6 @@ class BaseAnsweringModel():
                 correct = any([x in tmp for x in valid_list])
                 if correct:
                     scores[la] = 10
-            # if answer[: 1] == 'A':
-            #     if (len(answer) == 1) or (answer[1] == ' '):
-            #         a_score = 10
-            # elif answer[: 1] == 'B':
-            #     if (len(answer) == 1) or (answer[1] == ' '):
-            #         b_score = 10
-            # else: # for mc
-            #     if ('A ' in answer) or (' A' in answer):
-            #         a_score = 10
-            #     if ('B ' in answer) or (' B' in answer):
-            #         b_score = 10
         tmp = [1 for x in scores.values() if x==10]
         if sum(tmp) > 1:
             for key in labels:
@@ -249,7 +238,7 @@ class BaseAnsweringModel():
         labels = ['A', 'B', 'C', 'D']
         score_list = [a_score, b_score, c_score, d_score]
         max_score = max(score_list)
-        tmp = max([max_score - score for score in score_list])
+        tmp = min([max_score - score for score in score_list])
         if tmp >= tr:
             chosen = labels[score_list.index(max_score)]
         if chosen == answer:
