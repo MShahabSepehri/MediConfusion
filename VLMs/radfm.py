@@ -81,6 +81,9 @@ def ask_question(model, question, image_path, text_tokenizer, image_padding_toke
                 'position': 0, #indicate where to put the images in the text string, range from [0,len(question)-1]
             }, # can add abitrary number of imgs
         ] 
+    
+    if mode == 'prefix':
+        return do_prefix_forward(model, question, text_tokenizer, image_padding_tokens, image)
         
     text, vision_x = combine_and_preprocess(question, image, image_padding_tokens)
     with torch.no_grad():
@@ -99,10 +102,11 @@ def do_generation(model, text_tokenizer, lang_x, vision_x):
 
 @torch.no_grad()
 def do_forward(model, text_tokenizer, lang_x, vision_x):
-    VALID_ANSWERS = ['A', 'B', 'C', 'D']
-    TOKEN_IDs = [text_tokenizer(x, return_tensors="pt", add_special_tokens=False).get('input_ids') for x in VALID_ANSWERS]
-    out = model(lang_x, vision_x, attention_mask=None, labels=None, loss_reweight=None, key_words_query=None)
-    logits = out.logits[0, -1, :]
+    VALID_ANSWERS = ['A', 'B']
+    TOKEN_IDs = [text_tokenizer.encode(x, return_tensors="pt", add_special_tokens=False) for x in VALID_ANSWERS]
+    input_embedding, _= model.embedding_layer(lang_x, vision_x, key_words_query=None) 
+    out = model.lang_model(inputs_embeds=input_embedding, attention_mask=None, labels=None)
+    logits = out['logits'][0, -1, :]
     soft_max = torch.nn.Softmax(dim=0)
     probs = soft_max(torch.cat([logits[x] for x in TOKEN_IDs]))
     outputs = VALID_ANSWERS[probs.argmax().item()]
@@ -115,7 +119,7 @@ def do_prefix_forward(model, problem, text_tokenizer, image_padding_tokens, imag
     questions = []
     qs = problem["question"]
 
-    for option in [problem["option_A"], problem["option_B"], problem["option_C"], problem["option_D"]]:
+    for option in [problem["option_A"], problem["option_B"]]:
         prompt = PREFIX_PROMPT_TEMPLATE.format(qs, option)
         questions.append(prompt)
         text, vision_x = combine_and_preprocess(prompt, image, image_padding_tokens)
@@ -146,8 +150,5 @@ def do_prefix_forward(model, problem, text_tokenizer, image_padding_tokens, imag
             probs = torch.gather(probs, 1, torch.tensor(answer_tokens).cuda().unsqueeze(0))
             prefix_score = torch.prod(probs.pow(1/num_answer_tokens))
             scores.append(prefix_score.item())
-
-    labels = ['A', 'B', 'C', 'D']
-    outputs = labels[scores.index(max(scores))]
-    # outputs = "A" if scores[0] > scores[1] else "B"
+    outputs = "A" if scores[0] > scores[1] else "B"
     return outputs
