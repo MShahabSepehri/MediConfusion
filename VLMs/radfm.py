@@ -102,7 +102,7 @@ def do_generation(model, text_tokenizer, lang_x, vision_x):
 
 @torch.no_grad()
 def do_forward(model, text_tokenizer, lang_x, vision_x):
-    VALID_ANSWERS = ['A', 'B']
+    VALID_ANSWERS = ['A', 'B', 'C', 'D']
     TOKEN_IDs = [text_tokenizer.encode(x, return_tensors="pt", add_special_tokens=False) for x in VALID_ANSWERS]
     input_embedding, _= model.embedding_layer(lang_x, vision_x, key_words_query=None) 
     out = model.lang_model(inputs_embeds=input_embedding, attention_mask=None, labels=None)
@@ -119,7 +119,7 @@ def do_prefix_forward(model, problem, text_tokenizer, image_padding_tokens, imag
     questions = []
     qs = problem["question"]
 
-    for option in [problem["option_A"], problem["option_B"]]:
+    for option in [problem["option_A"], problem["option_B"], problem["option_C"], problem["option_D"]]:
         prompt = PREFIX_PROMPT_TEMPLATE.format(qs, option)
         questions.append(prompt)
         text, vision_x = combine_and_preprocess(prompt, image, image_padding_tokens)
@@ -150,5 +150,6 @@ def do_prefix_forward(model, problem, text_tokenizer, image_padding_tokens, imag
             probs = torch.gather(probs, 1, torch.tensor(answer_tokens).cuda().unsqueeze(0))
             prefix_score = torch.prod(probs.pow(1/num_answer_tokens))
             scores.append(prefix_score.item())
-    outputs = "A" if scores[0] > scores[1] else "B"
+    labels = ['A', 'B', 'C', 'D']
+    outputs = labels[scores.index(max(scores))]
     return outputs
