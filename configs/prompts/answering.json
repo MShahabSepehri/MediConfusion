@@ -28,7 +28,7 @@
     },
 
     "init_prompts": {
-        "default": "You are a helpful assitant expert in medical domain.",
+        "default": "You are a helpful assistant expert in medical domain.",
         "llava_med": {
             "1": "You are a helpful and precise assistant for checking the quality of the answer."
         }
