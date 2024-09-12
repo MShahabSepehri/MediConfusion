@@ -239,9 +239,11 @@ class BaseAnsweringModel():
         labels = ['A', 'B', 'C', 'D']
         score_list = [a_score, b_score, c_score, d_score]
         max_score = max(score_list)
-        tmp = min([max_score - score for score in score_list])
+        label_max = labels[score_list.index(max_score)]
+        score_list.sort()
+        tmp = max_score - score_list[-2]
         if tmp >= tr:
-            chosen = labels[score_list.index(max_score)]
+            chosen = label_max
         if chosen == answer:
             return 1, chosen
         return 0, chosen
