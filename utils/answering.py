@@ -212,7 +212,7 @@ class BaseAnsweringModel():
                                   'Invalid acc.',
                                   ))
 
-        if num_samples is None:
+        if (num_samples is None) or (num_samples == -1):
             total = len(DATA)
         else:
             total = num_samples
