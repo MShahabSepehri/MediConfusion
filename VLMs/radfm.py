@@ -114,7 +114,8 @@ def do_forward(model, text_tokenizer, lang_x, vision_x):
 
 @torch.no_grad()
 def do_prefix_forward(model, problem, text_tokenizer, image_padding_tokens, image):
-    PREFIX_PROMPT_TEMPLATE = "{} {}"
+    # PREFIX_PROMPT_TEMPLATE = "{} {}"
+    PREFIX_PROMPT_TEMPLATE = problem.get('format')
     scores = []
     questions = []
     qs = problem["question"]

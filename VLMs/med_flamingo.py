@@ -102,7 +102,8 @@ def do_generation(model, processor, pixels, tokenized_data, max_new_tokens):
 
 @torch.no_grad()
 def do_prefix_forward(model, problem, pixels, processor):
-    PREFIX_PROMPT_TEMPLATE =  "You are a helpful medical assistant. You are being provided with images, a question about each image and an answer. Follow the examples and answer the last question. <image>Question: What radiological technique was used to confirm the diagnosis? Answer: Mammography<|endofchunk|><image>Question: What did the CT scan show? Answer: Cerebral edema<|endofchunk|><image>Question: What is the purpose of the asterisk shown in the figure? Answer: To indicate the normal lentoid shape of hypocotyl nuclei.<|endofchunk|><image>Question: {}\nAnswer: {}"
+    # PREFIX_PROMPT_TEMPLATE =  "You are a helpful medical assistant. You are being provided with images, a question about each image and an answer. Follow the examples and answer the last question. <image>Question: What radiological technique was used to confirm the diagnosis? Answer: Mammography<|endofchunk|><image>Question: What did the CT scan show? Answer: Cerebral edema<|endofchunk|><image>Question: What is the purpose of the asterisk shown in the figure? Answer: To indicate the normal lentoid shape of hypocotyl nuclei.<|endofchunk|><image>Question: {}\nAnswer: {}"
+    PREFIX_PROMPT_TEMPLATE = process_prompt(problem.get('format'))
     scores = []
     questions = []
     qs = problem["question"]

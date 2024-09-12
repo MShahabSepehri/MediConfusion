@@ -192,7 +192,12 @@ class BaseAnsweringModel():
         elif self.mode == 'mc':
             output = tmp.format(question, options[0], options[1])
         elif self.mode == 'prefix':
-            output = {"question": question, "option_A": options[0], "option_B": options[1]}
+            output = {
+                "question": question, 
+                "option_A": options[0], 
+                "option_B": options[1],
+                "format": tmp
+                }
         return output
     
     def check_folder(self, save_dir):

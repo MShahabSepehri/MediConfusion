@@ -65,7 +65,8 @@ def do_forward(model, processor, inputs):
 
 @torch.no_grad()
 def do_prefix_forward(model, problem, image, processor):
-    PREFIX_PROMPT_TEMPLATE = "Question: {} Answer: {}"
+    # PREFIX_PROMPT_TEMPLATE = "Question: {} Answer: {}"
+    PREFIX_PROMPT_TEMPLATE = problem.get('format')
     scores = []
     questions = []
     qs = problem["question"]
