@@ -13,9 +13,7 @@ logging.set_verbosity_error()
 ROOT = io_tools.get_root(__file__, 2)
 PROMPTS_LOC = f'{ROOT}/configs/prompts/answering.json'
 DATA_PATH = f'{ROOT}/data/test_dataset.json'
-# STATS_PATH = f'{ROOT}/data/stats/test_statistics.json'
 DATA = io_tools.load_json(DATA_PATH)
-# STATS = io_tools.load_json(STATS_PATH)
 PROMPTS = io_tools.load_json(PROMPTS_LOC)
 
 
@@ -28,7 +26,7 @@ class BaseAnsweringModel():
         self.tr = tr
         self.max_samples = max_samples
         self.data_path = data_path
-        self.prompt_key = 'with_image'
+        self.prompt_key = 'prompt'
         self.set_model_params()
 
     def set_model_params(self):
@@ -167,7 +165,12 @@ class BaseAnsweringModel():
         elif self.mode == 'mc':
             output = tmp.format(question, options[0], options[1], options[2], options[3])
         elif self.mode == 'prefix':
-            output = {"question": question, "option_A": options[0], "option_B": options[1], "option_C": options[2], "option_D": options[3]}
+            output = {"question": question, 
+                      "option_A": options[0],
+                      "option_B": options[1], 
+                      "option_C": options[2], 
+                      "option_D": options[3],
+                      "format": tmp}
         return output
     
     def check_folder(self, save_dir):
@@ -194,7 +197,6 @@ class BaseAnsweringModel():
     @staticmethod
     def print_score(score, num_samples=None, precision=2):
         print('\n')
-        # print_format = "{:<17} {:<10} {:<10} {:<10} {:<12} {:<17} {:<10}"
         print_format = "{:<10} {:<17} {:<15}"
         print(print_format.format('Total', 
                                   'Individual acc.', 
