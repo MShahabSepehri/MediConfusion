@@ -49,8 +49,13 @@ def do_forward(model, inputs, processor):
     return outputs
 
 @torch.no_grad()
-def do_generation(model, inputs, processor, max_new_tokens):
-    output = model.generate(**inputs, max_new_tokens=max_new_tokens)
+def do_generation(model, inputs, processor, temperature, top_p, num_beams, max_new_tokens):
+    output = model.generate(**inputs, 
+                            temperature=temperature, 
+                            do_sample=(temperature > 0),
+                            top_p=top_p, 
+                            num_beams=num_beams, 
+                            max_new_tokens=max_new_tokens)
     return processor.decode(output[0], skip_special_tokens=True)
 
 @torch.no_grad()
