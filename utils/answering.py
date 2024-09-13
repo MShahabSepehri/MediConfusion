@@ -27,7 +27,7 @@ class BaseAnsweringModel():
         self.mode = mode
         self.tr = tr
         self.data_path = data_path
-        self.prompt_key = 'with_image'
+        self.prompt_key = 'prompts'
         self.set_model_params()
 
     def set_model_params(self):
@@ -40,7 +40,7 @@ class BaseAnsweringModel():
         if self.mode == 'mc':
             self.temperature = 0
             self.top_p = None
-            self.max_new_tokens = 1
+            self.max_new_tokens = 32
         if self.mode == 'gpt4':
             self.clean_up = self.clean_up_gpt
             global gpt
@@ -386,13 +386,12 @@ class LLAVAMedAnswering(BaseAnsweringModel):
         else:
             to_process = tmp
 
-        if self.prompt_key == 'with_image':
-            to_process = '<image>\n' + to_process
-            qs = to_process.replace(llava_med.DEFAULT_IMAGE_TOKEN, '').strip()
-            if self.use_im_start_end:
-                qs = llava_med.DEFAULT_IM_START_TOKEN + llava_med.DEFAULT_IMAGE_TOKEN + llava_med.DEFAULT_IM_END_TOKEN + '\n' + qs
-            else:
-                qs = llava_med.DEFAULT_IMAGE_TOKEN + '\n' + qs
+        to_process = '<image>\n' + to_process
+        qs = to_process.replace(llava_med.DEFAULT_IMAGE_TOKEN, '').strip()
+        if self.use_im_start_end:
+            qs = llava_med.DEFAULT_IM_START_TOKEN + llava_med.DEFAULT_IMAGE_TOKEN + llava_med.DEFAULT_IM_END_TOKEN + '\n' + qs
+        else:
+            qs = llava_med.DEFAULT_IMAGE_TOKEN + '\n' + qs
         
         if self.mode == 'prefix':
             tmp["question"] = qs

@@ -3,11 +3,11 @@ pyaml
 llava-torch
 open_clip_torch
 torch
-transformers==4.37.2
+transformers
 pandas
 oauth2client
 python-dotenv
-open_flamingo
+# open_flamingo
 anthropic
 ipython
 peft

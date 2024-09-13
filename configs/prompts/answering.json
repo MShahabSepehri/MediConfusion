@@ -1,5 +1,5 @@
 {
-    "with_image": {
+    "prompts": {
         "gpt4": {
             "default": "Based on the image, answer following question.\n{}",
             "blip2": "Question: {} Answer:",
