@@ -41,7 +41,7 @@ def do_generation(model,
     outputs = model.generate(
             **inputs,
             num_beams=num_beams,
-            do_sample=True,
+            do_sample=(temperature > 0),
             max_new_tokens=max_new_tokens,
             min_length=1,
             top_p=top_p,

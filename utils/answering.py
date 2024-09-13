@@ -39,6 +39,7 @@ class BaseAnsweringModel():
         self.top_p = args.get('top_p')
         if self.mode == 'mc':
             self.temperature = 0
+            self.num_beams = 1
             self.top_p = None
             self.max_new_tokens = 32
         if self.mode == 'gpt4':

@@ -40,7 +40,12 @@ def do_generation(model,
                   temperature, 
                   max_new_tokens):
     inputs = processor(images=image, text=question, return_tensors="pt").to(device="cuda", dtype=torch.float16)
-    outputs = model.generate(**inputs, num_beams=num_beams, top_p=top_p, temperature=temperature, max_new_tokens=max_new_tokens)
+    outputs = model.generate(**inputs, 
+                             do_sample=(temperature > 0),
+                             num_beams=num_beams, 
+                             top_p=top_p, 
+                             temperature=temperature, 
+                             max_new_tokens=max_new_tokens)
     generated_text = processor.decode(outputs[0], skip_special_tokens=True)
     return generated_text
 
