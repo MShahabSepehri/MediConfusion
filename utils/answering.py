@@ -65,7 +65,7 @@ class BaseAnsweringModel():
 
     def evaluate(self, resume_path, save_dir):
         results = io_tools.load_resume_dict(resume_path)
-        score = self.create_score_table([], [], 0, 0, 0, 0, 0)
+        score = self.create_score_table([], [], -1, -1, -1, -1, -1)
         save_path = self.check_folder(save_dir)
         for id in tqdm(DATA.keys()):
             if id in results.keys():
@@ -199,7 +199,7 @@ class BaseAnsweringModel():
 
     @staticmethod
     def create_score_table(cat_1, cat_2, im1_correct, im2_correct, im1_invalid, im2_invalid, confused):
-        scores = {'set_score': {}, 'individual_score': {}, 'confused': {}, 'invalid': {}}
+        scores = {'set_score': {}, 'individual_score': {}, 'confused': {}, 'invalid': {}, 'valids': {}, 'valid_pairs': {}}
         for v in scores.values():
             for key in STATS.keys():
                 v[key] = 0
@@ -227,6 +227,15 @@ class BaseAnsweringModel():
             for c in cat_2:
                 scores.get('invalid')[c] += 1
 
+        if (im1_invalid == 0) and (im2_invalid == 0):
+            scores.get('valids')['total'] += 1
+            for c in (cat_1 + cat_2):
+                scores.get('valids')[c] += 1
+            if confused == 0:
+                scores.get('valid_pairs')['total'] += 1
+                for c in (cat_1 + cat_2):
+                    scores.get('valid_pairs')[c] += 1
+
         if (im1_correct == 1) and (im2_correct == 1):
             scores.get('set_score')['total'] += 1
             for c in (cat_1 + cat_2):
@@ -237,30 +246,61 @@ class BaseAnsweringModel():
     def print_score(score, precision=2):
         print('\n')
         # print_format = "{:<17} {:<10} {:<10} {:<10} {:<12} {:<17} {:<10}"
-        print_format = "{:<17} {:<10} {:<10} {:<17} {:<15} {:<15}"
+        print_format = "{:<17} {:<10} {:<10} {:<17} {:<15} {:<15} {:<15} {:<15} {:<15}"
         print(print_format.format('Category', 
                                   'Total', 
                                   'Set acc.', 
                                   'Individual acc.', 
                                   'Confused acc.',
+                                  'Valid pairs',
                                   'Invalid acc.',
+                                  'Precision',
+                                  'Precision total',
                                   ))
-        for cat in STATS.keys():
-            total = STATS.get(cat)
-            num = total / 100
-            set_acc = round(score.get('set_score').get(cat) / num, precision)
-            individual_acc = round(score.get('individual_score').get(cat) / num, precision)
-            confused = round(score.get('confused').get(cat) / num, precision)
-            invalid = round(score.get('invalid').get(cat) / num, precision)
-            print(print_format.format(cat, total, set_acc, individual_acc, confused, invalid))
+        key_list = list(STATS.keys()) + ['total']
+        for cat in key_list:
+            if cat == 'total':
+                total = len(DATA)
+                num = total / 100
+                individual_acc = round(score.get('individual_score').get(cat) / num / 2, precision)
+                invalid = round(score.get('invalid').get(cat) / num / 2, precision)
+                txt = 'All'
+            else:
+                total = STATS.get(cat)
+                num = total / 100
+                individual_acc = round(score.get('individual_score').get(cat) / num, precision)
+                invalid = round(score.get('invalid').get(cat) / num, precision)
+                txt = cat
 
-        total = len(DATA)
-        num = total / 100
-        set_acc = round(score.get('set_score').get('total') / num, precision)
-        individual_acc = round(score.get('individual_score').get('total') / num / 2, precision)
-        confused = round(score.get('confused').get('total') / num, precision)
-        invalid = round(score.get('invalid').get('total') / num / 2, precision)
-        print(print_format.format('All', total, set_acc, individual_acc, confused, invalid))
+            set_acc = round(score.get('set_score').get(cat) / num, precision)
+            valid_pairs = score.get('valids').get(cat)
+            precision_total = score.get('valid_pairs').get(cat)
+
+            confused = 0
+            if score.get('valids').get(cat) > 0:
+                confused = round(score.get('confused').get(cat) / score.get('valids').get(cat) * 100, precision)
+            
+            pr = 0
+            if score.get('valid_pairs').get(cat) > 0:
+                pr = round(score.get('set_score').get(cat) / score.get('valid_pairs').get(cat) * 100, precision)
+
+            print(print_format.format(txt, total, set_acc, individual_acc, confused, valid_pairs, invalid, pr, precision_total))
+
+        
+        # set_acc = round(score.get('set_score').get('total') / num, precision)
+        # individual_acc = round(score.get('individual_score').get('total') / num / 2, precision)
+        # if score.get('valids').get('total') == 0:
+        #     confused = 0
+        # else:
+        #     confused = round(score.get('confused').get('total') / score.get('valids').get('total'), precision)
+        # valid_pairs = score.get('valids').get('total')
+        # invalid = round(score.get('invalid').get('total') / num / 2, precision)
+        # if score.get('valid_pairs').get('total') == 0:
+        #         pr = 0
+        # else:
+        #     pr = round(score.get('set_score').get('total') / score.get('valid_pairs').get('total') * 100, precision)
+        # precision_total = score.get('valid_pairs').get('total')
+        # print(print_format.format('total', total, set_acc, individual_acc, invalid, confused, valid_pairs, pr, precision_total))
             
     
     @staticmethod
