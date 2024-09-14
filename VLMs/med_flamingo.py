@@ -62,7 +62,7 @@ def ask_question(model, processor, image_path, question, max_new_tokens, mode, I
     if mode == 'prefix':
         return do_prefix_forward(model, question, pixels, processor)
 
-    question = process_prompt(question, use_option=(mode=='mc'))
+    question = process_prompt(question, use_option=(mode in ['mc', 'greedy']))
     tokenized_data = processor.encode_text(question)
     if mode == 'greedy':
         return do_forward(model, processor, pixels, tokenized_data)

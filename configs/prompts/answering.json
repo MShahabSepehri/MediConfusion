@@ -3,11 +3,11 @@
         "gpt4": {
             "default": "Based on the image, answer following question.\n{}",
             "blip2": "Question: {} Answer:",
-            "med_flamingo": "You are a helpful medical assistant. You are being provided with images, a two choise question about each image and an answer. Follow the examples and answer the last question. <image>Question: **Q1**<|endofchunk|><image>Question: **Q2**|endofchunk|><image>Question: **Q3**<|endofchunk|><image>Question: {} Answer:"
+            "med_flamingo": "You are a helpful medical assistant. You are being provided with images, a two choice question about each image and an answer. Follow the examples and answer the last question. <image>Question: **Q1**<|endofchunk|><image>Question: **Q2**|endofchunk|><image>Question: **Q3**<|endofchunk|><image>Question: {} Answer:"
         },
         "greedy": {
             "default": "Based on the image, choose the correct option for the following question.\nQuestion: {}\nA: {}\nB: {}\nAnswer with the option's letter from the given choices directly.\nAnswer: ",
-            "med_flamingo": "You are a helpful medical assistant. You are being provided with images, a two choise question about each image and an answer. Follow the examples and answer the last question. <image>Question: **Q1**<|endofchunk|><image>Question: **Q2**|endofchunk|><image>Question: **Q3**<|endofchunk|><image>Question: {}\nA: {}\nB: {}\nAnswer:",
+            "med_flamingo": "You are a helpful medical assistant. You are being provided with images, a two choice question about each image and an answer. Follow the examples and answer the last question. <image>Question: **Q1**<|endofchunk|><image>Question: **Q2**|endofchunk|><image>Question: **Q3**<|endofchunk|><image>Question: {}\nA: {}\nB: {}\nAnswer:",
             "blip2": "Question: Based on the image, choose the correct option for the following question. {}\nA: {}\nB: {}\nAnswer with the option's letter from the given choices directly. Answer:"
         },
         "mc": {
@@ -18,7 +18,7 @@
             "claude": "Based on the image, choose the correct option for the following question.\nQuestion: {}\nA: {}\nB: {}\nAnswer with the option's letter from the given choices directly. Your answer should be just one letter.\nAnswer: ",
             "medvint": "Question: {} The choices are: A: {} B: {} The Answer is: ",
             "blip2": "Question: Based on the image, choose the correct option for the following question. {}\nA: {}\nB: {}\nAnswer with the option's letter from the given choices directly. Answer:",
-            "med_flamingo": "You are a helpful medical assistant. You are being provided with images, a two choise question about each image and an answer. Follow the examples and answer the last question. <image>Question: **Q1**<|endofchunk|><image>Question: **Q2**|endofchunk|><image>Question: **Q3**<|endofchunk|><image>Question: {}\nA: {}\nB: {}\nAnswer:"
+            "med_flamingo": "You are a helpful medical assistant. You are being provided with images, a two choice question about each image and an answer. Follow the examples and answer the last question. <image>Question: **Q1**<|endofchunk|><image>Question: **Q2**|endofchunk|><image>Question: **Q3**<|endofchunk|><image>Question: {}\nA: {}\nB: {}\nAnswer:"
         },
         "prefix": {
             "default": "Question: {} Answer:{}",
