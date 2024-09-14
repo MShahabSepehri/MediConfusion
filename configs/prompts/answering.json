@@ -23,7 +23,7 @@
         "prefix": {
             "default": "Question: {} Answer:{}",
             "radfm": "{} {}",
-            "med_flamingo": "You are a helpful medical assistant. You are being provided with images, a question about each image and an answer. Follow the examples and answer the last question. <image>Question: **Q1**<|endofchunk|><image>Question: **Q2**<|endofchunk|><image>Question: **Q3**<|endofchunk|><image>Question: {}\nAnswer: {}"
+            "med_flamingo": "You are a helpful medical assistant. You are being provided with images, a question about each image and an answer. Follow the examples and answer the last question. <image>Question: **Q1**<|endofchunk|><image>Question: **Q2**<|endofchunk|><image>Question: **Q3**<|endofchunk|><image>Question: {} Answer: {}"
         }
     },
 
