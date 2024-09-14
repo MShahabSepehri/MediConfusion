@@ -3,7 +3,6 @@ sys.path.insert(0, os.path.dirname(pathlib.Path(__file__).parent.absolute()))
 
 import argparse
 from utils import io_tools
-# from BBP.utils.vlms import llava
 from utils.answering import ANSWERING_CLASS_DICT, DEFAULT_MODEL_CONFIGS 
 
 ROOT = io_tools.get_root(__file__, 2)

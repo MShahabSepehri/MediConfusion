@@ -1,9 +1,0 @@
-{   
-    "EMBED_DIM": 768,
-    "PRETRAINED_TOKENIZER": "/data/models/llama",
-    "PRETRAINED_MODEL": "/data/models/llama",
-    "IMAGE_ENCODER": "CLIP",
-    "PMCCLIP_PRETRAINED": "./models/pmc_clip/checkpoint.pt",
-    "CLIP_PRETRAINED": "openai/clip-vit-base-patch32",
-    "CKP": "/data/models/medvint/VQA_lora_pmcclip/vqa/checkpoint-13500"
-}

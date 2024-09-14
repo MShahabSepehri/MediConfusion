@@ -1,6 +1,5 @@
 import os
 import time
-import pandas as pd
 from tqdm import tqdm
 from PIL import Image
 from utils import io_tools
@@ -285,24 +284,7 @@ class BaseAnsweringModel():
                 pr = round(score.get('set_score').get(cat) / score.get('valid_pairs').get(cat) * 100, precision)
 
             print(print_format.format(txt, total, set_acc, individual_acc, confused, valid_pairs, invalid, pr, precision_total))
-
-        
-        # set_acc = round(score.get('set_score').get('total') / num, precision)
-        # individual_acc = round(score.get('individual_score').get('total') / num / 2, precision)
-        # if score.get('valids').get('total') == 0:
-        #     confused = 0
-        # else:
-        #     confused = round(score.get('confused').get('total') / score.get('valids').get('total'), precision)
-        # valid_pairs = score.get('valids').get('total')
-        # invalid = round(score.get('invalid').get('total') / num / 2, precision)
-        # if score.get('valid_pairs').get('total') == 0:
-        #         pr = 0
-        # else:
-        #     pr = round(score.get('set_score').get('total') / score.get('valid_pairs').get('total') * 100, precision)
-        # precision_total = score.get('valid_pairs').get('total')
-        # print(print_format.format('total', total, set_acc, individual_acc, invalid, confused, valid_pairs, pr, precision_total))
             
-    
     @staticmethod
     def process_gpt_response(response):
         if response is None:
@@ -492,7 +474,6 @@ class LLAVAAnswering(BaseAnsweringModel):
             response_list.append(outputs)
 
         return response_list
-
 
 
 class RadFMAnswering(BaseAnsweringModel):
