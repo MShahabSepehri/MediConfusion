@@ -14,7 +14,7 @@ AZURE_OPENAI_ENDPOINT=_YOUR_KEY_<br />
 ANTHROPIC_API_KEY=_YOUR_KEY_<br />
 
 ### Open source models
-Unfortunately, different MLLMs need diffenrent versions of `transformers` package and we could not find a version that support all of the models. Please use the following versions for each MLLM.<br />
+Unfortunately, different MLLMs need different versions of `transformers` package and we could not find a version that support all of the models. Please use the following versions for each MLLM.<br />
 * `LLaVA-Med`: Use `transformers` 4.36.2
 * `RadFM`: Use `transformers` 4.28.1
 * `MedFlamingo`: Use `transformers` 4.44.2 and install `open-flamingo` package
