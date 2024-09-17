@@ -29,8 +29,11 @@ pip install -r requirements.txt
 ```
 
 ### Required downloads
-* `LLaVA-Med`: Download the model from [here](microsoft/llava-med-7b-delta) and set `model_path` in the config to its address.
-* `LLaVA-Med`: Download the model from [here](microsoft/llava-med-7b-delta) and set `model_path` in the config to its address.
+* `LLaVA-Med`: Download the model from [here]([microsoft/llava-med-7b-delta](https://huggingface.co/microsoft/llava-med-7b-delta)) and set `model_path` in the config to its address.
+* `LLaMA`: Download the model from [here]([yahma/llama-7b-hf](https://huggingface.co/yahma/llama-7b-hf)) and set `LLaMa_PATH` in the `MedFlamingo` config to its address.
+* `MedFlamingo`: Download the model from [here]([yahma/llama-7b-hf](https://huggingface.co/med-flamingo/med-flamingo)) and set `CHECKPOINT_PATH` in the config to its address. <be />Also, Download `PMC1064097_F2.jpg`, `PMC1065025_F1.jpg`, and `PMC1087855_F3.jpg` from [PMV-VQA](https://huggingface.co/datasets/xmcmic/PMC-VQA) and set `IMAGE_PATH` to the folder containing them.
+* `RadFM`:
+
 ### Proprietary models
 To use closed source models, you should save your API keys in a file named `.env` like the example below .<br />
 GEMINI_API_KEY=_YOUR_KEY_<br />
