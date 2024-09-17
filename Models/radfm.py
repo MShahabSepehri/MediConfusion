@@ -65,30 +65,29 @@ def combine_and_preprocess(question,image_list,image_padding_tokens):
     text = ''.join(new_qestions) 
     return text, vision_x, 
     
-def load_model(language_files_path, model_path):
+def load_model(language_files_path, model_path, device='cuda'):
     text_tokenizer, image_padding_tokens = get_tokenizer(language_files_path)
     model = MultiLLaMAForCausalLM(lang_model_path=language_files_path)
     ckpt = torch.load(model_path, map_location='cpu')
     model.load_state_dict(ckpt)
-    model = model.to('cuda')
+    model = model.to(device)
     model.eval()
     return model, text_tokenizer, image_padding_tokens
     
-def ask_question(model, question, image_path, text_tokenizer, image_padding_tokens, mode):
+def ask_question(model, question, image_path, text_tokenizer, image_padding_tokens, mode, device):
     image =[
             {
                 'img_path': image_path,
                 'position': 0, #indicate where to put the images in the text string, range from [0,len(question)-1]
             }, # can add abitrary number of imgs
         ] 
-    
     if mode == 'prefix':
-        return do_prefix_forward(model, question, text_tokenizer, image_padding_tokens, image)
+        return do_prefix_forward(model, question, text_tokenizer, image_padding_tokens, image, device)
         
     text, vision_x = combine_and_preprocess(question, image, image_padding_tokens)
     with torch.no_grad():
-        lang_x = text_tokenizer(text, max_length=2048, truncation=True, return_tensors="pt")['input_ids'].to('cuda')
-        vision_x = vision_x.to('cuda')
+        lang_x = text_tokenizer(text, max_length=2048, truncation=True, return_tensors="pt")['input_ids'].to(device)
+        vision_x = vision_x.to(device)
     if mode == 'greedy':
         return do_forward(model, text_tokenizer, lang_x, vision_x)
     elif mode in ['mc', 'gpt4']:
@@ -113,7 +112,7 @@ def do_forward(model, text_tokenizer, lang_x, vision_x):
     return outputs
 
 @torch.no_grad()
-def do_prefix_forward(model, problem, text_tokenizer, image_padding_tokens, image):
+def do_prefix_forward(model, problem, text_tokenizer, image_padding_tokens, image, device):
     # PREFIX_PROMPT_TEMPLATE = "{} {}"
     PREFIX_PROMPT_TEMPLATE = problem.get('format')
     scores = []
@@ -125,15 +124,15 @@ def do_prefix_forward(model, problem, text_tokenizer, image_padding_tokens, imag
         questions.append(prompt)
         text, vision_x = combine_and_preprocess(prompt, image, image_padding_tokens)
         with torch.no_grad():
-            lang_x = text_tokenizer(text, max_length=2048, truncation=True, return_tensors="pt")['input_ids'].to('cuda')
-            vision_x = vision_x.to('cuda')
+            lang_x = text_tokenizer(text, max_length=2048, truncation=True, return_tensors="pt")['input_ids'].to(device)
+            vision_x = vision_x.to(device=device)
         answer_tokens = text_tokenizer.encode(" " + option, add_special_tokens=False)[1:]
         num_answer_tokens = len(answer_tokens)
 
         # try to find the answer tokens in input ids
         start_indices = []
         for i in range(lang_x.size(1) - num_answer_tokens + 1):
-            if torch.equal(lang_x[0, i:i+num_answer_tokens], torch.tensor(answer_tokens).cuda()):
+            if torch.equal(lang_x[0, i:i+num_answer_tokens], torch.tensor(answer_tokens).to(device=device)):
                 start_indices.append(i)
         
         if len(start_indices) == 0:
@@ -148,7 +147,7 @@ def do_prefix_forward(model, problem, text_tokenizer, image_padding_tokens, imag
             probs = torch.nn.functional.softmax(logits, dim=-1)
 
             # Pick the probabilities corresponding to each of the answer tokens
-            probs = torch.gather(probs, 1, torch.tensor(answer_tokens).cuda().unsqueeze(0))
+            probs = torch.gather(probs, 1, torch.tensor(answer_tokens).to(device=device).unsqueeze(0))
             prefix_score = torch.prod(probs.pow(1/num_answer_tokens))
             scores.append(prefix_score.item())
     outputs = "A" if scores[0] > scores[1] else "B"

@@ -407,6 +407,10 @@ class LLAVAMedAnswering(BaseAnsweringModel):
         self.tokenizer = tokenizer
         self.image_processor = image_processor
 
+        if self.device == 'cpu':
+            raise Warning('LLaVA-Med implepenation does not support CPU! Switching to CUDA.')
+            self.device = 'cuda'
+
         self.conv_mode = args.get("conv_mode")
         self.use_im_start_end = args.get('use_im_start_end')
 
@@ -493,7 +497,7 @@ class RadFMAnswering(BaseAnsweringModel):
         args = super().set_model_params()
         self.language_files_path = args.get("language_files_path")
         self.model_path = args.get("model_path")
-        model, text_tokenizer, image_padding_tokens = radfm.load_model(self.language_files_path, self.model_path)
+        model, text_tokenizer, image_padding_tokens = radfm.load_model(self.language_files_path, self.model_path, self.device)
         self.model = model
         self.text_tokenizer = text_tokenizer
         self.image_padding_tokens = image_padding_tokens
@@ -507,7 +511,8 @@ class RadFMAnswering(BaseAnsweringModel):
                                          image_path, 
                                          self.text_tokenizer, 
                                          self.image_padding_tokens,
-                                         self.mode)
+                                         self.mode,
+                                         self.device)
             response_list.append(outputs)
         return response_list
 
@@ -578,7 +583,7 @@ class MedFlamingoAnswering(BaseAnsweringModel):
         self.LLaMa_PATH = args.get('LLaMa_PATH')
         self.CHECKPOINT_PATH = args.get('CHECKPOINT_PATH')
         self.IMAGE_PATH = args.get('IMAGE_PATH')
-        model, processor = med_flamingo.load_model(self.LLaMa_PATH, self.CHECKPOINT_PATH)
+        model, processor = med_flamingo.load_model(self.LLaMa_PATH, self.CHECKPOINT_PATH, self.device)
         self.model = model
         self.processor = processor
 

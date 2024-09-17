@@ -25,7 +25,7 @@ FEW_SHOT_OPTIONS = [
     ['A: To indicate the formation of lobes around the contracting nucleus.', 'B: To indicate the normal lentoid shape of hypocotyl nuclei.']
 ]
 
-def load_model(LLaMa_PATH, CHECKPOINT_PATH):
+def load_model(LLaMa_PATH, CHECKPOINT_PATH, device='cuda'):
     model, image_processor, tokenizer = create_model_and_transforms(
         clip_vision_encoder_path="ViT-L-14",
         clip_vision_encoder_pretrained="openai",
@@ -33,8 +33,8 @@ def load_model(LLaMa_PATH, CHECKPOINT_PATH):
         tokenizer_path=LLaMa_PATH,
         cross_attn_every_n_layers=4
     )
-    model.load_state_dict(torch.load(CHECKPOINT_PATH, map_location='cuda'), strict=False)
-    model.cuda()
+    model.load_state_dict(torch.load(CHECKPOINT_PATH, map_location='cpu'), strict=False)
+    model.to(device=device)
     model.eval()
     processor = FlamingoProcessor(tokenizer, image_processor)
     return model, processor
@@ -72,9 +72,9 @@ def ask_question(model, processor, image_path, question, max_new_tokens, mode, I
 
 @torch.no_grad()
 def do_forward(model, processor, pixels, tokenized_data):
+    device = model.lang_encoder.device
     VALID_ANSWERS = ['A', 'B']
     TOKEN_IDs = [processor.tokenizer(x, return_tensors="pt", add_special_tokens=False).get('input_ids') for x in VALID_ANSWERS]
-    device = 'cuda'
     outputs = model.forward(vision_x=pixels.to(device),
                             lang_x=tokenized_data["input_ids"].to(device),
                             attention_mask=tokenized_data["attention_mask"].to(device))
@@ -86,7 +86,7 @@ def do_forward(model, processor, pixels, tokenized_data):
 
 @torch.no_grad()
 def do_generation(model, processor, pixels, tokenized_data, max_new_tokens):
-    device = 'cuda'
+    device = model.lang_encoder.device
     generated_text = model.generate(
         vision_x=pixels.to(device),
         lang_x=tokenized_data["input_ids"].to(device),
@@ -134,7 +134,7 @@ def do_prefix_forward(model, problem, pixels, processor):
             probs = torch.nn.functional.softmax(logits, dim=-1)
 
             # Pick the probabilities corresponding to each of the answer tokens
-            probs = torch.gather(probs, 1, torch.tensor(answer_tokens).cuda().unsqueeze(0))
+            probs = torch.gather(probs, 1, torch.tensor(answer_tokens).to(device=device).unsqueeze(0))
             prefix_score = torch.prod(probs.pow(1/num_answer_tokens))
             scores.append(prefix_score.item())
     outputs = "A" if scores[0] > scores[1] else "B"
