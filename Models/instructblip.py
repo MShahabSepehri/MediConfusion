@@ -2,18 +2,19 @@ import torch
 from PIL import Image
 from transformers import InstructBlipProcessor, InstructBlipForConditionalGeneration
 
-def load_model():
-    processor = InstructBlipProcessor.from_pretrained("Salesforce/instructblip-vicuna-7b")
-    model = InstructBlipForConditionalGeneration.from_pretrained("Salesforce/instructblip-vicuna-7b", load_in_4bit=True, torch_dtype=torch.float16)
+def load_model(device='cpu'):
+    processor = InstructBlipProcessor.from_pretrained("Salesforce/instructblip-vicuna-7b", device=device)
+    model = InstructBlipForConditionalGeneration.from_pretrained("Salesforce/instructblip-vicuna-7b")
+    model.to(device=device)
     return model, processor
 
 
 def ask_question(model, question, image_path, processor, num_beams, max_length, top_p, temperature, mode):
     image = Image.open(image_path).convert("RGB")
-
+    device = model.device
     if mode == 'prefix':
         return do_prefix_forward(model, question, image, processor)
-    inputs = processor(images=image, text=question, return_tensors="pt").to(device="cuda", dtype=torch.float16)
+    inputs = processor(images=image, text=question, return_tensors="pt").to(device=device, dtype=torch.float16)
     if mode == 'greedy':
         return do_forward(model, processor, inputs)
     elif mode in ['mc', 'gpt4']:
@@ -66,6 +67,7 @@ def do_forward(model, processor, inputs):
 @torch.no_grad()
 def do_prefix_forward(model, problem, image, processor):
     # PREFIX_PROMPT_TEMPLATE = "Question: {} Answer: {}"
+    device = model.device
     PREFIX_PROMPT_TEMPLATE = problem.get('format')
     scores = []
     questions = []
@@ -74,7 +76,7 @@ def do_prefix_forward(model, problem, image, processor):
     for option in [problem["option_A"], problem["option_B"]]:
         prompt = PREFIX_PROMPT_TEMPLATE.format(qs, option)
         questions.append(prompt)
-        inputs = processor(images=image, text=prompt, return_tensors="pt").to(device="cuda", dtype=torch.float16)
+        inputs = processor(images=image, text=prompt, return_tensors="pt").to(device=device, dtype=torch.float16)
         answer_tokens = processor.tokenizer.encode(" " + option, add_special_tokens=False)[1:]
         num_answer_tokens = len(answer_tokens)
         input_ids = inputs["input_ids"]
@@ -82,7 +84,7 @@ def do_prefix_forward(model, problem, image, processor):
         # try to find the answer tokens in input ids
         start_indices = []
         for i in range(input_ids.size(1) - num_answer_tokens + 1):
-            if torch.equal(input_ids[0, i:i+num_answer_tokens], torch.tensor(answer_tokens).cuda()):
+            if torch.equal(input_ids[0, i:i+num_answer_tokens], torch.tensor(answer_tokens).to(device=device)):
                 start_indices.append(i)
         
         if len(start_indices) == 0:
@@ -97,7 +99,7 @@ def do_prefix_forward(model, problem, image, processor):
             probs = torch.nn.functional.softmax(logits, dim=-1)
 
             # Pick the probabilities corresponding to each of the answer tokens
-            probs = torch.gather(probs, 1, torch.tensor(answer_tokens).cuda().unsqueeze(0))
+            probs = torch.gather(probs, 1, torch.tensor(answer_tokens).to(device=device).unsqueeze(0))
             prefix_score = torch.prod(probs.pow(1/num_answer_tokens))
             scores.append(prefix_score.item())
     outputs = "A" if scores[0] > scores[1] else "B"

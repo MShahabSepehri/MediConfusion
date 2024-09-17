@@ -19,7 +19,7 @@ PROMPTS = io_tools.load_json(PROMPTS_LOC)
 
 
 class BaseAnsweringModel():
-    def __init__(self, model_args_path, mode, data_path, local_image_address=False, tr=3):
+    def __init__(self, model_args_path, mode, data_path, local_image_address=False, tr=3, device='cuda'):
         self.key = None
         self.model_args_path = model_args_path
         self.conversion = io_tools.load_json(PROMPTS_LOC).get('conversion')
@@ -28,6 +28,7 @@ class BaseAnsweringModel():
         self.data_path = data_path
         self.prompt_key = 'prompts'
         self.local_image_address = local_image_address
+        self.device = device
         self.set_model_params()
 
     def set_model_params(self):
@@ -45,7 +46,7 @@ class BaseAnsweringModel():
         if self.mode == 'gpt4':
             self.clean_up = self.clean_up_gpt
             global gpt
-            from VLMs import gpt
+            from Models import gpt
         else:
             self.clean_up = self.clean_up_manual
         return args
@@ -77,10 +78,12 @@ class BaseAnsweringModel():
             
             self.update_score_table(score, sample_score)
             if save_path is not None:
-                io_tools.save_json(results, f'{save_path}/{self.key}_{self.mode}_ss.json')
+                pass
+                # io_tools.save_json(results, f'{save_path}/{self.key}_{self.mode}_ss.json')
         self.print_score(score)
         if save_path is not None:
-            io_tools.save_json(score, f'{save_path}/{self.key}_{self.mode}_score_ss.json')
+            pass
+            # io_tools.save_json(score, f'{save_path}/{self.key}_{self.mode}_score_ss.json')
         return results, score
     
     def sample_eval(self, sample):
@@ -322,7 +325,7 @@ class GPTAnswering(BaseAnsweringModel):
 
     def set_model_params(self):
         global gpt
-        from VLMs import gpt
+        from Models import gpt
         self.key = 'gpt'
         args = super().set_model_params()
         self.deployment_name = args.get("deployment_name")
@@ -342,7 +345,7 @@ class ClaudeAnswering(BaseAnsweringModel):
 
     def set_model_params(self):
         global claude
-        from VLMs import claude
+        from Models import claude
         self.key = 'claude'
         args = super().set_model_params()
         # self.deployment_name = args.get("deployment_name")
@@ -362,7 +365,7 @@ class ClaudeAnswering(BaseAnsweringModel):
 class GeminiAnswering(BaseAnsweringModel):
     def set_model_params(self):
         global gemini
-        from VLMs import gemini
+        from Models import gemini
         self.key = 'gemini'
         args = super().set_model_params()
         # self.deployment_name = args.get("deployment_name")
@@ -392,7 +395,7 @@ class LLAVAMedAnswering(BaseAnsweringModel):
 
     def set_model_params(self):
         global llava_med
-        from VLMs import llava_med
+        from Models import llava_med
         self.key = 'llava_med'
         args = super().set_model_params()
         
@@ -452,12 +455,12 @@ class LLAVAAnswering(BaseAnsweringModel):
 
     def set_model_params(self):
         global llava
-        from VLMs import llava
+        from Models import llava
         self.key = 'llava'
         args = super().set_model_params()
         
         set_seed(0)
-        model, processor = llava.load_model()
+        model, processor = llava.load_model(self.device)
 
         self.model = model
         self.processor = processor
@@ -485,7 +488,7 @@ class RadFMAnswering(BaseAnsweringModel):
 
     def set_model_params(self):
         global radfm
-        from VLMs import radfm
+        from Models import radfm
         self.key = 'radfm'
         args = super().set_model_params()
         self.language_files_path = args.get("language_files_path")
@@ -512,10 +515,10 @@ class BLIP2Answering(BaseAnsweringModel):
 
     def set_model_params(self):
         global blip2
-        from VLMs import blip2
+        from Models import blip2
         self.key = 'blip2'
         args = super().set_model_params()
-        model, processor = blip2.load_model()
+        model, processor = blip2.load_model(self.device)
         self.model = model
         self.processor = processor
 
@@ -539,10 +542,10 @@ class InstructBLIPAnswering(BaseAnsweringModel):
 
     def set_model_params(self):
         global instructblip
-        from VLMs import instructblip
+        from Models import instructblip
         self.key = 'instructblip'
         args = super().set_model_params()
-        model, processor = instructblip.load_model()
+        model, processor = instructblip.load_model(self.device)
         self.model = model
         self.processor = processor
         if self.temperature == 0:
@@ -569,7 +572,7 @@ class MedFlamingoAnswering(BaseAnsweringModel):
 
     def set_model_params(self):
         global med_flamingo
-        from VLMs import med_flamingo
+        from Models import med_flamingo
         self.key = 'med_flamingo'
         args = super().set_model_params()
         self.LLaMa_PATH = args.get('LLaMa_PATH')
@@ -599,7 +602,7 @@ class MedVInTAnswering(BaseAnsweringModel):
 
     def set_model_params(self):
         global med_flamingo
-        from VLMs import medvint
+        from Models import medvint
         self.key = 'medvint'
         args = super().set_model_params()
         self.model_args = medvint.ModelArguments()
@@ -642,14 +645,14 @@ ANSWERING_CLASS_DICT = {
 }
 
 DEFAULT_MODEL_CONFIGS = {
-    'gpt': f'{ROOT}/configs/VLM/gpt/vanilla.json',
-    'claude': f'{ROOT}/configs/VLM/claude/vanilla.json',
-    'gemini': f'{ROOT}/configs/VLM/gemini/vanilla.json',
-    'llava_med': f'{ROOT}/configs/VLM/llava_med/vanilla.json',
-    'llava': f'{ROOT}/configs/VLM/llava/vanilla.json',
-    'radfm': f'{ROOT}/configs/VLM/radfm/vanilla.json',
-    'blip2': f'{ROOT}/configs/VLM/blip2/vanilla.json',
-    'instructblip': f'{ROOT}/configs/VLM/instructblip/vanilla.json',
-    'med_flamingo': f'{ROOT}/configs/VLM/med_flamingo/vanilla.json',
-    'medvint': f'{ROOT}/configs/VLM/medvint/vanilla.json',
+    'gpt': f'{ROOT}/configs/Models/gpt/vanilla.json',
+    'claude': f'{ROOT}/configs/Models/claude/vanilla.json',
+    'gemini': f'{ROOT}/configs/Models/gemini/vanilla.json',
+    'llava_med': f'{ROOT}/configs/Models/llava_med/vanilla.json',
+    'llava': f'{ROOT}/configs/Models/llava/vanilla.json',
+    'radfm': f'{ROOT}/configs/Models/radfm/vanilla.json',
+    'blip2': f'{ROOT}/configs/Models/blip2/vanilla.json',
+    'instructblip': f'{ROOT}/configs/Models/instructblip/vanilla.json',
+    'med_flamingo': f'{ROOT}/configs/Models/med_flamingo/vanilla.json',
+    'medvint': f'{ROOT}/configs/Models/medvint/vanilla.json',
 }
