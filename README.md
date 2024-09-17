@@ -16,7 +16,6 @@ MediConfusion is a challenging medical Visual Question Answering (VQA) benchmark
     * [Evaluation](#evaluation)
     * [Arguments](#arguments)
   * [Leaderboard](#-leaderboard)
-  * [Citation](#-citation)
 
 ## 🔧 Requirements
 
@@ -70,16 +69,3 @@ The results will be in `Results/MODEL_NAME/`. You will see two files: one contai
 | 8 | [BLIP-2](https://github.com/salesforce/LAVIS/tree/main/projects/blip2) | Opt 2.7B | 6.82 |
 | 9 | [Med-Flamingo](https://github.com/snap-stanford/med-flamingo) | - | 4.55 |
 | 10 | [LLaVA-Med](https://github.com/microsoft/LLaVA-Med) | v1.5/Mistral 7B | 1.14 |
-
-## 📌 Citation
-
-If you use this code or our dataset, please cite our [paper](google.com)
-
-```
-@article{sepehri2024mediconfusion,
-  title={MediConfusion: Can You Trust Your AI Radiologist? Probing the reliability of multimodal medical foundation models},
-  author={Sepehri, Mohammad Shahab and Fabian, Zalan and Soltanolkotabi, Maryam and Soltanolkotabi, Mahdi},
-  journal={},
-  year={2024}
-}
-```
