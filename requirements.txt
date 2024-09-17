@@ -1,13 +1,14 @@
-openai
 pyaml
+openai
+google.generativeai
 llava-torch
 open_clip_torch
 torch
-transformers
 pandas
 oauth2client
 python-dotenv
-# open_flamingo
+open_flamingo
 anthropic
 ipython
 peft
+transformers

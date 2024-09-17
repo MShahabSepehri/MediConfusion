@@ -14,7 +14,9 @@ def get_args():
     parser.add_argument("--vlm_name", type=str, required=True)
     parser.add_argument("--resume_path", type=str, default=None)
     parser.add_argument("--model_args_path", type=str, default=None)
-    parser.add_argument("--data_path", type=str, default='/data/datasets/roco-dataset/data')
+    parser.add_argument("--local_image_address", type=bool, default=True)
+    # parser.add_argument("--data_path", type=str, default='/data/datasets/roco-dataset/data')
+    parser.add_argument("--data_path", type=str, default='./data/images')
     parser.add_argument("--mode", type=str, required=True, choices={'gpt4', 'mc', 'greedy', 'prefix'})
     args = parser.parse_args()
 
@@ -31,5 +33,5 @@ if __name__ == "__main__":
 
     answering_class = ANSWERING_CLASS_DICT.get(args.vlm_name)
 
-    ans_obj = answering_class(args.model_args_path, args.mode, args.data_path, args.tr)
+    ans_obj = answering_class(args.model_args_path, args.mode, args.data_path, args.local_image_address, args.tr)
     ans_obj.evaluate(args.resume_path, save_path)

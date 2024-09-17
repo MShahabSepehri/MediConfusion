@@ -51,7 +51,7 @@ The results will be in `Results/MODEL_NAME/`. You will see two files: one contai
 
 ### Arguments
 * `mode`: This sets the evaluation method. Available options are `gpt4` (FF), `mc` (MC), `greedy` (GD), and `prefix` (PS). For proprietary models you can only use the first two methods.
-* `vlm_name`: This is the name of your desired MLLM. Available options are `gpt` (GPT-4o), `gemini` (Gemini 1.5 Pro), `claude` (Claude 3 Opus), `llava` (LLaVA), `blip2` (BLIP-2), `intructblip` (InstructBLIP), `llava_med` (LLaVA-Med), `radfm` (RadFM), `med_flamingo` (Med-Flamingo).
+* `vlm_name`: This is the name of your desired MLLM. Available options are `gpt` (GPT-4o), `gemini` (Gemini 1.5 Pro), `claude` (Claude 3 Opus), `llava` (LLaVA), `blip2` (BLIP-2), `intructblip` (InstructBLIP), `llava_med` (LLaVA-Med), `radfm` (RadFM), and `med_flamingo` (Med-Flamingo).
 * `tr` (default: 3): Threshold used for FF evaluation to select an option. If the difference between assigned scores is at least `tr`, we select the option with the higher score. 
 * `resume_path` (default: `None`): If your run is intrrupted and you want to resume evaluation, you should set this argument to the path to the answers of the previous run.
 * `data_path` (default: `/data/datasets/roco-dataset/data`): Path to the images.

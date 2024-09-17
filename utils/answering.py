@@ -19,7 +19,7 @@ PROMPTS = io_tools.load_json(PROMPTS_LOC)
 
 
 class BaseAnsweringModel():
-    def __init__(self, model_args_path, mode, data_path, tr=3):
+    def __init__(self, model_args_path, mode, data_path, local_image_address=False, tr=3):
         self.key = None
         self.model_args_path = model_args_path
         self.conversion = io_tools.load_json(PROMPTS_LOC).get('conversion')
@@ -27,6 +27,7 @@ class BaseAnsweringModel():
         self.tr = tr
         self.data_path = data_path
         self.prompt_key = 'prompts'
+        self.local_image_address = local_image_address
         self.set_model_params()
 
     def set_model_params(self):
@@ -76,14 +77,18 @@ class BaseAnsweringModel():
             
             self.update_score_table(score, sample_score)
             if save_path is not None:
-                io_tools.save_json(results, f'{save_path}/{self.key}_{self.mode}.json')
+                io_tools.save_json(results, f'{save_path}/{self.key}_{self.mode}_ss.json')
         self.print_score(score)
         if save_path is not None:
-            io_tools.save_json(score, f'{save_path}/{self.key}_{self.mode}_score.json')
+            io_tools.save_json(score, f'{save_path}/{self.key}_{self.mode}_score_ss.json')
         return results, score
     
     def sample_eval(self, sample):
-        image_list = [f"{self.data_path}/{sample.get('im_1')}",  f"{self.data_path}/{sample.get('im_2')}"]
+        if self.local_image_address:
+            image_list = [f"{self.data_path}/{sample.get(x)}.jpg" for x in ['im_1_local', 'im_2_local']]
+            image_list = [f"{self.data_path}/{sample.get('im_1_local')}.jpg",  f"{self.data_path}/{sample.get('im_2_local')}.jpg"]
+        else:
+            image_list = [f"{self.data_path}/roco-dataset/data/{sample.get(x)}" for x in ['im_1', 'im_2']]
         question = sample.get('question')
         options = [sample.get('option_A'), sample.get('option_B')]
         im1_ans = sample.get('im_1_correct')
