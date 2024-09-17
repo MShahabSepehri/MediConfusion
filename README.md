@@ -1,7 +1,8 @@
 
-# <img src="logo.png" alt="drawing" width="60" style="float: right;"/> MediConfusion: Can you trust your AI radiologist? <br /> Probing the reliability of multimodal medical foundation models
-
+# MediConfusion: Can you trust your AI radiologist? <br /> Probing the reliability of multimodal medical foundation models
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/license/MIT)
+
+ <img src="logo.png" alt="drawing" width="200" style="float: right;"/> 
 
 MediConfusion is a challenging medical Visual Question Answering (VQA) benchmark dataset, that probes the failure modes of medical MLLMs from a vision perspective. We reveal that state-of-the-art models are easily confused by image pairs that are otherwise visually dissimilar and clearly distinct for medical experts. Strikingly, all available models (open-source or proprietary) achieve performance below random guessing on MediConfusion, raising serious concerns about the reliability of existing medical MLLMs for healthcare deployment.
 
@@ -15,7 +16,7 @@ MediConfusion is a challenging medical Visual Question Answering (VQA) benchmark
     * [Evaluation](#evaluation)
     * [Arguments](#arguments)
   * [Leaderboard](#-leaderboard)
-  * [Citation](#citation)
+  * [Citation](#-citation)
 
 ## 🔧 Requirements
 
@@ -39,7 +40,7 @@ Unfortunately, different MLLMs need different versions of `transformers` package
 * `MedFlamingo`: Use `transformers` 4.44.2 and install `open-flamingo` package
 * `Other MLLMs`: Use `transformers` 4.44.2
 
-## 📌 Usage
+## 🔰 Usage
 
 ### Evaluation
 Before using the code, make sure to follow the instruction in [Requirements](#-requirements). To use the evaluation code, you can run the follwing code in your terminal.
@@ -69,7 +70,8 @@ The results will be in `Results/MODEL_NAME/`. You will see two files: one contai
 | 8 | [BLIP-2](https://github.com/salesforce/LAVIS/tree/main/projects/blip2) | Opt 2.7B | 6.82 |
 | 9 | [Med-Flamingo](https://github.com/snap-stanford/med-flamingo) | - | 4.55 |
 | 10 | [LLaVA-Med](https://github.com/microsoft/LLaVA-Med) | v1.5/Mistral 7B | 1.14 |
-## Citation
+
+## 📌 Citation
 
 If you use this code or our dataset, please cite our [paper](google.com)
 
