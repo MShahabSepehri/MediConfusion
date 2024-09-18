@@ -1,6 +1,10 @@
 # MediConfusion
 ## Can you trust your AI radiologist? <br /> Probing the reliability of multimodal medical foundation models
-This is the official repository for the paper [MediConfusion: Can you trust your AI radiologist? \\ Probing the reliability of\\ multimodal medical foundation models](https://google.com). <br />
+
+> [**MediConfusion: Can you trust your AI radiologist? Probing the reliability of multimodal medical foundation models**](https://google.com),  
+> Mohammad Shahab Sepehri, Zalan Fabian, Maryam Soltanolkotabi, Mahdi Soltanolkotabi
+
+[Huggingface page](https://huggingface.co/datasets/shahab7899/MediConfusion)
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/license/MIT)
 
@@ -51,7 +55,7 @@ Also, You can download the images directly from [ROCO](https://github.com/razorx
 * `RadFM`: Download the model from [here](https://huggingface.co/chaoyi-wu/RadFM) and set `model_path` in the config to its address.
 
 ### Proprietary models
-To use closed source models, you should save your API keys in a file named `.env` like the example below .<br />
+To use proprietary models, you should save your API keys in a file named `.env` like the example below .<br />
 GEMINI_API_KEY=_YOUR_KEY_<br />
 AZURE_OPENAI_API_KEY=_YOUR_KEY_<br />
 AZURE_OPENAI_ENDPOINT=_YOUR_KEY_<br />
@@ -62,19 +66,19 @@ Unfortunately, different MLLMs need different versions of `transformers` package
 * `LLaVA-Med`: Use `transformers` 4.36.2
 * `RadFM`: Use `transformers` 4.28.1
 * `MedFlamingo`: Use `transformers` 4.44.2 and install `open-flamingo` package
-* `Other MLLMs`: Use `transformers` 4.44.2
+* `Gemini`: You need `python >= 3.9`
+* `Other MLLMs`: Use `transformers` 4.44.2 and `python >= 3.8`
 
 ## 🔰 Usage
 
 ### Evaluation
 Before using the code, make sure to follow the instruction in [Requirements](#-requirements). <br />
 You can create/change models' configurations in `configs/MODEL_NAME/`.<br />
-
-To use the evaluation code, you can run the following code in your terminal.
+To use the evaluation code, you can use the following command:
 ```
 python scripts/answering.py --mllm_name MODEL_NAME --mode MODE
 ```
-The results will be in `Results/MODEL_NAME/`. You will see two files: one containing the final scores and one containing answers. 
+The results will be saved in `Results/MODEL_NAME/`. You will see two files: one containing the final scores and one containing the answers. 
 
 ### Arguments
 * `mode`: This sets the evaluation method. Available options are `gpt4` (FF), `mc` (MC), `greedy` (GD), and `prefix` (PS). For proprietary models, you can only use the first two methods.
