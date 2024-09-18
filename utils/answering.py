@@ -20,7 +20,7 @@ PROMPTS = io_tools.load_json(PROMPTS_LOC)
 
 
 class BaseAnsweringModel():
-    def __init__(self, model_args_path, mode, data_path, tr=3, device='cuda'):
+    def __init__(self, model_args_path, mode, data_path, local_image_address=True, tr=3, device='cuda'):
         self.key = None
         self.model_args_path = model_args_path
         self.conversion = io_tools.load_json(PROMPTS_LOC).get('conversion')
@@ -28,6 +28,7 @@ class BaseAnsweringModel():
         self.tr = tr
         self.data_path = data_path
         self.prompt_key = 'prompts'
+        self.local_image_address = local_image_address
         self.device = device
         self.set_model_params()
 
@@ -78,12 +79,10 @@ class BaseAnsweringModel():
             
             self.update_score_table(score, sample_score)
             if save_path is not None:
-                pass
-                # io_tools.save_json(results, f'{save_path}/{self.key}_{self.mode}_ss.json')
+                io_tools.save_json(results, f'{save_path}/{self.key}_{self.mode}.json')
         self.print_score(score)
         if save_path is not None:
-            pass
-            # io_tools.save_json(score, f'{save_path}/{self.key}_{self.mode}_score_ss.json')
+            io_tools.save_json(score, f'{save_path}/{self.key}_{self.mode}_score.json')
         return results, score
     
     def sample_eval(self, sample):

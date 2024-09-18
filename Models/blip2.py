@@ -5,7 +5,7 @@ from transformers import Blip2Processor, Blip2ForConditionalGeneration
 
 def load_model(device='cuda'):
     processor = Blip2Processor.from_pretrained("Salesforce/blip2-opt-2.7b")
-    model = Blip2ForConditionalGeneration.from_pretrained("Salesforce/blip2-opt-2.7b")#, torch_dtype=torch.float16)
+    model = Blip2ForConditionalGeneration.from_pretrained("Salesforce/blip2-opt-2.7b")
     model.to(device)
     return model, processor
 
@@ -35,7 +35,7 @@ def do_generation(model,
                   temperature, 
                   max_new_tokens):
     device = model.device
-    inputs = processor(images=image, text=question, return_tensors="pt").to(device=device, dtype=torch.float16)
+    inputs = processor(images=image, text=question, return_tensors="pt").to(device=device)
     outputs = model.generate(**inputs, 
                              do_sample=(temperature > 0),
                              num_beams=num_beams, 
@@ -50,7 +50,7 @@ def do_forward(model, processor, image, question):
     VALID_ANSWERS = ['A', 'B']
     device = model.device
     TOKEN_IDs = [processor.tokenizer(x, return_tensors="pt", add_special_tokens=False).get('input_ids') for x in VALID_ANSWERS]
-    inputs = processor(images=image, text=question, return_tensors="pt").to(device=device, dtype=torch.float16)
+    inputs = processor(images=image, text=question, return_tensors="pt").to(device=device)
     logits = model.forward(**inputs).logits
     logits = logits[0, -1, :]
     logits = logits.reshape(-1, 1)
@@ -71,7 +71,7 @@ def do_prefix_forward(model, problem, image, processor):
     for option in [problem["option_A"], problem["option_B"]]:
         prompt = PREFIX_PROMPT_TEMPLATE.format(qs, option)
         questions.append(prompt)
-        inputs = processor(images=image, text=prompt, return_tensors="pt").to(device=device, dtype=torch.float16)
+        inputs = processor(images=image, text=prompt, return_tensors="pt").to(device=device)
         answer_tokens = processor.tokenizer.encode(' ' + option, add_special_tokens=False)
         num_answer_tokens = len(answer_tokens)
         input_ids = inputs["input_ids"]
