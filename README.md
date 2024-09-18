@@ -1,5 +1,7 @@
+# MediConfusion
+## Can you trust your AI radiologist? <br /> Probing the reliability of multimodal medical foundation models
+This is the official repository for the paper [MediConfusion: Can you trust your AI radiologist? \\ Probing the reliability of\\ multimodal medical foundation models](https://google.com). <br />
 
-# MediConfusion: Can you trust your AI radiologist? <br /> Probing the reliability of multimodal medical foundation models
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/license/MIT)
 
  <img src="logo.png" alt="drawing" width="200" style="float: right;"/> 
@@ -25,18 +27,27 @@ For each pair, the model receives a **_set score_** of 1 only if it correctly an
 
 ## 🔧 Requirements
 
-You should download the images separately. You can download them from our [huggingface page](https://huggingface.co/datasets/shahab7899/MediConfusion) or directly use [ROCO](https://github.com/razorx89/roco-dataset) (set `local_image_address` to `False`). You should set the `data_path` to point to that address (check [Usage](#-usage)). <br />
-
-Use the following code to install requirements. If you have any problems, using the models, please follow the instructions below.
+Use the following code to install requirements.
 
 ```
 pip install -r requirements.txt
 ```
 
+If you have any problems using the models, please follow the instructions below.
+### Images
+
+You should download the images separately. To download them, use the following command:
+
+```
+python scripts/download.py
+```
+
+Also, You can download the images directly from [ROCO](https://github.com/razorx89/roco-dataset) (set `local_image_address` to `False`). You should set the `data_path` to point to that address (check [Usage](#-usage)). <br />
+
 ### Required downloads
 * `LLaVA-Med`: Download the model from [here](https://huggingface.co/microsoft/llava-med-7b-delta) and set `model_path` in the config to its address.
 * `LLaMA`: Download the model from [here](https://huggingface.co/yahma/llama-7b-hf) and set `LLaMa_PATH` in the `MedFlamingo` config to its address.
-* `MedFlamingo`: Download the model from [here](https://huggingface.co/med-flamingo/med-flamingo) and set `CHECKPOINT_PATH` in the config to its address. <be />Also, Download `PMC1064097_F2.jpg`, `PMC1065025_F1.jpg`, and `PMC1087855_F3.jpg` from [PMV-VQA](https://huggingface.co/datasets/xmcmic/PMC-VQA) and set `IMAGE_PATH` to the folder containing them (these images are along with the images of our dataset in our [huggingface page](https://huggingface.co/datasets/shahab7899/MediConfusion)).
+* `MedFlamingo`: Download the model from [here](https://huggingface.co/med-flamingo/med-flamingo) and set `CHECKPOINT_PATH` in the config to its address. 
 * `RadFM`: Download the model from [here](https://huggingface.co/chaoyi-wu/RadFM) and set `model_path` in the config to its address.
 
 ### Proprietary models
@@ -72,7 +83,7 @@ The results will be in `Results/MODEL_NAME/`. You will see two files: one contai
 * `tr` (default: 3): Threshold used for FF evaluation to select an option. If the difference between assigned scores is at least `tr`, we select the option with the higher score. 
 * `resume_path` (default: `None`): If your run is interrupted and you want to resume evaluation, you should set this argument to the path to the answers of the previous run.
 * `local_image_address` (default: `True`): If `Flase`, the code looks for the images based on their ROCO IDs. Otherwise, it looks for the images based on their local IDs.
-* `data_path` (default: `./data/images`): Path to the images. If you are using local addressing, this is the path to the image folder downloaded from our [huggingface page](shahab7899/MediConfusion). If you are not using local addressing, this is the path to [ROCO](https://github.com/razorx89/roco-dataset).
+* `data_path` (default: `./data/images`): Path to the images. If you download the images using our script, this is `./data/images`. If you are not using local addressing, this is the path to the [ROCO](https://github.com/razorx89/roco-dataset).
 * `device` (default: `cuda`): You can use `cuda` or `cpu`. For `LLaVA-Med`, our code does not support `cpu`.
 
 ## 📊 Leaderboard
