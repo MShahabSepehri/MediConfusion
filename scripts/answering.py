@@ -5,9 +5,6 @@ import argparse
 from utils import io_tools
 from utils.answering import ANSWERING_CLASS_DICT, DEFAULT_MODEL_CONFIGS 
 
-ROOT = io_tools.get_root(__file__, 2)
-
-
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--tr", type=int, default=3)

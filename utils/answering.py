@@ -1,5 +1,6 @@
 import os
 import time
+import warnings
 from tqdm import tqdm
 from PIL import Image
 from utils import io_tools
@@ -408,7 +409,7 @@ class LLAVAMedAnswering(BaseAnsweringModel):
         self.image_processor = image_processor
 
         if self.device == 'cpu':
-            raise Warning('LLaVA-Med implepenation does not support CPU! Switching to CUDA.')
+            warnings.warn('LLaVA-Med implepenation does not support CPU! Switching to CUDA.')
             self.device = 'cuda'
 
         self.conv_mode = args.get("conv_mode")
@@ -495,9 +496,8 @@ class RadFMAnswering(BaseAnsweringModel):
         from Models import radfm
         self.key = 'radfm'
         args = super().set_model_params()
-        self.language_files_path = args.get("language_files_path")
         self.model_path = args.get("model_path")
-        model, text_tokenizer, image_padding_tokens = radfm.load_model(self.language_files_path, self.model_path, self.device)
+        model, text_tokenizer, image_padding_tokens = radfm.load_model(self.model_path, self.device)
         self.model = model
         self.text_tokenizer = text_tokenizer
         self.image_padding_tokens = image_padding_tokens

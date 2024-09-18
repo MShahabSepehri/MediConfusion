@@ -1,15 +1,19 @@
 import torch
 from PIL import Image
+from utils import io_tools
 from torchvision import transforms
 from transformers import LlamaTokenizer
 from .RadFM.multimodality_model import MultiLLaMAForCausalLM
+
+ROOT = io_tools.get_root(__file__, 2)
+
 
 def get_tokenizer(tokenizer_path, max_img_size=100, image_num=32):
     '''
     Initialize the image special tokens
     max_img_size denotes the max image put length and image_num denotes how many patch embeddings the image will be encoded to 
     '''
-    if isinstance(tokenizer_path,str):
+    if isinstance(tokenizer_path, str):
         image_padding_tokens = []
         text_tokenizer = LlamaTokenizer.from_pretrained(
             tokenizer_path,
@@ -65,7 +69,8 @@ def combine_and_preprocess(question,image_list,image_padding_tokens):
     text = ''.join(new_qestions) 
     return text, vision_x, 
     
-def load_model(language_files_path, model_path, device='cuda'):
+def load_model(model_path, device='cuda'):
+    language_files_path = f'{ROOT}/Models/RadFM/Language_files'
     text_tokenizer, image_padding_tokens = get_tokenizer(language_files_path)
     model = MultiLLaMAForCausalLM(lang_model_path=language_files_path)
     ckpt = torch.load(model_path, map_location='cpu')
