@@ -20,7 +20,7 @@ MediConfusion is a challenging medical Visual Question Answering (VQA) benchmark
 
 ## 🔧 Requirements
 
-You should download the images separately. You can download them from our [huggingface page](shahab7899/MediConfusion) or directly use [ROCO](https://github.com/razorx89/roco-dataset) (set `local_image_address` to `False`). You should set the `data_path` to point to that address (check [Usage](#-usage)). <br />
+You should download the images separately. You can download them from our [huggingface page](https://huggingface.co/datasets/shahab7899/MediConfusion) or directly use [ROCO](https://github.com/razorx89/roco-dataset) (set `local_image_address` to `False`). You should set the `data_path` to point to that address (check [Usage](#-usage)). <br />
 
 Use the following code to install requirements. If you have any problems, using the models, please follow the instructions below.
 
@@ -29,10 +29,10 @@ pip install -r requirements.txt
 ```
 
 ### Required downloads
-* `LLaVA-Med`: Download the model from [here]([microsoft/llava-med-7b-delta](https://huggingface.co/microsoft/llava-med-7b-delta)) and set `model_path` in the config to its address.
-* `LLaMA`: Download the model from [here]([yahma/llama-7b-hf](https://huggingface.co/yahma/llama-7b-hf)) and set `LLaMa_PATH` in the `MedFlamingo` config to its address.
-* `MedFlamingo`: Download the model from [here]([yahma/llama-7b-hf](https://huggingface.co/med-flamingo/med-flamingo)) and set `CHECKPOINT_PATH` in the config to its address. <be />Also, Download `PMC1064097_F2.jpg`, `PMC1065025_F1.jpg`, and `PMC1087855_F3.jpg` from [PMV-VQA](https://huggingface.co/datasets/xmcmic/PMC-VQA) and set `IMAGE_PATH` to the folder containing them.
-* `RadFM`:
+* `LLaVA-Med`: Download the model from [here](https://huggingface.co/microsoft/llava-med-7b-delta) and set `model_path` in the config to its address.
+* `LLaMA`: Download the model from [here](https://huggingface.co/yahma/llama-7b-hf) and set `LLaMa_PATH` in the `MedFlamingo` config to its address.
+* `MedFlamingo`: Download the model from [here](https://huggingface.co/med-flamingo/med-flamingo) and set `CHECKPOINT_PATH` in the config to its address. <be />Also, Download `PMC1064097_F2.jpg`, `PMC1065025_F1.jpg`, and `PMC1087855_F3.jpg` from [PMV-VQA](https://huggingface.co/datasets/xmcmic/PMC-VQA) and set `IMAGE_PATH` to the folder containing them (these images are along with the images of our dataset in our [huggingface page](https://huggingface.co/datasets/shahab7899/MediConfusion)).
+* `RadFM`: Download the model from [here](https://huggingface.co/chaoyi-wu/RadFM) and set `model_path` in the config to its address.
 
 ### Proprietary models
 To use closed source models, you should save your API keys in a file named `.env` like the example below .<br />
