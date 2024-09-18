@@ -12,7 +12,6 @@ def get_args():
     parser.add_argument("--resume_path", type=str, default=None)
     parser.add_argument("--model_args_path", type=str, default=None)
     parser.add_argument("--local_image_address", type=bool, default=True)
-    # parser.add_argument("--data_path", type=str, default='/data/datasets/roco-dataset/data')
     parser.add_argument("--data_path", type=str, default='./data/images')
     parser.add_argument("--mode", type=str, required=True, choices={'gpt4', 'mc', 'greedy', 'prefix'})
     parser.add_argument("--device", type=str, default='cuda')
