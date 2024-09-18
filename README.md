@@ -3,10 +3,13 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/license/MIT)
 
  <img src="logo.png" alt="drawing" width="200" style="float: right;"/> 
+ <img src="example.png" alt="drawing" width="200" style="float: right;"/> 
 
 MediConfusion is a challenging medical Visual Question Answering (VQA) benchmark dataset, that probes the failure modes of medical MLLMs from a vision perspective. We reveal that state-of-the-art models are easily confused by image pairs that are otherwise visually dissimilar and clearly distinct for medical experts. Strikingly, all available models (open-source or proprietary) achieve performance below random guessing on MediConfusion, raising serious concerns about the reliability of existing medical MLLMs for healthcare deployment.
 
-
+This benchmark consists of 176 confusing pairs. A confusing pair is a set of two images that share the same question and corresponding answer options, but the correct answer is different for the images (A for the image on the left and B for the image on the right). <br />
+For each pair, the model receives a **_set score_** of 1 only if it correctly answers both questions in the confusing pair (0 in the example).
+**_Individual score_** is evaluated separately for each image (1 out of 2 in the example).
 ## 📖 Table of Contents
 
   * [Requirements](#-requirements)
@@ -67,7 +70,7 @@ The results will be in `Results/MODEL_NAME/`. You will see two files: one contai
 * `tr` (default: 3): Threshold used for FF evaluation to select an option. If the difference between assigned scores is at least `tr`, we select the option with the higher score. 
 * `resume_path` (default: `None`): If your run is interrupted and you want to resume evaluation, you should set this argument to the path to the answers of the previous run.
 * `local_image_address` (default: `True`): If `Flase`, the code looks for the images based on their ROCO IDs. Otherwise, it looks for the images based on their local IDs.
-* `data_path` (default: `./data/images`): Path to the images. If you are using local addressing, this is the path to the image folder downloaded from our [huggingface page](shahab7899/MediConfusion). If you are not using local addressing, this is the path to the ROCO dataset (v1).
+* `data_path` (default: `./data/images`): Path to the images. If you are using local addressing, this is the path to the image folder downloaded from our [huggingface page](shahab7899/MediConfusion). If you are not using local addressing, this is the path to [ROCO](https://github.com/razorx89/roco-dataset).
 * `device` (default: `cuda`): You can use `cuda` or `cpu`. For `LLaVA-Med`, our code does not support `cpu`.
 
 ## 📊 Leaderboard
