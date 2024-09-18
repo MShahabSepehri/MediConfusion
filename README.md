@@ -1,14 +1,9 @@
 # MediConfusion
 ## Can you trust your AI radiologist? <br /> Probing the reliability of multimodal medical foundation models
 
-> [**MediConfusion: Can you trust your AI radiologist? Probing the reliability of multimodal medical foundation models**](https://google.com),  
-> Mohammad Shahab Sepehri, Zalan Fabian, Maryam Soltanolkotabi, Mahdi Soltanolkotabi
-
-[Huggingface page](https://huggingface.co/datasets/shahab7899/MediConfusion)
-
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/license/MIT)
 
- <img src="logo.png" alt="drawing" width="200" style="float: right;"/> 
+ <img src="assets/logo.png" alt="drawing" width="200" style="float: right;"/> 
 
 MediConfusion is a challenging medical Visual Question Answering (VQA) benchmark dataset, that probes the failure modes of medical MLLMs from a vision perspective. We reveal that state-of-the-art models are easily confused by image pairs that are otherwise visually dissimilar and clearly distinct for medical experts. Strikingly, all available models (open-source or proprietary) achieve performance below random guessing on MediConfusion, raising serious concerns about the reliability of existing medical MLLMs for healthcare deployment.
 
@@ -16,7 +11,7 @@ This benchmark consists of 176 confusing pairs. A confusing pair is a set of two
 For each pair, the model receives a **_set score_** of 1 only if it correctly answers both questions in the confusing pair (0 in the example).
 **_Individual score_** is evaluated separately for each image (1 out of 2 in the example).
 
- <img src="example.png" alt="drawing" width="250" style="float;"/> 
+ <img src="assets/example.png" alt="drawing" width="250" style="float;"/> 
  
 ## 📖 Table of Contents
 
