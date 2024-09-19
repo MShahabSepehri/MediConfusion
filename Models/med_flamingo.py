@@ -53,7 +53,7 @@ def process_prompt(prompt, use_option):
     return prompt
 
 def ask_question(model, processor, image_path, question, max_new_tokens, mode, IMAGE_DIR):
-    tmp = [(IMAGE_DIR + IM) for IM in FEW_SHOT_IMAGES]
+    tmp = [(f'{IMAGE_DIR}/{IM}') for IM in FEW_SHOT_IMAGES]
     tmp.append(image_path)
     images = [Image.open(image_path) for image_path in tmp]
     pixels = processor.preprocess_images(images)

@@ -5,5 +5,5 @@
     "temperature": 1,
     "LLaMa_PATH": "/data/models/llama",
     "CHECKPOINT_PATH": "/data/models/med_flamingo/model.pt",
-    "IMAGE_PATH": "./data/images/few_shor"
+    "IMAGE_PATH": "./data/few_shot_prompts"
 }
