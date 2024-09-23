@@ -1,0 +1,9 @@
+{   
+    "num_beams": 5,
+    "max_new_tokens": 10,
+    "top_p": 0.9,
+    "temperature": 1,
+    "LLaMa_PATH": "/data/models/llama",
+    "CHECKPOINT_PATH": "/data/models/med_flamingo/model.pt",
+    "IMAGE_PATH": "./data/few_shot_prompts"
+}

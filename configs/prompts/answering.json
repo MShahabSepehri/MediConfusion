@@ -1,0 +1,44 @@
+{
+    "prompts": {
+        "gpt4": {
+            "default": "Based on the image, answer following question.\n{}",
+            "blip2": "Question: {} Answer:",
+            "med_flamingo": "You are a helpful medical assistant. You are being provided with images, a two choice question about each image and an answer. Follow the examples and answer the last question. <image>Question: **Q1**<|endofchunk|><image>Question: **Q2**|endofchunk|><image>Question: **Q3**<|endofchunk|><image>Question: {} Answer:"
+        },
+        "greedy": {
+            "default": "Based on the image, choose the correct option for the following question.\nQuestion: {}\nA: {}\nB: {}\nAnswer with the option's letter from the given choices directly.\nAnswer: ",
+            "med_flamingo": "You are a helpful medical assistant. You are being provided with images, a two choice question about each image and an answer. Follow the examples and answer the last question. <image>Question: **Q1**<|endofchunk|><image>Question: **Q2**|endofchunk|><image>Question: **Q3**<|endofchunk|><image>Question: {}\nA: {}\nB: {}\nAnswer:",
+            "blip2": "Question: Based on the image, choose the correct option for the following question. {}\nA: {}\nB: {}\nAnswer with the option's letter from the given choices directly. Answer:"
+        },
+        "mc": {
+            "default": "Based on the image, choose the correct option for the following question.\nQuestion: {}\n(\"A\": {})\n(\"B\": {})\nAnswer with the option's letter from the given choices directly. Your answer should be just one letter.\n#answer: (\"",
+            "llava_med": "Based on the image, choose the correct option for the following question.\nQuestion: {}\nA: {}\nB: {}\nAnswer with the option's letter from the given choices directly. Your answer should be just one letter.\nAnswer: ",
+            "gpt": "Based on the image, choose the correct option for the following question.\nQuestion: {}\nA: {}\nB: {}\nAnswer with the option's letter from the given choices directly. Your answer should be just one letter.\nAnswer: ",
+            "gemini": "Based on the image, choose the correct option for the following question.\nQuestion: {}\nA: {}\nB: {}\nAnswer with the option's letter from the given choices directly. Your answer should be just one letter.\nAnswer: ",
+            "claude": "Based on the image, choose the correct option for the following question.\nQuestion: {}\nA: {}\nB: {}\nAnswer with the option's letter from the given choices directly. Your answer should be just one letter.\nAnswer: ",
+            "medvint": "Question: {} The choices are: A: {} B: {} The Answer is: ",
+            "blip2": "Question: Based on the image, choose the correct option for the following question. {}\nA: {}\nB: {}\nAnswer with the option's letter from the given choices directly. Answer:",
+            "med_flamingo": "You are a helpful medical assistant. You are being provided with images, a two choice question about each image and an answer. Follow the examples and answer the last question. <image>Question: **Q1**<|endofchunk|><image>Question: **Q2**|endofchunk|><image>Question: **Q3**<|endofchunk|><image>Question: {}\nA: {}\nB: {}\nAnswer:"
+        },
+        "prefix": {
+            "default": "Question: {} Answer: {}",
+            "radfm": "{} {}",
+            "med_flamingo": "You are a helpful medical assistant. You are being provided with images, a question about each image and an answer. Follow the examples and answer the last question. <image>Question: **Q1**<|endofchunk|><image>Question: **Q2**<|endofchunk|><image>Question: **Q3**<|endofchunk|><image>Question: {} Answer: {}"
+        }
+    },
+
+    "init_prompts": {
+        "default": "You are a helpful assitant expert in medical domain.",
+        "llava_med": {
+            "1": "You are a helpful and precise assistant for checking the quality of the answer."
+        }
+    },
+
+    "conversion": {
+        "instruct_prompt": "We would like to request your feedback on the performance of an AI assistant in response to the user question displayed above. The user asks the question on observing an image. We have provided two possible answers, [Answer A] and [Answer B] to the question. Your job is to evaluate how close the AI assistant's answer is to each of the answers. You don't have to decide whether the answers are correct or not. Each answer should receive an overall score on a scale of 1 to 10, where a higher score indicates the AI assistant's answer is closer to the specific answer. After providing the scores, concisely provide your explanation for the given scores. Remember, you don't need to comment on the correctness of the answers. Please provide your answer in the following format:\nA: <SCORE>\nB: <SCORE>\nYour explanation: <EXPLANATION>",
+        "role": "AI Assistant",
+        "init_prompt": "You are a helpful and precise assistant for checking the quality of the answer.",
+        "gpt_deployment_name": "gpt4o",
+        "temperature": 0.7
+    }
+}

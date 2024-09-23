@@ -1,0 +1,5 @@
+{   
+    "max_new_tokens": 64,
+    "language_files_path": "/data/models/radfm/Language_files",
+    "model_path": "/data/models/radfm/pytorch_model.bin"
+}

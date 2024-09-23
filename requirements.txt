@@ -1,0 +1,14 @@
+pyaml
+openai
+google.generativeai
+open_clip_torch
+torch
+pandas
+oauth2client
+python-dotenv
+open_flamingo
+anthropic
+ipython
+peft
+transformers
+tqdm==4.66.2

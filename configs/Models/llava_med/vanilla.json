@@ -1,0 +1,11 @@
+{
+    "model_path": "/data/models/llava-med-v1.5-mistral-7b",
+    "model_base": null,
+    "top_p": null,
+    "num_beams": 1,
+    "conv_mode": "mistral_instruct",
+    "temperature": 0.2,
+    "init_prompt_id": 1,
+    "use_im_start_end": false,
+    "max_new_tokens": 100
+}

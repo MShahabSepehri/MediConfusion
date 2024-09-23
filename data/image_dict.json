@@ -1,0 +1,1142 @@
+{
+    "train/radiology/images/ROCO_28778.jpg": {
+        "local": 20192,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/25/da/PMC3284869.tar.gz",
+        "file_name": "1752-1947-6-45-2.jpg"
+    },
+    "train/radiology/images/ROCO_62117.jpg": {
+        "local": 20053,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/e7/68/PMC4273002.tar.gz",
+        "file_name": "jkns-56-423-g009.jpg"
+    },
+    "train/radiology/images/ROCO_38225.jpg": {
+        "local": 20014,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/8c/01/PMC2737801.tar.gz",
+        "file_name": "1752-1947-0003-0000008389-4.jpg"
+    },
+    "train/radiology/images/ROCO_56053.jpg": {
+        "local": 20040,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/b7/7e/PMC3872649.tar.gz",
+        "file_name": "SNI-4-150-g007.jpg"
+    },
+    "train/radiology/images/ROCO_20285.jpg": {
+        "local": 20069,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/3e/c7/PMC5488575.tar.gz",
+        "file_name": "JNRP-8-455-g004.jpg"
+    },
+    "train/radiology/images/ROCO_24437.jpg": {
+        "local": 20142,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/e2/96/PMC5520603.tar.gz",
+        "file_name": "JOACP-33-256-g001.jpg"
+    },
+    "train/radiology/images/ROCO_35078.jpg": {
+        "local": 20058,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/05/e4/PMC4491941.tar.gz",
+        "file_name": "jao-19-58-g004.jpg"
+    },
+    "train/radiology/images/ROCO_36456.jpg": {
+        "local": 20177,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/3b/65/PMC3589835.tar.gz",
+        "file_name": "SNI-4-18-g002.jpg"
+    },
+    "train/radiology/images/ROCO_34001.jpg": {
+        "local": 20066,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/57/86/PMC5652084.tar.gz",
+        "file_name": "AJNS-12-605-g003.jpg"
+    },
+    "validation/radiology/images/ROCO_32831.jpg": {
+        "local": 20081,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/9e/66/PMC3361819.tar.gz",
+        "file_name": "IJO-60-216-g008.jpg"
+    },
+    "test/radiology/images/ROCO_43209.jpg": {
+        "local": 20113,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/b5/bd/PMC4634034.tar.gz",
+        "file_name": "PAMJ-21-290-g002.jpg"
+    },
+    "train/radiology/images/ROCO_12537.jpg": {
+        "local": 20027,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/16/c2/PMC4166672.tar.gz",
+        "file_name": "tre-04-202-6022-1-g001.jpg"
+    },
+    "train/radiology/images/ROCO_26019.jpg": {
+        "local": 20157,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/59/5a/PMC3178520.tar.gz",
+        "file_name": "1752-1947-5-366-1.jpg"
+    },
+    "train/radiology/images/ROCO_07207.jpg": {
+        "local": 20218,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/0f/39/PMC5537397.tar.gz",
+        "file_name": "gr1.jpg"
+    },
+    "validation/radiology/images/ROCO_08708.jpg": {
+        "local": 20208,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/bf/70/PMC4817910.tar.gz",
+        "file_name": "NG2015001016FF1.jpg"
+    },
+    "validation/radiology/images/ROCO_33649.jpg": {
+        "local": 20196,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/3d/ce/PMC3713557.tar.gz",
+        "file_name": "10-1055-s-0033-1346980-i120066-1.jpg"
+    },
+    "train/radiology/images/ROCO_35856.jpg": {
+        "local": 20193,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/9f/5e/PMC5156626.tar.gz",
+        "file_name": "cureus-0008-00000000876-i03.jpg"
+    },
+    "train/radiology/images/ROCO_22947.jpg": {
+        "local": 20176,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/7a/89/PMC4042058.tar.gz",
+        "file_name": "AMS-10-22719-g002.jpg"
+    },
+    "train/radiology/images/ROCO_34389.jpg": {
+        "local": 20170,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/95/69/PMC3055990.tar.gz",
+        "file_name": "381_2010_1358_Fig43_HTML.jpg"
+    },
+    "train/radiology/images/ROCO_79809.jpg": {
+        "local": 20172,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/0e/5f/PMC4821142.tar.gz",
+        "file_name": "crn-0008-0059-g01.jpg"
+    },
+    "validation/radiology/images/ROCO_56150.jpg": {
+        "local": 20220,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/48/c4/PMC5656074.tar.gz",
+        "file_name": "rb-50-05-0328-g12.jpg"
+    },
+    "train/radiology/images/ROCO_12111.jpg": {
+        "local": 20121,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/40/03/PMC5115844.tar.gz",
+        "file_name": "cureus-0008-00000000838-i02.jpg"
+    },
+    "train/radiology/images/ROCO_28314.jpg": {
+        "local": 20164,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/66/31/PMC3432225.tar.gz",
+        "file_name": "biij-08-e6-g03.jpg"
+    },
+    "test/radiology/images/ROCO_49681.jpg": {
+        "local": 20034,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/41/d1/PMC5453301.tar.gz",
+        "file_name": "nmccrj-4-055-g003.jpg"
+    },
+    "train/radiology/images/ROCO_10207.jpg": {
+        "local": 20147,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/b9/e7/PMC1479417.tar.gz",
+        "file_name": "pmed.0030233.g006.jpg"
+    },
+    "test/radiology/images/ROCO_56284.jpg": {
+        "local": 20155,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/d5/c5/PMC5699006.tar.gz",
+        "file_name": "IJCCM-21-772-g007.jpg"
+    },
+    "train/radiology/images/ROCO_46426.jpg": {
+        "local": 20008,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/1d/5f/PMC4126129.tar.gz",
+        "file_name": "JETS-7-242-g002.jpg"
+    },
+    "validation/radiology/images/ROCO_14863.jpg": {
+        "local": 20209,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/27/94/PMC5200988.tar.gz",
+        "file_name": "IJO-64-843-g002.jpg"
+    },
+    "train/radiology/images/ROCO_62193.jpg": {
+        "local": 20195,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/a0/0f/PMC4677012.tar.gz",
+        "file_name": "CRIID2015-718289.005.jpg"
+    },
+    "train/radiology/images/ROCO_17682.jpg": {
+        "local": 20045,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/51/ae/PMC3693839.tar.gz",
+        "file_name": "poljradiol-78-2-57-g006.jpg"
+    },
+    "train/radiology/images/ROCO_24334.jpg": {
+        "local": 20073,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/e4/91/PMC4212581.tar.gz",
+        "file_name": "10-1055-s-0034-1386749-i1300020cr-6.jpg"
+    },
+    "train/radiology/images/ROCO_21373.jpg": {
+        "local": 20153,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/8c/b4/PMC4307690.tar.gz",
+        "file_name": "poljradiol-80-40-g011.jpg"
+    },
+    "train/radiology/images/ROCO_50808.jpg": {
+        "local": 20032,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/ae/f6/PMC3277484.tar.gz",
+        "file_name": "1752-1947-6-32-2.jpg"
+    },
+    "train/radiology/images/ROCO_04892.jpg": {
+        "local": 20029,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/4c/fa/PMC5662851.tar.gz",
+        "file_name": "asj-11-700-g003.jpg"
+    },
+    "train/radiology/images/ROCO_31119.jpg": {
+        "local": 20161,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/19/e3/PMC2908802.tar.gz",
+        "file_name": "jkms-25-1247-g003.jpg"
+    },
+    "train/radiology/images/ROCO_09352.jpg": {
+        "local": 20150,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/ba/8c/PMC3021939.tar.gz",
+        "file_name": "AIAN-13-308-g001.jpg"
+    },
+    "validation/radiology/images/ROCO_39258.jpg": {
+        "local": 20038,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/7f/c3/PMC107839.tar.gz",
+        "file_name": "1471-2296-3-6-2.jpg"
+    },
+    "train/radiology/images/ROCO_40628.jpg": {
+        "local": 20131,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/ce/56/PMC3623094.tar.gz",
+        "file_name": "ebsj01069-2.jpg"
+    },
+    "train/radiology/images/ROCO_66160.jpg": {
+        "local": 20003,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/b5/79/PMC4472283.tar.gz",
+        "file_name": "10-1055-s-0035-1549432-i1400022cr-7.jpg"
+    },
+    "test/radiology/images/ROCO_20327.jpg": {
+        "local": 20002,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/7c/bd/PMC3814995.tar.gz",
+        "file_name": "SNI-4-130-g001.jpg"
+    },
+    "train/radiology/images/ROCO_06181.jpg": {
+        "local": 20012,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/8f/49/PMC5110914.tar.gz",
+        "file_name": "kjn-12-180-g002.jpg"
+    },
+    "train/radiology/images/ROCO_29740.jpg": {
+        "local": 20216,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/42/0f/PMC4262055.tar.gz",
+        "file_name": "poljradiol-79-461-g003.jpg"
+    },
+    "train/radiology/images/ROCO_34261.jpg": {
+        "local": 20004,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/a0/34/PMC3335667.tar.gz",
+        "file_name": "TRT2011-483802.001.jpg"
+    },
+    "train/radiology/images/ROCO_53813.jpg": {
+        "local": 20136,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/95/2d/PMC3903806.tar.gz",
+        "file_name": "kjpain-27-77-g002.jpg"
+    },
+    "train/radiology/images/ROCO_46814.jpg": {
+        "local": 20016,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/e9/78/PMC5742915.tar.gz",
+        "file_name": "SNI-8-301-g003.jpg"
+    },
+    "train/radiology/images/ROCO_66856.jpg": {
+        "local": 20188,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/a2/fd/PMC5523509.tar.gz",
+        "file_name": "SNI-8-139-g004.jpg"
+    },
+    "train/radiology/images/ROCO_37683.jpg": {
+        "local": 20160,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/29/b0/PMC3756868.tar.gz",
+        "file_name": "umj0082-100-f6.jpg"
+    },
+    "train/radiology/images/ROCO_78993.jpg": {
+        "local": 20154,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/29/b0/PMC3756868.tar.gz",
+        "file_name": "umj0082-100-f14.jpg"
+    },
+    "train/radiology/images/ROCO_14355.jpg": {
+        "local": 20049,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/7d/9c/PMC4577332.tar.gz",
+        "file_name": "10-1055-s-0035-1546417-i1400052-2.jpg"
+    },
+    "train/radiology/images/ROCO_46338.jpg": {
+        "local": 20025,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/df/b4/PMC2857501.tar.gz",
+        "file_name": "asj-1-38-g001.jpg"
+    },
+    "train/radiology/images/ROCO_00519.jpg": {
+        "local": 20163,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/38/3e/PMC4577313.tar.gz",
+        "file_name": "10-1055-s-0035-1546953-i1400095-3.jpg"
+    },
+    "validation/radiology/images/ROCO_80980.jpg": {
+        "local": 20022,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/53/b3/PMC3852820.tar.gz",
+        "file_name": "1756-0500-6-412-4.jpg"
+    },
+    "train/radiology/images/ROCO_70598.jpg": {
+        "local": 20091,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/58/33/PMC4553737.tar.gz",
+        "file_name": "AJNS-10-222-g001.jpg"
+    },
+    "train/radiology/images/ROCO_58846.jpg": {
+        "local": 20060,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/23/c1/PMC3519072.tar.gz",
+        "file_name": "JPN-7-129-g003.jpg"
+    },
+    "train/radiology/images/ROCO_06069.jpg": {
+        "local": 20000,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/0c/2c/PMC5034018.tar.gz",
+        "file_name": "JoU-2016-0024-g011.jpg"
+    },
+    "train/radiology/images/ROCO_50748.jpg": {
+        "local": 20181,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/45/d6/PMC3632845.tar.gz",
+        "file_name": "umj0082-0023-f3.jpg"
+    },
+    "train/radiology/images/ROCO_52097.jpg": {
+        "local": 20098,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/e6/48/PMC4756188.tar.gz",
+        "file_name": "gr3.jpg"
+    },
+    "validation/radiology/images/ROCO_63793.jpg": {
+        "local": 20162,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/d0/a7/PMC5415381.tar.gz",
+        "file_name": "cureus-0009-00000001130-i04.jpg"
+    },
+    "train/radiology/images/ROCO_52999.jpg": {
+        "local": 20107,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/2f/12/PMC4860520.tar.gz",
+        "file_name": "omw03602.jpg"
+    },
+    "train/radiology/images/ROCO_66035.jpg": {
+        "local": 20047,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/30/4d/PMC4295072.tar.gz",
+        "file_name": "CroatMedJ_55_0562-F3.jpg"
+    },
+    "validation/radiology/images/ROCO_62185.jpg": {
+        "local": 20015,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/b0/fa/PMC5295539.tar.gz",
+        "file_name": "cr-06-257-g002.jpg"
+    },
+    "train/radiology/images/ROCO_17031.jpg": {
+        "local": 20217,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/16/17/PMC4008282.tar.gz",
+        "file_name": "CRIM.CARDIOLOGY2012-652086.001.jpg"
+    },
+    "test/radiology/images/ROCO_77968.jpg": {
+        "local": 20092,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/c3/fc/PMC3717425.tar.gz",
+        "file_name": "kcj-43-411-g005.jpg"
+    },
+    "train/radiology/images/ROCO_18204.jpg": {
+        "local": 20117,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/82/01/PMC2831875.tar.gz",
+        "file_name": "1756-6614-3-1-2.jpg"
+    },
+    "train/radiology/images/ROCO_49208.jpg": {
+        "local": 20082,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/ad/2e/PMC2796416.tar.gz",
+        "file_name": "ymj-50-852-g003.jpg"
+    },
+    "train/radiology/images/ROCO_68615.jpg": {
+        "local": 20086,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/de/25/PMC3132695.tar.gz",
+        "file_name": "kcj-41-327-g003.jpg"
+    },
+    "train/radiology/images/ROCO_63659.jpg": {
+        "local": 20075,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/9e/94/PMC3849523.tar.gz",
+        "file_name": "1477-9560-11-19-5.jpg"
+    },
+    "train/radiology/images/ROCO_51660.jpg": {
+        "local": 20020,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/9d/62/PMC2890517.tar.gz",
+        "file_name": "1749-8090-5-49-1.jpg"
+    },
+    "validation/radiology/images/ROCO_22682.jpg": {
+        "local": 20104,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/de/25/PMC3132695.tar.gz",
+        "file_name": "kcj-41-327-g002.jpg"
+    },
+    "train/radiology/images/ROCO_20723.jpg": {
+        "local": 20156,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/75/5c/PMC2848682.tar.gz",
+        "file_name": "1752-1947-4-94-3.jpg"
+    },
+    "validation/radiology/images/ROCO_58591.jpg": {
+        "local": 20151,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/40/7c/PMC4909932.tar.gz",
+        "file_name": "gr2.jpg"
+    },
+    "train/radiology/images/ROCO_52702.jpg": {
+        "local": 20030,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/b6/73/PMC3214859.tar.gz",
+        "file_name": "cmj-47-57-g001.jpg"
+    },
+    "train/radiology/images/ROCO_62765.jpg": {
+        "local": 20130,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/18/e4/PMC4774630.tar.gz",
+        "file_name": "CCR-11-277_F4.jpg"
+    },
+    "train/radiology/images/ROCO_72230.jpg": {
+        "local": 20167,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/93/64/PMC5084387.tar.gz",
+        "file_name": "12872_2016_378_Fig2_HTML.jpg"
+    },
+    "validation/radiology/images/ROCO_67837.jpg": {
+        "local": 20119,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/ae/99/PMC4008273.tar.gz",
+        "file_name": "CRIM.CARDIOLOGY2012-954951.001.jpg"
+    },
+    "train/radiology/images/ROCO_04544.jpg": {
+        "local": 20200,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/4f/a1/PMC3443728.tar.gz",
+        "file_name": "kjim-27-342-g002.jpg"
+    },
+    "train/radiology/images/ROCO_02865.jpg": {
+        "local": 20028,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/29/ac/PMC3152740.tar.gz",
+        "file_name": "kcj-41-417-g004.jpg"
+    },
+    "train/radiology/images/ROCO_56364.jpg": {
+        "local": 20227,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/76/00/PMC4124836.tar.gz",
+        "file_name": "CRIC2014-427045.001.jpg"
+    },
+    "validation/radiology/images/ROCO_70055.jpg": {
+        "local": 20051,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/14/e4/PMC5480679.tar.gz",
+        "file_name": "10.1177_2050313X16672382-fig1.jpg"
+    },
+    "train/radiology/images/ROCO_10245.jpg": {
+        "local": 20210,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/16/17/PMC4008282.tar.gz",
+        "file_name": "CRIM.CARDIOLOGY2012-652086.004.jpg"
+    },
+    "train/radiology/images/ROCO_41444.jpg": {
+        "local": 20211,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/53/06/PMC3232530.tar.gz",
+        "file_name": "IPC-6-31-g001.jpg"
+    },
+    "train/radiology/images/ROCO_07577.jpg": {
+        "local": 20221,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/73/cb/PMC5051133.tar.gz",
+        "file_name": "gr-06-240-g001.jpg"
+    },
+    "train/radiology/images/ROCO_11801.jpg": {
+        "local": 20013,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/6b/1d/PMC3797947.tar.gz",
+        "file_name": "ce-46-576-g002.jpg"
+    },
+    "train/radiology/images/ROCO_25355.jpg": {
+        "local": 20007,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/05/88/PMC4064162.tar.gz",
+        "file_name": "EUS-3-135-g002.jpg"
+    },
+    "train/radiology/images/ROCO_49350.jpg": {
+        "local": 20175,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/bf/fd/PMC3088755.tar.gz",
+        "file_name": "crg0005-0232-f02.jpg"
+    },
+    "validation/radiology/images/ROCO_77116.jpg": {
+        "local": 20165,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/95/8f/PMC4508953.tar.gz",
+        "file_name": "crj-02-239-g003.jpg"
+    },
+    "train/radiology/images/ROCO_30230.jpg": {
+        "local": 20052,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/c3/7b/PMC4742049.tar.gz",
+        "file_name": "PAMJ-22-145-g001.jpg"
+    },
+    "train/radiology/images/ROCO_35577.jpg": {
+        "local": 20105,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/c5/c1/PMC5051156.tar.gz",
+        "file_name": "gr-06-112-g006.jpg"
+    },
+    "validation/radiology/images/ROCO_68405.jpg": {
+        "local": 20133,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/11/86/PMC5058990.tar.gz",
+        "file_name": "medi-94-e2088-g006.jpg"
+    },
+    "train/radiology/images/ROCO_39982.jpg": {
+        "local": 20071,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/c3/4b/PMC5400498.tar.gz",
+        "file_name": "rjx067f01.jpg"
+    },
+    "train/radiology/images/ROCO_20933.jpg": {
+        "local": 20068,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/c9/a3/PMC4531926.tar.gz",
+        "file_name": "kjim-14-2-1-1f2.jpg"
+    },
+    "train/radiology/images/ROCO_40445.jpg": {
+        "local": 20189,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/5b/b3/PMC5062654.tar.gz",
+        "file_name": "CG-CGCR160021F002.jpg"
+    },
+    "train/radiology/images/ROCO_00986.jpg": {
+        "local": 20149,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/a7/e9/PMC3891028.tar.gz",
+        "file_name": "kjim-21-236-g002.jpg"
+    },
+    "train/radiology/images/ROCO_25927.jpg": {
+        "local": 20001,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/a9/22/PMC4895099.tar.gz",
+        "file_name": "gr5b.jpg"
+    },
+    "train/radiology/images/ROCO_52597.jpg": {
+        "local": 20126,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/ea/5d/PMC2740269.tar.gz",
+        "file_name": "1757-1626-0002-0000007029-002.jpg"
+    },
+    "train/radiology/images/ROCO_38374.jpg": {
+        "local": 20205,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/43/87/PMC4423457.tar.gz",
+        "file_name": "gou048f1p.jpg"
+    },
+    "train/radiology/images/ROCO_76859.jpg": {
+        "local": 20037,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/6b/75/PMC4475520.tar.gz",
+        "file_name": "CRIS2015-353818.001.jpg"
+    },
+    "train/radiology/images/ROCO_26026.jpg": {
+        "local": 20152,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/d8/cb/PMC2828985.tar.gz",
+        "file_name": "1471-230X-10-17-2.jpg"
+    },
+    "train/radiology/images/ROCO_46224.jpg": {
+        "local": 20198,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/54/bf/PMC2823681.tar.gz",
+        "file_name": "1746-1596-5-4-1.jpg"
+    },
+    "train/radiology/images/ROCO_78814.jpg": {
+        "local": 20116,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/8b/de/PMC4433139.tar.gz",
+        "file_name": "vim-0031-0007-g01.jpg"
+    },
+    "train/radiology/images/ROCO_52190.jpg": {
+        "local": 20009,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/19/9e/PMC4700844.tar.gz",
+        "file_name": "AnnGastroenterol-29-33-g002.jpg"
+    },
+    "validation/radiology/images/ROCO_76809.jpg": {
+        "local": 20112,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/23/97/PMC5003501.tar.gz",
+        "file_name": "traumamon-21-02-21115-g002.jpg"
+    },
+    "train/radiology/images/ROCO_00124.jpg": {
+        "local": 20010,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/98/67/PMC5116499.tar.gz",
+        "file_name": "CRIS2016-5321081.003.jpg"
+    },
+    "train/radiology/images/ROCO_33192.jpg": {
+        "local": 20041,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/dc/b1/PMC2872600.tar.gz",
+        "file_name": "cmo-2009-059f2.jpg"
+    },
+    "train/radiology/images/ROCO_61346.jpg": {
+        "local": 20026,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/94/51/PMC4423308.tar.gz",
+        "file_name": "10-1055-s-0034-1390744-i111ei2.jpg"
+    },
+    "train/radiology/images/ROCO_06239.jpg": {
+        "local": 20148,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/4d/2e/PMC2977075.tar.gz",
+        "file_name": "270_2010_9943_Fig6_HTML.jpg"
+    },
+    "train/radiology/images/ROCO_45414.jpg": {
+        "local": 20166,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/8e/b0/PMC3891419.tar.gz",
+        "file_name": "kjim-20-80-g005.jpg"
+    },
+    "train/radiology/images/ROCO_50034.jpg": {
+        "local": 20088,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/a4/b1/PMC3412185.tar.gz",
+        "file_name": "jkss-83-119-g002.jpg"
+    },
+    "validation/radiology/images/ROCO_78617.jpg": {
+        "local": 20064,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/c8/1f/PMC5021652.tar.gz",
+        "file_name": "40064_2016_3209_Fig1_HTML.jpg"
+    },
+    "train/radiology/images/ROCO_40786.jpg": {
+        "local": 20197,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/e6/7c/PMC3744712.tar.gz",
+        "file_name": "jkms-28-1220-g001.jpg"
+    },
+    "validation/radiology/images/ROCO_79518.jpg": {
+        "local": 20042,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/ad/2c/PMC4532129.tar.gz",
+        "file_name": "kjim-3-1-88-15f1.jpg"
+    },
+    "train/radiology/images/ROCO_22814.jpg": {
+        "local": 20087,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/a6/7c/PMC2881112.tar.gz",
+        "file_name": "1471-230X-10-2-6.jpg"
+    },
+    "train/radiology/images/ROCO_21136.jpg": {
+        "local": 20145,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/bc/bc/PMC5064422.tar.gz",
+        "file_name": "CG-CGCR160079F002.jpg"
+    },
+    "train/radiology/images/ROCO_10810.jpg": {
+        "local": 20135,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/24/b4/PMC5636918.tar.gz",
+        "file_name": "CG-CGCR170079F005.jpg"
+    },
+    "train/radiology/images/ROCO_23482.jpg": {
+        "local": 20225,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/97/72/PMC4604280.tar.gz",
+        "file_name": "ce-48-411-g009.jpg"
+    },
+    "train/radiology/images/ROCO_02690.jpg": {
+        "local": 20083,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/3a/8f/PMC5730652.tar.gz",
+        "file_name": "gr2.jpg"
+    },
+    "train/radiology/images/ROCO_80484.jpg": {
+        "local": 20078,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/6a/34/PMC4898178.tar.gz",
+        "file_name": "gr4.jpg"
+    },
+    "train/radiology/images/ROCO_75983.jpg": {
+        "local": 20035,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/1f/80/PMC1766022.tar.gz",
+        "file_name": "330_2006_333_Fig8_HTML.jpg"
+    },
+    "validation/radiology/images/ROCO_26319.jpg": {
+        "local": 20005,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/4f/87/PMC5016909.tar.gz",
+        "file_name": "iort-87-497.F01.jpg"
+    },
+    "train/radiology/images/ROCO_37503.jpg": {
+        "local": 20057,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/71/05/PMC5016928.tar.gz",
+        "file_name": "13018_2016_431_Fig4_HTML.jpg"
+    },
+    "train/radiology/images/ROCO_66438.jpg": {
+        "local": 20212,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/96/d4/PMC4579753.tar.gz",
+        "file_name": "JoU-2015-0017-g005.jpg"
+    },
+    "test/radiology/images/ROCO_24120.jpg": {
+        "local": 20184,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/e7/80/PMC5694994.tar.gz",
+        "file_name": "CRIOR2017-9307259.003.jpg"
+    },
+    "train/radiology/images/ROCO_19922.jpg": {
+        "local": 20199,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/d7/08/PMC4077873.tar.gz",
+        "file_name": "oajsm-5-151Fig3.jpg"
+    },
+    "test/radiology/images/ROCO_43661.jpg": {
+        "local": 20077,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/92/56/PMC4443412.tar.gz",
+        "file_name": "IJOrtho-49-304-g001.jpg"
+    },
+    "train/radiology/images/ROCO_55477.jpg": {
+        "local": 20065,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/22/9d/PMC3177464.tar.gz",
+        "file_name": "JCIS-1-22-g003.jpg"
+    },
+    "train/radiology/images/ROCO_46828.jpg": {
+        "local": 20143,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/83/49/PMC5380787.tar.gz",
+        "file_name": "gr2.jpg"
+    },
+    "train/radiology/images/ROCO_39233.jpg": {
+        "local": 20024,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/d8/35/PMC5439322.tar.gz",
+        "file_name": "IJOrtho-51-334-g002.jpg"
+    },
+    "test/radiology/images/ROCO_54039.jpg": {
+        "local": 20219,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/ba/cd/PMC4478831.tar.gz",
+        "file_name": "SJA-9-327-g001.jpg"
+    },
+    "train/radiology/images/ROCO_01976.jpg": {
+        "local": 20144,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/82/ea/PMC4055069.tar.gz",
+        "file_name": "CRIS2014-747951.002.jpg"
+    },
+    "train/radiology/images/ROCO_76236.jpg": {
+        "local": 20061,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/9d/30/PMC4515470.tar.gz",
+        "file_name": "cios-7-264-g002.jpg"
+    },
+    "train/radiology/images/ROCO_77395.jpg": {
+        "local": 20054,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/87/a8/PMC3086325.tar.gz",
+        "file_name": "SHORTS-10-10102.jpg"
+    },
+    "validation/radiology/images/ROCO_46491.jpg": {
+        "local": 20132,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/08/d0/PMC4432360.tar.gz",
+        "file_name": "kjs-9-118-g002.jpg"
+    },
+    "train/radiology/images/ROCO_03795.jpg": {
+        "local": 20190,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/ba/16/PMC5288636.tar.gz",
+        "file_name": "JOCR-6-9-g003.jpg"
+    },
+    "train/radiology/images/ROCO_50711.jpg": {
+        "local": 20204,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/8f/18/PMC5440777.tar.gz",
+        "file_name": "gr5.jpg"
+    },
+    "validation/radiology/images/ROCO_60785.jpg": {
+        "local": 20178,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/c9/e2/PMC4476323.tar.gz",
+        "file_name": "PJMS-31-263-g005.jpg"
+    },
+    "train/radiology/images/ROCO_27150.jpg": {
+        "local": 20102,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/99/c4/PMC5065670.tar.gz",
+        "file_name": "WJO-7-638-g011.jpg"
+    },
+    "test/radiology/images/ROCO_47119.jpg": {
+        "local": 20093,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/3c/48/PMC5556859.tar.gz",
+        "file_name": "acfs-16-99-g005.jpg"
+    },
+    "train/radiology/images/ROCO_59334.jpg": {
+        "local": 20146,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/b9/be/PMC2804007.tar.gz",
+        "file_name": "1757-1626-2-9360-1.jpg"
+    },
+    "train/radiology/images/ROCO_78776.jpg": {
+        "local": 20031,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/31/0f/PMC4531743.tar.gz",
+        "file_name": "kjim-15-1-96-18f1.jpg"
+    },
+    "train/radiology/images/ROCO_14607.jpg": {
+        "local": 20019,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/b7/47/PMC5653603.tar.gz",
+        "file_name": "11751_2017_296_Fig3_HTML.jpg"
+    },
+    "train/radiology/images/ROCO_19972.jpg": {
+        "local": 20100,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/26/03/PMC4623548.tar.gz",
+        "file_name": "icrp-2-037-g004.jpg"
+    },
+    "train/radiology/images/ROCO_62889.jpg": {
+        "local": 20138,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/c1/ec/PMC3863657.tar.gz",
+        "file_name": "asj-7-308-g001.jpg"
+    },
+    "train/radiology/images/ROCO_64661.jpg": {
+        "local": 20101,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/97/28/PMC5731169.tar.gz",
+        "file_name": "cro-0010-0954-g01.jpg"
+    },
+    "train/radiology/images/ROCO_32030.jpg": {
+        "local": 20067,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/ca/e2/PMC3247729.tar.gz",
+        "file_name": "sensors-10-05724f3.jpg"
+    },
+    "train/radiology/images/ROCO_53061.jpg": {
+        "local": 20182,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/e1/2f/PMC3445133.tar.gz",
+        "file_name": "10.1177_1941738110397875-fig3.jpg"
+    },
+    "train/radiology/images/ROCO_02691.jpg": {
+        "local": 20122,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/69/33/PMC5458692.tar.gz",
+        "file_name": "JOCR-7-28-g001.jpg"
+    },
+    "train/radiology/images/ROCO_16164.jpg": {
+        "local": 20114,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/4c/53/PMC1796545.tar.gz",
+        "file_name": "1749-7922-2-1-10.jpg"
+    },
+    "train/radiology/images/ROCO_11812.jpg": {
+        "local": 20044,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/7a/6a/PMC3836933.tar.gz",
+        "file_name": "jkns-54-239-g004.jpg"
+    },
+    "test/radiology/images/ROCO_66709.jpg": {
+        "local": 20213,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/85/08/PMC3423047.tar.gz",
+        "file_name": "1752-1947-6-186-7.jpg"
+    },
+    "validation/radiology/images/ROCO_45351.jpg": {
+        "local": 20123,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/51/3e/PMC2722015.tar.gz",
+        "file_name": "jkms-21-958-g007.jpg"
+    },
+    "train/radiology/images/ROCO_70184.jpg": {
+        "local": 20222,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/2f/a5/PMC5678218.tar.gz",
+        "file_name": "jcen-19-96-g004.jpg"
+    },
+    "train/radiology/images/ROCO_72065.jpg": {
+        "local": 20201,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/78/2f/PMC3424179.tar.gz",
+        "file_name": "jkns-51-370-g001.jpg"
+    },
+    "train/radiology/images/ROCO_31423.jpg": {
+        "local": 20108,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/c0/3a/PMC4661477.tar.gz",
+        "file_name": "gr6.jpg"
+    },
+    "train/radiology/images/ROCO_51900.jpg": {
+        "local": 20106,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/99/69/PMC3935525.tar.gz",
+        "file_name": "jocmr-06-149-g004.jpg"
+    },
+    "train/radiology/images/ROCO_14905.jpg": {
+        "local": 20072,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/3f/d4/PMC5659302.tar.gz",
+        "file_name": "cureus-0009-00000001622-i05.jpg"
+    },
+    "train/radiology/images/ROCO_21866.jpg": {
+        "local": 20109,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/3f/d4/PMC5659302.tar.gz",
+        "file_name": "cureus-0009-00000001622-i06.jpg"
+    },
+    "train/radiology/images/ROCO_66056.jpg": {
+        "local": 20224,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/99/77/PMC4900126.tar.gz",
+        "file_name": "gr5.jpg"
+    },
+    "train/radiology/images/ROCO_52712.jpg": {
+        "local": 20223,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/99/77/PMC4900126.tar.gz",
+        "file_name": "gr4.jpg"
+    },
+    "train/radiology/images/ROCO_31533.jpg": {
+        "local": 20194,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/85/08/PMC3423047.tar.gz",
+        "file_name": "1752-1947-6-186-4.jpg"
+    },
+    "validation/radiology/images/ROCO_09106.jpg": {
+        "local": 20099,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/85/08/PMC3423047.tar.gz",
+        "file_name": "1752-1947-6-186-6.jpg"
+    },
+    "train/radiology/images/ROCO_12400.jpg": {
+        "local": 20128,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/63/2d/PMC5554980.tar.gz",
+        "file_name": "gr4.jpg"
+    },
+    "validation/radiology/images/ROCO_25199.jpg": {
+        "local": 20202,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/9e/4b/PMC4438410.tar.gz",
+        "file_name": "sft09602.jpg"
+    },
+    "validation/radiology/images/ROCO_75449.jpg": {
+        "local": 20168,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/02/f3/PMC5385974.tar.gz",
+        "file_name": "med-12-001-g002.jpg"
+    },
+    "train/radiology/images/ROCO_66354.jpg": {
+        "local": 20011,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/61/45/PMC4899676.tar.gz",
+        "file_name": "gr5.jpg"
+    },
+    "train/radiology/images/ROCO_61927.jpg": {
+        "local": 20046,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/1c/59/PMC2014766.tar.gz",
+        "file_name": "1752-1947-1-82-4.jpg"
+    },
+    "train/radiology/images/ROCO_11735.jpg": {
+        "local": 20070,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/68/ce/PMC5310245.tar.gz",
+        "file_name": "gr5.jpg"
+    },
+    "train/radiology/images/ROCO_55872.jpg": {
+        "local": 20084,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/57/76/PMC5470832.tar.gz",
+        "file_name": "poljradiol-82-304-g003.jpg"
+    },
+    "train/radiology/images/ROCO_33944.jpg": {
+        "local": 20079,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/d4/6d/PMC5045565.tar.gz",
+        "file_name": "gr2.jpg"
+    },
+    "train/radiology/images/ROCO_65564.jpg": {
+        "local": 20085,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/c9/a8/PMC324567.tar.gz",
+        "file_name": "1476-7120-2-1-3.jpg"
+    },
+    "train/radiology/images/ROCO_64197.jpg": {
+        "local": 20017,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/69/48/PMC3851821.tar.gz",
+        "file_name": "1477-7819-11-238-2.jpg"
+    },
+    "test/radiology/images/ROCO_14725.jpg": {
+        "local": 20207,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/70/fd/PMC3423673.tar.gz",
+        "file_name": "rado-44-01-30f2.jpg"
+    },
+    "train/radiology/images/ROCO_38948.jpg": {
+        "local": 20215,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/31/af/PMC3843324.tar.gz",
+        "file_name": "IJRI-23-198-g005.jpg"
+    },
+    "train/radiology/images/ROCO_76672.jpg": {
+        "local": 20115,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/8c/2d/PMC3094658.tar.gz",
+        "file_name": "10194_2011_305_Fig2_HTML.jpg"
+    },
+    "test/radiology/images/ROCO_14887.jpg": {
+        "local": 20174,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/47/df/PMC4731074.tar.gz",
+        "file_name": "pone.0147838.g001.jpg"
+    },
+    "validation/radiology/images/ROCO_81353.jpg": {
+        "local": 20036,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/a8/bd/PMC5221689.tar.gz",
+        "file_name": "AOJNMB-5-70-g002.jpg"
+    },
+    "test/radiology/images/ROCO_33619.jpg": {
+        "local": 20137,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/8d/e7/PMC3972028.tar.gz",
+        "file_name": "tcrm-10-207Fig9.jpg"
+    },
+    "test/radiology/images/ROCO_46639.jpg": {
+        "local": 20089,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/a5/ea/PMC5270036.tar.gz",
+        "file_name": "ipc-18-1-g005.jpg"
+    },
+    "train/radiology/images/ROCO_61778.jpg": {
+        "local": 20048,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/c0/49/PMC4531957.tar.gz",
+        "file_name": "kjim-12-1-70-13f2.jpg"
+    },
+    "validation/radiology/images/ROCO_08632.jpg": {
+        "local": 20080,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/84/8f/PMC3669552.tar.gz",
+        "file_name": "LI-30-124-g004.jpg"
+    },
+    "train/radiology/images/ROCO_16288.jpg": {
+        "local": 20124,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/82/40/PMC3781618.tar.gz",
+        "file_name": "TJH-29-397-g2.jpg"
+    },
+    "train/radiology/images/ROCO_76138.jpg": {
+        "local": 20125,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/01/5b/PMC2698626.tar.gz",
+        "file_name": "kjim-24-156-g002.jpg"
+    },
+    "train/radiology/images/ROCO_41047.jpg": {
+        "local": 20158,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/48/49/PMC4896176.tar.gz",
+        "file_name": "gr3.jpg"
+    },
+    "train/radiology/images/ROCO_47414.jpg": {
+        "local": 20139,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/3f/77/PMC3022890.tar.gz",
+        "file_name": "1471-2407-10-696-3.jpg"
+    },
+    "validation/radiology/images/ROCO_56172.jpg": {
+        "local": 20171,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/70/69/PMC4399508.tar.gz",
+        "file_name": "omu03201.jpg"
+    },
+    "train/radiology/images/ROCO_11371.jpg": {
+        "local": 20118,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/ac/95/PMC2647177.tar.gz",
+        "file_name": "kjr-10-21-g004.jpg"
+    },
+    "train/radiology/images/ROCO_09042.jpg": {
+        "local": 20055,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/3f/77/PMC3022890.tar.gz",
+        "file_name": "1471-2407-10-696-4.jpg"
+    },
+    "train/radiology/images/ROCO_31680.jpg": {
+        "local": 20183,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/de/5d/PMC4890335.tar.gz",
+        "file_name": "13104_2016_2094_Fig1_HTML.jpg"
+    },
+    "train/radiology/images/ROCO_50234.jpg": {
+        "local": 20203,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/05/d5/PMC3533857.tar.gz",
+        "file_name": "1752-1947-6-411-1.jpg"
+    },
+    "train/radiology/images/ROCO_60136.jpg": {
+        "local": 20180,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/7f/10/PMC4246355.tar.gz",
+        "file_name": "gr3.jpg"
+    },
+    "train/radiology/images/ROCO_23315.jpg": {
+        "local": 20134,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/7d/7e/PMC3780951.tar.gz",
+        "file_name": "ic-45-234-g002.jpg"
+    },
+    "train/radiology/images/ROCO_32382.jpg": {
+        "local": 20127,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/9e/ae/PMC5589510.tar.gz",
+        "file_name": "cureus-0009-00000001445-i06.jpg"
+    },
+    "validation/radiology/images/ROCO_15256.jpg": {
+        "local": 20185,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/e1/1b/PMC4414643.tar.gz",
+        "file_name": "jkms-30-591-g004.jpg"
+    },
+    "validation/radiology/images/ROCO_55975.jpg": {
+        "local": 20023,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/8a/0b/PMC4823418.tar.gz",
+        "file_name": "kjae-69-189-g002.jpg"
+    },
+    "test/radiology/images/ROCO_18846.jpg": {
+        "local": 20214,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/6d/2f/PMC3214369.tar.gz",
+        "file_name": "JRMS-16-591-g005.jpg"
+    },
+    "train/radiology/images/ROCO_09202.jpg": {
+        "local": 20050,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/04/b2/PMC5713496.tar.gz",
+        "file_name": "amjcaserep-18-1242-g002.jpg"
+    },
+    "train/radiology/images/ROCO_13508.jpg": {
+        "local": 20140,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/58/5b/PMC3522375.tar.gz",
+        "file_name": "iranjradiol-09-122-g002.jpg"
+    },
+    "train/radiology/images/ROCO_36675.jpg": {
+        "local": 20097,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/47/d7/PMC4184605.tar.gz",
+        "file_name": "ccr30002-0108-f2.jpg"
+    },
+    "test/radiology/images/ROCO_62204.jpg": {
+        "local": 20103,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/0f/5f/PMC5474368.tar.gz",
+        "file_name": "1806-3713-jbpneu-43-02-00085-gf1.jpg"
+    },
+    "train/radiology/images/ROCO_50099.jpg": {
+        "local": 20006,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/92/78/PMC2880241.tar.gz",
+        "file_name": "10140_2010_859_Fig2_HTML.jpg"
+    },
+    "validation/radiology/images/ROCO_21013.jpg": {
+        "local": 20021,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/e4/44/PMC2579999.tar.gz",
+        "file_name": "jkms-23-916-g004.jpg"
+    },
+    "train/radiology/images/ROCO_27261.jpg": {
+        "local": 20159,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/2f/30/PMC5617949.tar.gz",
+        "file_name": "diagnostics-07-00049-g002.jpg"
+    },
+    "train/radiology/images/ROCO_09034.jpg": {
+        "local": 20056,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/09/3d/PMC4898228.tar.gz",
+        "file_name": "gr1.jpg"
+    },
+    "train/radiology/images/ROCO_68501.jpg": {
+        "local": 20095,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/8c/bf/PMC4046599.tar.gz",
+        "file_name": "IJEM-17-696-g002.jpg"
+    },
+    "test/radiology/images/ROCO_72435.jpg": {
+        "local": 20043,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/ad/57/PMC2014763.tar.gz",
+        "file_name": "1752-1947-1-77-4.jpg"
+    },
+    "validation/radiology/images/ROCO_24456.jpg": {
+        "local": 20179,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/1b/7b/PMC5722126.tar.gz",
+        "file_name": "gr2.jpg"
+    },
+    "train/radiology/images/ROCO_72094.jpg": {
+        "local": 20033,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/ad/57/PMC2014763.tar.gz",
+        "file_name": "1752-1947-1-77-1.jpg"
+    },
+    "validation/radiology/images/ROCO_38935.jpg": {
+        "local": 20111,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/9c/9b/PMC5534902.tar.gz",
+        "file_name": "bcr-2016-217912f02.jpg"
+    },
+    "train/radiology/images/ROCO_79217.jpg": {
+        "local": 20094,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/10/7e/PMC3272911.tar.gz",
+        "file_name": "JCIS-1-43-g005.jpg"
+    },
+    "test/radiology/images/ROCO_80895.jpg": {
+        "local": 20169,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/0c/87/PMC3691895.tar.gz",
+        "file_name": "CRIM.OTOLARYNGOLOGY2013-957926.001.jpg"
+    },
+    "train/radiology/images/ROCO_41017.jpg": {
+        "local": 20226,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/7c/74/PMC5375703.tar.gz",
+        "file_name": "10-1055-s-0036-1584266-i0423or-11.jpg"
+    },
+    "train/radiology/images/ROCO_31554.jpg": {
+        "local": 20074,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/97/0d/PMC3687652.tar.gz",
+        "file_name": "cpe-21-075-g002.jpg"
+    },
+    "train/radiology/images/ROCO_14808.jpg": {
+        "local": 20206,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/83/b0/PMC3981335.tar.gz",
+        "file_name": "cp-2012-1-e5-g002.jpg"
+    },
+    "validation/radiology/images/ROCO_10051.jpg": {
+        "local": 20187,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/84/72/PMC3173836.tar.gz",
+        "file_name": "JCIS-1-10-g004.jpg"
+    },
+    "train/radiology/images/ROCO_28204.jpg": {
+        "local": 20062,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/e6/eb/PMC3189534.tar.gz",
+        "file_name": "isd-41-107-g003.jpg"
+    },
+    "train/radiology/images/ROCO_47082.jpg": {
+        "local": 20090,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/30/c3/PMC2769358.tar.gz",
+        "file_name": "1757-1626-0002-0000007509-001.jpg"
+    },
+    "validation/radiology/images/ROCO_38505.jpg": {
+        "local": 20063,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/2b/2f/PMC4855083.tar.gz",
+        "file_name": "kjim-2014-031f3.jpg"
+    },
+    "validation/radiology/images/ROCO_08963.jpg": {
+        "local": 20018,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/14/74/PMC3965272.tar.gz",
+        "file_name": "edmcr-2014-130057-g002.jpg"
+    },
+    "train/radiology/images/ROCO_00732.jpg": {
+        "local": 20186,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/96/d6/PMC3953676.tar.gz",
+        "file_name": "fonc-04-00044-g001.jpg"
+    },
+    "train/radiology/images/ROCO_54188.jpg": {
+        "local": 20141,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/8a/7e/PMC3116539.tar.gz",
+        "file_name": "IJO-59-111-g002.jpg"
+    },
+    "train/radiology/images/ROCO_20481.jpg": {
+        "local": 20110,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/d3/6f/PMC3116551.tar.gz",
+        "file_name": "IJO-59-162-g002.jpg"
+    },
+    "train/radiology/images/ROCO_42326.jpg": {
+        "local": 20191,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/a5/d4/PMC4866068.tar.gz",
+        "file_name": "SNI-7-51-g004.jpg"
+    },
+    "train/radiology/images/ROCO_16870.jpg": {
+        "local": 20096,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/94/d1/PMC3039196.tar.gz",
+        "file_name": "kjo-25-54-g002.jpg"
+    },
+    "train/radiology/images/ROCO_27574.jpg": {
+        "local": 20129,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/3c/cb/PMC4364005.tar.gz",
+        "file_name": "CRIU2015-263978.005.jpg"
+    },
+    "train/radiology/images/ROCO_43161.jpg": {
+        "local": 20076,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/c8/0d/PMC4450038.tar.gz",
+        "file_name": "PAMJ-20-89-g001.jpg"
+    },
+    "train/radiology/images/ROCO_56075.jpg": {
+        "local": 20039,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/05/13/PMC5402823.tar.gz",
+        "file_name": "AAM-15-87-g002.jpg"
+    },
+    "train/radiology/images/ROCO_35744.jpg": {
+        "local": 20120,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/bf/c6/PMC4900030.tar.gz",
+        "file_name": "gr1.jpg"
+    },
+    "train/radiology/images/ROCO_52594.jpg": {
+        "local": 20173,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/c3/6d/PMC4027118.tar.gz",
+        "file_name": "btrt-1-28-g003.jpg"
+    },
+    "train/radiology/images/ROCO_26897.jpg": {
+        "local": 20059,
+        "dlink": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/5e/a3/PMC5532951.tar.gz",
+        "file_name": "AJNS-12-563-g002.jpg"
+    }
+}
