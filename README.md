@@ -152,7 +152,7 @@ If you use this code or our dataset, please cite our [paper](https://arxiv.org/a
 @article{sepehri2024mediconfusion,
   title={MediConfusion: Can You Trust Your AI Radiologist? Probing the reliability of multimodal medical foundation models},
   author={Sepehri, Mohammad Shahab and Fabian, Zalan and Soltanolkotabi, Maryam and Soltanolkotabi, Mahdi},
-  journal={},
+  journal={arXiv preprint arXiv:2409.15477},
   year={2024}
 }
 ```
