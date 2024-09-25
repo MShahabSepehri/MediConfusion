@@ -14,7 +14,7 @@ Probing the reliability of multimodal medical foundation models
 -->
 <p align="center">
 | 🤗 <a href="https://huggingface.co/datasets/shahab7899/MediConfusion">Hugging Face</a> | 📄
- <a href="https://huggingface.co/datasets/shahab7899/MediConfusion">Paper</a> | 
+ <a href="https://arxiv.org/abs/2409.15477">Paper</a> | 
 </p> 
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/license/MIT)
@@ -32,7 +32,7 @@ Our benchmark consists of 176 confusing pairs. A confusing pair is a set of two 
  <img src="assets/example.png" alt="drawing" width="550" style="float; center"/> 
 </p>
 <p align="justify"> 
-We evaluate models based on their ability to answer <i>both</i> questions correctly within a confusing pair, which we call <b>set accuracy</b>. This metric indicates how well models can tell the two images apart, as a model that selects the same answer option for both images for all pairs will receive 0% set accuracy. We also report <b>confusion</b>, a metric which describes the proportion of confusing pairs where the model has chosen the same answer option for both images.
+We evaluate models based on their ability to answer <i>both</i> questions correctly within a confusing pair, which we call <b>set accuracy</b>. This metric indicates how well models can tell the two images apart, as a model that selects the same answer option for both images for all pairs will receive 0% set accuracy. We also report <b>confusion</b>, a metric that describes the proportion of confusing pairs where the model has chosen the same answer option for both images.
 </p>
 <p align="justify"> 
  Strikingly, all available models (open-source or proprietary) achieve performance below random guessing on MediConfusion, raising serious concerns about the reliability of existing medical MLLMs for healthcare deployment.
@@ -106,7 +106,7 @@ The images can also be downloaded directly from [ROCO](https://github.com/razorx
 * `RadFM`: Download the model from [here](https://huggingface.co/chaoyi-wu/RadFM) and set `model_path` in the [config](./configs/Models/radfm/vanilla.json) to its folder.
 
 ### Proprietary Models
-To use proprietary models, save your API keys in the root directory of the repo in a file named `.env` icluding the keys as in the example below.
+To use proprietary models, save your API keys in the root directory of the repo in a file named `.env,` including the keys as in the example below.
 ```
 GEMINI_API_KEY=YOUR_KEY
 AZURE_OPENAI_API_KEY=YOUR_KEY
@@ -125,8 +125,8 @@ Different MLLMs need different versions of the `transformers` package. Please us
 ## 🔰 Usage
 
 ### Evaluation
-Before using the code, make sure to follow the instruction in [Requirements](#-requirements). <br />
-You can create/change models configurations in `configs/MODEL_NAME/`.<br />
+Before using the code, make sure to follow the instructions in [Requirements](#-requirements). <br />
+You can create/change model configurations in `configs/MODEL_NAME/`.<br />
 To use the evaluation code, use the following command:
 ```
 python scripts/answering.py --mllm_name MODEL_NAME --mode MODE
@@ -145,7 +145,7 @@ The results will be saved in `Results/MODEL_NAME/`. You will see two files: one 
 
 ## 📌 Citation
 
-If you use this code or our dataset, please cite our [paper](-).
+If you use this code or our dataset, please cite our [paper](https://arxiv.org/abs/2409.15477).
 
 ```bibtex
 @article{sepehri2024mediconfusion,
