@@ -14,7 +14,8 @@ Probing the reliability of multimodal medical foundation models
 -->
 <p align="center">
 | 🤗 <a href="https://huggingface.co/datasets/shahab7899/MediConfusion">Hugging Face</a> | 📄
- <a href="https://arxiv.org/abs/2409.15477">Paper</a> | 
+ <a href="https://arxiv.org/abs/2409.15477">Paper</a> | 🌐
+ <a href="https://sites.usc.edu/aif4s/?p=2200">Blog</a> | 
 </p> 
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/license/MIT)
