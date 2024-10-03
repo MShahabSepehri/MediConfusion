@@ -42,19 +42,28 @@ We evaluate models based on their ability to answer <i>both</i> questions correc
 ## 📊 Leaderboard
 <div align="center">
  
+<style>
+    .heatMap {
+    }
+</style>
+
+<div class="heatMap">
+
 | Rank | Model | Version | Set acc. (%) | Confusion (%) |
 | :--: | :--: | :--: | :--: |  :--: |
 | 🏅️ | **Random Guessing** | - | **25.00** | 50.00 |
 | 🥈 | **[Gemini](https://deepmind.google/technologies/gemini/pro/)** | 1.5 Pro | 19.89 | 58.52 |
 | 🥉 | **[GPT](https://openai.com/index/hello-gpt-4o/)** | 4o (release 20240513) | 18.75 | 75.00 |
-| 4 | [InstructBLIP](https://github.com/salesforce/LAVIS/tree/main/projects/instructblip) | Vicuna 7B | 12.50 | 80.35 | 
-| 5 | [LLaVA](https://huggingface.co/llava-hf/llava-v1.6-mistral-7b-hf) | v1.6/Mistral 7B | 9.09 | 85.80 |
-| 6 | [Claude](https://claude.ai/new) | 3 Opus | 8.52 | 84.09 |
-| 7 | [BLIP-2](https://github.com/salesforce/LAVIS/tree/main/projects/blip2) | Opt 2.7B | 6.82 | 86.93 |
-| 8 | [RadFM](https://github.com/chaoyi-wu/RadFM) | - | 5.68 | 85.80 |
-| 9 | [Med-Flamingo](https://github.com/snap-stanford/med-flamingo) | - | 4.55 | 98.30 |
-| 10 | [LLaVA-Med](https://github.com/microsoft/LLaVA-Med) | v1.5/Mistral 7B | 1.14 | 97.16 |
+| 4 | [Llama 3.2](https://www.llama.com/) | 90B-Vision-Instruct | 15.34 | 77.78 |
+| 5 | [InstructBLIP](https://github.com/salesforce/LAVIS/tree/main/projects/instructblip) | Vicuna 7B | 12.50 | 80.35 | 
+| 6 | [LLaVA](https://huggingface.co/llava-hf/llava-v1.6-mistral-7b-hf) | v1.6-Mistral 7B | 9.09 | 85.80 |
+| 7 | [Claude](https://claude.ai/new) | 3 Opus | 8.52 | 84.09 |
+| 8 | [BLIP-2](https://github.com/salesforce/LAVIS/tree/main/projects/blip2) | Opt 2.7B | 6.82 | 86.93 |
+| 9 | [RadFM](https://github.com/chaoyi-wu/RadFM) | - | 5.68 | 85.80 |
+| 10 | [Med-Flamingo](https://github.com/snap-stanford/med-flamingo) | - | 4.55 | 98.30 |
+| 11 | [LLaVA-Med](https://github.com/microsoft/LLaVA-Med) | v1.5-Mistral 7B | 1.14 | 97.16 |
 
+</div>
 </div>
 
 ## 📖 Table of Contents
@@ -83,7 +92,7 @@ Use the following code to install requirements:
 pip install -r requirements.txt
 ```
 
-To evaluate `LLaVA-Med`, follow the instructions [here](https://github.com/microsoft/LLaVA-Med/tree/main) and install `LLaVA-Med`.
+<!-- To evaluate `LLaVA-Med`, follow the instructions [here](https://github.com/microsoft/LLaVA-Med/tree/main) and install `LLaVA-Med`. -->
 
 If you have any problem using the models, please follow the instructions below.
 
@@ -101,7 +110,8 @@ python scripts/download.py
 The images can also be downloaded directly from [ROCO](https://github.com/razorx89/roco-dataset) (set `local_image_address` to `False`). In this case, set `data_path` to the download folder when running the evaluation script (more details in [Usage](#-usage)). <br />
 
 ### Open-source Models
-* `LLaVA-Med`: Download the model from [here](https://huggingface.co/microsoft/llava-med-7b-delta) and set `model_path` in the [config](./configs/Models/llava_med/vanilla.json) to its folder.
+* `LLaVA-Med`: Follow the instructions [here](https://github.com/microsoft/LLaVA-Med/tree/main) and install `LLaVA-Med`. Download the model from [here](https://huggingface.co/microsoft/llava-med-7b-delta) and set `model_path` in the [config](./configs/Models/llava_med/vanilla.json) to its folder.
+* `LLaMA 3.2`: To download this model you should get access by requesting in [here](https://huggingface.co/yahma/llama-7b-hf). Then, add your token to the [config](./configs/Models/llama/vanilla.json).
 * `LLaMA`: Download the model from [here](https://huggingface.co/yahma/llama-7b-hf) and set `LLaMa_PATH` in the `MedFlamingo` [config](./configs/Models/med_flamingo/vanilla.json) to its folder.
 * `MedFlamingo`: Download the model from [here](https://huggingface.co/med-flamingo/med-flamingo) and set `CHECKPOINT_PATH` in the [config](./configs/Models/llava_med/vanilla.json) to its folder. 
 * `RadFM`: Download the model from [here](https://huggingface.co/chaoyi-wu/RadFM) and set `model_path` in the [config](./configs/Models/radfm/vanilla.json) to its folder.
@@ -132,8 +142,11 @@ To use the evaluation code, use the following command:
 ```
 python scripts/answering.py --mllm_name MODEL_NAME --mode MODE
 ```
-The results will be saved in `Results/MODEL_NAME/`. You will see two files: one containing the final scores and one containing the answers provided by the model. 
-
+The results will be saved in `Results/MODEL_NAME/`. You will see two files: one containing the final scores and one containing the answers provided by the model.  <br/>
+After runing `answering.py` you can print the results again with the command below:
+ ```
+python scripts/printing.py --mllm_name MODEL_NAME --mode MODE
+```
 ### Arguments
 * `mode`: This sets the evaluation method. Available options are `gpt4` (FF), `mc` (MC), `greedy` (GD), and `prefix` (PS). For proprietary models, you can only use the first two methods.
 * `mllm_name`: This is the name of your desired MLLM. Available options are `gpt` (GPT-4o), `gemini` (Gemini 1.5 Pro), `claude` (Claude 3 Opus), `llava` (LLaVA), `blip2` (BLIP-2), `intructblip` (InstructBLIP), `llava_med` (LLaVA-Med), `radfm` (RadFM), and `med_flamingo` (Med-Flamingo).
