@@ -5,9 +5,9 @@ from llava.mm_utils import tokenizer_image_token
 from llava.constants import IMAGE_TOKEN_INDEX
 
 
-def load_model(device='cuda'):
-    processor = LlavaNextProcessor.from_pretrained("llava-hf/llava-v1.6-mistral-7b-hf")
-    model = LlavaNextForConditionalGeneration.from_pretrained("llava-hf/llava-v1.6-mistral-7b-hf") 
+def load_model(model_id, device='cuda'):
+    processor = LlavaNextProcessor.from_pretrained(model_id, device_map=device)
+    model = LlavaNextForConditionalGeneration.from_pretrained(model_id) 
     model.to(device)
     return model, processor
 
@@ -56,7 +56,9 @@ def do_generation(model, inputs, processor, temperature, top_p, num_beams, max_n
                             top_p=top_p, 
                             num_beams=num_beams, 
                             max_new_tokens=max_new_tokens)
-    return processor.decode(output[0], skip_special_tokens=True)
+    tmp = processor.decode(inputs.get('input_ids')[0], skip_special_tokens=True)
+    txt = processor.decode(output[0], skip_special_tokens=True).replace(tmp, '')
+    return txt
 
 @torch.no_grad()
 def do_prefix_forward(model, problem, image, processor):
@@ -99,9 +101,9 @@ def do_prefix_forward(model, problem, image, processor):
         answer_start_from_back = answer_start - input_ids.size(1)
 
         with torch.inference_mode():
-            out = model(**inputs
-                )
+            out = model(**inputs)
             # shift by 1 compared to input
+            raise ValueError(out.logits.shape, answer_start, input_ids.size(1), answer_start_from_back)
             logits = out.logits[0, answer_start_from_back-1:answer_start_from_back-1+num_answer_tokens]
             probs = torch.nn.functional.softmax(logits, dim=-1)
 

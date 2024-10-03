@@ -6,5 +6,6 @@
     "temperature": 0.2,
     "init_prompt_id": 1,
     "max_new_tokens": 100,
-    "use_im_start_end": false
+    "use_im_start_end": false,
+    "model_id": "llava-hf/llava-v1.6-mistral-7b-hf"
 }

@@ -1,4 +1,5 @@
 {
     "temperature": 0.2,
+    "deployment_name": "claude-3-opus-20240229",
     "init_prompt_id": 1
 }

@@ -3,9 +3,9 @@ from PIL import Image
 from transformers import Blip2Processor, Blip2ForConditionalGeneration
 
 
-def load_model(device='cuda'):
-    processor = Blip2Processor.from_pretrained("Salesforce/blip2-opt-2.7b")
-    model = Blip2ForConditionalGeneration.from_pretrained("Salesforce/blip2-opt-2.7b")
+def load_model(model_id, device='cuda'):
+    processor = Blip2Processor.from_pretrained(model_id)
+    model = Blip2ForConditionalGeneration.from_pretrained(model_id)
     model.to(device)
     return model, processor
 

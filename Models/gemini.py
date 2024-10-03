@@ -11,7 +11,7 @@ def configure_client():
     genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
 
 
-def load_model(init_prompt, temperature, deployment_name="gemini-1.5-pro"):
+def load_model(init_prompt, temperature, deployment_name):
     configure_client() 
     model = genai.GenerativeModel(deployment_name, 
                                   generation_config=genai.GenerationConfig(temperature=temperature),

@@ -16,7 +16,7 @@ def get_client():
     client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
     return client
 
-def ask_question(client, image_path, question, init_prompt, temperature, deployment_name="claude-3-opus-20240229"):
+def ask_question(client, image_path, question, init_prompt, temperature, deployment_name):
     message_list = [
         {
             "role": 'user',

@@ -2,9 +2,9 @@ import torch
 from PIL import Image
 from transformers import InstructBlipProcessor, InstructBlipForConditionalGeneration
 
-def load_model(device='cpu'):
-    processor = InstructBlipProcessor.from_pretrained("Salesforce/instructblip-vicuna-7b", device=device)
-    model = InstructBlipForConditionalGeneration.from_pretrained("Salesforce/instructblip-vicuna-7b")
+def load_model(model_id, device='cpu'):
+    processor = InstructBlipProcessor.from_pretrained(model_id, device=device)
+    model = InstructBlipForConditionalGeneration.from_pretrained(model_id)
     model.to(device=device)
     return model, processor
 
