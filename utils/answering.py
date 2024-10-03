@@ -153,9 +153,12 @@ class BaseAnsweringModel():
         for key in labels:
             scores[key] = 0
         if answer is not None:
+            answer = answer.replace('\n', ' ')
             tmp = answer.split(' ')
             for la in labels:
-                valid_list = [f'{la}', f'{la}:', f'.{la}', f'.{la}:', f'{la}.', f'{la}\")', f'{la}\n', f'\n{la}']
+                valid_list = [f'{la}', f'{la}:', f'.{la}', f'.{la}:', f'{la}.', 
+                              f'{la}\")', f'{la}\n', f'\n{la}', f'(\"{la}\":', 
+                              f'(\"{la}\")', f'(\"{la}\").']
                 correct = any([x in tmp for x in valid_list])
                 if correct:
                     scores[la] = 10
@@ -347,7 +350,7 @@ class ClaudeAnswering(BaseAnsweringModel):
         from Models import claude
         self.key = 'claude'
         args = super().set_model_params()
-        # self.deployment_name = args.get("deployment_name")
+        self.deployment_name = args.get("deployment_name")
         self.client = claude.get_client()
         if self.mode in ['greedy', 'prefix']:
             raise ValueError(f'Cannot use forward for Claude!')
@@ -356,7 +359,7 @@ class ClaudeAnswering(BaseAnsweringModel):
         qs = super().ask_question(question, options, image_list)
         response_list = []
         for image in image_list:
-            response = claude.ask_question(self.client, image, qs, self.init_prompt, self.temperature)
+            response = claude.ask_question(self.client, image, qs, self.init_prompt, self.temperature, self.deployment_name)
             response_list.append(response)
         return response_list
     
@@ -367,8 +370,8 @@ class GeminiAnswering(BaseAnsweringModel):
         from Models import gemini
         self.key = 'gemini'
         args = super().set_model_params()
-        # self.deployment_name = args.get("deployment_name")
-        self.model = gemini.load_model(self.init_prompt, self.temperature)
+        self.deployment_name = args.get("deployment_name")
+        self.model = gemini.load_model(self.init_prompt, self.temperature, self.deployment_name)
         if self.mode in ['greedy', 'prefix']:
             raise ValueError(f'Cannot use forward for Claude!')
 
@@ -390,7 +393,7 @@ class GeminiAnswering(BaseAnsweringModel):
         return response_list
 
 
-class LLAVAMedAnswering(BaseAnsweringModel):
+class LLaVAMedAnswering(BaseAnsweringModel):
 
     def set_model_params(self):
         global llava_med
@@ -454,7 +457,7 @@ class LLAVAMedAnswering(BaseAnsweringModel):
         return response_list
 
 
-class LLAVAAnswering(BaseAnsweringModel):
+class LLaVAAnswering(BaseAnsweringModel):
 
     def set_model_params(self):
         global llava
@@ -463,7 +466,8 @@ class LLAVAAnswering(BaseAnsweringModel):
         args = super().set_model_params()
         
         set_seed(0)
-        model, processor = llava.load_model(self.device)
+        model_id = args.get('model_id')
+        model, processor = llava.load_model(model_id, self.device)
 
         self.model = model
         self.processor = processor
@@ -521,7 +525,8 @@ class BLIP2Answering(BaseAnsweringModel):
         from Models import blip2
         self.key = 'blip2'
         args = super().set_model_params()
-        model, processor = blip2.load_model(self.device)
+        model_id = args.get('model_id')
+        model, processor = blip2.load_model(model_id, self.device)
         self.model = model
         self.processor = processor
 
@@ -548,7 +553,8 @@ class InstructBLIPAnswering(BaseAnsweringModel):
         from Models import instructblip
         self.key = 'instructblip'
         args = super().set_model_params()
-        model, processor = instructblip.load_model(self.device)
+        model_id = args.get('model_id')
+        model, processor = instructblip.load_model(model_id, self.device)
         self.model = model
         self.processor = processor
         if self.temperature == 0:
@@ -601,6 +607,39 @@ class MedFlamingoAnswering(BaseAnsweringModel):
         return response_list
 
 
+class LlamaAnswering(BaseAnsweringModel):
+
+    def set_model_params(self):
+        global llama
+        from Models import llama
+        self.key = 'llama'
+        args = super().set_model_params()
+        
+        token = args.get('token')
+        model_id = args.get('model_id')
+        model, processor = llama.load_model(token, model_id, self.device)
+
+        self.model = model
+        self.processor = processor
+
+    def ask_question(self, question, options, image_list):
+        question = super().ask_question(question, options, image_list)
+        response_list = []
+        image_list = [Image.open(x) for x in image_list]
+        for image in image_list:
+            outputs = llama.ask_question(self.model, 
+                                         self.processor, 
+                                         question, 
+                                         image, 
+                                         self.mode,
+                                         temperature=self.temperature,
+                                         top_p=self.top_p, 
+                                         num_beams=self.num_beams)
+            response_list.append(outputs)
+
+        return response_list
+
+
 class MedVInTAnswering(BaseAnsweringModel):
 
     def set_model_params(self):
@@ -638,13 +677,14 @@ ANSWERING_CLASS_DICT = {
     'gpt': GPTAnswering,
     'claude': ClaudeAnswering,
     'gemini': GeminiAnswering,
-    'llava_med': LLAVAMedAnswering,
-    'llava': LLAVAAnswering,
+    'llava_med': LLaVAMedAnswering,
+    'llava': LLaVAAnswering,
     'radfm': RadFMAnswering,
     'blip2': BLIP2Answering,
     'instructblip': InstructBLIPAnswering,
     'med_flamingo': MedFlamingoAnswering,
     'medvint': MedVInTAnswering,
+    'llama': LlamaAnswering,
 }
 
 DEFAULT_MODEL_CONFIGS = {
@@ -658,4 +698,5 @@ DEFAULT_MODEL_CONFIGS = {
     'instructblip': f'{ROOT}/configs/Models/instructblip/vanilla.json',
     'med_flamingo': f'{ROOT}/configs/Models/med_flamingo/vanilla.json',
     'medvint': f'{ROOT}/configs/Models/medvint/vanilla.json',
+    'llama': f'{ROOT}/configs/Models/llama/vanilla.json',
 }

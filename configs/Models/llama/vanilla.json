@@ -1,0 +1,10 @@
+{
+    "model_base": null,
+    "top_p": null,
+    "num_beams": 1,
+    "temperature": 0.2,
+    "init_prompt_id": 1,
+    "max_new_tokens": 100,
+    "model_id": "meta-llama/Llama-3.2-90B-Vision-Instruct",
+    "token": ""
+}
