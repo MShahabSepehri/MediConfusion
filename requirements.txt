@@ -12,3 +12,6 @@ ipython
 peft
 transformers
 tqdm==4.66.2
+fairscale 
+fire 
+blobfile
