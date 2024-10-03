@@ -111,7 +111,7 @@ The images can also be downloaded directly from [ROCO](https://github.com/razorx
 
 ### Open-source Models
 * `LLaVA-Med`: Follow the instructions [here](https://github.com/microsoft/LLaVA-Med/tree/main) and install `LLaVA-Med`. Download the model from [here](https://huggingface.co/microsoft/llava-med-7b-delta) and set `model_path` in the [config](./configs/Models/llava_med/vanilla.json) to its folder.
-* `LLaMA 3.2`: To download this model you should get access by requesting in [here](https://huggingface.co/yahma/llama-7b-hf). Then, add your token to the [config](./configs/Models/llama/vanilla.json). If you encountered CUDA memory error, set device to `auto`.
+* `LLaMA 3.2`: To download this model you should get access by requesting in [here](https://huggingface.co/meta-llama/Llama-3.2-11B-Vision). Then, add your token to the [config](./configs/Models/llama/vanilla.json). If you encountered CUDA memory error, set `device` to `auto`.
 * `LLaMA`: Download the model from [here](https://huggingface.co/yahma/llama-7b-hf) and set `LLaMa_PATH` in the `MedFlamingo` [config](./configs/Models/med_flamingo/vanilla.json) to its folder.
 * `MedFlamingo`: Download the model from [here](https://huggingface.co/med-flamingo/med-flamingo) and set `CHECKPOINT_PATH` in the [config](./configs/Models/llava_med/vanilla.json) to its folder. 
 * `RadFM`: Download the model from [here](https://huggingface.co/chaoyi-wu/RadFM) and set `model_path` in the [config](./configs/Models/radfm/vanilla.json) to its folder.
