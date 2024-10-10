@@ -42,13 +42,6 @@ We evaluate models based on their ability to answer <i>both</i> questions correc
 ## 📊 Leaderboard
 <div align="center">
 
-<style>
-    .heatMap {
-    }
-</style>
-
-<div class="heatMap">
-
 
 | Rank | Model | Version | Set acc. (%) | Confusion (%) |
 | :--: | :--: | :--: | :--: |  :--: |
@@ -66,7 +59,6 @@ We evaluate models based on their ability to answer <i>both</i> questions correc
 | 12 | [Med-Flamingo](https://github.com/snap-stanford/med-flamingo) | - | 4.55 | 98.30 |
 | 13 | [LLaVA-Med](https://github.com/microsoft/LLaVA-Med) | v1.5-Mistral 7B | 1.14 | 97.16 |
 
-</div>
 </div>
 
 ## 📖 Table of Contents
