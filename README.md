@@ -42,21 +42,31 @@ We evaluate models based on their ability to answer <i>both</i> questions correc
 ## 📊 Leaderboard
 <div align="center">
 
+<style>
+    .heatMap {
+    }
+</style>
+
+<div class="heatMap">
+
 
 | Rank | Model | Version | Set acc. (%) | Confusion (%) |
 | :--: | :--: | :--: | :--: |  :--: |
 | 🏅️ | **Random Guessing** | - | **25.00** | 50.00 |
 | 🥈 | **[Gemini](https://deepmind.google/technologies/gemini/pro/)** | 1.5 Pro | 19.89 | 58.52 |
 | 🥉 | **[GPT](https://openai.com/index/hello-gpt-4o/)** | 4o (release 20240513) | 18.75 | 75.00 |
-| 4 | [Llama 3.2](https://www.llama.com/) | 90B-Vision-Instruct | 15.34 | 77.78 |
+| 4 | [Llama 3.2](https://www.llama.com/) | 90B-Vision-Instruct | 15.34 | 78.41 |
 | 5 | [InstructBLIP](https://github.com/salesforce/LAVIS/tree/main/projects/instructblip) | Vicuna 7B | 12.50 | 80.35 | 
-| 6 | [LLaVA](https://huggingface.co/llava-hf/llava-v1.6-mistral-7b-hf) | v1.6-Mistral 7B | 9.09 | 85.80 |
-| 7 | [Claude](https://claude.ai/new) | 3 Opus | 8.52 | 84.09 |
-| 8 | [BLIP-2](https://github.com/salesforce/LAVIS/tree/main/projects/blip2) | Opt 2.7B | 6.82 | 86.93 |
-| 9 | [RadFM](https://github.com/chaoyi-wu/RadFM) | - | 5.68 | 85.80 |
-| 10 | [Med-Flamingo](https://github.com/snap-stanford/med-flamingo) | - | 4.55 | 98.30 |
-| 11 | [LLaVA-Med](https://github.com/microsoft/LLaVA-Med) | v1.5-Mistral 7B | 1.14 | 97.16 |
+| 6 | [Molmo](https://molmo.allenai.org/) | 7B-D-0924 | 9.66 | 86.21 |
+| 7 | [LLaVA](https://huggingface.co/llava-hf/llava-v1.6-mistral-7b-hf) | v1.6-Mistral 7B | 9.09 | 85.80 |
+| 8 | [Claude](https://claude.ai/new) | 3 Opus | 8.52 | 84.09 |
+| 9 | [BLIP-2](https://github.com/salesforce/LAVIS/tree/main/projects/blip2) | Opt 2.7B | 6.82 | 86.93 |
+| 10 | [Molmo](https://molmo.allenai.org/) | 72B-0924 | 6.82 | 85.80 |
+| 11 | [RadFM](https://github.com/chaoyi-wu/RadFM) | - | 5.68 | 85.80 |
+| 12 | [Med-Flamingo](https://github.com/snap-stanford/med-flamingo) | - | 4.55 | 98.30 |
+| 13 | [LLaVA-Med](https://github.com/microsoft/LLaVA-Med) | v1.5-Mistral 7B | 1.14 | 97.16 |
 
+</div>
 </div>
 
 ## 📖 Table of Contents

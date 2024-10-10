@@ -575,7 +575,36 @@ class InstructBLIPAnswering(BaseAnsweringModel):
                                                 self.mode)
             response_list.append(outputs)
         return response_list
-    
+
+
+class MolmoAnswering(BaseAnsweringModel):
+
+    def set_model_params(self):
+        global molmo
+        from Models import molmo
+        self.key = 'molmo'
+        args = super().set_model_params()
+        model_id = args.get('model_id')
+        model, processor = molmo.load_model(model_id, self.device)
+        self.model = model
+        self.processor = processor
+
+    def ask_question(self, question, options, image_list):
+        question = super().ask_question(question, options, image_list)
+        response_list = []
+        for image_path in image_list:
+            outputs = molmo.ask_question(self.model, 
+                                         question, 
+                                         image_path, 
+                                         self.processor,
+                                         self.num_beams,
+                                         self.max_new_tokens,
+                                         self.top_p,
+                                         self.temperature,
+                                         self.mode)
+            response_list.append(outputs)
+        return response_list
+
 
 class MedFlamingoAnswering(BaseAnsweringModel):
 
@@ -685,6 +714,7 @@ ANSWERING_CLASS_DICT = {
     'med_flamingo': MedFlamingoAnswering,
     'medvint': MedVInTAnswering,
     'llama': LlamaAnswering,
+    'molmo': MolmoAnswering,
 }
 
 DEFAULT_MODEL_CONFIGS = {
@@ -699,4 +729,5 @@ DEFAULT_MODEL_CONFIGS = {
     'med_flamingo': f'{ROOT}/configs/Models/med_flamingo/vanilla.json',
     'medvint': f'{ROOT}/configs/Models/medvint/vanilla.json',
     'llama': f'{ROOT}/configs/Models/llama/vanilla.json',
+    'molmo': f'{ROOT}/configs/Models/molmo/vanilla.json',
 }

@@ -1,0 +1,7 @@
+{   
+    "num_beams": 1,
+    "max_new_tokens": 30,
+    "top_p": null,
+    "temperature": 0.7,
+    "model_id": "allenai/Molmo-7B-D-0924"
+}
