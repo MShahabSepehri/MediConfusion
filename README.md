@@ -63,8 +63,8 @@ We evaluate models based on their ability to answer <i>both</i> questions correc
 
 ## Updates
 
-- [2024/09/11] Molmo family added to supported models.
-- [2024/03/11] Llama 3.2 family added to supported models.
+- [2024/09/11] _Molmo_ family added to the supported models.
+- [2024/03/11] _Llama 3.2_ family added to the supported models.
 
 ## 📖 Table of Contents
 
