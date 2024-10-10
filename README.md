@@ -61,6 +61,11 @@ We evaluate models based on their ability to answer <i>both</i> questions correc
 
 </div>
 
+## Updates
+
+- [2024/09/11] Molmo family added to supported models.
+- [2024/03/11] Llama 3.2 family added to supported models.
+
 ## 📖 Table of Contents
 
   * [Requirements](#-requirements)
@@ -71,7 +76,6 @@ We evaluate models based on their ability to answer <i>both</i> questions correc
   * [Usage](#-usage)
     * [Evaluation](#evaluation)
     * [Arguments](#arguments)
-  * [Leaderboard](#-leaderboard)
 
 ## 🔧 Requirements
 
@@ -107,6 +111,7 @@ The images can also be downloaded directly from [ROCO](https://github.com/razorx
 ### Open-source Models
 * `LLaVA-Med`: Follow the instructions [here](https://github.com/microsoft/LLaVA-Med/tree/main) and install `LLaVA-Med`. Download the model from [here](https://huggingface.co/microsoft/llava-med-7b-delta) and set `model_path` in the [config](./configs/Models/llava_med/vanilla.json) to its folder.
 * `LLaMA 3.2`: To download this model you should get access by requesting in [here](https://huggingface.co/meta-llama/Llama-3.2-11B-Vision). Then, add your token to the [config](./configs/Models/llama/vanilla.json). If you encountered CUDA memory error, set `device` to `auto`.
+* `Molmo`: If you encountered CUDA memory error, set `device` to `auto`.
 * `LLaMA`: Download the model from [here](https://huggingface.co/yahma/llama-7b-hf) and set `LLaMa_PATH` in the `MedFlamingo` [config](./configs/Models/med_flamingo/vanilla.json) to its folder.
 * `MedFlamingo`: Download the model from [here](https://huggingface.co/med-flamingo/med-flamingo) and set `CHECKPOINT_PATH` in the [config](./configs/Models/llava_med/vanilla.json) to its folder. 
 * `RadFM`: Download the model from [here](https://huggingface.co/chaoyi-wu/RadFM) and set `model_path` in the [config](./configs/Models/radfm/vanilla.json) to its folder.
