@@ -171,12 +171,11 @@ python scripts/printing.py --mllm_name MODEL_NAME --mode MODE
 If you use this code or our dataset, please cite our [paper](https://arxiv.org/abs/2409.15477).
 
 ```bibtex
-@inproceedings{
-sepehri2025mediconfusion,
-title={MediConfusion: Can you trust your {AI} radiologist? Probing the reliability of multimodal medical foundation models},
-author={Mohammad Shahab Sepehri and Zalan Fabian and Maryam Soltanolkotabi and Mahdi Soltanolkotabi},
-booktitle={The Thirteenth International Conference on Learning Representations},
-year={2025},
-url={https://openreview.net/forum?id=H9UnNgdq0g}
+@inproceedings{sepehri2025mediconfusion,
+  title={MediConfusion: Can you trust your {AI} radiologist? Probing the reliability of multimodal medical foundation models},
+  author={Mohammad Shahab Sepehri and Zalan Fabian and Maryam Soltanolkotabi and Mahdi Soltanolkotabi},
+  booktitle={The Thirteenth International Conference on Learning Representations},
+  year={2025},
+  url={https://openreview.net/forum?id=H9UnNgdq0g}
 }
 ```
