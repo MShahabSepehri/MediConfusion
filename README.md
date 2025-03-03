@@ -68,6 +68,7 @@ We evaluate models based on their ability to answer <i>both</i> questions correc
 ## Updates
 
 - [2025/02/18] _DeepSeek_ family added to the supported models.
+- [2025/01/22] **MediConfusion** is accepted by ICLR 2025.
 - [2024/09/11] _Molmo_ family added to the supported models.
 - [2024/03/11] _Llama 3.2_ family added to the supported models.
 
