@@ -18,7 +18,9 @@ Probing the reliability of multimodal medical foundation models
  <a href="https://sites.usc.edu/aif4s/?p=2200">Blog</a> | 
 </p> 
 
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/license/MIT)
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License"/></a>
+</p>
 
 <p align="justify" > 
 MediConfusion is a challenging medical Visual Question Answering (VQA) benchmark dataset, that probes the failure modes of medical Multimodal Large Language Models (MLLMs) from a vision perspective. We reveal that state-of-the-art models are easily confused by image pairs that are otherwise visually dissimilar and clearly distinct for medical experts. These are some examples of confusing image pairs from the ROCO radiology dataset:
